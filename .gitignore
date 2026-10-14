@@ -1,0 +1,15 @@
+# Node
+addons/*/node_modules/
+addons/*/.env
+addons/*/.env.local
+
+# Build outputs (for future Astro frontend)
+addons/*/dist/
+addons/*/.astro/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
