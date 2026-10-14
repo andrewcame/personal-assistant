@@ -29,7 +29,9 @@ It is not meant to become:
 - `.github/agents` - Small, role-based chat agents for the most common tasks.
 - `.github/skills` - Reusable research and action-extraction workflows.
 - [challenges](challenges) - Numbered records of open management problems, with context, questions, position, and next action.
-- [state](state) - [now.md](state/now.md): short working memory (this week's focus, open threads, recent decisions, waiting on). Every agent reads it first.
+- [AGENTS.md](AGENTS.md) - Shared instructions for every assistant (Copilot reads it directly; [CLAUDE.md](CLAUDE.md) imports it). Start-here files, repo map, non-negotiable rules, agent and skill list.
+- [state](state) - [now.md](state/now.md): short working memory (this week's focus, open threads, recent decisions, waiting on). [learnings.md](state/learnings.md): corrections AC has accepted, consolidated into agents at each horizon review. Every agent reads both first.
+- [evals](evals) - Behaviour checks for agents and skills; re-run after changing instructions or models.
 - [scripts](scripts) - Repo health checks (`python scripts/check.py all`): validates front-matter, IDs, tags and links; regenerates folder indexes; reports evidence coverage by pillar/JD and stale records. Standard-library Python only.
 - [initiatives](initiatives) - Formal proposals raised through the initiative process, usually graduated from a challenge or improvement.
 - [context](context) - [Taxonomy](context/_taxonomy.md) (stable IDs for JD items, pillars, lenses, values, goals, records), [People lookup](context/people.md) (alias → role; no real names anywhere in the repo), personal role context, team role expectations, discovery calls, QA health, industry signals, objective lenses, role pillars, and QA banding.

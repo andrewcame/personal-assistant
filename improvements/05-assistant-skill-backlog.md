@@ -47,11 +47,17 @@ Identify and add only the skills that remove repeated procedural guidance withou
 - Added three activity skills: `weekly-review`, `gap-analysis`, `horizon-review`.
 - Remaining candidates: shared routing guidance (partly covered by Capture's routing table), evidence extraction before review drafting (partly covered by tags + gap-analysis).
 
+### 2026-10-14 (phase 4)
+
+- Added root `AGENTS.md` (shared instructions for Copilot and Claude) and `CLAUDE.md` importing it.
+- Added a learning loop: `state/learnings.md` (propose → accept → consolidate at horizon review), seeded with today's corrections.
+- Added `evals/` with ten behaviour cases (privacy, routing, reasoning, learning loop) and a results log.
+
 ## Status & Next Action
 
 **Status:** In progress
 
-**Next action:** Use the weekly-review skill for two consecutive Fridays and the gap-analysis skill before the next GL 1:1; keep, adjust, or drop each based on real use. Phase 4 (AGENTS.md, learning loop, evals) follows.
+**Next action:** Use the weekly-review skill for two consecutive Fridays and the gap-analysis skill before the next GL 1:1; keep, adjust, or drop each based on real use. Run eval cases E01–E04 once in Copilot and once in Claude to set a baseline.
 
 ## Outcome
 

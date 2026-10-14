@@ -24,6 +24,7 @@ Keeps `context/my-role/horizons.md` an accurate plan rather than a wish list. Ru
 5. **New direction** — check new leadership direction entries: does anything add, remove, or re-order outcomes? Does the driving theme still hold?
 6. **Orphans** — open records not linked from any horizon row: propose linking them, or confirm they're intentionally off-plan.
 7. **Gaps** — note any blind spots from the coverage output that the plan doesn't address.
+8. **Consolidate learnings** — for each line in `state/learnings.md` older than a month, propose moving it into the agent, skill, template, or `AGENTS.md` it belongs to, then retiring it from the learnings file. Flag any learning that has been contradicted in practice.
 
 ## Output
 
