@@ -1,13 +1,13 @@
 ---
 id: INI-02
 type: initiative
-status: in-progress
-horizon: now
+status: on-hold
+horizon: next
 updated: 2026-10-15
 pillars: [P4, P9]
 focus: [automation]
 goals: []
-links: [CH-01, CH-09, INI-01]
+links: [CH-09, INI-01, IMP-10]
 people: [GH, KB]
 ---
 
@@ -82,6 +82,19 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 - Confirm the app-side path for using dynamic member creation from Initiative 01 in the first web-journey tests
 
 **Supporting Context**
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| INI-02.1 | Document Appium local setup for Mac and Windows | AC | — | done |
+| INI-02.2 | Make AI flows reusable; revert non-standard repo changes | AC | — | dropped |
+| INI-02.3 | Re-scope initiative from the app simplification plan, then prioritise journeys | AC | INI-02.8 | blocked |
+| INI-02.4 | Generate AI-led Appium tests for priority journeys | AC | INI-02.3 | later |
+| INI-02.5 | Adopt dynamic member creation for app web journeys | AC | INI-01.7 | later |
+| INI-02.6 | Get first-pass tests passing reliably in the pipeline | AC | INI-02.4, INI-02.5 | later |
+| INI-02.7 | Document remaining coverage; define follow-on initiative | AC | INI-02.6 | later |
+| INI-02.8 | Join app simplification kick-off (w/c 2026-10-19) | AC | — | next |
+
 ## Progress Update - 2026-10-08
 
 - The Appium initiative is moving forward under the QA & Test Engineering Manager. Appium strategy now led by AC, with space to progress the agreed Appium approach.
@@ -106,3 +119,7 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 ## Progress Update - 2026-10-15
 
 - Appium local-setup documentation updated so the framework runs on both Mac and Windows, and tested (closed in Notion To Do).
+
+## Progress Update - 2026-10-15 (status)
+
+- **On hold / in discovery** until the app simplification plan is understood (CH-01 kick-off w/c 2026-10-19). The initiative will then be re-scoped and resumed. The planned AI-flow clean-up step is no longer needed.

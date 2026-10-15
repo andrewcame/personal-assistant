@@ -2,8 +2,8 @@
 id: CH-08
 type: challenge
 status: open
-horizon: none
-updated: 2026-09-17
+horizon: later
+updated: 2026-10-15
 pillars: [P5, P8]
 focus: [automation]
 goals: []
@@ -77,6 +77,17 @@ The approach needs to account for:
 The Exerp Extractor should be treated as a business-critical integration and data-integrity boundary, not only as background platform plumbing. A useful first step is to document the source-to-member flow, select representative promotion/pricing/subscription scenarios with Configuration, and define a small set of reconciliation checks between Exerp and Pico.
 
 The full-dataset extraction and 90-minute propagation time may limit fast feedback, so the strategy should combine targeted representative scenarios with post-run reconciliation and clear failure visibility. Staging is the natural proving ground because Configuration already tests campaigns and promotions there, but its shared role makes environment ownership and communication important prerequisites.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-08.1 | Arrange COP and promotion walkthrough with CR | AC | CH-08.6 | later |
+| CH-08.2 | Map Extractor to Publisher to Pico to front-end flow | AC | CH-08.1 | later |
+| CH-08.3 | Select representative commercial scenarios for staging | AC | CH-08.2 | later |
+| CH-08.4 | Define minimum Exerp-versus-Pico reconciliation checks | AC | CH-08.3 | later |
+| CH-08.5 | Confirm ownership for failed runs, replay and sign-off | AC | CH-08.2 | later |
+| CH-08.6 | Discover Extractor usage and sunset plan; decide if testing is needed | AC | — | later |
 
 ## Status & Next Action
 

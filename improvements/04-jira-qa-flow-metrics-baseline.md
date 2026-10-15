@@ -3,7 +3,7 @@ id: IMP-04
 type: improvement
 status: in-progress
 horizon: next
-updated: 2026-10-08
+updated: 2026-10-15
 pillars: [P6]
 focus: [productivity]
 goals: []
@@ -141,6 +141,18 @@ These measures can be referenced as context during an investigation, but should 
 
 - Jira will remain the initial home for QA flow measures and automation-coverage tracking. Lightweight placeholders are being set up first, with definitions and a more robust reporting approach to follow as the baseline is established.
 - Coordinate the metrics home with the QA Confluence tidy-up and functional coverage reference tracked in [Improvement 06 - QA Knowledge And Coverage Baseline](06-qa-knowledge-and-coverage-baseline.md).
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-04.1 | Agree five QA flow measures, Jira-first | AC | — | done |
+| IMP-04.2 | Set up Jira placeholders for metrics and coverage | AC | IMP-04.1 | doing |
+| IMP-04.3 | Write first JQL queries | AC | IMP-04.2 | next |
+| IMP-04.4 | Complete Jira discovery checklist with Delivery or Jira admin | AC | — | later |
+| IMP-04.5 | Vibe-code Jira metric tool for gaps | AC | IMP-04.3 | later |
+| IMP-04.6 | Produce one-team proof-of-concept baseline | AC | IMP-04.3, IMP-04.4 | later |
+| IMP-04.7 | Agree metrics home alongside the Confluence tidy-up | AC | IMP-06.2 | later |
 
 ## Status & Next Action
 

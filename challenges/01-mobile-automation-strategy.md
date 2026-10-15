@@ -1,13 +1,13 @@
 ---
 id: CH-01
 type: challenge
-status: open
-horizon: now
+status: resolved
+horizon: none
 updated: 2026-10-15
 pillars: [P4, P9]
 focus: [automation]
 goals: []
-links: [CH-09, INI-02]
+links: [CH-09, INI-02, IMP-10]
 people: [GH, TMW, RW]
 ---
 
@@ -87,9 +87,26 @@ The 60-day plan commits to establishing and settling automation — not restarti
 
 ---
 
+## 2026-10-15 Resolution
+
+- **Resolved.** Appium is the decision, and moving TMW out of Apps removed the Maestro-vs-Appium tension. The remaining work continues in [INI-02](../initiatives/02-appium-ai-led-first-pass.md), which waits on the app simplification plan.
+- Device-farm questions continue in [IMP-10](../improvements/10-browserstack-renewal-and-device-strategy.md); population-scale testing in [CH-09](09-population-scale-mobile-app-testing.md). Remaining roadmap steps are dropped here.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-01.1 | Set Appium as the default mobile platform | AC | — | done |
+| CH-01.2 | Run app simplification kick-off (w/c 2026-10-19) | AC | — | dropped |
+| CH-01.3 | Add layered testing model to the automation evaluation | AC | CH-01.2 | dropped |
+| CH-01.4 | Run mocked-integration proof of concept on one feature | AC | CH-01.3 | dropped |
+| CH-01.5 | Baseline BrowserStack failures; compare managed and local devices | AC | — | dropped |
+| CH-01.6 | Build Apps QA capacity and Lead QA resourcing case | AC | CH-01.2 | dropped |
+| CH-01.7 | Define QA/SRE chapter outcomes with GH | AC | — | dropped |
+
 ## Status & Next Action
 
-**Status:** Open — direction set (Appium remains the default; see 2026-09-16 update and Current Direction below). Delivery now runs through [Initiative 02 — Appium AI-led first pass](../initiatives/02-appium-ai-led-first-pass.md).
+**Status:** Resolved 2026-10-15 (see Resolution above). _Previously:_ Open — direction set (Appium remains the default; see 2026-09-16 update and Current Direction below). Delivery now runs through [Initiative 02 — Appium AI-led first pass](../initiatives/02-appium-ai-led-first-pass.md).
 
 **Next action:** Work through the Updated Next Actions in the 2026-09-16 update below; track delivery in Initiative 02 and keep this file for the strategic question (layering, capacity, device farm).
 

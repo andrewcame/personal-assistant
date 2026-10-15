@@ -51,6 +51,10 @@ people: []
 - AC is currently doing staging first-response checks manually.
 - Idea: use Claude to assist or automate the manual SRE checks (dashboard review, DLQ inspection, log entry). Candidate next step, not yet scoped.
 
+### 2026-10-15 (direction)
+
+- The mission is unchanged; the method changes. The morning first-response checks could be run by Claude, while AC (and the team) still own fixing what is found. Tracked as roadmap steps IMP-01.6–7 rather than a separate improvement.
+
 ## Proposed Daily First-Response Routine
 
 _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escalation contacts, and permissions with DevEx/Platform before adopting it._
@@ -59,6 +63,18 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 2. Inspect the staging DLQ when dashboard signals or test failures indicate a possible asynchronous-processing issue; capture the error and relevant context before changing queue or consumer state.
 3. Record findings in the agreed local log, including the environment, time, observed signal, error evidence, impact, and escalation/outcome.
 4. Escalate actionable findings to the appropriate SME. If DLQ recovery is agreed, recreate the Kafka DLQ topic and then restart the affected consumer pod; verify that the consumer recreates its subscription.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-01.1 | Offer to own staging first-response triage | AC | — | done |
+| IMP-01.2 | Complete DevEx/Platform monitoring walkthrough | AC | — | done |
+| IMP-01.3 | Run staging first-response checks manually | AC | IMP-01.2 | doing |
+| IMP-01.4 | Confirm daily first-response routine with DevEx/Platform | AC | IMP-01.2 | next |
+| IMP-01.5 | Look into staging DLQ issues | AC | — | next |
+| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC | IMP-01.4 | later |
+| IMP-01.7 | Pilot Claude-run morning checks; AC triages and fixes findings | AC | IMP-01.6 | later |
 
 ## Status & Next Action
 

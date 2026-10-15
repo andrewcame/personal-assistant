@@ -54,7 +54,7 @@ Strategy notes for handling a difficult conversation are fine to think through i
 | MP    | Payments              | Level 7          | Direct report  | [mp.md](mp.md)   |
 | JS    | Website               | Level 3/4        | Reports to DA  | [js.md](js.md)   |
 | JFG   | Website               | Level 3/4        | Reports to TMW | [jfg.md](jfg.md) |
-| KB    | Mobile App            | Level 6          | Reports to DA  | [kb.md](kb.md)   |
+| KB    | Mobile App (Lead)     | Level 6          | Reports to DA  | [kb.md](kb.md)   |
 | LM    | All (E2E)             | N/A (Contractor) | Direct report  | [lm.md](lm.md)   |
 | IY    | All (Floating)        | N/A (Contractor) | TBC            | [iy.md](iy.md)   |
 

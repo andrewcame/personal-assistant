@@ -29,6 +29,12 @@ people: []              # aliases from context/people.md
 
 -
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| XX-NN.1 | | AC | — | next |
+
 ## Status & Next Action
 
 **Status:** Open — [one line]

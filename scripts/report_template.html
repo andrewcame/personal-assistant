@@ -148,6 +148,32 @@ td .title { font-weight: 500; }
 .note { font-size: 13px; color: var(--muted); margin-top: 10px; }
 .count { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .zero { color: var(--coral); font-weight: 600; }
+.src { font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: .02em; }
+.stat a { color: inherit; text-decoration: none; }
+a.stat { text-decoration: none; color: inherit; }
+a.stat:hover, a.stat:focus-visible { border-color: var(--teal-bright); outline: none; }
+.attn { display: grid; gap: 6px; }
+.attn .row { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 14px; }
+.attn .issue { color: var(--coral); font-size: 13px; font-weight: 500; }
+.group { display: grid; gap: 6px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.group:last-child { border-bottom: 0; }
+.group .gh { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-weight: 500; }
+.task { display: flex; gap: 8px; align-items: baseline; font-size: 14px; padding-left: 4px; }
+.task .st { font-family: var(--font-mono); font-size: 11px; color: var(--muted); min-width: 52px; }
+.task.done { color: var(--muted); text-decoration: line-through; }
+.bignum { font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 1; }
+.firstup { color: var(--ink); font-size: 13px; }
+.firstup b { color: var(--teal); font-weight: 600; }
+.mermaid-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 12px; margin-top: 16px; }
+pre.mermaid { margin: 0; background: transparent; font-size: 12px; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 8px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -2px; margin-right: 4px; border: 1px solid var(--line); }
+.help dt { font-family: var(--font-display); font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: .03em; color: var(--deep); margin-top: 14px; }
+.help dd { margin: 4px 0 0; max-width: 75ch; }
+.help dd .src { display: block; margin-top: 2px; }
+.pill.doing { background: var(--teal-bright); color: #102020; }
+.pill.next { background: var(--teal-soft); color: var(--ink); }
+.pill.later { background: var(--sunk); color: var(--muted); }
 footer { margin-top: 40px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 html { scroll-behavior: smooth; }
@@ -158,19 +184,34 @@ html { scroll-behavior: smooth; }
     <div class="eyebrow" id="gen">QA &amp; Test Engineering</div>
     <h1>Quality Leadership Board</h1>
     <p class="theme-line" id="theme"></p>
+    <p class="src" id="themeMeta"></p>
   </header>
 </div>
 <nav class="sections" aria-label="Sections"><div class="inner">
-  <a href="#overview">Overview</a><a href="#plan">Plan</a><a href="#framework">Framework</a><a href="#activity">Activity</a><a href="#evidence">Evidence</a><a href="#signals">Signals</a><a href="#team">Team</a>
+  <a href="#overview">Overview</a><a href="#todo">To Do</a><a href="#plan">Plan</a><a href="#roadmap">Roadmap</a><a href="#framework">Framework</a><a href="#activity">Activity</a><a href="#evidence">Evidence</a><a href="#signals">Signals</a><a href="#team">Team</a><a href="#help">Help</a>
 </div></nav>
 <div class="wrap">
   <section id="overview">
     <h2>This week</h2>
     <div class="stats" id="stats"></div>
     <div class="cols" style="margin-top:16px">
-      <div class="panel"><h3>Focus</h3><ol class="focus" id="focus"></ol></div>
+      <div class="panel"><h3>Focus</h3><p class="src" id="focusMeta"></p><ol class="focus" id="focus"></ol></div>
+      <div class="panel"><h3>Needs attention</h3><p class="src">CIIs missing a roadmap, first-up step, or To Do card; records quiet <span class="stale-days"></span>+ days</p><div class="attn" id="attn"></div></div>
+    </div>
+    <div class="cols" style="margin-top:16px">
       <div class="panel"><h3>Waiting on</h3><ul class="plain" id="waiting"></ul><h3 style="margin-top:16px">Coming up</h3><ul class="plain" id="upcoming"></ul></div>
-      <div class="panel"><h3>Open threads</h3><ul class="plain" id="threads"></ul></div>
+      <div class="panel"><h3>Watching</h3><p class="src">Live situations to keep in mind — context, not tasks</p><ul class="plain" id="threads"></ul></div>
+    </div>
+  </section>
+
+  <section id="todo">
+    <h2>To Do &amp; Ideas</h2>
+    <p class="sub">A snapshot of the Notion To Do board and Ideas page, refreshed by the Friday sync. Cards are grouped by the CII they move forward; untagged cards are ad hoc asks.</p>
+    <p class="src" id="todoMeta"></p>
+    <div class="cols">
+      <div class="panel"><h3>For CIIs</h3><div id="todoByRecord"></div></div>
+      <div class="panel"><h3>Ad hoc</h3><div id="todoAdhoc"></div></div>
+      <div class="panel"><h3>Ideas</h3><div id="ideas"></div></div>
     </div>
   </section>
 
@@ -178,6 +219,14 @@ html { scroll-behavior: smooth; }
     <h2>Plan</h2>
     <p class="sub">Now, Next and Later outcomes. A coral edge means the freshest linked record hasn't moved in <span class="stale-days"></span>+ days.</p>
     <div class="board" id="board"></div>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <p class="sub">The path to completion for every challenge, improvement and initiative in Now and Next. "First up" steps are what should be on the To Do board this week. Dotted arrows are dependencies between CIIs.</p>
+    <div class="tablewrap"><table><thead><tr><th>CII</th><th>First-up step</th><th>Owner</th><th>Status</th><th>To Do card</th></tr></thead><tbody id="fuRows"></tbody></table></div>
+    <div class="mermaid-wrap"><pre class="mermaid"><!--__MERMAID__--></pre></div>
+    <div class="legend"><span><i style="background:#C0E498"></i>done</span><span><i style="background:#00C1C6"></i>doing</span><span><i style="background:#D6F1F2"></i>next</span><span><i style="background:#EEF2F2"></i>later</span><span><i style="background:#FFBAB9"></i>blocked</span><span>solid arrow = within a CII · dotted = across CIIs</span></div>
   </section>
 
   <section id="framework">
@@ -212,8 +261,25 @@ html { scroll-behavior: smooth; }
   <section id="team">
     <h2>Team readiness</h2>
     <p class="sub" id="calib"></p>
-    <div class="tablewrap"><table><thead><tr><th>Alias</th><th>Role</th><th>Profile reviewed</th><th>Objectives recorded</th><th>WHAT evidence</th><th>HOW evidence</th></tr></thead><tbody id="teamrows"></tbody></table></div>
+    <div class="tablewrap"><table><thead><tr><th>Alias</th><th>Role</th><th>Objectives agreed</th><th>WHAT evidence</th><th>HOW evidence</th><th>Self / manager</th><th>Profile reviewed</th></tr></thead><tbody id="teamrows"></tbody></table></div>
     <p class="note">Counts only. Ratings, matrix positions and retention views are never stored in the repo or shown here.</p>
+  </section>
+
+  <section id="help" class="help">
+    <h2>How to read this board</h2>
+    <p class="sub">Everything here is generated from the personal-assistant repo by <code>scripts/report.py</code>. To change what you see, change the source — usually by telling the assistant.</p>
+    <dl>
+      <dt>Driving theme</dt><dd>The one direction everything else hangs off. A new leadership signal that could change it is flagged to you before anything changes.<span class="src">Source: context/my-role/horizons.md · Driving Theme</span></dd>
+      <dt>Overview tiles</dt><dd><b>Now priorities</b>: outcomes in the Now column of the plan. <b>Needs attention</b>: CIIs missing a roadmap, a first-up step or a To Do card, plus records with no update for 3+ weeks. <b>My evidence</b>: your own logged achievements this year and how many role pillars still have none. <b>Calibration</b>: days to the 11 November session.<span class="src">Source: horizons.md, record front-matter and roadmaps, achievements/2026.md, Notion snapshot</span></dd>
+      <dt>Focus · Waiting on · Coming up · Watching</dt><dd><b>Focus</b> is this week's top three, set on Monday and reviewed Friday. <b>Waiting on</b> is anything blocked by someone else. <b>Coming up</b> is anything with a date. <b>Watching</b> holds live situations worth keeping in mind that aren't a single task.<span class="src">Source: state/now.md (updated by Capture and the weekly routines after you confirm)</span></dd>
+      <dt>To Do &amp; Ideas</dt><dd>Your Notion To Do cards grouped by the CII they move forward, ad hoc cards, and how many ideas are waiting for triage. Notion is where you work day to day; this is a weekly snapshot.<span class="src">Source: reports/notion-snapshot.json, written by the Friday Notion sync</span></dd>
+      <dt>Plan</dt><dd>The big-ticket outcomes in Now, Next and Later, each delivered through one or more CIIs. A coral edge means none of its CIIs has moved for 3+ weeks.<span class="src">Source: context/my-role/horizons.md</span></dd>
+      <dt>Roadmap</dt><dd>Each CII's ordered steps to completion, with dependencies across CIIs. First-up steps (doing/next) owned by you should each have a To Do card; steps owned by others show as waiting.<span class="src">Source: the ## Roadmap table in each challenge, improvement and initiative</span></dd>
+      <dt>Framework coverage · JD evidence</dt><dd>How much evidence sits behind each role pillar and each job-description responsibility. Pillars with no achievements are the gaps to fill before reviews.<span class="src">Source: achievement Tags lines, record and discovery-call front-matter</span></dd>
+      <dt>Activity</dt><dd>Every CII with status, horizon, pillars, last update and the recorded next step.<span class="src">Source: challenges/, improvements/, initiatives/</span></dd>
+      <dt>Evidence · Signals</dt><dd>Your achievements timeline; recent leadership direction, industry signals by stance, and recent conversations.<span class="src">Source: achievements/, context/leadership-direction.md, context/industry-signals.md, context/discovery-calls/</span></dd>
+      <dt>Team readiness</dt><dd>For each permanent team member: objectives agreed for the year, dated WHAT and HOW evidence, and whether it came from them (self) or from what you observed (manager). Counts only — ratings and sensitive fields are never stored or shown.<span class="src">Source: team/&lt;alias&gt;.md · YYYY Objectives and Year-End Evidence</span></dd>
+    </dl>
   </section>
 
   <footer id="foot"></footer>
@@ -232,6 +298,7 @@ function render() {
   const d = DATA;
   $("#gen").textContent = `QA & Test Engineering \u00b7 generated ${d.generated}`;
   $("#theme").innerHTML = `<strong>Driving theme:</strong> ${esc(d.horizons.theme)}`;
+  $("#themeMeta").textContent = d.horizons.themeSet ? `Set ${d.horizons.themeSet} \u00b7 from ${d.horizons.themeSource}` : "";
   document.querySelectorAll(".stale-days").forEach((e) => (e.textContent = d.staleDays));
 
   const open = d.records.filter((r) => !r.closed);
@@ -240,15 +307,41 @@ function render() {
   const pGap = d.coverage.pillars.filter((p) => p.achievements === 0).length;
   const jdGap = d.coverage.jd.filter((j) => j.achievements === 0).length;
   const calib = daysTo("2026-11-11");
+  const attn = d.roadmap.attention;
   const stats = [
-    [nowRows.length, "outcomes in Now", nowRows.length <= 5 ? "ok" : "warn"],
-    [stale.length, `open records quiet ${d.staleDays}+ days`, stale.length ? "warn" : "ok"],
-    [d.achievements.length, "achievements logged", "ok"],
-    [`${pGap}/10`, "pillars with no achievements", pGap ? "warn" : "ok"],
-    [`${jdGap}/${d.coverage.jd.length}`, "JD items with no evidence", jdGap ? "warn" : "ok"],
-    [calib >= 0 ? calib : "—", "days to calibration (11 Nov)", calib <= 21 ? "warn" : "ok"],
+    ["#plan", nowRows.length, "Now priorities", nowRows.length <= 6 ? "ok" : "warn"],
+    ["#overview", attn.length, "need attention", attn.length ? "warn" : "ok"],
+    ["#evidence", `${d.achievements.length} \u00b7 ${pGap}/10`, "my wins \u00b7 pillars with none", pGap ? "warn" : "ok"],
+    ["#team", calib >= 0 ? calib : "\u2014", "days to calibration (11 Nov)", calib <= 21 ? "warn" : "ok"],
   ];
-  $("#stats").innerHTML = stats.map(([n, l, c]) => `<div class="stat ${c}"><span class="n">${n}</span><span class="l">${esc(l)}</span></div>`).join("");
+  $("#stats").innerHTML = stats.map(([href, n, l, c]) => `<a class="stat ${c}" href="${href}"><span class="n">${n}</span><span class="l">${esc(l)}</span></a>`).join("");
+  $("#focusMeta").textContent = `Set in state/now.md \u00b7 updated ${d.now.updated || "\u2014"}`;
+  $("#attn").innerHTML = attn.length ? attn.map((a) => `<div class="row"><button class="idchip" data-id="${a.id}">${a.id}</button><span>${esc(a.title)}</span><span class="issue">${esc(a.issue)}</span></div>`).join("") : "<p>Nothing needs attention.</p>";
+
+  const snap = d.notion;
+  if (!snap) {
+    $("#todoMeta").textContent = "No Notion snapshot yet \u2014 it is written by the Friday Notion sync.";
+  } else {
+    $("#todoMeta").textContent = `Snapshot ${snap.generated}`;
+    const open = snap.cards.filter((c) => c.status !== "Done");
+    const done = snap.cards.filter((c) => c.status === "Done");
+    const recIds = d.records.map((r) => r.id);
+    const byRec = {};
+    open.forEach((c) => (c.records || []).filter((x) => recIds.includes(x)).forEach((x) => (byRec[x] = byRec[x] || []).push(c)));
+    const title = (id) => (d.records.find((r) => r.id === id) || {}).title || "";
+    const task = (c) => `<div class="task ${c.status === "Done" ? "done" : ""}"><span class="st">${esc(c.status)}</span><span>${esc(c.title)}</span></div>`;
+    $("#todoByRecord").innerHTML = Object.keys(byRec).sort().map((id) => `<div class="group"><div class="gh"><button class="idchip" data-id="${id}">${id}</button>${esc(title(id))}</div>${byRec[id].map(task).join("")}</div>`).join("") || "<p>No cards tagged to a CII.</p>";
+    const adhoc = open.filter((c) => !(c.records || []).some((x) => recIds.includes(x)));
+    $("#todoAdhoc").innerHTML = (adhoc.map(task).join("") || "<p>None.</p>") + (done.length ? `<p class="note">${done.length} completed in the last 7 days</p>` : "");
+    const ideas = snap.ideas || {};
+    $("#ideas").innerHTML = `<div class="bignum">${ideas.untriaged ?? "\u2014"}</div><p class="note" style="margin-top:4px">ideas waiting for triage</p><p class="note">Last triage: ${esc(ideas.lastTriage || "not yet")} \u00b7 ${ideas.processedTicked || 0} ticked, ready to purge</p>`;
+  }
+
+  $("#fuRows").innerHTML = d.roadmap.firstUp.map((f) => {
+    const carded = d.roadmap.cardedRecords.includes(f.record);
+    const cardCell = f.owner !== "AC" ? `<span class="note">waiting on ${esc(f.owner)}</span>` : (carded ? "Yes" : `<span class="zero">Missing</span>`);
+    return `<tr><td><button class="idchip" data-id="${f.record}">${f.record}</button></td><td><span class="title">${esc(f.step)}</span><br><span class="src">${f.id}</span></td><td>${esc(f.owner)}</td><td><span class="pill ${f.status}">${f.status}</span></td><td>${d.notion ? cardCell : "\u2014"}</td></tr>`;
+  }).join("");
   $("#focus").innerHTML = d.now.focus.map((f) => `<li>${linkIds(f)}</li>`).join("") || "<li>Nothing set</li>";
   const list = (sel, arr) => ($(sel).innerHTML = arr.length ? arr.map((x) => `<li>${linkIds(x)}</li>`).join("") : `<li>None</li>`);
   list("#waiting", d.now.waiting); list("#upcoming", d.now.upcoming); list("#threads", d.now.threads);
@@ -260,7 +353,7 @@ function render() {
       const isStale = r.freshest != null && r.freshest >= d.staleDays;
       return `<div class="card ${isStale ? "stale" : ""}"><div class="outcome">${esc(r.outcome)}</div>
         <div class="meta"><span class="focus-label">${esc(r.focus)}</span>${r.carried.map((id) => `<button class="idchip" data-id="${id}">${id}</button>`).join("")}</div>
-        <div class="meta">${esc(r.status)}${r.freshest != null ? " \u00b7 " + ageCell(r.freshest) : ""}</div></div>`;
+        <div class="meta">${esc(r.status)}${r.freshest != null ? " \u00b7 " + ageCell(r.freshest) : ""}</div>${(() => { const fu = d.roadmap.firstUp.filter((f) => r.carried.includes(f.record)); return fu.length ? `<div class="firstup"><b>First up:</b> ${esc(fu[0].step)} <span class="src">${fu[0].id}</span></div>` : ""; })()}</div>`;
     }).join("")}</div>`;
   }).join("");
 
@@ -305,8 +398,8 @@ function render() {
 
   $("#calib").textContent = `Calibration on 11 November (${calib} days). WHAT is rated against agreed objectives, so each person needs objectives recorded and dated evidence for both WHAT and HOW.`;
   const num = (n) => `<span class="count ${n ? "" : "zero"}">${n}</span>`;
-  $("#teamrows").innerHTML = d.team.map((t) => `<tr><td><b>${t.alias}</b></td><td>${esc(t.role)}</td><td>${t.reviewed ? `${t.reviewed} ${ageCell(t.reviewedAge)}` : "—"}</td>
-    <td>${t.hasGoal ? "Yes" : `<span class="zero">Not yet</span>`}</td><td>${num(t.what)}</td><td>${num(t.how)}</td></tr>`).join("");
+  $("#teamrows").innerHTML = d.team.map((t) => `<tr><td><b>${t.alias}</b></td><td>${esc(t.role)}</td><td>${num(t.objectives)}</td><td>${num(t.what)}</td><td>${num(t.how)}</td>
+    <td><span class="count">${t.selfEvidence} / ${t.managerEvidence}</span></td><td>${t.reviewed ? `${t.reviewed} ${ageCell(t.reviewedAge)}` : "\u2014"}</td></tr>`).join("");
 
   $("#foot").innerHTML = `Generated from the personal-assistant repo on ${d.generated} by <code>scripts/report.py</code>. Working memory last updated ${esc(d.now.updated || "—")}.`;
 

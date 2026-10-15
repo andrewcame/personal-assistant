@@ -30,7 +30,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | TMW   | Lead QA                               | Website (Web Team 2) | Current | Previously App; see [team](../team/README.md) |
 | DA    | Lead QA                               | Website              | Current |                                             |
 | MP    | Lead QA                               | Payments             | Current |                                             |
-| KB    | QA                                    | Mobile App           | Current |                                             |
+| KB    | App Lead (Senior QA)                  | Mobile App           | Current | Supported by AC                             |
 | JS    | QA                                    | Website              | Current |                                             |
 | JFG   | QA                                    | Backend / Payments / Pico | Current |                                        |
 | LM    | Contract QA                           | All (E2E)            | Current |                                             |

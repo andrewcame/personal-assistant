@@ -87,6 +87,19 @@ Making this change within the Pico front-end repo first lets us establish the pa
 - [2026-09-23 Technical Lead, Backend/Portal/Wundergraph discovery call](../context/discovery-calls/2026-09-23-technical-lead-backend-portal-wundergraph.md)
 - [2026-09-25 Technical Lead, Pico Backend Legacy Architecture discovery call](../context/discovery-calls/2026-09-25-technical-lead-pico-backend-legacy-architecture.md)
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| INI-01.1 | Draft Portal Web MVP initiative | AC | IMP-02.2 | done |
+| INI-01.2 | Confirm an exec sponsor | AC | — | next |
+| INI-01.3 | Run kick-off/refinement with AC and Lead QAs | DA | INI-01.8 | next |
+| INI-01.4 | Resolve open items: payment agreement events, target environment | DA | INI-01.3, CH-10.3 | later |
+| INI-01.5 | Extend Playwright helpers to create members via WunderGraph | DA | INI-01.4 | later |
+| INI-01.6 | Migrate state-changing Portal tests to created members | DA | INI-01.5 | later |
+| INI-01.7 | Document reusable pattern for App adoption | DA | INI-01.6 | later |
+| INI-01.8 | Help DA refine the initiative ready for kick-off | AC | — | next |
+
 ## Progress Log
 
 ### 2026-10-15
@@ -94,3 +107,4 @@ Making this change within the Pico front-end repo first lets us establish the pa
 - DA will start once his current work is complete.
 - First step: a kick-off/refinement session run by DA with AC and the other Lead QAs to agree the approach before build.
 - Exec sponsor still to confirm.
+- AC's action: help DA refine the initiative ready for kick-off (INI-01.8). Drafting the lookup/state-sourcing requirements (IMP-02.4) sits with DA.

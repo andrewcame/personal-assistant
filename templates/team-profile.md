@@ -63,17 +63,25 @@ _Last discussed: YYYY-MM-DD_
 - Gaps or areas needing more evidence:
 - Promotion discussion status: Not discussed / Exploring / Building evidence / Proposed
 
+## YYYY Objectives
+
+_Agreed objectives for the review year. The WHAT rating is judged against these. Stable IDs: `<ALIAS>-O<n>`._
+
+| ID | Objective | Agreed | Status |
+|----|-----------|--------|--------|
+| ALIAS-O1 | | YYYY-MM-DD | on track / at risk / met / changed |
+
 ## Year-End Evidence (YYYY)
 
-_Feeds calibration prep and the end-of-year review. Add dated, linked evidence through the year — not just in November._
+_Feeds calibration prep and the end-of-year review. Add dated, linked evidence through the year — not just in November. Tag each line with the objective (or value) it supports and its source: **self** (what they tell you) or **manager** (what you saw)._
 
 ### WHAT — impact against objectives
 
-- YYYY-MM-DD — [outcome and impact] — [link]
+- YYYY-MM-DD — ALIAS-O1 — manager — [outcome and impact] — [link]
 
 ### HOW — behaviours against the values
 
-- V-DETAIL / V-WIN / V-SHOULDER / V-DIFF — YYYY-MM-DD — [observable behaviour] — [link]
+- YYYY-MM-DD — V-DETAIL / V-WIN / V-SHOULDER / V-DIFF — self — [observable behaviour] — [link]
 
 ## Team Movement Considerations
 

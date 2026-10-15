@@ -1,9 +1,9 @@
 ---
 id: CH-05
 type: challenge
-status: open
-horizon: later
-updated: 2026-10-08
+status: resolved
+horizon: none
+updated: 2026-10-15
 pillars: [P1]
 focus: [people]
 goals: []
@@ -103,9 +103,26 @@ We must address both ends of the pyramid:
 
 ---
 
+## 2026-10-15 Resolved For Now
+
+- KB's move to App lead opens his growth route. Other QAs have routes to Senior within their current teams.
+- The remaining headroom question is the Staff QA route for the two Website Lead QAs (TMW, DA). If one reaches Staff, they step up and the other leads Web; if both do, Web concerns are split between them.
+- Priorities and team shape may change in 2027, so this is resolved for now. Individual progression continues through objectives and development plans ([IMP-08](../improvements/08-2026-objectives-calibration-and-eoy-reviews.md)); reopen at 2027 planning if needed.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-05.1 | Review each QA's competency profile in 1:1s | AC | — | dropped |
+| CH-05.2 | Deep-dive each Lead QA area, including growth review | AC | — | dropped |
+| CH-05.3 | Define Staff QA (Level 8) expectations and evidence | AC | — | dropped |
+| CH-05.4 | Define Senior QA II progression options with engineering leadership | AC | — | dropped |
+| CH-05.5 | Agree a Staff QA evidence plan with DA | AC | CH-05.3 | dropped |
+| CH-05.6 | Explore Junior/Graduate QA headcount with GL | AC | — | dropped |
+
 ## Status & Next Action
 
-**Status:** Open — Identified as a structural team health and retention risk during initial baseline phase.
+**Status:** Resolved for now 2026-10-15. _Previously:_ Open — Identified as a structural team health and retention risk during initial baseline phase.
 
 **Next action:**
 1. Review each QA engineer's current competency profile against the QA Rating Model during the initial 1:1 discovery conversations.

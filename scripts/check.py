@@ -29,13 +29,15 @@ RECORD_DIRS = {
 }
 STATUSES = {
     "challenge": ["open", "active-monitoring", "resolved", "closed"],
-    "improvement": ["not-started", "in-progress", "blocked", "done"],
-    "initiative": ["draft", "submitted", "in-progress", "done", "rejected"],
+    "improvement": ["not-started", "in-progress", "on-hold", "blocked", "done"],
+    "initiative": ["draft", "submitted", "in-progress", "on-hold", "done", "rejected"],
 }
 CLOSED = {"resolved", "closed", "done", "rejected"}
 HORIZONS = ["now", "next", "later", "none"]
 FOCUS = ["people", "ownership", "automation", "productivity"]
 INDEX_START, INDEX_END = "<!-- index:start -->", "<!-- index:end -->"
+STEP_STATUSES = ["done", "doing", "next", "later", "blocked", "dropped"]
+FIRST_UP = {"doing", "next"}
 
 
 # ---------------------------------------------------------------- io helpers
@@ -115,6 +117,21 @@ def title_of(text: str, kind: str) -> str:
     return re.sub(r"^(Challenge|Improvement|Initiative)\s+\d+\s*[—–-]\s*", "", t)
 
 
+def parse_roadmap(text: str) -> list[dict] | None:
+    """Return roadmap steps from a '## Roadmap' table, or None if the section is missing."""
+    m = re.search(r"^## Roadmap[^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+    if not m:
+        return None
+    steps = []
+    for line in m.group(1).splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 5 or not re.fullmatch(r"(CH|IMP|INI)-\d\d\.\d+", cells[0]):
+            continue
+        deps = [d.strip() for d in re.split(r"[,;]", cells[3]) if d.strip() and d.strip() not in ("—", "-")]
+        steps.append({"id": cells[0], "step": cells[1], "owner": cells[2], "deps": deps, "status": cells[4].lower()})
+    return steps
+
+
 def load_records() -> list[dict]:
     records = []
     for kind, (folder, prefix) in RECORD_DIRS.items():
@@ -122,7 +139,8 @@ def load_records() -> list[dict]:
             text = read(path)
             fm = parse_front_matter(text) or {}
             records.append({"kind": kind, "path": path, "fm": fm, "text": text,
-                            "num": path.name[:2], "prefix": prefix, "title": title_of(text, kind)})
+                            "num": path.name[:2], "prefix": prefix, "title": title_of(text, kind),
+                            "roadmap": parse_roadmap(text)})
     for path in sorted((ROOT / "context" / "discovery-calls").glob("20*.md")):
         text = read(path)
         records.append({"kind": "discovery-call", "path": path, "fm": parse_front_matter(text) or {},
@@ -185,6 +203,30 @@ def validate() -> int:
         for a in fm.get("people", []):
             if a not in tax["people"]:
                 err(path, f"alias '{a}' not in context/people.md")
+
+    # roadmaps
+    all_steps = {st["id"] for r in records for st in (r.get("roadmap") or [])}
+    for r in records:
+        if r["kind"] == "discovery-call" or not r["fm"]:
+            continue
+        rid, fm, rm = r["fm"].get("id"), r["fm"], r.get("roadmap")
+        live = fm.get("status") not in CLOSED
+        if rm is None:
+            if live and fm.get("horizon") in ("now", "next"):
+                warn(r["path"], "no ## Roadmap section (required for Now/Next records)")
+            continue
+        for st in rm:
+            if not st["id"].startswith(f"{rid}."):
+                err(r["path"], f"roadmap step {st['id']} should start with {rid}.")
+            if st["status"] not in STEP_STATUSES:
+                err(r["path"], f"roadmap step {st['id']} status '{st['status']}' not in {STEP_STATUSES}")
+            if st["owner"] and st["owner"] not in tax["people"]:
+                err(r["path"], f"roadmap step {st['id']} owner '{st['owner']}' not in context/people.md")
+            for d in st["deps"]:
+                if d not in all_steps and d not in known_ids:
+                    err(r["path"], f"roadmap step {st['id']} depends on unknown '{d}'")
+        if live and fm.get("status") != "on-hold" and fm.get("horizon") in ("now", "next") and not any(st["status"] in FIRST_UP for st in rm):
+            warn(r["path"], "Now/Next record has no 'doing' or 'next' roadmap step")
 
     valid_tags = tax["pillars"] | tax["jd"] | tax["goals"] | tax["lenses"] | tax["values"] | known_ids
     for a in load_achievements():

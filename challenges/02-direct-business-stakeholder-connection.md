@@ -3,7 +3,7 @@ id: CH-02
 type: challenge
 status: open
 horizon: later
-updated: 2026-09-04
+updated: 2026-10-15
 pillars: [P8, P10]
 focus: [ownership]
 goals: []
@@ -62,6 +62,15 @@ The new structure should be treated as an opportunity to get closer to the busin
 QA can help expose ambiguity, map user journeys, and translate quality risk into business language, but it should not quietly become the replacement Product function. Engineering, QA, delivery, and stakeholders need an explicit working agreement about who brings context, who makes decisions, and how disagreements are resolved.
 
 Start with the highest-value domains, use real journeys rather than abstract requirements, and keep the feedback loop lightweight enough that it supports pace.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-02.1 | Map stakeholders and decision owners for critical domains | AC | — | later |
+| CH-02.2 | Validate business journeys through the domain reviews | AC | CH-02.1 | later |
+| CH-02.3 | Agree regular stakeholder touchpoints for shaping work | AC | CH-02.2 | later |
+| CH-02.4 | Decide which business relationships QA needs to build | AC | CH-02.1 | later |
 
 ## Status & Next Action
 

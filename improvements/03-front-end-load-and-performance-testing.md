@@ -3,7 +3,7 @@ id: IMP-03
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-09-15
+updated: 2026-10-15
 pillars: [P7]
 focus: [automation]
 goals: []
@@ -36,6 +36,16 @@ people: [GL, GH, DJ]
 ### 2026-09-15
 
 - Raised in Senior Leadership Meeting as a new gap distinct from backend load testing; agreed as a candidate improvement to action.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-03.1 | Design nightly staging performance run and scenarios | AC | — | later |
+| IMP-03.2 | Agree overnight Exerp test instance ramp-up | AC | IMP-03.1 | later |
+| IMP-03.3 | Feed results into morning staging alert review | AC | IMP-03.1, IMP-01.4 | later |
+| IMP-03.4 | Validate staging as the UK load test environment | AC | IMP-03.3, CH-10.7 | later |
+| IMP-03.5 | Retire the Southampton satellite Exerp test instance | AC | IMP-03.4 | later |
 
 ## Status & Next Action
 

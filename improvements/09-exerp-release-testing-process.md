@@ -35,6 +35,15 @@ people: [MJ]
 
 - Opened. First step: discussion with the Lead QAs (Notion to-do).
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-09.1 | Agree process outline and owner with the Lead QAs | AC | CH-12.1 | next |
+| IMP-09.2 | Confirm version notice and change-note route with MJ | AC | — | next |
+| IMP-09.3 | Draft risk-based scope, ticket ownership and sign-off | AC | IMP-09.1, IMP-09.2 | later |
+| IMP-09.4 | Document and agree the process with the Lead QAs | AC | IMP-09.3 | later |
+
 ## Status & Next Action
 
 **Status:** Not started

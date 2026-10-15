@@ -3,7 +3,7 @@ id: CH-10
 type: challenge
 status: open
 horizon: next
-updated: 2026-10-14
+updated: 2026-10-15
 pillars: [P4, P5]
 focus: [automation]
 goals: []
@@ -82,6 +82,19 @@ The immediate opportunity is the planned backend-testing initiative. It should f
 
 Over time, the multi-tenant environment model needs an explicit architecture and cost decision. The right answer may combine dedicated real paths for the flagship platform with controlled mocks, sandbox alternatives, or shared services for other brands. Until that decision is made, tests should be clear about what each tier proves and what it cannot prove.
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-10.1 | Review environments direction: one Exerp test per brand | AC | — | done |
+| CH-10.2 | Propose QA impact measures for SOW step 4 | AC | CH-10.8 | later |
+| CH-10.3 | Raise data isolation and event opt-in design questions | AC | CH-10.1 | later |
+| CH-10.4 | Map high-risk journeys by dependency type | AC | — | later |
+| CH-10.5 | Agree test-tier rules and Pico assertion boundary | AC | CH-10.4 | later |
+| CH-10.6 | Run one real-Exerp PoC journey with dynamic data | AC | CH-10.5, INI-01.5 | later |
+| CH-10.7 | Record multi-tenant Exerp environment architecture decision | AC | CH-10.6 | later |
+| CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem | AC | CH-10.1 | next |
+
 ## Status & Next Action
 
 **Status:** Open — captured on 2026-09-25. Pico's original isolation philosophy remains valuable, but the implemented platform has real Exerp-dependent journeys without an agreed test-boundary policy or scalable multi-tenant environment direction.
@@ -111,6 +124,8 @@ Source: [2026-10-13 environments discussion](../context/discovery-calls/2026-10-
 - An **Exerp Event Broadcaster** would fan each Exerp event out to the staging and preview adapters; **pico.deployment** would stand up full FE/Supergraph/BE previews per ticket. Payments integration (Kafka access on AKS) is the open blocker.
 - **Effect on this challenge:** this gives the multi-tenant environment question a working answer — a shared real Exerp per brand rather than per environment — which is the "separate architecture decision" next action 5 anticipated. It also raises two new QA risks: shared data between previews and staging, and events reaching environments they don't belong to.
 - **Effect on the test-tier model:** unchanged. Pico-first mocks remain the default; real-Exerp journeys now have a consistent target (PureGym Test) in both preview and staging.
+
+**Next action (2026-10-15):** first pull metrics showing why environments are a problem (CH-10.8), then propose the step-4 impact measures.
 
 **Next action (added 2026-10-13):** offer QA-defined impact measures for SOW step 4 (preview spin-up time, preview test pass rate and flakiness, environment-caused failures, Exerp configuration effort) and raise data isolation and event opt-in as design questions before previews are added to the broadcaster.
 

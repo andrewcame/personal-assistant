@@ -2,8 +2,8 @@
 id: IMP-05
 type: improvement
 status: in-progress
-horizon: none
-updated: 2026-10-14
+horizon: now
+updated: 2026-10-15
 pillars: []
 focus: [productivity]
 goals: []
@@ -52,6 +52,18 @@ Identify and add only the skills that remove repeated procedural guidance withou
 - Added root `AGENTS.md` (shared instructions for Copilot and Claude) and `CLAUDE.md` importing it.
 - Added a learning loop: `state/learnings.md` (propose → accept → consolidate at horizon review), seeded with today's corrections.
 - Added `evals/` with ten behaviour cases (privacy, routing, reasoning, learning loop) and a results log.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-05.1 | Add industry-research and action-extraction skills | AC | — | done |
+| IMP-05.2 | Add taxonomy, front-matter and check.py scripts | AC | — | done |
+| IMP-05.3 | Add AGENTS.md, learning loop and evals | AC | IMP-05.2 | done |
+| IMP-05.4 | Build dashboard and Notion bridge | AC | IMP-05.2 | done |
+| IMP-05.5 | Run evals baseline in Copilot and Claude | AC | IMP-05.3 | next |
+| IMP-05.6 | Run the first cross-review | AC | IMP-05.3 | next |
+| IMP-05.7 | Trial weekly-review and gap-analysis; keep, adjust or drop | AC | — | later |
 
 ## Status & Next Action
 

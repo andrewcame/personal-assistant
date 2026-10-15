@@ -35,6 +35,12 @@ people: []
 
 -
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| XX-NN.1 | | AC | — | next |
+
 ## Status & Next Action
 
 **Status:** Not started / In progress / Blocked / Done

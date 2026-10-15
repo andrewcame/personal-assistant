@@ -3,7 +3,7 @@ id: CH-11
 type: challenge
 status: open
 horizon: now
-updated: 2026-10-09
+updated: 2026-10-15
 pillars: [P3, P6, P9]
 focus: [ownership]
 goals: []
@@ -128,9 +128,25 @@ Two things temper this. First, DORA's amplifier finding says the new model will 
 
 The unresolved part is slice sizing and the batching risk. That is where this most likely breaks first.
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-11.1 | Raise QA engagement model at leadership call | AC | — | done |
+| CH-11.2 | Take three-touchpoint model to the QA lead sync | AC | CH-11.7 | later |
+| CH-11.3 | Argue environments and test data as precondition with GL | AC | CH-11.7 | later |
+| CH-11.4 | Trial mutation testing on one core domain area | AC | — | later |
+| CH-11.5 | Test slice sizing on the first AI-paired initiative | AC | CH-11.2, INI-02.4 | later |
+| CH-11.6 | Agree QA engagement model for AI-paired delivery | AC | CH-11.4, CH-11.5 | later |
+| CH-11.7 | Own discovery: read research brief, then talk to engineers and leads | AC | — | doing |
+
 ## Status & Next Action
 
-- **Status:** Open — raised 2026-09-30 at the leadership call with GL, DJ, and GH. External reference points added 2026-09-30.
+- _2026-10-15:_ research brief started: [QA in AI-paired delivery](../context/research/2026-10-15-qa-in-ai-paired-delivery.md).
+
+_2026-10-15:_ AC wants to do his own discovery and research on QA in AI-paired delivery before taking a model to the lead sync (CH-11.7).
+
+**Status:** Open — raised 2026-09-30 at the leadership call with GL, DJ, and GH. External reference points added 2026-09-30.
 - **Next action:** Bring the three-touchpoint model and the probability/impact/detectability review scale to the QA lead sync for reaction, and test the slice-sizing question against the first initiative run this way.
 - **Next action:** Trial mutation testing on one core domain area to get a real signal on AI-drafted test quality before the model scales.
 - **Next action:** Use the DORA amplifier finding to argue environments and test data as a precondition for the new delivery model in the next 1:1 with GL.

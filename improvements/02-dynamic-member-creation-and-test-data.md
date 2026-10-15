@@ -63,6 +63,18 @@ _Proposal for engineering discussion, not an architectural decision._
 - Separate requirements for fresh, fully usable member creation from this initial scope and retain the payments/Exerp dependency explicitly.
 - Take the requirements to the Backend Chapter to shape and test the technical direction before submitting or committing to an implementation approach.
 
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-02.1 | Agree Tech Challenges Board route for member creation | AC | — | done |
+| IMP-02.2 | Clarify scope and limits in Pico architecture discovery | AC | — | done |
+| IMP-02.3 | Scope Portal Web MVP as Initiative 01 | AC | IMP-02.2 | done |
+| IMP-02.4 | Draft lookup, state-sourcing and disposable-state requirements | DA | IMP-02.2, INI-01.8 | next |
+| IMP-02.5 | Shape requirements with the Backend Chapter | AC | IMP-02.4 | later |
+| IMP-02.6 | Propose architecture through the Tech Challenges Board | AC | IMP-02.5, CH-10.7 | later |
+| IMP-02.7 | Agree cross-team test data strategy beyond Portal MVP | AC | IMP-02.6, INI-01.7 | later |
+
 ## Status & Next Action
 
 **Status:** In progress — formal delivery has graduated to [Initiative 01 — Portal Dynamic Member Creation](../initiatives/01-portal-dynamic-member-creation.md) (Draft). This file keeps the wider test-data architecture direction; the initiative holds the scoped Web MVP.

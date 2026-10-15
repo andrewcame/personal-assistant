@@ -101,10 +101,25 @@ Derived from the file number in each folder — no separate registration needed.
 | INI-   | [initiatives](../initiatives)            | INI-01   |
 | DC-    | [discovery-calls](discovery-calls)       | DC-2026-09-16-cr (date + slug) |
 
+## Roadmap Steps (CII)
+
+Every challenge, improvement and initiative (a **CII**) carries a `## Roadmap` table: the ordered steps to completion. Step IDs extend the record ID (`IMP-02.1`, `IMP-02.2`); never renumber, append instead.
+
+| Column | Meaning |
+|---|---|
+| ID | `<record ID>.<n>` |
+| Step | Short outcome, verb-first |
+| Owner | Alias (`AC`, `DA`, …) |
+| Depends on | Step IDs (any record) or `—` |
+| Status | `done` · `doing` · `next` · `later` · `blocked` · `dropped` (no longer needed; keep the row for history) |
+
+- **First up** = steps with status `doing` or `next`. Every CII in the Now or Next horizon (unless `on-hold`) must have at least one, and each first-up step owned by AC should have an open Notion To Do card tagged with the record ID. A first-up step owned by someone else is tracked as "waiting on" rather than a card.
+- Cross-record dependencies (e.g. `INI-01.2` depends on `CH-10.3`) drive the roadmap view on the dashboard.
+
 ## Status Values
 
 | Record      | Allowed status                                              |
 |-------------|-------------------------------------------------------------|
 | Challenge   | `open`, `active-monitoring`, `resolved`, `closed`           |
-| Improvement | `not-started`, `in-progress`, `blocked`, `done`             |
-| Initiative  | `draft`, `submitted`, `in-progress`, `done`, `rejected`     |
+| Improvement | `not-started`, `in-progress`, `on-hold`, `blocked`, `done` |
+| Initiative  | `draft`, `submitted`, `in-progress`, `on-hold`, `done`, `rejected` |

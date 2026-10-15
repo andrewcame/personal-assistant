@@ -31,22 +31,22 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 - Role pillar(s): [P1 People Capability, Progression & Succession](../context/role-pillars.md)
 - Originating recommendation: self (gap analysis 2026-10-14)
 
-## Plan
-
-| Step | What | Target | Status |
-|---|---|---|---|
-| 1 | Agree AC's objectives with GL | 2026-10-16 | Booked |
-| 2 | Objectives and "where we are" calls with each team member | by 2026-10-30 | Calls being booked (Notion to-do) |
-| 3 | Record each person's objectives and current evidence in `team/<alias>.md` (Year-End Evidence) | after each call | Not started |
-| 4 | Run the calibration-prep skill; draft Top 3 WHAT / HOW in chat; fill the People template | by 2026-11-02 | Scheduled |
-| 5 | Calibration session | 2026-11-11 | Booked |
-| 6 | Book and deliver end-of-year reviews (Review Writer drafts, development first) | by 2026-12-31 | Not started |
-
 ## Actions & Progress
 
 ### 2026-10-15
 
 - Activity opened. Objective-harvesting calls to be booked over the next two weeks (tracked in Notion); AC's objectives with GL on 2026-10-16.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| IMP-08.1 | Book and hold objectives meeting with GL | AC | — | next |
+| IMP-08.2 | Hold objectives calls with each team member (booked; by 2026-10-30) | AC | — | doing |
+| IMP-08.3 | Record objectives and evidence in team profiles | AC | IMP-08.2 | later |
+| IMP-08.4 | Run calibration prep; fill People template (by 2026-11-02) | AC | IMP-08.3 | later |
+| IMP-08.5 | Attend calibration session (2026-11-11) | AC | IMP-08.4 | later |
+| IMP-08.6 | Deliver end-of-year reviews (by 2026-12-31) | AC | IMP-08.5 | later |
 
 ## Status & Next Action
 

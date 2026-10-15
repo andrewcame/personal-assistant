@@ -82,6 +82,7 @@ def records() -> tuple[list[dict], list[dict]]:
             "horizon": fm.get("horizon"), "updated": fm.get("updated"), "age": age(fm.get("updated")),
             "pillars": fm.get("pillars", []), "links": fm.get("links", []), "next": nxt[:260],
             "closed": fm.get("status") in check.CLOSED, "file": check.rel(r["path"]),
+            "roadmap": r.get("roadmap") or [],
         })
     return recs, calls
 
@@ -89,7 +90,9 @@ def records() -> tuple[list[dict], list[dict]]:
 def horizons(rec_by_file: dict) -> dict:
     text = check.read(ROOT / "context" / "my-role" / "horizons.md")
     theme = re.search(r"\*\*Get off the microsites\.\*\*(.*?)\n", text)
-    out = {"theme": strip_md("Get off the microsites." + (theme.group(1) if theme else "")), "rows": []}
+    meta = re.search(r"_Set (\d{4}-\d{2}-\d{2}) from ([^(]+?)\s*\(", text)
+    out = {"theme": strip_md("Get off the microsites." + (theme.group(1) if theme else "")), "rows": [],
+           "themeSet": meta.group(1) if meta else None, "themeSource": meta.group(2).strip() if meta else None}
     for hz in ["Now", "Next", "Later"]:
         block = section(text, hz)
         for line in block.splitlines():
@@ -150,10 +153,16 @@ def team() -> list[dict]:
         ye = section(text, "Year-End Evidence", 2)
         what = len([b for b in bullets(section(ye + "\n", "WHAT", 3)) if not b.startswith("YYYY")])
         how = len([b for b in bullets(section(ye + "\n", "HOW", 3)) if not b.startswith("YYYY")])
-        goal = re.search(r"Current development goals?:[ \t]*(.*)", text, re.I)
+        objs = re.findall(rf"^\|\s*({alias}-O\d+)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|", text, re.M)
+        objs = [{"id": o[0], "objective": o[1], "agreed": o[2], "status": o[3]} for o in objs if o[1]]
+        ev = bullets(section(ye + "\n", "WHAT", 3)) + bullets(section(ye + "\n", "HOW", 3))
+        ev = [e for e in ev if not e.startswith("YYYY")]
+        self_n = sum(1 for e in ev if re.search(r"—\s*self\s*—", e))
+        mgr_n = sum(1 for e in ev if re.search(r"—\s*manager\s*—", e))
         out.append({"alias": alias, "role": role.group(1).strip() if role else "",
                     "reviewed": rev.group(1) if rev else None, "reviewedAge": age(rev.group(1) if rev else None),
-                    "what": what, "how": how, "hasGoal": bool(goal and goal.group(1).strip())})
+                    "what": what, "how": how, "objectives": len(objs),
+                    "selfEvidence": self_n, "managerEvidence": mgr_n})
     return out
 
 
@@ -174,10 +183,72 @@ def coverage(recs, calls, achs) -> dict:
     return {"missions": missions, "pillars": pillars, "jd": jd}
 
 
+def notion_snapshot() -> dict | None:
+    p = ROOT / "reports" / "notion-snapshot.json"
+    if not p.exists():
+        return None
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return None
+
+
+def roadmap_view(recs: list[dict], snap: dict | None) -> dict:
+    """First-up steps, card coverage, and a Mermaid graph of Now/Next roadmaps."""
+    open_cards = [c for c in (snap or {}).get("cards", []) if c.get("status") != "Done"]
+    carded = {rid for c in open_cards for rid in c.get("records", [])}
+    live = [r for r in recs if not r["closed"] and r["horizon"] in ("now", "next")]
+    first_up, attention = [], []
+    for r in live:
+        fu = [st for st in r["roadmap"] if st["status"] in check.FIRST_UP]
+        if not r["roadmap"]:
+            attention.append({"id": r["id"], "title": r["title"], "issue": "No roadmap yet"})
+        elif not fu and r["status"] != "on-hold":
+            attention.append({"id": r["id"], "title": r["title"], "issue": "No first-up step"})
+        for st in fu:
+            first_up.append({**st, "record": r["id"], "horizon": r["horizon"], "recordTitle": r["title"]})
+        if snap is not None and any(st["owner"] == "AC" for st in fu) and r["id"] not in carded:
+            attention.append({"id": r["id"], "title": r["title"], "issue": "First-up step has no To Do card"})
+    for r in recs:
+        if not r["closed"] and r["age"] is not None and r["age"] >= STALE_DAYS:
+            attention.append({"id": r["id"], "title": r["title"], "issue": f"No update for {r['age']} days"})
+    # Mermaid graph for Now/Next records
+    def nid(x):
+        return x.replace("-", "_").replace(".", "_")
+    def esc(t):
+        return re.sub(r'["<>#;]', "", t)[:48]
+    lines = ["flowchart LR",
+             "classDef done fill:#C0E498,stroke:#38A169,color:#1C2B2B",
+             "classDef doing fill:#00C1C6,stroke:#00999D,color:#1C2B2B",
+             "classDef next fill:#D6F1F2,stroke:#00999D,stroke-width:2px,color:#1C2B2B",
+             "classDef later fill:#EEF2F2,stroke:#9DB3B3,color:#5B6E6E",
+             "classDef blocked fill:#FFBAB9,stroke:#E53E3E,color:#1C2B2B"]
+    shown = {st["id"] for r in live for st in r["roadmap"]}
+    for r in sorted(live, key=lambda x: (x["horizon"] != "now", x["id"])):
+        if not r["roadmap"]:
+            continue
+        lines.append(f'subgraph {nid(r["id"])}["{r["id"]} · {esc(r["title"])}"]')
+        lines.append("direction LR")
+        for st in r["roadmap"]:
+            lines.append(f'{nid(st["id"])}["{st["id"].split(".")[-1]}. {esc(st["step"])}"]:::{st["status"] if st["status"] in check.STEP_STATUSES else "later"}')
+        lines.append("end")
+    for r in live:
+        for st in r["roadmap"]:
+            for d in st["deps"]:
+                if d in shown:
+                    same = d.rsplit(".", 1)[0] == r["id"]
+                    lines.append(f'{nid(d)} {"-->" if same else "-.->"} {nid(st["id"])}')
+    order = {"now": 0, "next": 1}
+    first_up.sort(key=lambda x: (order.get(x["horizon"], 2), x["record"]))
+    return {"firstUp": first_up, "attention": attention, "mermaid": "\n".join(lines),
+            "cardedRecords": sorted(carded)}
+
+
 def build() -> dict:
     recs, calls = records()
     by_file = {r["file"]: r for r in recs}
     achs = achievements()
+    snap = notion_snapshot()
     data = {
         "generated": TODAY.isoformat(),
         "staleDays": STALE_DAYS,
@@ -190,6 +261,8 @@ def build() -> dict:
         "industry": industry(),
         "team": team(),
         "coverage": coverage(recs, calls, achs),
+        "notion": snap,
+        "roadmap": roadmap_view(recs, snap),
     }
     return data
 
@@ -203,11 +276,13 @@ def main(argv: list[str]) -> int:
     out_dir.mkdir(exist_ok=True)
     (out_dir / "data.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
     template = (Path(__file__).parent / "report_template.html").read_text(encoding="utf-8")
+    import html as _h
     html = template.replace("/*__DATA__*/null", json.dumps(data).replace("</", "<\\/"))
+    html = html.replace("<!--__MERMAID__-->", _h.escape(data["roadmap"]["mermaid"], quote=False))
     # artifact.html is the bare page for publishing (the host adds the document skeleton);
     # dashboard.html is a standalone copy for opening locally in a browser.
     (out_dir / "artifact.html").write_text(html, encoding="utf-8")
-    standalone = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>\n' + html + "\n</body></html>\n"
+    standalone = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>\n' + html + '\n<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true});</script>\n</body></html>\n'
     (out_dir / "dashboard.html").write_text(standalone, encoding="utf-8")
     print(f"report: reports/dashboard.html ({len(data['records'])} records, {len(data['achievements'])} achievements)")
     return 0

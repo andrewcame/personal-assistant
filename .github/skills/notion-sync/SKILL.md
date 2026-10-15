@@ -29,6 +29,13 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 3. For tracked cards, propose: progress or blocker lines for the matching record; a possible achievement if a meaningful outcome completed (ask before logging); a nudge if a card has been open for a long time with no movement.
 4. Apply repo changes only after AC confirms; they follow the normal show-then-commit rule.
 
+## Flow 4 — Roadmap Coverage And Snapshot
+
+1. For every CII in the Now or Next horizon, find its first-up roadmap steps (`doing`/`next`). Each AC-owned first-up step should have an open To Do card tagged with the record ID. Propose cards for any that are missing (Flow 2); steps owned by others are reported as "waiting on", not carded.
+2. Write `reports/notion-snapshot.json` for the dashboard (no approval needed — it's a generated, git-ignored file):
+   `{"generated": "YYYY-MM-DD", "cards": [{"title", "status", "records": [...], "created", "due"}], "ideas": {"untriaged": n, "processedTicked": n, "lastTriage": "YYYY-MM-DD" | null}}`
+   Include open cards and cards completed in the last 7 days. Convert any real names in titles to aliases. Count Ideas lines that are not ticked as `untriaged`.
+
 ## Output
 
 - **Ideas:** table of idea → proposed verdict → reason.

@@ -2,7 +2,7 @@
 id: CH-07
 type: challenge
 status: open
-horizon: now
+horizon: next
 updated: 2026-10-15
 pillars: [P2, P3, P8]
 focus: [people]
@@ -113,6 +113,18 @@ At the same time, the current model concentrates too much initiative-level E2E k
 E2E responsibility should be considered during refinement and initiative reviews, not introduced only after all component tickets are complete. Grouping related work may improve the point at which testing happens, but it must retain clear ownership, representative data, and enough time to act on findings.
 
 The future decision should be informed by evidence of value. Measure the defects, missing scenarios, and release risks LM is finding, then work backwards to understand why they were not found earlier. This should improve the delivery system regardless of whether the eventual answer is a permanent specialist, a hybrid model, or team-owned E2E testing. It should also test whether the capability itself is a legitimate Staff-level opportunity: not simply owning a queue of late E2E tickets, but building the shared utilities, data patterns, automation, and coaching that raise confidence and make other engineers faster.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-07.1 | Run Miro end-to-end domain review with LM | AC | — | next |
+| CH-07.2 | Catalogue priority journeys LM covers, AI-assisted | AC | CH-07.1 | later |
+| CH-07.3 | Publish E2E results page in Confluence | AC | IMP-06.2 | next |
+| CH-07.4 | Pair delivery QAs into upcoming E2E work | AC | CH-07.2 | later |
+| CH-07.5 | Define criteria for a dedicated E2E stage | AC | CH-07.2 | later |
+| CH-07.6 | Review sample of LM findings for escape causes | AC | — | later |
+| CH-07.7 | Recommend E2E resourcing and ownership model before 2027 | AC | CH-07.4, CH-07.6 | later |
 
 ## Status & Next Action
 

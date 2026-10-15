@@ -44,6 +44,7 @@ Open full source files only when these don't answer the question. Prefer folder 
 7. **Show before saving; never commit without AC's explicit OK.** Summarise changes, run checks, then pause. Small, focused commit messages on `main`.
 8. **Preserve formatting.** Keep CRLF line endings and aligned markdown tables as found.
 9. **Notion: two boards only.** Read and write only the boards listed in [`context/notion-boards.md`](context/notion-boards.md). Never search the workspace or open other pages — it also holds AC's personal life admin. Show every Notion write first.
+10. **Every live CII has a roadmap.** Challenges, improvements and initiatives in Now/Next keep a `## Roadmap` table (format in `context/_taxonomy.md`) with at least one `doing`/`next` step; AC-owned first-up steps have a tagged Notion To Do card.
 
 ## Routing (summary)
 

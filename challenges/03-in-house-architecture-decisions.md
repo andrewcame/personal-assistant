@@ -1,9 +1,9 @@
 ---
 id: CH-03
 type: challenge
-status: open
+status: closed
 horizon: none
-updated: 2026-09-04
+updated: 2026-10-15
 pillars: [P3, P7]
 focus: [ownership]
 goals: []
@@ -64,9 +64,21 @@ QA should be involved where design affects testability, observability, resilienc
 
 Use the smallest governance mechanism that preserves coherence: clear decision ownership, short written records for consequential choices, and escalation when a team cannot sensibly resolve an issue.
 
+## 2026-10-15 Closed — Accepted
+
+- The in-house architecture model is an accepted organisational decision. QA works within it rather than treating it as an open problem. Closed as accepted; reopen only if a specific decision-path problem arises.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-03.1 | Confirm decision and escalation path with DG and Tech Lead Chapter | AC | — | dropped |
+| CH-03.2 | Agree decision-recording expectation for consequential choices | AC | CH-03.1 | dropped |
+| CH-03.3 | Define quality concerns QA brings into design discussions | AC | CH-03.1 | dropped |
+
 ## Status & Next Action
 
-**Status:** Open — new in-house architecture model is settling.
+**Status:** Closed (accepted) 2026-10-15. _Previously:_ Open — new in-house architecture model is settling.
 
 **Next action:** Confirm the decision and escalation path with the Principal Engineer and Tech Lead Chapter. Capture the agreed route, decision-recording expectation, and the quality concerns QA should bring into design discussions.
 

@@ -1,9 +1,9 @@
 ---
 id: CH-04
 type: challenge
-status: open
-horizon: now
-updated: 2026-09-18
+status: active-monitoring
+horizon: later
+updated: 2026-10-15
 pillars: [P1, P6]
 focus: [people]
 goals: []
@@ -109,6 +109,24 @@ The Website Lead needs to own the situation in practice, not only on the organis
 DA's initial conversation confirms that managing three Web teams is difficult and that he currently relies on active QA boards, joining tickets when needed, and a separate automation-improvement epic. He accepted that he needs to become more visible and involved in Web 3. This gives the accountability question a practical baseline: agree what visible Web 3 ownership means and review whether it is happening, rather than treating platform ownership as an abstract expectation.
 
 The operating model should also make it possible to test the journeys it is accountable for. A capacity plan that leaves preview and staging connections unreliable will continue to produce false confidence even if ownership is clarified. The environment proposal should therefore be validated with engineering and treated as a supporting hypothesis, not assumed to be the only solution.
+
+## 2026-10-15 Update
+
+- Ownership model largely settled for now: TMW (Web Team Two) works with DA on Website lead responsibilities; KB has taken on the App lead role as a Senior QA, supported by AC.
+- A possible Join / Portal split for Web is held until 2027 planning, when the work is known.
+- Status moved to active monitoring; horizon to Later.
+
+## Roadmap
+
+| ID | Step | Owner | Depends on | Status |
+|----|------|-------|------------|--------|
+| CH-04.1 | Agree interim Web 2 cover expectations with DA | AC | — | done |
+| CH-04.2 | Reassign platforms: TMW to Web Team Two, KB to App | AC | — | done |
+| CH-04.3 | Review DA's Web visibility expectations at next 1:1 | AC | — | later |
+| CH-04.4 | Agree ownership and coverage model across Web and App | AC | CH-04.2 | done |
+| CH-04.5 | Document JFG crossover support and resilient Exerp release ownership | AC | CH-04.4, IMP-09.4 | later |
+| CH-04.6 | Decide whether the reporting line should change | AC | CH-04.4 | later |
+| CH-04.7 | Decide Join / Portal split for Web in 2027 planning | AC | CH-04.4 | later |
 
 ## Status & Next Action
 
