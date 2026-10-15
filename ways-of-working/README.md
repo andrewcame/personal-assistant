@@ -18,6 +18,7 @@ It is not a meeting-notes archive or task tracker. Use it to understand operatin
 - [qa-lead-call-agendas.md](qa-lead-call-agendas.md) - initial listening agendas for the Mobile App, Payments, and Website leads.
 - [cadences.md](cadences.md) - register of regular calls, forums, and recurring processes.
 - [engineering-behaviors.md](engineering-behaviors.md) - the agreed engineering ways-of-working principles (debate, disagreement, decision ownership).
+- [assistant-routine.md](assistant-routine.md) - how AC uses this assistant: what lives where, the weekly rhythm, cross-model review.
 
 Person-specific guides (e.g. 1:1 escalation paths) live with that person's profile in [team](../team), not here.
 

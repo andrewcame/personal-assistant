@@ -1,0 +1,323 @@
+<title>Quality Leadership Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky section nav over a single scrolling board; summary strip first, then plan, framework matrix, activity, evidence, signals, team. PureGym palette. */
+:root {
+  --bg: #F3F7F7;
+  --surface: #FFFFFF;
+  --sunk: #E8F0F0;
+  --ink: #1C2B2B;
+  --muted: #5B6E6E;
+  --line: #D3E0E0;
+  --teal: #00999D;
+  --teal-bright: #00C1C6;
+  --teal-soft: #D6F1F2;
+  --deep: #324B4B;
+  --purple: #6975A6;
+  --coral: #FF5350;
+  --coral-soft: #FFE3E2;
+  --red: #E53E3E;
+  --red-bg: #FFBAB9;
+  --green: #38A169;
+  --green-bg: #C0E498;
+  --amber: #B7791F;
+  --amber-bg: #FBE7B5;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #142020; --surface: #1C2B2B; --sunk: #233636; --ink: #E6F0F0; --muted: #9DB3B3; --line: #2F4646;
+    --teal: #00C1C6; --teal-bright: #00C1C6; --teal-soft: #11393B; --deep: #95CDCE; --purple: #9EA8DD;
+    --coral: #FF6F6C; --coral-soft: #3D2222; --red: #FF7A78; --red-bg: #4A2323; --green: #6FCF97; --green-bg: #213F2B;
+    --amber: #F0C060; --amber-bg: #3D3220; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #142020; --surface: #1C2B2B; --sunk: #233636; --ink: #E6F0F0; --muted: #9DB3B3; --line: #2F4646;
+  --teal: #00C1C6; --teal-bright: #00C1C6; --teal-soft: #11393B; --deep: #95CDCE; --purple: #9EA8DD;
+  --coral: #FF6F6C; --coral-soft: #3D2222; --red: #FF7A78; --red-bg: #4A2323; --green: #6FCF97; --green-bg: #213F2B;
+  --amber: #F0C060; --amber-bg: #3D3220; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+a { color: var(--teal); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 0 64px; }
+header.top { padding-block: 28px 18px; display: grid; gap: 6px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 5vw, 44px); line-height: 1; margin: 0; letter-spacing: .01em; text-wrap: balance; }
+.theme-line { font-size: 16px; max-width: 70ch; color: var(--muted); margin: 4px 0 0; }
+.theme-line strong { color: var(--ink); }
+nav.sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav.sections .inner { max-width: 1180px; margin: 0 auto; padding-inline: 20px; display: flex; gap: 4px; overflow-x: auto; }
+nav.sections a { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; color: var(--muted); padding: 10px 10px 9px; border-bottom: 3px solid transparent; white-space: nowrap; }
+nav.sections a:hover, nav.sections a:focus-visible { color: var(--ink); border-bottom-color: var(--teal-bright); outline: none; }
+section { padding-top: 34px; scroll-margin-top: 52px; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: .02em; text-transform: uppercase; margin: 0 0 4px; }
+.sub { color: var(--muted); margin: 0 0 16px; max-width: 75ch; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; display: grid; gap: 2px; }
+.stat .n { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 13px; color: var(--muted); }
+.stat.warn { border-left: 4px solid var(--coral); }
+.stat.ok { border-left: 4px solid var(--teal-bright); }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px; min-width: 0; }
+.panel h3 { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: .03em; text-transform: uppercase; margin: 0 0 10px; color: var(--deep); }
+ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+ul.plain li { padding-left: 14px; position: relative; }
+ul.plain li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; background: var(--teal-bright); border-radius: 1px; }
+ol.focus { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+ol.focus li::marker { font-family: var(--font-display); font-weight: 700; color: var(--teal); }
+.idchip { font-family: var(--font-mono); font-size: 12px; padding: 1px 6px; border-radius: 3px; background: var(--teal-soft); color: var(--ink); border: 0; cursor: pointer; white-space: nowrap; }
+.idchip:hover, .idchip:focus-visible { outline: 2px solid var(--teal-bright); outline-offset: 1px; }
+.tag { font-family: var(--font-mono); font-size: 11px; padding: 1px 5px; border-radius: 3px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.pill { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; display: inline-block; }
+.pill.open, .pill.in-progress, .pill.active-monitoring { background: var(--teal-soft); color: var(--ink); }
+.pill.not-started, .pill.draft, .pill.submitted { background: var(--sunk); color: var(--muted); }
+.pill.blocked { background: var(--red-bg); color: var(--ink); }
+.pill.done, .pill.resolved, .pill.closed { background: var(--green-bg); color: var(--ink); }
+.age { font-family: var(--font-mono); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.age.stale { color: var(--coral); font-weight: 500; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 860px) { .board { grid-template-columns: 1fr; } }
+.lane { background: var(--sunk); border-radius: 6px; padding: 12px; display: grid; gap: 10px; align-content: start; }
+.lane > header { display: flex; justify-content: space-between; align-items: baseline; }
+.lane > header b { font-family: var(--font-display); font-size: 22px; text-transform: uppercase; letter-spacing: .03em; }
+.lane > header span { color: var(--muted); font-size: 13px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: 10px 12px; display: grid; gap: 6px; }
+.card.stale { box-shadow: inset 3px 0 0 var(--coral); }
+.card .outcome { font-weight: 500; }
+.card .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+.focus-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--purple); }
+.missions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 980px) { .missions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .missions { grid-template-columns: 1fr; } }
+.mission { display: grid; gap: 10px; align-content: start; }
+.mission > h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: .03em; margin: 0; color: var(--deep); border-bottom: 2px solid var(--teal-bright); padding-bottom: 4px; }
+.pillar { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: 10px 12px; display: grid; gap: 8px; }
+.pillar.gap { border-color: var(--coral); background: linear-gradient(var(--coral-soft), var(--coral-soft)) top/100% 3px no-repeat, var(--surface); }
+.pillar .head { display: flex; gap: 8px; align-items: baseline; }
+.pillar .pid { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.pillar .name { font-weight: 500; font-size: 14px; line-height: 1.3; }
+.bars { display: grid; gap: 4px; }
+.bar { display: grid; grid-template-columns: 92px 1fr 24px; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); }
+.bar .track { height: 7px; background: var(--sunk); border-radius: 2px; overflow: hidden; }
+.bar .fill { height: 100%; border-radius: 2px; }
+.bar .v { font-family: var(--font-mono); text-align: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+.gapnote { font-size: 12px; color: var(--coral); font-weight: 600; }
+.jd { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 6px 18px; margin-top: 18px; }
+.jd .row { display: grid; grid-template-columns: 48px 1fr 22px; gap: 8px; align-items: center; font-size: 13px; padding: 4px 0; border-bottom: 1px dashed var(--line); }
+.jd .row .id { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.jd .row.none .label { color: var(--muted); }
+.jd .row .v { font-family: var(--font-mono); text-align: right; }
+.jd .row.none .v { color: var(--coral); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.filters button { font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--deep); color: var(--bg); border-color: var(--deep); }
+.filters button:focus-visible { outline: 2px solid var(--teal-bright); outline-offset: 2px; }
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-family: var(--font-mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+tr.flash td { background: var(--teal-soft); transition: background .6s; }
+td.next { color: var(--muted); font-size: 13px; min-width: 260px; }
+td .title { font-weight: 500; }
+.timeline { display: grid; gap: 12px; }
+.ach { display: grid; grid-template-columns: 96px 1fr; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; }
+@media (max-width: 560px) { .ach { grid-template-columns: 1fr; gap: 4px; } }
+.ach .d { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.ach .t { font-weight: 600; }
+.ach .s { margin: 4px 0 8px; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.sig { display: grid; gap: 4px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.sig:last-child { border-bottom: 0; }
+.sig .d { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.sig .t { font-weight: 500; }
+.sig .i { font-size: 13px; color: var(--muted); }
+.stance { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.stance span { font-size: 12px; padding: 2px 8px; border-radius: 3px; }
+.st-Supports { background: var(--green-bg); }
+.st-Challenges { background: var(--amber-bg); }
+.st-Refutes { background: var(--red-bg); }
+.st-Unsettled { background: var(--sunk); }
+.note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+.count { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.zero { color: var(--coral); font-weight: 600; }
+footer { margin-top: 40px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 14px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap" style="padding-block:0">
+  <header class="top">
+    <div class="eyebrow" id="gen">QA &amp; Test Engineering</div>
+    <h1>Quality Leadership Board</h1>
+    <p class="theme-line" id="theme"></p>
+  </header>
+</div>
+<nav class="sections" aria-label="Sections"><div class="inner">
+  <a href="#overview">Overview</a><a href="#plan">Plan</a><a href="#framework">Framework</a><a href="#activity">Activity</a><a href="#evidence">Evidence</a><a href="#signals">Signals</a><a href="#team">Team</a>
+</div></nav>
+<div class="wrap">
+  <section id="overview">
+    <h2>This week</h2>
+    <div class="stats" id="stats"></div>
+    <div class="cols" style="margin-top:16px">
+      <div class="panel"><h3>Focus</h3><ol class="focus" id="focus"></ol></div>
+      <div class="panel"><h3>Waiting on</h3><ul class="plain" id="waiting"></ul><h3 style="margin-top:16px">Coming up</h3><ul class="plain" id="upcoming"></ul></div>
+      <div class="panel"><h3>Open threads</h3><ul class="plain" id="threads"></ul></div>
+    </div>
+  </section>
+
+  <section id="plan">
+    <h2>Plan</h2>
+    <p class="sub">Now, Next and Later outcomes. A coral edge means the freshest linked record hasn't moved in <span class="stale-days"></span>+ days.</p>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section id="framework">
+    <h2>Framework coverage</h2>
+    <p class="sub">Every pillar against the evidence behind it: logged achievements, live records, and discovery calls. Pillars with no achievements are outlined in coral.</p>
+    <div class="missions" id="missions"></div>
+    <div class="panel" style="margin-top:18px"><h3>Job description evidence</h3><div class="jd" id="jd"></div></div>
+  </section>
+
+  <section id="activity">
+    <h2>Activity</h2>
+    <p class="sub">Challenges, improvements and initiatives. Actions live in Notion; this shows status and the next step recorded on each.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filter records"></div>
+    <div class="tablewrap"><table><thead><tr><th>ID</th><th>Record</th><th>Status</th><th>Horizon</th><th>Pillars</th><th>Updated</th><th>Next step</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence</h2>
+    <p class="sub">Achievements logged this year, newest first, with their taxonomy tags.</p>
+    <div class="timeline" id="achs"></div>
+  </section>
+
+  <section id="signals">
+    <h2>Signals</h2>
+    <div class="cols">
+      <div class="panel"><h3>Leadership direction</h3><div id="lead"></div></div>
+      <div class="panel"><h3>Industry signals</h3><div class="stance" id="stance"></div><div id="ind"></div></div>
+      <div class="panel"><h3>Recent conversations</h3><div id="calls"></div></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Team readiness</h2>
+    <p class="sub" id="calib"></p>
+    <div class="tablewrap"><table><thead><tr><th>Alias</th><th>Role</th><th>Profile reviewed</th><th>Objectives recorded</th><th>WHAT evidence</th><th>HOW evidence</th></tr></thead><tbody id="teamrows"></tbody></table></div>
+    <p class="note">Counts only. Ratings, matrix positions and retention views are never stored in the repo or shown here.</p>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const IDRE = /\b(CH|IMP|INI)-\d\d\b/g;
+const linkIds = (t) => esc(t).replace(IDRE, (m) => `<button class="idchip" data-id="${m}">${m}</button>`);
+const ageCell = (a) => a == null ? "" : `<span class="age ${a >= DATA.staleDays ? "stale" : ""}">${a === 0 ? "today" : a + "d ago"}</span>`;
+const daysTo = (iso) => Math.round((new Date(iso + "T00:00:00") - new Date(DATA.generated + "T00:00:00")) / 86400000);
+
+function render() {
+  const d = DATA;
+  $("#gen").textContent = `QA & Test Engineering \u00b7 generated ${d.generated}`;
+  $("#theme").innerHTML = `<strong>Driving theme:</strong> ${esc(d.horizons.theme)}`;
+  document.querySelectorAll(".stale-days").forEach((e) => (e.textContent = d.staleDays));
+
+  const open = d.records.filter((r) => !r.closed);
+  const stale = open.filter((r) => r.age != null && r.age >= d.staleDays);
+  const nowRows = d.horizons.rows.filter((r) => r.horizon === "now");
+  const pGap = d.coverage.pillars.filter((p) => p.achievements === 0).length;
+  const jdGap = d.coverage.jd.filter((j) => j.achievements === 0).length;
+  const calib = daysTo("2026-11-11");
+  const stats = [
+    [nowRows.length, "outcomes in Now", nowRows.length <= 5 ? "ok" : "warn"],
+    [stale.length, `open records quiet ${d.staleDays}+ days`, stale.length ? "warn" : "ok"],
+    [d.achievements.length, "achievements logged", "ok"],
+    [`${pGap}/10`, "pillars with no achievements", pGap ? "warn" : "ok"],
+    [`${jdGap}/${d.coverage.jd.length}`, "JD items with no evidence", jdGap ? "warn" : "ok"],
+    [calib >= 0 ? calib : "—", "days to calibration (11 Nov)", calib <= 21 ? "warn" : "ok"],
+  ];
+  $("#stats").innerHTML = stats.map(([n, l, c]) => `<div class="stat ${c}"><span class="n">${n}</span><span class="l">${esc(l)}</span></div>`).join("");
+  $("#focus").innerHTML = d.now.focus.map((f) => `<li>${linkIds(f)}</li>`).join("") || "<li>Nothing set</li>";
+  const list = (sel, arr) => ($(sel).innerHTML = arr.length ? arr.map((x) => `<li>${linkIds(x)}</li>`).join("") : `<li>None</li>`);
+  list("#waiting", d.now.waiting); list("#upcoming", d.now.upcoming); list("#threads", d.now.threads);
+
+  const lanes = [["now", "Now", "short term"], ["next", "Next", "mid term"], ["later", "Later", "long term"]];
+  $("#board").innerHTML = lanes.map(([k, label, hint]) => {
+    const rows = d.horizons.rows.filter((r) => r.horizon === k);
+    return `<div class="lane"><header><b>${label}</b><span>${rows.length} \u00b7 ${hint}</span></header>${rows.map((r) => {
+      const isStale = r.freshest != null && r.freshest >= d.staleDays;
+      return `<div class="card ${isStale ? "stale" : ""}"><div class="outcome">${esc(r.outcome)}</div>
+        <div class="meta"><span class="focus-label">${esc(r.focus)}</span>${r.carried.map((id) => `<button class="idchip" data-id="${id}">${id}</button>`).join("")}</div>
+        <div class="meta">${esc(r.status)}${r.freshest != null ? " \u00b7 " + ageCell(r.freshest) : ""}</div></div>`;
+    }).join("")}</div>`;
+  }).join("");
+
+  const maxA = Math.max(1, ...d.coverage.pillars.map((p) => p.achievements));
+  const maxL = Math.max(1, ...d.coverage.pillars.map((p) => p.live));
+  const maxC = Math.max(1, ...d.coverage.pillars.map((p) => p.calls));
+  const bar = (label, v, max, color) => `<div class="bar"><span>${label}</span><span class="track"><span class="fill" style="display:block;width:${(v / max) * 100}%;background:${color}"></span></span><span class="v">${v}</span></div>`;
+  $("#missions").innerHTML = Object.entries(d.coverage.missions).map(([mid, mlabel]) => {
+    const ps = d.coverage.pillars.filter((p) => p.mission === mid);
+    return `<div class="mission"><h3>${esc(mlabel)}</h3>${ps.map((p) => `<div class="pillar ${p.achievements ? "" : "gap"}">
+      <div class="head"><span class="pid">${p.id}</span><span class="name">${esc(p.label)}</span></div>
+      <div class="bars">${bar("Achievements", p.achievements, maxA, "var(--teal-bright)")}${bar("Live records", p.live, maxL, "var(--deep)")}${bar("Calls", p.calls, maxC, "var(--purple)")}</div>
+      ${p.achievements ? "" : `<span class="gapnote">No achievements yet</span>`}</div>`).join("")}</div>`;
+  }).join("");
+  $("#jd").innerHTML = d.coverage.jd.map((j) => `<div class="row ${j.achievements ? "" : "none"}"><span class="id">${j.id}</span><span class="label">${esc(j.label)}</span><span class="v">${j.achievements}</span></div>`).join("");
+
+  const kinds = [["all", "All"], ["challenge", "Challenges"], ["improvement", "Improvements"], ["initiative", "Initiatives"], ["stale", "Quiet " + d.staleDays + "d+"]];
+  let filter = "all";
+  $("#filters").innerHTML = kinds.map(([k, l]) => `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("");
+  const drawRows = () => {
+    const rows = d.records.filter((r) => filter === "all" || r.kind === filter || (filter === "stale" && !r.closed && r.age >= d.staleDays));
+    $("#rows").innerHTML = rows.map((r) => `<tr id="row-${r.id}"><td><span class="idchip" style="cursor:default">${r.id}</span></td><td><span class="title">${esc(r.title)}</span></td>
+      <td><span class="pill ${r.status}">${esc((r.status || "").replace(/-/g, " "))}</span></td><td>${esc(r.horizon === "none" ? "—" : r.horizon)}</td>
+      <td><span class="tags">${r.pillars.map((p) => `<span class="tag">${p}</span>`).join("")}</span></td><td>${ageCell(r.age)}</td><td class="next">${linkIds(r.next)}</td></tr>`).join("");
+  };
+  drawRows();
+  $("#filters").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    filter = b.dataset.k;
+    document.querySelectorAll("#filters button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    drawRows();
+  });
+
+  $("#achs").innerHTML = d.achievements.map((a) => `<article class="ach"><div class="d">${a.date}</div><div><div class="t">${esc(a.title)}</div><p class="s">${esc(a.summary)}</p>
+    <div class="tags">${a.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div></div></article>`).join("") || "<p>No achievements yet.</p>";
+
+  $("#lead").innerHTML = d.leadership.slice(0, 5).map((l) => `<div class="sig"><span class="d">${l.date}</span><span class="t">${esc(l.title)}</span>${l.implication ? `<span class="i">${esc(l.implication)}</span>` : ""}</div>`).join("");
+  const counts = {}; d.industry.forEach((s) => (counts[s.stance] = (counts[s.stance] || 0) + 1));
+  $("#stance").innerHTML = ["Supports", "Challenges", "Refutes", "Unsettled"].filter((s) => counts[s]).map((s) => `<span class="st-${s}">${s} ${counts[s]}</span>`).join("");
+  $("#ind").innerHTML = d.industry.slice(0, 6).map((s) => `<div class="sig"><span class="d">${s.date} \u00b7 <span class="st-${s.stance}" style="padding:0 5px;border-radius:3px">${s.stance}</span></span><span class="t">${esc(s.title)}</span></div>`).join("");
+  $("#calls").innerHTML = d.calls.slice(0, 6).map((c) => `<div class="sig"><span class="d">${c.date}</span><span class="t">${esc(c.title)}</span><span class="tags">${c.pillars.map((p) => `<span class="tag">${p}</span>`).join("")}</span></div>`).join("");
+
+  $("#calib").textContent = `Calibration on 11 November (${calib} days). WHAT is rated against agreed objectives, so each person needs objectives recorded and dated evidence for both WHAT and HOW.`;
+  const num = (n) => `<span class="count ${n ? "" : "zero"}">${n}</span>`;
+  $("#teamrows").innerHTML = d.team.map((t) => `<tr><td><b>${t.alias}</b></td><td>${esc(t.role)}</td><td>${t.reviewed ? `${t.reviewed} ${ageCell(t.reviewedAge)}` : "—"}</td>
+    <td>${t.hasGoal ? "Yes" : `<span class="zero">Not yet</span>`}</td><td>${num(t.what)}</td><td>${num(t.how)}</td></tr>`).join("");
+
+  $("#foot").innerHTML = `Generated from the personal-assistant repo on ${d.generated} by <code>scripts/report.py</code>. Working memory last updated ${esc(d.now.updated || "—")}.`;
+
+  document.addEventListener("click", (e) => {
+    const chip = e.target.closest("button.idchip"); if (!chip) return;
+    filter = "all";
+    document.querySelectorAll("#filters button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.k === "all")));
+    drawRows();
+    const row = document.getElementById("row-" + chip.dataset.id);
+    if (row) { row.scrollIntoView({ block: "center" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1400); }
+  });
+}
+if (DATA) render(); else document.querySelector("#theme").textContent = "No data — run python scripts/report.py";
+</script>

@@ -3,7 +3,7 @@ id: CH-07
 type: challenge
 status: open
 horizon: now
-updated: 2026-09-14
+updated: 2026-10-15
 pillars: [P2, P3, P8]
 focus: [people]
 goals: []
@@ -116,7 +116,9 @@ The future decision should be informed by evidence of value. Measure the defects
 
 ## Status & Next Action
 
-**Status:** Open — LM's possible departure creates an immediate decision point for complex Portal and cross-platform E2E ownership.
+**Status:** Open — LM's contract has been extended into 2027 (confirmed 2026-10-15; end date to record), so the resourcing decision is no longer immediate. Knowledge transfer remains valid and should use AI to capture and structure journey knowledge.
+
+_Superseded 2026-10-15:_ LM's possible departure created an immediate decision point.
 
 **Next action:**
 
@@ -126,7 +128,8 @@ The future decision should be informed by evidence of value. Measure the defects
 4. Define criteria for when an initiative needs a dedicated E2E stage or grouped journey test.
 5. Review a representative sample of LM's E2E findings: count defects, classify severity and defect type, record where each issue was first found, and identify why earlier checks did not catch it.
 6. Compare three options: retain a specialist, replace with a permanent E2E resource, or distribute ownership through a hybrid/team-owned model.
-7. Make a resourcing and ownership recommendation before the contractor engagement is expected to end.
+7. Make a resourcing and ownership recommendation in good time before the extended contract ends (2027).
+8. Use AI to support knowledge transfer: e.g. turn LM walkthroughs, Miro journey maps, and E2E test notes into structured journey documentation and test scenarios that delivery QAs can reuse.
 
 **Watch for:**
 
@@ -134,5 +137,6 @@ The future decision should be informed by evidence of value. Measure the defects
 - Teams assuming that component-level testing is sufficient for Portal journeys spanning Pico and Exerp.
 - Distributed ownership being agreed without capacity, training, data, or environment support.
 - LM's contract ending with undocumented journey and domain knowledge.
-- E2E defect counts being collected without asking why the defects escaped earlier stages.- Staging or source-data failures being misclassified as product defects, or vice versa.
+- E2E defect counts being collected without asking why the defects escaped earlier stages.
+- Staging or source-data failures being misclassified as product defects, or vice versa.
 - Automation being treated as a complete substitute for the manual exploratory coverage currently providing value.

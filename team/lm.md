@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | N/A                           |
-| Profile last reviewed  | 2026-09-17                    |
+| Profile last reviewed  | 2026-10-15                    |
 
 ## Experience And Specialism
 
@@ -43,6 +43,14 @@
 - Observation: Established contractor profile for cross-platform E2E testing. Reports directly to QA & Test Engineering Manager.
 - Impact or relevance: Core contributor for cross-system integration confidence.
 - Follow-up or evidence needed: Review ongoing e2e coverage priorities and contract scope.
+
+### 2026-10-15 - Contract extension
+
+- Type: Direct evidence
+- Source: QA & Test Engineering Manager
+- Observation: LM's contract has been extended into 2027.
+- Impact or relevance: Removes the immediate continuity deadline in [CH-07](../challenges/07-end-to-end-quality-ownership-and-continuity.md); knowledge transfer continues, with AI used to capture and structure journey knowledge.
+- Follow-up or evidence needed: Record the new end date.
 
 ### 2026-09-14 - E2E Contractor Conversation
 

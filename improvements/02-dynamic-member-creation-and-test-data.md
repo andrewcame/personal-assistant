@@ -3,7 +3,7 @@ id: IMP-02
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-14
+updated: 2026-10-15
 pillars: [P5]
 focus: [automation]
 goals: []
@@ -50,6 +50,10 @@ people: []
 - Environments discussion leaning towards one Exerp test environment per brand, shared by previews and staging ([notes](../context/discovery-calls/2026-10-13-environments-exerp-per-brand.md)).
 - **Implication:** previews and staging would share member records in PureGym Test. Disposable, dynamically created or reserved members become a prerequisite for reliable preview automation, which strengthens the case for this improvement and Initiative 01.
 - Payments is still not connected in the proposal, so the fully usable fresh-member limitation recorded on 2026-09-14 remains.
+
+### 2026-10-15
+
+- INI-01 start sequenced after DA's current work; kick-off/refinement with the Lead QAs to agree the approach first.
 
 ## Proposed Direction
 

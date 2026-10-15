@@ -27,11 +27,12 @@ The four focus areas from the original plan still apply as the lens across every
 
 | Outcome | Focus | Carried by | Status |
 |---|---|---|---|
-| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — needs sponsor |
-| AI-led Appium first pass expands coverage of high-value mobile journeys | Automation | [Initiative 02](../../initiatives/02-appium-ai-led-first-pass.md), [Challenge 01](../../challenges/01-mobile-automation-strategy.md) | In progress |
-| Staging monitoring and alerting has a clear owner and daily routine | Productivity | [Improvement 01](../../improvements/01-staging-monitoring-and-alerting-ownership.md) | In progress |
+| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — DA starts after current work; kick-off with leads first; needs sponsor |
+| AI-led Appium first pass expands coverage of high-value mobile journeys | Automation | [Initiative 02](../../initiatives/02-appium-ai-led-first-pass.md), [Challenge 01](../../challenges/01-mobile-automation-strategy.md) | In progress — app simplification kick-off w/c 2026-10-19 |
+| Staging monitoring and alerting has a clear owner and daily routine | Productivity | [Improvement 01](../../improvements/01-staging-monitoring-and-alerting-ownership.md) | In progress — walkthrough done; AC running checks; explore Claude for manual SRE |
 | QA engagement model agreed for paired, AI-assisted initiative delivery | Ownership | [Challenge 11](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md) | Open |
-| Web QA cover and accountability stable; E2E knowledge transfer under way | People | [Challenge 04](../../challenges/04-web-qa-capacity-and-accountability.md), [Challenge 07](../../challenges/07-end-to-end-quality-ownership-and-continuity.md) | Open |
+| Web QA cover and accountability stable; E2E knowledge transfer under way | People | [Challenge 04](../../challenges/04-web-qa-capacity-and-accountability.md), [Challenge 07](../../challenges/07-end-to-end-quality-ownership-and-continuity.md) | Open — LM extended into 2027; AI-assisted KT |
+| 2026 objectives recorded for AC and the team; calibration and EOY reviews delivered | People | [Improvement 08](../../improvements/08-2026-objectives-calibration-and-eoy-reviews.md) | In progress — calls being booked; calibration 2026-11-11 |
 
 ## Next (mid term)
 
@@ -41,7 +42,6 @@ _Mostly the original 60-day "stabilise and reduce friction" intent, re-sequenced
 |---|---|---|---|
 | First-pass coverage register (journey, market, repo, owner, cadence, gap) | Automation | [Improvement 06](../../improvements/06-qa-knowledge-and-coverage-baseline.md) | In progress |
 | QA flow metrics baseline in Jira (one-team proof of concept) | Productivity | [Improvement 04](../../improvements/04-jira-qa-flow-metrics-baseline.md) | In progress |
-| Growth and objectives deep dive held with each direct report; shared team priorities agreed | People | [team](../../team) | Not started |
 | Domain ownership model for automation code; flaky-pack response agreed | Ownership | — | Not started |
 | Test data strategy agreed across teams (beyond the Portal MVP) | Automation | [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Challenge 10](../../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md) | Not started |
 | Payments QA cross-training and cover | People | [Improvement 07](../../improvements/07-payments-qa-cross-training-and-cover.md) | Not started |

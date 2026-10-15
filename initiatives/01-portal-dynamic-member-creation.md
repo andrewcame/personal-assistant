@@ -3,7 +3,7 @@ id: INI-01
 type: initiative
 status: draft
 horizon: now
-updated: 2026-09-25
+updated: 2026-10-15
 pillars: [P4, P5]
 focus: [automation]
 goals: []
@@ -86,3 +86,11 @@ Making this change within the Pico front-end repo first lets us establish the pa
 - [2026-09-14 SEM Pico Architecture discovery call](../context/discovery-calls/2026-09-14-sem-pico-architecture.md)
 - [2026-09-23 Technical Lead, Backend/Portal/Wundergraph discovery call](../context/discovery-calls/2026-09-23-technical-lead-backend-portal-wundergraph.md)
 - [2026-09-25 Technical Lead, Pico Backend Legacy Architecture discovery call](../context/discovery-calls/2026-09-25-technical-lead-pico-backend-legacy-architecture.md)
+
+## Progress Log
+
+### 2026-10-15
+
+- DA will start once his current work is complete.
+- First step: a kick-off/refinement session run by DA with AC and the other Lead QAs to agree the approach before build.
+- Exec sponsor still to confirm.

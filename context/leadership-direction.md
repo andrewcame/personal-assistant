@@ -6,6 +6,19 @@ It is **not** a task list. Tasks live in Notion. This is for themes and signals 
 
 The idea-validator agent should load this file alongside the job spec and the [horizons plan](my-role/horizons.md) when sense-checking ideas.
 
+## Standing Themes (as at 2026-10-14)
+
+Durable direction distilled from all entries, including [archived ones](archive/leadership-direction-2026-q3.md). Dates point to the source entries.
+
+- **Microsite sunset is the gating priority** — the CTO expects account and bookings microsites to be gone by end of 2026 (team forecast: March 2027), and it is the standing answer to resourcing, promotion, and investment questions. (2026-09-11, 2026-09-30)
+- **Morale and progression sit behind microsite sunset** — progression and investment are held until sunset, while low morale makes it harder; treat sunset as the unlock narrative and show visible progress against it. (2026-09-30)
+- **In-house technical ownership, closer to the business** — a more autonomous engineering function with direct stakeholder relationships, faster decisions, ownership pushed down, and the Tech Lead Chapter in place of the architecture council; QA takes custody of staging alerting. (2026-07-29, 2026-09-03, 2026-09-11)
+- **Pace with proportionate quality** — fewer, more valuable tests mapped to member-critical journeys; test when a feature is ready rather than every micro-deploy, backed by deterministic regression and leadership-owned risk; front-end-first while services migrate. (2026-09-07, 2026-09-11, 2026-09-30)
+- **Paired AI-assisted delivery** — pairs of engineers take larger initiatives with AI (including AI-written tests) and hand QA something more complete; the QA engagement model has to change with it. (2026-09-11, 2026-09-30)
+- **AI with accountability** — adopt AI quickly but selectively, tie it to measurable outcomes and a connected data spine, and keep human accountability for risk, quality, and member experience. (2026-07-29, 2026-08-11)
+- **Foundations after firefighting** — environments, test data, staging health, and front-end performance (a nightly staging run) so problems are caught by monitoring, not members. (2026-09-07, 2026-09-15, 2026-09-17)
+- **Purposeful visibility** — a fortnightly 1:1 rhythm with GL and leadership reporting that explains quality, risk, and readiness for decisions rather than activity. (2026-09-07, 2026-09-15)
+
 ## How To Add An Entry
 
 - **Date** — when you heard it
@@ -14,7 +27,7 @@ The idea-validator agent should load this file alongside the job spec and the [h
 - **Implication** — what this means for current focus, if clear
 - **My read** — personal reaction, where there is one worth keeping; optional
 
-Add new entries at the top of **Entries** (newest first). If a new entry changes earlier direction, add `**Supersedes:** <date/heading>` to it and `_Superseded by <date>_` under the older heading, rather than deleting it.
+Add new entries at the top of **Entries** (newest first). Entries older than about six weeks roll up quarterly into [`archive/`](archive/README.md); refresh **Standing Themes** when they move. If a new entry changes earlier direction, add `**Supersedes:** <date/heading>` to it and `_Superseded by <date>_` under the older heading, rather than deleting it.
 
 ### Leadership Scope
 
@@ -62,7 +75,7 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 ### 2026-09-15 — Weekly Senior Leadership Call
 
 - **Date** — 2026-09-15
-- **Source** — Weekly Engineering Senior Leadership Meeting: me, GL (Software Engineering Director), GH (GH, Head of Software Engineering), DJ (Head of Delivery)
+- **Source** — Weekly Engineering Senior Leadership Meeting: me, GL (Software Engineering Director), GH (Head of Software Engineering), DJ (Head of Delivery)
 - **Theme** — Getting better at spotting signals when things are going wrong is a shared priority. A recent front-end usage-creep issue was caught by members reporting it rather than by monitoring, which is the wrong way round. Front-end load/performance testing is now recognised as a real gap alongside the backend load testing already being considered.
 - **Theme** — GL suggested a nightly performance run, potentially on staging, as a pragmatic alternative to a dedicated load test environment — ramping the Exerp test instance overnight to meet demand and reviewing results each morning alongside existing staging/app alerting. This could also justify retiring the unused Southampton satellite Exerp test instance once staging is validated as the de facto UK load test environment.
 - **Theme** — GH wants the agenda for this months monthly engineering all-hands to revisit ways of working across teams, prompted by a conflict/issue-resolution challenge in one web team this week.
@@ -100,36 +113,4 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 - **Theme** — The new structure brings engineering closer to the business and to decision makers who can maximise the impact of the team's work. The organisation should operate as a more autonomous function, drawing on its own expertise, collaborating directly, and making sensible decisions at pace. The broad architecture is in place, with Operations and Security supporting the function; specific architectural, product, or design blockers should be escalated to the named engineering leaders and director. Issues previously taken to the architecture council should now go to the Tech Lead Chapter.
 - **Implication** — Build direct, purposeful relationships with business stakeholders rather than relying on a Product intermediary by default, while keeping ownership of priorities and decisions explicit. Support engineering-led design decisions with lightweight records, shared technical context, and early consideration of quality, operability, security, and testability. Use the Tech Lead Chapter for shared technical challenges without recreating a slow approval forum.
 
----
-
-### 2026-08-11 — London Tech Leaders: The CTO Lens Podcast
-
-- **Date** — 2026-08-11
-- **Source** — London Tech Leaders — The CTO Lens Podcast, guest GL (Group Software Engineering Director, PureGym)
-- **Theme** — PureGym’s technology is not a shiny innovation platform; it is the low-cost membership engine that makes the business work: digital join flow, member portal, access, retention, pricing discipline, and an operating model built for scale. GL framed engineering as a business enabler: teams need to stay tightly aligned to value, cost, and growth, not just build for the sake of building. He also described AI as an unavoidable shift in how engineering work is done — not a replacement for what matters, but an amplifier of the need for clear business alignment, critical review, and human connection. He emphasised that the craft of engineering is changing: more of the work is becoming orchestration, review, and judgment, while AI handles more of the drafting and repetitive production tasks.
-- **Implication** — For this role, the key implication is that senior engineering and QA leadership must keep the team anchored to business value, quality, and operating reality rather than being seduced by broad AI hype or overbuilding. The right response is selective adoption: measure AI use, provide tooling, train people, and make it part of progression without losing standards and human judgment. The most important leadership signal is to protect purpose, manager quality, and team connection as AI compresses more of the production work, because the enduring differentiator becomes clear thinking, strong judgment, and being close to the business outcome.
-- **My read** — This was the clearest articulation so far of the shift happening in senior engineering leadership: less about a heroic engineering culture, more about a business-aware operating model. GL’s framing resonated because it turns technology into a means for the business to scale sensibly rather than an end in itself. The most useful part was his point that AI is not just changing how code is written, it is changing how engineers work day to day — managing multiple AI outputs, triaging generated work, reviewing more code, and paying attention to context, quality, and business outcomes. The craft is not disappearing; it is evolving into something more managerial and more judgment-heavy. The “be honest, label the changes, protect time” point was equally relevant: for a team leader the biggest risk isn’t that AI replaces people, it’s that people become overrun by noise, context switching, and the feeling that they are constantly managing work rather than doing real thinking. Practical follow-ups: anchor the team to business value rather than output; treat AI adoption as a management and quality issue rather than a tooling one, with expectations, measured usage, and protected review standards; actively design for calm, focused work and clear priorities; keep purpose visible; and differentiate hype from real leverage by proving a small number of targeted experiments before expanding. Worth revisiting as a reference point for leading through transformation without losing team quality or culture.
-
----
-
-### 2026-08-11 — Additional leaders’ themes from the same podcast
-
-- **Date** — 2026-08-11
-- **Source** — London Tech Leaders — The CTO Lens Podcast, GL
-- **Theme** — As companies scale, culture must be actively redesigned rather than inherited. GL described the need to keep the best of the past while leaving behind overbuilt structures, excessive process, and low-value complexity. He also highlighted a real shift in team expectations: engineers are increasingly managing a “mini virtual team” of AI agents, reviewing outputs, coordinating workflows, and staying in constant context-switching mode. In that environment, the people skill becomes critical because the business still needs trust, clear communication, and the ability to turn technical work into measurable value.
-- **Implication** — This matters for direction-setting in a leadership role: keep the team lean, outcome-focused, and business-connected; avoid treating AI as an excuse for more noise or faster output without clarity; and invest in manager quality, team health, and intentional learning. The risk is not only productivity loss but a drift into “everyone is managing everything,” which can strip away flow and craft. The antidote is disciplined focus, transparent prioritisation, and a deliberate effort to retain purpose and connection as the work becomes more AI-mediated.
-
----
-
-### 2026-07-29 — C-suite leadership call after organisational restructure
-
-- **Date** — 2026-07-29
-- **Source** — C-suite leadership call led by the COO, the CTO, and the CEO, following the removal of several leadership layers and a move to a simpler senior structure. The CTO is the manager of my manager.
-- **Theme** — The business is organised around three strategic priorities: grow, improve, and simplify. The stated North Star is to be the best gym and fitness business in the world, with high standards, high support, low ego, and people flying in formation behind clear decisions. Technology is an enabler, not the objective: members care about joining easily, paying easily, and having a consistently good end-to-end experience. Growth through new markets and acquisitions requires repeatable, integrated infrastructure that can be deployed quickly and operated efficiently. Simplification means removing unnecessary complexity, bringing leaders closer to the business and members, making decisions faster, and giving more responsibility to people lower in the organisation.
-- **Theme** — the CTO strongly positioned AI as a major opportunity for PureGym. He wants people to get involved quickly, experiment with the available tools, share learning, and use AI to simplify routine work, increase the speed and quality of decisions, and create more time for ideation and improvement. He connected this directly to the importance of an integrated data spine: AI will only be as effective as the quality, accessibility, and connectedness of the underlying business data and systems.
-- **Implication** — QA must always be rooted in member value. Quality is not a property of a technical project in isolation; it is confidence that the member can join, pay, access the service, and move through the wider experience simply and reliably. When shaping quality work, make the member outcome and business value explicit, then use that to decide what to test, automate, measure, or simplify.
-- **Implication** — Expansion readiness is a quality concern. As PureGym enters markets and integrates acquisitions, QA should help identify the repeatable capabilities, data dependencies, operational risks, and end-to-end journeys needed to launch and scale without adding unnecessary complexity. The goal is not maximal process or coverage everywhere; it is reliable, adaptable foundations that support rapid growth.
-- **Implication** — The new structure creates permission and expectation for faster, more direct decision making and broader ownership. Take problems to the right people early, make pragmatic decisions within the available context, and step beyond narrowly defined role boundaries when the outcome needs it. This creates opportunity for people who can combine hands-on involvement with good judgment and visible delivery.
-- **Implication** — AI adoption should be treated as part of how the function improves, not as a separate innovation programme. Use it where it removes toil, improves analysis, strengthens test thinking, or accelerates feedback, while preserving human accountability for risk, quality, and the member experience. The CTO’s enthusiasm makes this an important leadership signal, but adoption still needs to be tied to measurable outcomes rather than tool activity.
-
----
+Older entries (before 2026-09-01): [archive/leadership-direction-2026-q3.md](archive/leadership-direction-2026-q3.md).

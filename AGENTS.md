@@ -25,10 +25,13 @@ Open full source files only when these don't answer the question. Prefer folder 
 | `context/people.md` | Alias → role lookup. No real names anywhere |
 | `context/discovery-calls/` | Interpreted call notes with front-matter |
 | `context/leadership-direction.md` | Director-level-and-above themes, newest first |
+| `context/archive/` | Quarterly roll-ups of long context files; don't load unless asked about history |
 | `team/` | Per-person development profiles under the writing standard |
 | `templates/` | Formats for every record type |
 | `scripts/check.py` | Validate, regenerate indexes, coverage, stale report |
 | `evals/` | Behaviour checks for agents and skills |
+| `ways-of-working/assistant-routine.md` | The weekly rhythm: what runs when, and how AC uses the harness |
+| `state/cross-review/` | Findings from cross-model reviews, with AC's responses |
 
 ## Non-Negotiable Rules
 
@@ -40,6 +43,7 @@ Open full source files only when these don't answer the question. Prefer folder 
 6. **Facts over inference.** Don't invent achievements, impact, dates, owners, or reactions. Ask for the minimum missing detail.
 7. **Show before saving; never commit without AC's explicit OK.** Summarise changes, run checks, then pause. Small, focused commit messages on `main`.
 8. **Preserve formatting.** Keep CRLF line endings and aligned markdown tables as found.
+9. **Notion: two boards only.** Read and write only the boards listed in [`context/notion-boards.md`](context/notion-boards.md). Never search the workspace or open other pages — it also holds AC's personal life admin. Show every Notion write first.
 
 ## Routing (summary)
 
@@ -60,6 +64,8 @@ Capture is the router — full rules in [`.github/agents/capture.agent.md`](.git
 | calibration-prep | WHAT/HOW drafts — chat only | `.github/skills/calibration-prep/SKILL.md` |
 | industry-research | Source-backed research brief | `.github/skills/industry-research/SKILL.md` |
 | action-extraction | Forgotten actions → Notion list | `.github/skills/action-extraction/SKILL.md` |
+| notion-sync | Ideas triage, actions out, to-dos back in | `.github/skills/notion-sync/SKILL.md` |
+| cross-review | Second-opinion sense check by a different model family | `.github/skills/cross-review/SKILL.md` |
 
 If your tool doesn't load these automatically, read the file and follow it.
 

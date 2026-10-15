@@ -3,7 +3,7 @@ id: CH-01
 type: challenge
 status: open
 horizon: now
-updated: 2026-09-16
+updated: 2026-10-15
 pillars: [P4, P9]
 focus: [automation]
 goals: []
@@ -99,6 +99,12 @@ _Original next action (pre-start, superseded 2026-09-16):_ In the first 30 days,
 - Whether the QA Lead raises the topic themselves, and the technical reasons given
 
 ---
+
+## 2026-10-15 Update
+
+- Owner: AC.
+- In discovery, pending decisions on simplifying the app. A kick-off on this is booked for the week of 2026-10-19.
+- The Appium strategy questions below stay open until the simplification direction is known.
 
 ## 2026-09-16 Evidence Update — Mobile Technical Lead / RSR Lead
 

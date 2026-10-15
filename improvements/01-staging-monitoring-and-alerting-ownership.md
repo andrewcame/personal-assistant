@@ -3,7 +3,7 @@ id: IMP-01
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-09-14
+updated: 2026-10-15
 pillars: [P5]
 focus: [productivity]
 goals: []
@@ -45,6 +45,12 @@ people: []
 - **Observed guidance:** Dead-letter queue (DLQ) investigation should capture the error and relevant context before any recovery action, then be logged and escalated to the appropriate SME for resolution advice.
 - **Observed safe recovery sequence:** Where recovery is agreed after investigation, recreate the Kafka DLQ topic because clearing messages was unreliable, then restart the affected consumer pod so it recreates its subscription. This is not a routine "clear the queue" action: preserve evidence and seek awareness/escalation before doing it.
 
+### 2026-10-15
+
+- DevEx/Platform walkthrough completed (by 2026-10-15); nothing materially new beyond the 2026-09-14 guidance.
+- AC is currently doing staging first-response checks manually.
+- Idea: use Claude to assist or automate the manual SRE checks (dashboard review, DLQ inspection, log entry). Candidate next step, not yet scoped.
+
 ## Proposed Daily First-Response Routine
 
 _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escalation contacts, and permissions with DevEx/Platform before adopting it._
@@ -58,7 +64,9 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 
 **Status:** In progress
 
-**Next action:** Complete the DevEx/Platform walkthrough, confirm access and escalation ownership, then validate and document the proposed daily routine and DLQ recovery controls before taking on first-response monitoring.
+**Next action:** Confirm the daily routine above as the agreed first-response process, then scope how Claude could take on the repetitive manual SRE checks (what it can read, what stays human, how findings are logged).
+
+_Superseded 2026-10-15:_ complete the DevEx/Platform walkthrough (done).
 
 ## Outcome
 
