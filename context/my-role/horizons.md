@@ -44,6 +44,7 @@ _Mostly the original 60-day "stabilise and reduce friction" intent, re-sequenced
 | QA flow metrics baseline in Jira (one-team proof of concept) | Productivity | [Improvement 04](../../improvements/04-jira-qa-flow-metrics-baseline.md) | In progress |
 | Domain ownership model for automation code; flaky-pack response agreed | Ownership | — | Not started |
 | Test data strategy agreed across teams (beyond the Portal MVP) | Automation | [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Challenge 10](../../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md) | Not started |
+| Defined, risk-based process for Exerp release and upgrade testing | Ownership | [Challenge 12](../../challenges/12-exerp-release-testing-process.md), [Improvement 09](../../improvements/09-exerp-release-testing-process.md) | Not started — discuss with leads |
 | Payments QA cross-training and cover | People | [Improvement 07](../../improvements/07-payments-qa-cross-training-and-cover.md) | Not started |
 | CI/CD quality gate model defined | Automation | — | Not started |
 

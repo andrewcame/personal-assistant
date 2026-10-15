@@ -21,10 +21,11 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 
 ## Conventions
 
-**To-Do Database schema (as at 2026-10-15):** `Name` (title, AC prefixes a category like `[AI]`, `[DOCS]`, `[METRICS/DOCS]`), `Status` (Backlog · To Do · Do Now · Done), `Priority` (High · Medium · Low), `Due date`, `Multi-select` (unused — proposed for record IDs), `To-Do Completion` (relation).
+**To-Do Database schema (as at 2026-10-15):** `Name` (title), `Status` (Backlog · To Do · Do Now · Done), `Priority` (High · Medium · Low), `Due date`, `Record` (multi-select of record IDs, e.g. `IMP-08`, `CH-12`), `To-Do Completion` (relation).
 
-- **Record IDs:** because titles already carry AC's category prefix, record IDs go in the `Multi-select` property (proposed rename: `Record`), e.g. `IMP-08`. Until that is agreed, put the ID in brackets at the end of the title: `Book objectives call with MP [IMP-08]`.
+- **Titles:** short and plain, no `[CATEGORY]` prefix (retired 2026-10-15). Detail can go in the card body — agents read the body of tracked cards.
+- **Record IDs:** go in the `Record` property. Add a new option there when a new record is created; untagged cards are fine for quick tasks.
 - **"Open"** means Status is Backlog, To Do, or Do Now.
 
 - **To Do:** quick reminders that open and close within the week are counted as "weekly churn" in the weekly review and otherwise ignored. Cards tagged with a record ID, or open for more than 14 days, are processed: progress or blockers go into the matching record; completed ones may become evidence.
-- **Ideas:** each new idea gets one verdict — **Park** (keep in Notion), **Link** (add as context to an existing record), or **Promote** (open a new improvement or challenge). The verdict and any record ID are written back to the card.
+- **Ideas:** capture stays free-form — any bullet, any wording, mid-call. At triage, each **unticked** line gets one verdict: **Park** (not now), **Link** (weave into an existing record), **Promote** (new challenge/improvement), or **To Do** (becomes a card). After AC approves, the line is turned into a **ticked checkbox** with a short suffix (`→ IMP-04`, `→ To Do`, `→ parked`), and the verdict is logged in [`state/ideas-log.md`](../state/ideas-log.md). Ticked lines are never re-triaged; AC purges them whenever he likes.

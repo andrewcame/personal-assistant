@@ -3,7 +3,7 @@ id: INI-02
 type: initiative
 status: in-progress
 horizon: now
-updated: 2026-10-09
+updated: 2026-10-15
 pillars: [P4, P9]
 focus: [automation]
 goals: []
@@ -102,3 +102,7 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 - [2026-09-15 Head of Software Engineering (GH) discovery call](../context/discovery-calls/2026-09-15-head-of-software-engineering-gh.md) — Appium AI experiment origin
 - [2026-09-16 Technical Lead Mobile / RSR discovery call](../context/discovery-calls/2026-09-16-technical-lead-mobile-rsr.md) — layered testing model, shared ownership, AI experiment evaluation
 - [context/my-role/60-day-plan.md](../context/my-role/60-day-plan.md) — agentic AI test creation standards, Appium as first POC
+
+## Progress Update - 2026-10-15
+
+- Appium local-setup documentation updated so the framework runs on both Mac and Windows, and tested (closed in Notion To Do).

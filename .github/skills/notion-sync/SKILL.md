@@ -9,20 +9,20 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 ## Flow 1 — Ideas Triage
 
-1. Fetch the Ideas page (a free-form page of bullets, not a database). Treat each top-level bullet or block as one idea; skip any already marked with a verdict.
+1. Fetch the Ideas page (free-form bullets, not a database). Treat each line or short bullet group as one idea. **Skip ticked checkboxes** — they have been processed.
 2. For each, sense-check against `context/role-brief.md`, `context/my-role/horizons.md`, and open records (the Idea Validator method): where does it fit, does it duplicate something, is now the time?
-3. Propose one verdict per idea: **Park**, **Link → <record ID>**, or **Promote → new improvement/challenge** (with a one-line objective and pillar).
-4. After AC confirms: write the verdict and record ID back to each card; for Link, add a dated line to the record; for Promote, hand to Capture to open the record.
+3. Propose one verdict per idea: **Park**, **Link → <record ID>**, **Promote → new improvement/challenge** (one-line objective and pillar), or **To Do** (proposed card title and Record tag).
+4. After AC confirms: turn each processed line into a ticked checkbox with a suffix (`→ IMP-04`, `→ To Do`, `→ parked`) — change nothing else on the page; append one row per idea to `state/ideas-log.md`; for Link, add a dated line to the record; for Promote, hand to Capture; for To Do, create the card (Flow 2).
 
 ## Flow 2 — Actions Out
 
 1. Gather candidate actions: from the action-extraction skill, a record's next action, or what AC asks for.
-2. Propose cards as `<verb-first action>` with the record ID in the `Record`/`Multi-select` property (or `[<ID>]` at the end of the title until that is set up), keeping AC's category-prefix style, with a due date only if AC gave one.
+2. Propose cards with a short, plain, verb-first title (no bracket prefix) and the record ID in the `Record` property (add the option if it's a new record), with a due date only if AC gave one.
 3. Create them in To Do only after AC approves the list.
 
 ## Flow 3 — To Do Back In
 
-1. Fetch To Do cards that are open, or were completed in the last 7 days.
+1. Query the To-Do data source for cards that are open (Backlog, To Do, Do Now) or were completed in the last 7 days. For tracked cards (below), also fetch the card body — AC may keep detail there rather than in the title.
 2. Split them:
    - **Weekly churn:** untagged cards opened and closed within the week. Report a count and a one-line flavour only.
    - **Tracked:** cards tagged with a record ID, or open for more than 14 days.
