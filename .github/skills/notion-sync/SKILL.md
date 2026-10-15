@@ -9,7 +9,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 ## Flow 1 — Ideas Triage
 
-1. Fetch the Ideas board. Select cards without a verdict.
+1. Fetch the Ideas page (a free-form page of bullets, not a database). Treat each top-level bullet or block as one idea; skip any already marked with a verdict.
 2. For each, sense-check against `context/role-brief.md`, `context/my-role/horizons.md`, and open records (the Idea Validator method): where does it fit, does it duplicate something, is now the time?
 3. Propose one verdict per idea: **Park**, **Link → <record ID>**, or **Promote → new improvement/challenge** (with a one-line objective and pillar).
 4. After AC confirms: write the verdict and record ID back to each card; for Link, add a dated line to the record; for Promote, hand to Capture to open the record.
@@ -17,7 +17,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 ## Flow 2 — Actions Out
 
 1. Gather candidate actions: from the action-extraction skill, a record's next action, or what AC asks for.
-2. Propose cards as `[<record ID>] <verb-first action>` with any due date only if AC gave one.
+2. Propose cards as `<verb-first action>` with the record ID in the `Record`/`Multi-select` property (or `[<ID>]` at the end of the title until that is set up), keeping AC's category-prefix style, with a due date only if AC gave one.
 3. Create them in To Do only after AC approves the list.
 
 ## Flow 3 — To Do Back In
