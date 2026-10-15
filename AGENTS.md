@@ -11,6 +11,7 @@ A personal documentation assistant for AC, QA & Test Engineering Manager at Pure
 1. [`state/now.md`](state/now.md) — this week's focus, open threads, recent decisions, waiting on.
 2. [`context/role-brief.md`](context/role-brief.md) — condensed role, plan, pillars, decision lens.
 3. [`state/learnings.md`](state/learnings.md) — accepted corrections from earlier sessions. Follow them.
+4. [`ways-of-working/assistant-routine.md`](ways-of-working/assistant-routine.md) — the working agreement: how AC uses Notion, chats and the weekly/monthly routines.
 
 Open full source files only when these don't answer the question. Prefer folder `README.md` indexes over reading every file.
 

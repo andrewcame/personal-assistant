@@ -2,6 +2,15 @@
 
 How AC works with this harness day to day. Agreed 2026-10-15; adjust as it beds in.
 
+## Working Agreement (AC, 2026-10-15)
+
+1. **Ideas** — AC adds them to the Notion Ideas page as they come, free-form. The agent checks and triages them (Friday), ticking each once processed.
+2. **To-dos** — AC adds them to the Notion To Do board as they come. The agent checks them and pulls long-running or record-tagged cards into the matching CII.
+3. **Developments** — AC messages new calls, ideas, decisions and challenges in a new chat in this project. The agent files them into the repo (neutral record, "Not recorded" line) and keeps CIIs, horizons and `state/now.md` current.
+4. **Suggestions** — the agent proposes improvements monthly (industry scan + horizon review), and flags anything urgent in the weekly report.
+5. **Two-way monitoring** — the agent keeps CII roadmaps and Notion in step: every first-up step owned by AC has a card; completed cards move roadmap steps on; new records get a `Record` tag option.
+6. **Approval** — nothing is committed, and nothing is written to Notion, without AC's OK (cards AC has explicitly approved in the conversation count). AC pushes to GitHub.
+
 ## What Lives Where
 
 | Tool | Job |
