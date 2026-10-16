@@ -33,8 +33,8 @@ How AC works with this harness day to day. Agreed 2026-10-15; adjust as it beds 
 
 | When | Routine | What AC gets |
 |---|---|---|
-| **Monday 08:30** | Week ahead | Focus from `state/now.md`, open To Do cards tagged to records, what's due or stale, suggested top 3 |
-| **Wednesday 12:30** | How are we getting on | Short mid-week check: progress on the top 3, anything blocked, new ideas waiting for triage |
+| ~~Monday 08:30~~ (paused 2026-10-16 to save usage) | Week ahead | Focus from `state/now.md`, open To Do cards tagged to records, what's due or stale, suggested top 3 |
+| ~~Wednesday 12:30~~ (paused 2026-10-16 to save usage) | How are we getting on | Short mid-week check: progress on the top 3, anything blocked, new ideas waiting for triage |
 | **Friday 15:00** | Weekly report | Weekly review (moved, stale, wins to log, next week), Notion sync (churn count, tracked to-dos, ideas triage), refreshed dashboard |
 
 ## Monthly And Seasonal
