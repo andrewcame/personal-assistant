@@ -69,3 +69,18 @@ Each case: a prompt to give the named agent or skill, what a **pass** looks like
 - **Prompt:** (after any filing) "No — discovery calls with Config should also update CH-08."
 - **Pass:** Makes the fix and proposes a one-line learning in the `state/learnings.md` format; adds it only after AC accepts.
 - **Fail signals:** adds the learning without asking; proposes nothing.
+
+## Ideas Triage
+
+### E11 — Sub-bullets are one idea; covered still enriches
+- **Skill:** notion-sync (Flow 1)
+- **Prompt:** Triage this fictional Ideas excerpt:
+  ```
+  - Speed up test data
+      - Seed weekly or create per test?
+      - Market-specific data — we've drifted from what prod markets look like
+          - Lean into each market's nuance in scenario breadth
+  - Book coffee with new SEM
+  ```
+- **Pass:** Two groups, not five. The first is matched to the test-data record (IMP-02 / CH-10) with verdict **Enrich**, proposing concrete additions (e.g. the seed-vs-create question and market-specific scenario breadth as Questions To Explore or a roadmap step). The second is a **To Do** (or Park). Ticking is proposed on the top-level lines only, with suffixes.
+- **Fail signals:** each sub-bullet treated as a separate idea; "already covered by IMP-02" with no additions; sub-bullets ticked or rewritten.

@@ -9,10 +9,32 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 ## Flow 1 — Ideas Triage
 
-1. Fetch the Ideas page (free-form bullets, not a database). Treat each line or short bullet group as one idea. **Skip ticked checkboxes** — they have been processed.
-2. For each, sense-check against `context/role-brief.md`, `context/my-role/horizons.md`, and open records (the Idea Validator method): where does it fit, does it duplicate something, is now the time?
-3. Propose one verdict per idea: **Park**, **Link → <record ID>**, **Promote → new improvement/challenge** (one-line objective and pillar), or **To Do** (proposed card title and Record tag).
-4. After AC confirms: turn each processed line into a ticked checkbox with a suffix (`→ IMP-04`, `→ To Do`, `→ parked`) — change nothing else on the page; append one row per idea to `state/ideas-log.md`; for Link, add a dated line to the record; for Promote, hand to Capture; for To Do, create the card (Flow 2).
+### Reading the page
+
+- The Ideas page is free-form. **Indentation carries meaning:** a top-level bullet is a topic; its sub-bullets (and their sub-bullets) drill into that topic — detail, options, questions, examples, or reasons. Treat a top-level bullet **and all its descendants as one idea group**, never as separate new ideas. Read the children in the context of their parent (e.g. "Use AI" under "How do we accelerate delivery of Appium" means *use AI to accelerate Appium*).
+- A group can still touch more than one record — e.g. a "Web" topic whose children cover member creation, cross-country Portal tests, and accessibility. Map each child to the record it informs, but present them together under the parent.
+- **Skip ticked checkboxes** — those groups have been processed. A group counts as processed when its top-level line is ticked.
+
+### Triage: enrich, don't just match
+
+"We already have a record for this" is a starting point, not a verdict. For every idea group:
+
+1. Find the related records (`context/role-brief.md`, `context/my-role/horizons.md`, open CIIs, roadmaps, Notion To Do).
+2. **Extract what the idea adds** that the record doesn't already say: a new question to explore, an option or approach, a risk, a scope detail, a dependency, a metric, a stakeholder, an example, or a concrete next step. Compare against the record's text and roadmap so you only propose what is genuinely new.
+3. Propose one verdict per group (children may carry their own where they map elsewhere):
+   - **Enrich → <record ID>** — the idea is covered, *and* here is what to add: list each addition and where it goes (Questions To Explore, a roadmap step, Initial Position, a dated update, or a To Do card). Use this whenever there is anything worth adding.
+   - **Covered → <record ID>** — already fully captured; nothing new. Say briefly why, so AC can disagree.
+   - **Promote → new challenge/improvement** — one-line objective and pillar.
+   - **To Do** — proposed card title and Record tag.
+   - **Park** — not now; say what would make it relevant.
+4. Keep AC's intent and wording where it carries meaning; tidy only for clarity. Real names become aliases in anything written to the repo.
+
+### After AC confirms
+
+- For **Enrich**: apply the additions to the records (dated, with `updated:` bumped), add or adjust roadmap steps, and propose any resulting To Do cards (Flow 2).
+- For **Promote**: hand to Capture to open the record. For **To Do**: create the card (Flow 2).
+- Turn the **top-level line** of each processed group into a ticked checkbox with a suffix listing every record it fed, e.g. `→ IMP-02, INI-01` · `→ To Do` · `→ parked` · `→ covered (CH-10)`. Leave the sub-bullets nested underneath, unchanged. Change nothing else on the page.
+- Append one row per group to `state/ideas-log.md`, including a short note of what was added to each record.
 
 ## Flow 2 — Actions Out
 
@@ -38,7 +60,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 ## Output
 
-- **Ideas:** table of idea → proposed verdict → reason.
+- **Ideas:** one block per idea group (top-level line, with its sub-bullets summarised) → verdict → for Enrich, each proposed addition and the record/section it goes into.
 - **Actions out:** list of proposed cards.
 - **To Do back in:** churn count; tracked cards with proposed record updates; long-open cards.
 - **Not recorded:** anything stripped under the people-records standard.
