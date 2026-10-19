@@ -3,7 +3,7 @@ id: IMP-02
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P5]
 focus: [automation]
 goals: []
@@ -54,6 +54,14 @@ people: []
 ### 2026-10-15
 
 - INI-01 start sequenced after DA's current work; kick-off/refinement with the Lead QAs to agree the approach first.
+
+### 2026-10-16 (ideas triage)
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Payload (CMS) data in dev and staging:** who owns it? With no Product function, are we testing with real data or placeholders? Likely placeholders — the strategy should make sure we always test realistically.
+- **Exerp data refresh approach (for IMP-02.7):** seed data weekly, search for data at run time by criteria, or create data in each test run? Move away from hardcoded data.
+- **Test data generation:** this was done in CAPI before — can it run on a regular basis again?
 
 ## Proposed Direction
 

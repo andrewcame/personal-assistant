@@ -3,7 +3,7 @@ id: IMP-09
 type: improvement
 status: not-started
 horizon: next
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P5, P8, P6]
 focus: [ownership, productivity]
 goals: []
@@ -35,12 +35,16 @@ people: [MJ]
 
 - Opened. First step: discussion with the Lead QAs (Notion to-do).
 
+### 2026-10-16
+
+- IMP-09.2 reframed by AC: get access to the Exerp release calendar in Confluence, so upcoming Exerp releases can be shown in the weekly report.
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
 | IMP-09.1 | Agree process outline and owner with the Lead QAs | AC | CH-12.1 | next |
-| IMP-09.2 | Confirm version notice and change-note route with MJ | AC | — | next |
+| IMP-09.2 | Get access to the Exerp release calendar in Confluence | AC | — | next |
 | IMP-09.3 | Draft risk-based scope, ticket ownership and sign-off | AC | IMP-09.1, IMP-09.2 | later |
 | IMP-09.4 | Document and agree the process with the Lead QAs | AC | IMP-09.3 | later |
 
@@ -48,7 +52,7 @@ people: [MJ]
 
 **Status:** Not started
 
-**Next action:** Discuss with the Lead QAs; agree the process outline and an owner; confirm the notice and change-note route with MJ (Head of Configuration).
+**Next action:** Discuss with the Lead QAs; agree the process outline and an owner; get access to the Exerp release calendar in Confluence and add upcoming releases to the weekly report.
 
 ## Outcome
 

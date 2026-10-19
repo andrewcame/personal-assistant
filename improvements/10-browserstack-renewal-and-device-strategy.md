@@ -3,7 +3,7 @@ id: IMP-10
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P4, P9]
 focus: [automation, productivity]
 goals: []
@@ -36,6 +36,14 @@ people: []
 ### 2026-10-15
 
 - Opened. Account-manager call booked as the first port of call.
+
+### 2026-10-16 (ideas triage)
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Speed:** is there a reason BrowserStack is slow? Are there better alternatives (feeds IMP-10.4)?
+- **Exploratory testing:** consider Firebase Test Lab or other exploratory test tools.
+- **Requirement to check:** QR code testing via BrowserStack camera image injection with Appium ([BrowserStack docs](https://www.browserstack.com/docs/app-automate/appium/advanced-features/camera-image-injection?fw-lang=c-sharp)).
 
 ## Roadmap
 

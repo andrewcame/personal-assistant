@@ -3,7 +3,7 @@ id: CH-10
 type: challenge
 status: open
 horizon: next
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P4, P5]
 focus: [automation]
 goals: []
@@ -81,6 +81,16 @@ However, the current platform should not be tested as if all journeys are isolat
 The immediate opportunity is the planned backend-testing initiative. It should first map dependency boundaries for a limited number of high-risk journeys, establish a tiered test policy, replace the static-data dependencies preventing reliable automation, and prove the model in the UK environments. This is a practical quality intervention, not a decision to recreate a dedicated Exerp estate for every brand.
 
 Over time, the multi-tenant environment model needs an explicit architecture and cost decision. The right answer may combine dedicated real paths for the flagship platform with controlled mocks, sandbox alternatives, or shared services for other brands. Until that decision is made, tests should be clear about what each tier proves and what it cannot prove.
+
+## 2026-10-16 Update — Ideas Triage
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Previews and environment health (feeds CH-10.8):** previews can be a pain. Options: extend the environment-deployment plans with a preview health and schema-status check, or extend AC's own backend tooling. Monitor preview reliability, and check how often it occurs first. Could a backend tester run an environment-stability check before picking up a ticket?
+- **Execution strategy (feeds CH-10.5):** what runs on preview vs staging vs prod, and when.
+- **Exerp test config by market:** test has drifted from what each prod market looks like by configuring every market the same. Lean into each market's nuance in the breadth of scenarios.
+- **Cross-brand edge cases and copy-back:** e.g. logging into Ireland as a UK member on the same Exerp; Exerp copy-back protections.
+- **Parked:** Pico backend deploys everything at once, first to staging (needing a coordinator to check all parts deployed) then prod (race conditions as parts deploy in different orders). Not a QA item and aspirational for now; raise later if it becomes relevant.
 
 ## Roadmap
 

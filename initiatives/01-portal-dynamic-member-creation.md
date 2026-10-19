@@ -3,17 +3,17 @@ id: INI-01
 type: initiative
 status: draft
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P4, P5]
 focus: [automation]
 goals: []
 links: [CH-09, CH-10, IMP-02]
-people: [MP, RT]
+people: [MP, RT, DA, TMW]
 ---
 
 **Initiative Name:** Dynamic Member Creation & Lookup For Portal Automation
 
-**Exec Sponsor:**
+**Exec Sponsor:** AC (confirmed 2026-10-16; no higher sponsor needed)
 
 **Business Lead:**
 
@@ -92,13 +92,13 @@ Making this change within the Pico front-end repo first lets us establish the pa
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
 | INI-01.1 | Draft Portal Web MVP initiative | AC | IMP-02.2 | done |
-| INI-01.2 | Confirm an exec sponsor | AC | — | next |
-| INI-01.3 | Run kick-off/refinement with AC and Lead QAs | DA | INI-01.8 | next |
+| INI-01.2 | Confirm an exec sponsor | AC | — | done |
+| INI-01.3 | Scope with AC, MP (and probably TMW), then run a review to agree the plan | DA | INI-01.8 | next |
 | INI-01.4 | Resolve open items: payment agreement events, target environment | DA | INI-01.3, CH-10.3 | later |
 | INI-01.5 | Extend Playwright helpers to create members via WunderGraph | DA | INI-01.4 | later |
 | INI-01.6 | Migrate state-changing Portal tests to created members | DA | INI-01.5 | later |
 | INI-01.7 | Document reusable pattern for App adoption | DA | INI-01.6 | later |
-| INI-01.8 | Help DA refine the initiative ready for kick-off | AC | — | next |
+| INI-01.8 | Help DA refine the initiative ready for kick-off | AC | — | doing |
 
 ## Progress Log
 
@@ -108,3 +108,8 @@ Making this change within the Pico front-end repo first lets us establish the pa
 - First step: a kick-off/refinement session run by DA with AC and the other Lead QAs to agree the approach before build.
 - Exec sponsor still to confirm.
 - AC's action: help DA refine the initiative ready for kick-off (INI-01.8). Drafting the lookup/state-sourcing requirements (IMP-02.4) sits with DA.
+
+### 2026-10-16
+
+- Approach agreed at the AC–DA 1:1. DA will scope the initiative with AC, MP and probably TMW, then set up a review so the plan can be reviewed and agreed.
+- AC is the sponsor; no higher sponsor is needed. Waiting on DA to propose the plan to AC and MP.

@@ -3,7 +3,7 @@ id: CH-08
 type: challenge
 status: open
 horizon: later
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P5, P8]
 focus: [automation]
 goals: []
@@ -77,6 +77,12 @@ The approach needs to account for:
 The Exerp Extractor should be treated as a business-critical integration and data-integrity boundary, not only as background platform plumbing. A useful first step is to document the source-to-member flow, select representative promotion/pricing/subscription scenarios with Configuration, and define a small set of reconciliation checks between Exerp and Pico.
 
 The full-dataset extraction and 90-minute propagation time may limit fast feedback, so the strategy should combine targeted representative scenarios with post-run reconciliation and clear failure visibility. Staging is the natural proving ground because Configuration already tests campaigns and promotions there, but its shared role makes environment ownership and communication important prerequisites.
+
+## 2026-10-16 Update — Ideas Triage
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- Pricing and discounts add complication: campaigns need to exist in staging to reflect prod, and must be reseeded after each Exerp copy-back.
 
 ## Roadmap
 

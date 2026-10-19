@@ -3,7 +3,7 @@ id: IMP-04
 type: improvement
 status: in-progress
 horizon: next
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P6]
 focus: [productivity]
 goals: []
@@ -142,6 +142,16 @@ These measures can be referenced as context during an investigation, but should 
 - Jira will remain the initial home for QA flow measures and automation-coverage tracking. Lightweight placeholders are being set up first, with definitions and a more robust reporting approach to follow as the baseline is established.
 - Coordinate the metrics home with the QA Confluence tidy-up and functional coverage reference tracked in [Improvement 06 - QA Knowledge And Coverage Baseline](06-qa-knowledge-and-coverage-baseline.md).
 
+### 2026-10-16 (ideas triage)
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Report Portal vs Claude reports:** set up Report Portal access with PDEX to check it gives what's needed, and compare it with Claude-built reports. For now, build up the Claude reports and expand later (new step IMP-04.8).
+- **Ready-for-Test dwell time by team:** average Ready for Test tickets and how long they stay there. Is the distribution disproportionate to the nature of the work (e.g. more front end means more QA)? Metrics should show whether team ratios (devs vs QA in a team) are appropriate. Data point: Web 1, 3 September — 3 tickets.
+- **Metrics home (IMP-04.7):** option of a combined engineering/QA dashboard rather than separate ones; GL hosts internal tools on Cloudflare Workers. Keep discussing with GL.
+- **Further measures to consider:** success of dev-QA tickets vs normal QA; right-first-time / rework. Which metrics drive decisions, and what should we surface first?
+- **Parked:** a record of ticket changes over time (useful, but possibly not one of the measures needed).
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
@@ -153,6 +163,7 @@ These measures can be referenced as context during an investigation, but should 
 | IMP-04.5 | Vibe-code Jira metric tool for gaps | AC | IMP-04.3 | later |
 | IMP-04.6 | Produce one-team proof-of-concept baseline | AC | IMP-04.3, IMP-04.4 | later |
 | IMP-04.7 | Agree metrics home alongside the Confluence tidy-up | AC | IMP-06.2 | later |
+| IMP-04.8 | Set up Report Portal access with PDEX; compare with Claude reports | AC | — | next |
 
 ## Status & Next Action
 

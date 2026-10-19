@@ -3,12 +3,12 @@ id: IMP-01
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P5]
 focus: [productivity]
 goals: []
 links: []
-people: []
+people: [JT]
 ---
 
 # Improvement 01 — Staging Monitoring And Alerting Ownership
@@ -55,6 +55,15 @@ people: []
 
 - The mission is unchanged; the method changes. The morning first-response checks could be run by Claude, while AC (and the team) still own fixing what is found. Tracked as roadmap steps IMP-01.6–7 rather than a separate improvement.
 
+### 2026-10-16
+
+- AC confirmed a separate agreement of the daily routine with DevEx/Platform isn't needed: AC is running the checks manually, and the next step is to automate them with AI and work through the issues found so far (IMP-01.4 dropped).
+- Staging DLQ issues found so far (IMP-01.5, from the Notion card):
+  - `account.basket.dlq.raw`, `account.membership.dlq.raw` and `account.payment.dlq.raw` are receiving some "production"-tagged messages — use AI to work out why.
+  - `brazeadapter.account.dlq.raw` has many errors about config missing in Braze — identify and get fixed.
+  - `exerpadapter.extracts.internal.dlq.raw` — check why and when it runs, what it does, and whether it can be disabled in staging if unused; compare with prod.
+  - `exerpadapter.product.dlq.raw` — work with JT to learn how to clear and re-run it.
+
 ## Proposed Daily First-Response Routine
 
 _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escalation contacts, and permissions with DevEx/Platform before adopting it._
@@ -71,16 +80,18 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 | IMP-01.1 | Offer to own staging first-response triage | AC | — | done |
 | IMP-01.2 | Complete DevEx/Platform monitoring walkthrough | AC | — | done |
 | IMP-01.3 | Run staging first-response checks manually | AC | IMP-01.2 | doing |
-| IMP-01.4 | Confirm daily first-response routine with DevEx/Platform | AC | IMP-01.2 | next |
+| IMP-01.4 | Confirm daily first-response routine with DevEx/Platform | AC | IMP-01.2 | dropped |
 | IMP-01.5 | Look into staging DLQ issues | AC | — | next |
-| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC | IMP-01.4 | later |
+| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC | IMP-01.3 | next |
 | IMP-01.7 | Pilot Claude-run morning checks; AC triages and fixes findings | AC | IMP-01.6 | later |
 
 ## Status & Next Action
 
 **Status:** In progress
 
-**Next action:** Confirm the daily routine above as the agreed first-response process, then scope how Claude could take on the repetitive manual SRE checks (what it can read, what stays human, how findings are logged).
+**Next action:** Work through the four DLQ issues found so far, and scope how Claude could take on the repetitive manual SRE checks (what it can read, what stays human, how findings are logged).
+
+_Superseded 2026-10-16:_ confirm the daily routine with DevEx/Platform first (not needed).
 
 _Superseded 2026-10-15:_ complete the DevEx/Platform walkthrough (done).
 

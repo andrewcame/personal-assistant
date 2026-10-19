@@ -3,7 +3,7 @@ id: CH-11
 type: challenge
 status: open
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P3, P6, P9]
 focus: [ownership]
 goals: []
@@ -127,6 +127,18 @@ How deeply we review any given slice should follow the probability × impact × 
 Two things temper this. First, DORA's amplifier finding says the new model will magnify our existing weaknesses in environments and test data — so those foundations become a precondition, which is useful ammunition when sequencing work with GL. Second, Modern Testing principle 7 points at a future with fewer dedicated specialists; I would rather lead that conversation than have it arrive as a surprise for the team.
 
 The unresolved part is slice sizing and the batching risk. That is where this most likely breaks first.
+
+## 2026-10-16 Update — Ideas Triage
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Right tests, not more tests:** add the correct automated tests rather than one for every case, with a periodic scope review to check we're testing the right thing.
+- **Test the initiative, not the ticket:** a QA strategy for how to test work that focuses on the initiative; shift left, build skills, and use AI during development.
+- **Dev testing:** are devs deploying previews and checking their code? Dev-QA (no QA on some tickets) is already happening under Kanban — measure its success. Ask devs what would speed up QA and what they can show us, then document it.
+- **QA adds diagnosis:** if devs help us, we help devs by debugging more (with AI) rather than returning a ticket with "this failed".
+- **Role shift:** the ability to write tests is no longer the differentiator — the value is analysis, asking questions and risk assessment. Work out how QA time splits between repetitive work (basic tests, manual testing) and high-judgement work (refinement, exploratory, edge cases, risk) to size the AI opportunity.
+- **Empowerment:** can QA block releases? Visibility, and an opinion that matters (feeds the CI/CD quality gate item in Next).
+- **AI options to explore:** suggest test scenarios and regression scope from a well-formed Jira ticket, again once the PR is known, possibly raising a PR of test changes to review (dev-friendly, so devs can spot a misunderstood implementation); expand a thin dev-written ticket once the implementation is known; "auto" manual regression.
 
 ## Roadmap
 

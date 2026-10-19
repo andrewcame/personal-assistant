@@ -3,7 +3,7 @@ id: CH-07
 type: challenge
 status: open
 horizon: next
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P2, P3, P8]
 focus: [people]
 goals: []
@@ -114,11 +114,18 @@ E2E responsibility should be considered during refinement and initiative reviews
 
 The future decision should be informed by evidence of value. Measure the defects, missing scenarios, and release risks LM is finding, then work backwards to understand why they were not found earlier. This should improve the delivery system regardless of whether the eventual answer is a permanent specialist, a hybrid model, or team-owned E2E testing. It should also test whether the capability itself is a legitimate Staff-level opportunity: not simply owning a queue of late E2E tickets, but building the shared utilities, data patterns, automation, and coaching that raise confidence and make other engineers faster.
 
+## 2026-10-16 Update — Ideas Triage
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- CH-07.1 reframed by AC: AC maps the Portal part of the E2E domain review in Miro first, then explores using AI for the remaining domains (CH-07.2).
+- Question for CH-07.5: should the E2E pack be a separate repo running on a schedule, or built from the Playwright pack and flagged `e2e`?
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
-| CH-07.1 | Run Miro end-to-end domain review with LM | AC | — | next |
+| CH-07.1 | Map the Portal part of the E2E domain review in Miro | AC | — | next |
 | CH-07.2 | Catalogue priority journeys LM covers, AI-assisted | AC | CH-07.1 | later |
 | CH-07.3 | Publish E2E results page in Confluence | AC | IMP-06.2 | next |
 | CH-07.4 | Pair delivery QAs into upcoming E2E work | AC | CH-07.2 | later |
@@ -135,7 +142,7 @@ _Superseded 2026-10-15:_ LM's possible departure created an immediate decision p
 **Next action:**
 
 1. Build a catalogue of the priority Portal and Pico/Exerp journeys currently covered by LM.
-2. Run the Miro-based end-to-end domain review with LM (meeting booked): map what happens functionally at each stage of the system, identify the gaps, then map back to domains, potentially using AI assistance.
+2. Map the Portal part of the end-to-end domain review in Miro (AC), then explore AI for the remaining domains with LM: map what happens functionally at each stage of the system, identify the gaps, then map back to domains, potentially using AI assistance.
 3. Pair the relevant delivery QAs into upcoming E2E work and capture the domain, data, environment, and scenario knowledge required.
 4. Define criteria for when an initiative needs a dedicated E2E stage or grouped journey test.
 5. Review a representative sample of LM's E2E findings: count defects, classify severity and defect type, record where each issue was first found, and identify why earlier checks did not catch it.

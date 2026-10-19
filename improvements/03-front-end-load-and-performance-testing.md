@@ -3,7 +3,7 @@ id: IMP-03
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P7]
 focus: [automation]
 goals: []
@@ -36,6 +36,14 @@ people: [GL, GH, DJ]
 ### 2026-09-15
 
 - Raised in Senior Leadership Meeting as a new gap distinct from backend load testing; agreed as a candidate improvement to action.
+
+### 2026-10-16 (ideas triage)
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Always-on staging traffic:** run a low, steady volume of joiners through staging so it behaves more realistically and surfaces issues. Risk: Exerp test data will need purging, or compute will eventually run out.
+- **Measuring slowness:** how do we catch issues like "gym slowness" in QA, and measure page slowness smartly (load time and similar)?
+- **Get ahead of incidents:** performance testing is currently reactive. Check that prod alerting is in place.
 
 ## Roadmap
 

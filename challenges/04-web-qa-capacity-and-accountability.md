@@ -3,7 +3,7 @@ id: CH-04
 type: challenge
 status: active-monitoring
 horizon: later
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P1, P6]
 focus: [people]
 goals: []
@@ -115,6 +115,13 @@ The operating model should also make it possible to test the journeys it is acco
 - Ownership model largely settled for now: TMW (Web Team Two) works with DA on Website lead responsibilities; KB has taken on the App lead role as a Senior QA, supported by AC.
 - A possible Join / Portal split for Web is held until 2027 planning, when the work is known.
 - Status moved to active monitoring; horizon to Later.
+
+## 2026-10-16 Update — Ideas Triage
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- Each team (Web, Payments, Mobile) has a lead handling issues in their space with AC's support, but the leads still don't talk enough across teams. The QA lead sync is the current bridge; TMW's move into Web should help.
+- Question: is the lead sync enough, or does cross-team work (shared apps, Exerp data and config) need named owners?
 
 ## Roadmap
 

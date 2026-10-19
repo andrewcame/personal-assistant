@@ -51,6 +51,14 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 
 ## Entries
 
+### Undated — CIO priorities (recorded 2026-10-16)
+
+- **Date** — not recorded; captured on AC's Ideas page and logged at the 2026-10-16 triage
+- **Source** — the CIO (role per AC)
+- **Theme** — Priorities: a better Join journey; quicker response to a member; markets own their performance; AI is not a separate thing, it is a tool.
+- **Theme** — "Fly in formation": not everyone doing the same thing, but everyone understanding what we are doing; learn from each other; one business.
+- **Implication** — Supports the existing themes on member-critical journeys and AI with accountability; market ownership of performance is a lens for test strategy by market (see [CH-10](../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md)).
+
 ### 2026-09-30 — Leadership call: sunsetting microsites as the gateway to everything else
 
 - **Date** — 2026-09-30

@@ -3,7 +3,7 @@ id: IMP-08
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P1]
 focus: [people]
 goals: []
@@ -36,6 +36,10 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 ### 2026-10-15
 
 - Activity opened. Objective-harvesting calls to be booked over the next two weeks (tracked in Notion); AC's objectives with GL on 2026-10-16.
+
+### 2026-10-16
+
+- Checked whether TMW and DA had held mid-year reviews with their teams, and held a symbolic mid-year. Alignment calls with the team are booked; still to hold (from the Notion card).
 
 ## Roadmap
 

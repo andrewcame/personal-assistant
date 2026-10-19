@@ -3,7 +3,7 @@ id: CH-09
 type: challenge
 status: open
 horizon: later
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P4, P8]
 focus: [automation]
 goals: []
@@ -82,6 +82,13 @@ Passing a function on a few devices is necessary evidence, but it is not evidenc
 The first step should not be to multiply the same tests unchanged. Repetition will add limited value if every run uses the same member state, data, sequence, and timing. A useful proof of concept should combine controlled variation with enough executions to expose intermittent behaviour, while preserving the seed, data, device, state, and journey trace needed to reproduce a failure.
 
 Production telemetry and escaped-defect evidence should guide scenario selection. The aim is not to reproduce the entire member base in test, but to identify representative cohorts and high-risk state combinations, then use repeated execution to make uncommon failures visible before release.
+
+## 2026-10-16 Update — Ideas Triage
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- Current app issues keep unearthing defects that have always been there; each fix reveals another. They are hard to find in QA because testing is functional rather than like the app is used.
+- Question: how can we test on prod, alpha and beta builds?
 
 ## Roadmap
 

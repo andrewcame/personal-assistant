@@ -3,7 +3,7 @@ id: INI-02
 type: initiative
 status: on-hold
 horizon: next
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: [P4, P9]
 focus: [automation]
 goals: []
@@ -123,3 +123,12 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 ## Progress Update - 2026-10-15 (status)
 
 - **On hold / in discovery** until the app simplification plan is understood (CH-01 kick-off w/c 2026-10-19). The initiative will then be re-scoped and resumed. The planned AI-flow clean-up step is no longer needed.
+
+## Ideas Input - 2026-10-16
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **Accelerating delivery with AI:** can AI skills create the Page, Component and Journey Objects we need, with engineers then connecting journeys into tests? Can AI review the old Xamarin UI tests to inform scope?
+- **Dev support:** the delivery risk affects everyone; devs were involved in the framework and could help get tests done.
+- **Focus:** stop trying to solutionise another approach (Maestro); swarm on a core set of key Appium tests and get them green first.
+- **Re-scope criterion:** current app issues keep revealing long-standing defects because QA tests functionally rather than like the app is used. The re-scope (INI-02.3) should include usage-realistic, non-functional journeys (see [CH-09](../challenges/09-population-scale-mobile-app-testing.md)).

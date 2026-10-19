@@ -3,7 +3,7 @@ id: IMP-05
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-15
+updated: 2026-10-16
 pillars: []
 focus: [productivity]
 goals: []
@@ -53,6 +53,14 @@ Identify and add only the skills that remove repeated procedural guidance withou
 - Added a learning loop: `state/learnings.md` (propose → accept → consolidate at horizon review), seeded with today's corrections.
 - Added `evals/` with ten behaviour cases (privacy, routing, reasoning, learning loop) and a results log.
 
+### 2026-10-16 (ideas triage)
+
+_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+
+- **QA harness ahead of GL's:** following the Dootrix harness discussion, GL plans a PureGym harness next year. QA could get ahead by defining a QA harness for all automation rules and standards (new step IMP-05.8).
+- **Skills from each QA's best practice:** create a skill for the "best thing" each QA does; the harness might be the place for this.
+- **Rovo vs Claude + MCP:** explore whether Atlassian Rovo or Claude with an MCP connection is better for Jira and Confluence (new step IMP-05.9).
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
@@ -64,6 +72,8 @@ Identify and add only the skills that remove repeated procedural guidance withou
 | IMP-05.5 | Run evals baseline in Copilot and Claude | AC | IMP-05.3 | next |
 | IMP-05.6 | Run the first cross-review | AC | IMP-05.3 | next |
 | IMP-05.7 | Trial weekly-review and gap-analysis; keep, adjust or drop | AC | — | later |
+| IMP-05.8 | Scope a QA automation-standards harness ahead of GL's 2027 harness | AC | — | later |
+| IMP-05.9 | Compare Rovo with Claude + MCP for Jira and Confluence | AC | — | later |
 
 ## Status & Next Action
 
