@@ -2,11 +2,11 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it short (one screen). Anything that needs more than a line belongs in a record — link to it._
 
-**Updated:** 2026-10-16
+**Updated:** 2026-10-19
 
 ## This Week's Focus
 
-1. App simplification kick-off, then re-scope INI-02; BrowserStack renewal call (IMP-10.1).
+1. App simplification kick-off, then re-scope INI-02; BrowserStack plan comparison once the list arrives (IMP-10.2).
 2. Team objectives calls (by 2026-10-30) and book GL objectives meeting (IMP-08); calibration prep due 2026-11-02.
 3. Staging: work through the DLQ issues found so far and scope Claude-run morning checks (IMP-01).
 
@@ -18,7 +18,7 @@ _Working memory. Every agent reads this first; Capture and the weekly review upd
 - Jira QA flow metrics placeholders being set up; Report Portal access to compare with Claude reports (IMP-04).
 - Environments: one Exerp test per brand + event broadcaster + pico.deployment previews; Payments/Kafka unresolved; pull environment metrics first (CH-10).
 - Exerp release testing — discuss with the leads; get Exerp release calendar access (CH-12 / IMP-09).
-- BrowserStack renews in November — reduce cost now, alternatives later (IMP-10).
+- BrowserStack renews in November — renewal call held 2026-10-19; plan options and SDK docs link awaited (IMP-10).
 - QA in AI-paired delivery: read research brief, then discovery chats (CH-11).
 - Backend test pack gaps, Exerp Assistant first — opened IMP-11.
 
@@ -33,6 +33,7 @@ _Working memory. Every agent reads this first; Capture and the weekly review upd
 ## Waiting On
 
 - DA: proposed INI-01 plan to AC and MP (scoping, then review); member-creation requirements (IMP-02.4).
+- BrowserStack: current plan and features, plans up or down, and the SDK docs link (IMP-10.2 / 10.6).
 
 ## Upcoming
 

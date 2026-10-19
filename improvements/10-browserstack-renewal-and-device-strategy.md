@@ -3,7 +3,7 @@ id: IMP-10
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-16
+updated: 2026-10-19
 pillars: [P4, P9]
 focus: [automation, productivity]
 goals: []
@@ -45,21 +45,29 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - **Exploratory testing:** consider Firebase Test Lab or other exploratory test tools.
 - **Requirement to check:** QR code testing via BrowserStack camera image injection with Appium ([BrowserStack docs](https://www.browserstack.com/docs/app-automate/appium/advanced-features/camera-image-injection?fw-lang=c-sharp)).
 
+### 2026-10-19 (renewal call)
+
+- Account-manager call held; the Notion card is closed.
+- BrowserStack offered additional features during the call.
+- BrowserStack will send: (a) what our current plan includes, including features; (b) the plans we could move to, up or down.
+- BrowserStack shared a link to its SDK documentation, but the link can no longer be found. To be re-requested and assessed as an Appium test improvement (IMP-10.6, links INI-02).
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
-| IMP-10.1 | Hold renewal call with the BrowserStack account manager | AC | — | next |
-| IMP-10.2 | Size actual usage and agree a lower-cost plan for November | AC | IMP-10.1 | next |
+| IMP-10.1 | Hold renewal call with the BrowserStack account manager | AC | — | done |
+| IMP-10.2 | Receive the plan list from BrowserStack, compare options against actual usage and agree a lower-cost plan for November | AC | IMP-10.1 | doing |
 | IMP-10.3 | Baseline device-related failures in mobile automation | AC | — | later |
 | IMP-10.4 | Review alternatives: other device clouds and a local device estate | AC | IMP-10.2, IMP-10.3 | later |
 | IMP-10.5 | Choose the platform that best unlocks mobile automation | AC | IMP-10.4, INI-02.3 | later |
+| IMP-10.6 | Re-request the SDK documentation; assess it as an Appium test improvement (with camera image injection) | AC | IMP-10.1 | later |
 
 ## Status & Next Action
 
 **Status:** In progress
 
-**Next action:** Hold the account-manager call, then agree a reduced plan before the November renewal.
+**Next action:** Compare the plan options against actual usage and agree a lower-cost plan before the November renewal.
 
 ## Outcome
 
