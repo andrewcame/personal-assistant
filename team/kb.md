@@ -9,7 +9,7 @@
 | Reports to             | DA                                |
 | Direct report to me    | No                                |
 | Last promoted          | Unknown                           |
-| Profile last reviewed  | 2026-10-08                        |
+| Profile last reviewed  | 2026-10-19                        |
 
 ## Experience And Specialism
 
@@ -105,6 +105,44 @@ _Last discussed: 2026-10-08_
 - Observation: KB has moved from Website to Mobile App and is now the sole QA in Apps. KB has expressed that he is happy to make the move. His cross-stack experience is a good basis for taking increasing ownership of the app quality domain; this is a development opportunity, not a confirmed promotion or role change.
 - Impact or relevance: The move gives Apps dedicated QA capacity and creates room for KB to build domain ownership and leadership evidence. The existing Appium initiative can be progressed with a view to handing over more of the work as KB develops familiarity.
 - Follow-up or evidence needed: Agree clear app-quality objectives with KB, support his Appium onboarding, and identify the evidence and support needed for a possible future Lead QA pathway.
+
+## 2026 Objectives
+
+_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `KB-O<n>`. The objectives pre-date the move to Mobile App on 2026-10-08._
+
+| ID     | Objective                                                                                    | Agreed                   | Status                          |
+|--------|----------------------------------------------------------------------------------------------|--------------------------|---------------------------------|
+| KB-O1  | CoP E2E automation with comms team QAs                                                       | 2026 (date not recorded) | Not assessed (no update logged) |
+| KB-O2  | GCMv2 automation: setup, message creation, scheduling, audience filtering, Braze integration | 2026 (date not recorded) | Not assessed (no update logged) |
+| KB-O3  | Adapt and extend ByteSmith guidance so AI can generate automation tests                      | 2026 (date not recorded) | Not assessed (no update logged) |
+
+### KB-O1 — CoP E2E automation with comms team QAs (Mar–Nov 2026)
+
+- Work with the comms team QAs (including JS, who has worked across comms and Web) to create a Miro board of the CoP structure in readiness for automation, to understand the requirements and test scenarios needed.
+- Identify a top 10 list of CoP tests, prioritise them and start with the highest value.
+- Support back-end CoP API automation to ensure coverage of key functionality, either by creating a separate back-end test suite or by working with JS on one shared suite (KB's choice).
+- Ensure the work can be reused for CH / DK as the Pico programme expands.
+- Updates logged in the system: none.
+
+### KB-O2 — GCMv2 automation (Mar–Nov 2026)
+
+- Scope: setup, message creation, scheduling, audience filtering and Braze integration.
+- Prepare a comparison between [Stagehand](https://www.stagehand.dev/) and the current framework approach (Stagehand is not available in C#, so would mean converting to TypeScript).
+- Extend the test plan and strategy ([GCM V2 Automation Test Plan](https://puregym.atlassian.net/wiki/spaces/IS1/pages/5665062924/GCM+V2+Automation+Test+Plan)) to identify a top 10 list of tests and the most important filter combinations for the UK brand and its members, and extend the approach.
+- Set up the prerequisites for the test environment, test data, dependencies, parameters and conditions to enable automation (email verification possibly out of scope).
+- Automate the UK GCM solution using the agreed framework, ensuring reliability, reusability and CI/CD integration.
+- Extend the automation to the CH and DK brands.
+- Updates logged in the system: none.
+
+### KB-O3 — ByteSmith AI-generated automation (Jul–Nov 2026)
+
+- Begin to adopt the QA Chapter's post-ByteSmith AI strategy to generate automation scripts.
+- AI upskilling (Udemy suggested).
+- Baseline the test pack so improvements can be measured.
+- Work with GH, DA and MP to adapt Playwright / Stagehand / TypeScript.
+- Mentor others within the QA team.
+- Target: a minimum 10% increase in AI-generated automation coverage by Q4 2026.
+- Updates logged in the system: none.
 
 ## Progression And Review Evidence
 

@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-10-08                    |
+| Profile last reviewed  | 2026-10-19                    |
 
 ## Experience And Specialism
 
@@ -92,6 +92,48 @@ _Last discussed: 2026-10-08_
 - Observation: TMW has moved from Mobile App to Website (Web Team Two). TMW said she is positive about the move. The move places her closer to Web Team Three's QA lead for day-to-day collaboration.
 - Impact or relevance: The move creates additional Web QA leadership capacity while the organisation continues its focus on moving away from Microsites. It also reduces the risk of Web knowledge and leadership being concentrated in one person.
 - Follow-up or evidence needed: Check that the new scope and collaboration are working well; retain TMW's mobile knowledge for planned cross-team support where useful.
+
+## 2026 Objectives
+
+_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `TMW-O<n>`. The objectives pre-date the move to Web Team Two on 2026-10-08._
+
+| ID      | Objective                                                                | Agreed                   | Status                          |
+|---------|--------------------------------------------------------------------------|--------------------------|---------------------------------|
+| TMW-O1  | QA and QA leadership for the DK mobile app                               | 2026 (date not recorded) | Not assessed (no update logged) |
+| TMW-O2  | Extend Appium automation to cover 10 functional areas in Q1/Q2           | 2026 (date not recorded) | Not assessed (no update logged) |
+| TMW-O3  | Learn to lean into courageous conversations                              | 2026 (date not recorded) | Not assessed (no update logged) |
+| TMW-O4  | Extend ByteSmith guidance so AI can generate reliable Appium tests in H2 | 2026 (date not recorded) | Not assessed (no update logged) |
+
+### TMW-O1 — QA and QA leadership for the DK mobile app (Jan–May 2026)
+
+- The system shows the period as "January to May 2024"; recorded as 2026 as a likely typo.
+- Provide QA and QA leadership for the Danish mobile app across core areas, including Exerp login, brand setup and refresh, the scan-to-enter gym journey and more.
+- Includes oversight of the QA Chapter NFR 4b mobile accessibility testing, delegated to and performed by a mobile QA, who delivers a findings report by the end of March 2026 so remediations can begin.
+- Updates logged in the system: none.
+
+### TMW-O2 — Extend Appium automation to 10 functional areas (Jan–Jun 2026)
+
+- Extend Appium automation to cover 10 functional areas during Q1/Q2; plan, execute and start to benefit from the automation.
+- Ensure delegation to other mobile app QA engineers helps achieve this.
+- Updates logged in the system: none.
+
+### TMW-O3 — Courageous conversations (Mar–Jun 2026)
+
+- Agree a plan, find a training course and practise scenarios, so as to:
+  - be balanced and professional in a heated moment
+  - address tough topics with clarity and confidence
+  - develop direct reports
+  - raise the bar on quality standards
+  - grow and be performance-focused
+- Updates logged in the system: none.
+
+### TMW-O4 — ByteSmith AI-generated Appium tests (Jul–Dec 2026)
+
+- Adapt and extend ByteSmith guidance into a workable test methodology so AI can generate reliable Appium tests in H2.
+- By December, a small measurable auto-generated Appium extension of tests (for example 10%) should be evidenced.
+- Ensure rigorous reviews so the tests are viable, repeatable and robust.
+- Work with GH, MP, DA and a mobile QA.
+- Updates logged in the system: none.
 
 ## Progression And Review Evidence
 

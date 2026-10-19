@@ -11,7 +11,7 @@ _Written to the [people-records standard](README.md#writing-standard): dated, ob
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-10-14                    |
+| Profile last reviewed  | 2026-10-19                    |
 
 ## Experience And Specialism
 
@@ -56,6 +56,38 @@ _Written to the [people-records standard](README.md#writing-standard): dated, ob
 | 2026-10-08 | When disagreeing or declining a request, do so constructively and propose a workable next step or review point | Feedback given in 1:1  |
 
 The Lead QA specification's flow-discipline clause ("stepping into whatever is needed to keep things moving") applies during agreed cover periods.
+
+## 2026 Objectives
+
+_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `DA-O<n>`._
+
+| ID     | Objective                                                                           | Agreed                   | Status                          |
+|--------|-------------------------------------------------------------------------------------|--------------------------|---------------------------------|
+| DA-O1  | Drive high quality delivery of the web experience across key market rollouts        | 2026 (date not recorded) | Not assessed (no update logged) |
+| DA-O2  | Leverage automation to support early defect identification and incident prevention  | 2026 (date not recorded) | Not assessed (no update logged) |
+| DA-O3  | Adapt/extend ByteSmith so AI can start to generate automation tests                 | 2026 (date not recorded) | Not assessed (no update logged) |
+
+### DA-O1 — Web experience delivery across key market rollouts (Jan–Jun 2026)
+
+- Provide QA ownership of the web front-end member experience, including leading the DK/CH rollouts and overseeing UK CoP automation testing.
+- Ensure effective development, clear objectives and successful outcomes for the team.
+- Updates logged in the system: none.
+
+### DA-O2 — Automation for early defect identification and incident prevention (Mar–Jul 2026)
+
+- Using the AI / ByteSmith approach and next-generation automation techniques, take end-to-end ownership of testing to actively improve Pico system reliability.
+- Develop and implement a QA strategy to improve the current approach, for example increasing sharding to 100% for smoke tests in production deploy pipelines, including maturing features such as CoP/rejoiners, and ensuring the large daily automation pack reliably catches problems.
+- Communicate confidently and professionally with key cross-functional stakeholders to build trust that testing identifies issues early.
+- Updates logged in the system: none.
+
+### DA-O3 — ByteSmith AI-generated automation (Jan–Nov 2026)
+
+- AI upskilling in Copilot CLI and MCP.
+- Baselining so AI improvements can be measured.
+- Work with the AI Chapter (especially GH) to broaden Playwright coverage via the QA Chapter.
+- Coach, mentor and manage others in the QA team to succeed in this space.
+- Target: a minimum 10% increase in AI-generated Playwright coverage for the large pack and smoke test packs by Q4 2026.
+- Updates logged in the system: none.
 
 ## Observations
 

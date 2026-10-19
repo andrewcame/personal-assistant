@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-09-03                    |
+| Profile last reviewed  | 2026-10-19                    |
 
 ## Experience And Specialism
 
@@ -92,6 +92,47 @@ _Last discussed: 2026-09-03_
 - Source: GL 1:1 with QA & Test Engineering Manager
 - Observation: GL described MP as performing strongly in Payments and contributing beyond the immediate group by getting involved in wider Payments work.
 - Impact or relevance: This is useful evidence of cross-team ownership and growing business/domain impact; look for concrete examples that can support future progression and review conversations.
+
+## 2026 Objectives
+
+_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `MP-O<n>`. Comments below are MP's, as logged in the system (dates not captured)._
+
+| ID     | Objective                                                               | Agreed                   | Status                             |
+|--------|-------------------------------------------------------------------------|--------------------------|------------------------------------|
+| MP-O1  | Payments automation merge with Pico codebase (UK only)                  | 2026 (date not recorded) | Changed (scope; 50% reported)      |
+| MP-O2  | DK payments: robust, relevant E2E QA test coverage                      | 2026 (date not recorded) | Marked complete (agreed with GL)   |
+| MP-O3  | CH payments: robust, relevant E2E QA test coverage                      | 2026 (date not recorded) | Update logged (CH live)            |
+| MP-O4  | Adapt and extend ByteSmith guidance so AI can generate Playwright tests | 2026 (date not recorded) | Update logged (rewording proposed) |
+
+### MP-O1 — Payments automation merge with Pico codebase, UK only (Mar–Jun 2026)
+
+- Work with the Pico web team to assess and review existing Pico UK payments automation coverage for the large Pico pack and the smaller smoke packs, so robustness is embedded for all brands.
+- Aim to extend coverage to boundary testing and edge cases, for example redirects, integration-point coverage, basket changes after the form has loaded, situational/state testing, unhappy paths and rejoiners.
+- Gap analysis in Q1; remediation plan and completion by June 2026.
+- Note: Pico playground remains the early warning system.
+- MP's update: the scope has changed. Merging the payments codebase into Pico is no longer realistic, so that work is delayed until fully off the microsite, when it can be revisited. The focus has shifted to test coverage, because some payments services have moved from the payments repo to the Pico repo and coverage in that area must not be lost.
+- MP's update: progress reported at 50%. A Miro board documents the post-payment processing flow. Next steps are to identify where existing coverage exists and how to add anything missing.
+
+### MP-O2 — DK payments (Jan–Jun 2026)
+
+- Ensure robust, relevant E2E QA test coverage for Denmark payments, including Betalingsservice, pro rata, DDAN checking and payment form accessibility.
+- MP's update: good test coverage so far, but nothing end-to-end because development had not got that far. The initiative has been deprioritised, so MP cannot progress the objective. Agreed with GL to mark it complete.
+
+### MP-O3 — CH payments (Jan–Jun 2026)
+
+- Ensure robust, relevant E2E QA test coverage for Swiss payments, including thorough TWINT validation, DDAN checking and payment form accessibility.
+- MP's update: CH is live and there is good test coverage.
+
+### MP-O4 — ByteSmith AI-generated Playwright tests (Jul–Dec 2026)
+
+- Begin to adopt the QA Chapter's post-ByteSmith strategy, aiming for AI to start generating Playwright automation scripts.
+- Work with GH, DA and TMW to adapt it for payments and Playwright.
+- Upskilling (Udemy or the ISTQB AI extension).
+- Baseline the test pack so improvements can be measured.
+- Mentor others within the QA team.
+- Target: a minimum 10% increase in AI-generated automation coverage by Q4 2026.
+- MP's update: not sure the objective is realistic, and prefers not to set an arbitrary percentage of AI-created tests. MP would prefer it reworded to focus on how AI can help the QA process (writing code, suggesting coverage, analysis, assisting manual QA), noting this is hard to measure. MP also noted limited time to work on it.
+- Suggested by GL: record the wins from using AI and its limitations, then use that evidence to shape a more formal strategy later.
 
 ## Progression And Review Evidence
 

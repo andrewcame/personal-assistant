@@ -7,7 +7,7 @@ _Working memory. Every agent reads this first; Capture and the weekly review upd
 ## This Week's Focus
 
 1. App simplification kick-off, then re-scope INI-02; BrowserStack plan comparison once the list arrives (IMP-10.2).
-2. Team objectives calls (by 2026-10-30) and book GL objectives meeting (IMP-08); calibration prep due 2026-11-02.
+2. Team objectives calls and calibration prep (w/c 2026-11-02) and book GL objectives meeting (IMP-08).
 3. Staging: work through the DLQ issues found so far and scope Claude-run morning checks (IMP-01).
 
 ## Open Threads
@@ -38,6 +38,5 @@ _Working memory. Every agent reads this first; Capture and the weekly review upd
 ## Upcoming
 
 - w/c 2026-10-19 — App simplification kick-off.
-- 2026-10-30 — Team objectives calls complete.
-- 2026-11-02 — Calibration prep; 2026-11-11 — calibration session. EOY reviews by 31 December.
+- w/c 2026-11-02 — Team objectives calls and calibration prep; 2026-11-11 — calibration session. EOY reviews by 31 December.
 - Next weekly review: Friday 2026-10-23.
