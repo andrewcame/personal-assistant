@@ -3,7 +3,7 @@ id: IMP-01
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P5]
 focus: [productivity]
 goals: []
@@ -84,6 +84,7 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 | IMP-01.5 | Look into staging DLQ issues | AC | — | next |
 | IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC | IMP-01.3 | next |
 | IMP-01.7 | Pilot Claude-run morning checks; AC triages and fixes findings | AC | IMP-01.6 | later |
+| IMP-01.8 | Speak to PDEX about the staging environment to get control of it | AC | — | next |
 
 ## Status & Next Action
 

@@ -29,11 +29,11 @@ The four focus areas from the original plan still apply as the lens across every
 
 | Outcome | Focus | Carried by | Status |
 |---|---|---|---|
-| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — AC sponsoring; DA scoping with AC, MP (and probably TMW), then a review to agree |
+| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — AC sponsoring; DA's tickets in team review, kick-off once approved |
 | Staging monitoring and alerting has a clear owner and daily routine | Productivity | [Improvement 01](../../improvements/01-staging-monitoring-and-alerting-ownership.md) | In progress — AC running checks manually; next: DLQ issues and AI-run checks |
-| QA engagement model agreed for paired, AI-assisted initiative delivery | Ownership | [Challenge 11](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md) | Open |
+| QA engagement model agreed for paired, AI-assisted initiative delivery | Ownership | [Challenge 11](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md) | Open — interim model tentatively agreed: QA does one e2e ticket once coding is done |
 | 2026 objectives recorded for AC and the team; calibration and EOY reviews delivered | People | [Improvement 08](../../improvements/08-2026-objectives-calibration-and-eoy-reviews.md) | In progress — calls being booked; calibration 2026-11-11 |
-| BrowserStack renewed at lower cost; device strategy for mobile automation reviewed | Productivity | [Improvement 10](../../improvements/10-browserstack-renewal-and-device-strategy.md) | In progress — account-manager call booked; renewal November |
+| BrowserStack renewed at lower cost; device strategy for mobile automation reviewed | Productivity | [Improvement 10](../../improvements/10-browserstack-renewal-and-device-strategy.md) | In progress — call held 2026-10-19; plan list awaited from BrowserStack; renewal November |
 | Assistant harness improved and used weekly (quick wins) | Productivity | [Improvement 05](../../improvements/05-assistant-skill-backlog.md) | In progress — evals baseline and first cross-review next |
 
 ## Next (mid term)
@@ -47,7 +47,7 @@ _Mostly the original 60-day "stabilise and reduce friction" intent, re-sequenced
 | Domain ownership model for automation code; flaky-pack response agreed | Ownership | — | Not started |
 | Test data strategy agreed across teams (beyond the Portal MVP) | Automation | [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Challenge 10](../../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md) | Not started |
 | Defined, risk-based process for Exerp release and upgrade testing | Ownership | [Challenge 12](../../challenges/12-exerp-release-testing-process.md), [Improvement 09](../../improvements/09-exerp-release-testing-process.md) | Not started — discuss with leads |
-| AI-led Appium first pass expands coverage of high-value mobile journeys | Automation | [Initiative 02](../../initiatives/02-appium-ai-led-first-pass.md) | On hold — re-scope after app simplification plan (kick-off w/c 2026-10-19) |
+| AI-led Appium first pass expands coverage of high-value mobile journeys | Automation | [Initiative 02](../../initiatives/02-appium-ai-led-first-pass.md) | In progress — kick-off held; awaiting app simplification tickets to scope (two epics plus one aligned to simplification) |
 | Backend test pack covers priority services (Exerp Assistant first) | Automation | [Improvement 11](../../improvements/11-backend-test-pack-coverage.md) | Not started |
 | E2E knowledge transfer and continuity (AI-assisted) | People | [Challenge 07](../../challenges/07-end-to-end-quality-ownership-and-continuity.md) | Open — LM extended into 2027 |
 | CI/CD quality gate model defined | Automation | — | Not started |

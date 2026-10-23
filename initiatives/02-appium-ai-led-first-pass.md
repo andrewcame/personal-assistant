@@ -1,9 +1,9 @@
 ---
 id: INI-02
 type: initiative
-status: on-hold
+status: in-progress
 horizon: next
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P4, P9]
 focus: [automation]
 goals: []
@@ -88,12 +88,20 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 |----|------|-------|------------|--------|
 | INI-02.1 | Document Appium local setup for Mac and Windows | AC | — | done |
 | INI-02.2 | Make AI flows reusable; revert non-standard repo changes | AC | — | dropped |
-| INI-02.3 | Re-scope initiative from the app simplification plan, then prioritise journeys | AC | INI-02.8 | blocked |
+| INI-02.3 | Re-scope initiative from the app simplification plan, then prioritise journeys | AC | INI-02.9 | blocked |
 | INI-02.4 | Generate AI-led Appium tests for priority journeys | AC | INI-02.3 | later |
 | INI-02.5 | Adopt dynamic member creation for app web journeys | AC | INI-01.7 | later |
 | INI-02.6 | Get first-pass tests passing reliably in the pipeline | AC | INI-02.4, INI-02.5 | later |
 | INI-02.7 | Document remaining coverage; define follow-on initiative | AC | INI-02.6 | later |
-| INI-02.8 | Join app simplification kick-off (w/c 2026-10-19) | AC | — | next |
+| INI-02.8 | Join app simplification kick-off (w/c 2026-10-19) | AC | — | done |
+| INI-02.9 | Receive the app simplification tickets so the work can be scoped | AC | INI-02.8 | doing |
+| INI-02.10 | Shape as two epics (make tests pass; pipelines) plus a third aligned to app simplification, with AI/OpenSpec enablement | AC | INI-02.9 | next |
+
+## Progress Update - 2026-10-23
+
+- App simplification kick-off held; the Appium initiative kicked off with Delivery and team buy-in on implementation details.
+- Shape agreed in principle: two epics (make the tests pass; pipelines), with a third aligned to the app simplification approach. AI/OpenSpec enablement is expected to come with that third epic.
+- Waiting on the app simplification tickets before scoping the work (INI-02.3).
 
 ## Progress Update - 2026-10-08
 

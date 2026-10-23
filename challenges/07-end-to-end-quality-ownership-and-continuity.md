@@ -3,7 +3,7 @@ id: CH-07
 type: challenge
 status: open
 horizon: next
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P2, P3, P8]
 focus: [people]
 goals: []
@@ -136,6 +136,8 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 ## Status & Next Action
 
 **Status:** Open — LM's contract has been extended into 2027 (confirmed 2026-10-15; end date to record), so the resourcing decision is no longer immediate. Knowledge transfer remains valid and should use AI to capture and structure journey knowledge.
+
+_2026-10-23:_ this is now a longer-term shift in how E2E is done, not just a replacement decision. It stays live until a sound data and environment strategy is agreed, since that enables earlier testing ([CH-10](10-pico-source-of-truth-and-exerp-dependent-test-strategy.md)).
 
 _Superseded 2026-10-15:_ LM's possible departure created an immediate decision point.
 

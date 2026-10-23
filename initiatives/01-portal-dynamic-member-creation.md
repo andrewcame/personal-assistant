@@ -3,7 +3,7 @@ id: INI-01
 type: initiative
 status: draft
 horizon: now
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P4, P5]
 focus: [automation]
 goals: []
@@ -93,7 +93,7 @@ Making this change within the Pico front-end repo first lets us establish the pa
 |----|------|-------|------------|--------|
 | INI-01.1 | Draft Portal Web MVP initiative | AC | IMP-02.2 | done |
 | INI-01.2 | Confirm an exec sponsor | AC | — | done |
-| INI-01.3 | Scope with AC, MP (and probably TMW), then run a review to agree the plan | DA | INI-01.8 | next |
+| INI-01.3 | Scope with AC, MP (and probably TMW), then run a review to agree the plan | DA | INI-01.8 | doing |
 | INI-01.4 | Resolve open items: payment agreement events, target environment | DA | INI-01.3, CH-10.3 | later |
 | INI-01.5 | Extend Playwright helpers to create members via WunderGraph | DA | INI-01.4 | later |
 | INI-01.6 | Migrate state-changing Portal tests to created members | DA | INI-01.5 | later |
@@ -113,3 +113,7 @@ Making this change within the Pico front-end repo first lets us establish the pa
 
 - Approach agreed at the AC–DA 1:1. DA will scope the initiative with AC, MP and probably TMW, then set up a review so the plan can be reviewed and agreed.
 - AC is the sponsor; no higher sponsor is needed. Waiting on DA to propose the plan to AC and MP.
+
+### 2026-10-23
+
+- DA has written the tickets; the team is reviewing them. Once approved, the work kicks off (expected next week).

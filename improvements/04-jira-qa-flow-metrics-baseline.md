@@ -3,7 +3,7 @@ id: IMP-04
 type: improvement
 status: in-progress
 horizon: next
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P6]
 focus: [productivity]
 goals: []
@@ -158,12 +158,13 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 |----|------|-------|------------|--------|
 | IMP-04.1 | Agree five QA flow measures, Jira-first | AC | — | done |
 | IMP-04.2 | Set up Jira placeholders for metrics and coverage | AC | IMP-04.1 | doing |
-| IMP-04.3 | Write first JQL queries | AC | IMP-04.2 | next |
+| IMP-04.3 | Write first JQL queries | AC | IMP-04.2 | doing |
 | IMP-04.4 | Complete Jira discovery checklist with Delivery or Jira admin | AC | — | later |
 | IMP-04.5 | Vibe-code Jira metric tool for gaps | AC | IMP-04.3 | later |
 | IMP-04.6 | Produce one-team proof-of-concept baseline | AC | IMP-04.3, IMP-04.4 | later |
 | IMP-04.7 | Agree metrics home alongside the Confluence tidy-up | AC | IMP-06.2 | later |
 | IMP-04.8 | Set up Report Portal access with PDEX; compare with Claude reports | AC | — | next |
+| IMP-04.9 | Build a separate Jira dashboard from the JQL queries | AC | IMP-04.3 | later |
 
 ## Status & Next Action
 

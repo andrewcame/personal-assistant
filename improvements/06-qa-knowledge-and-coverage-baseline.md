@@ -3,7 +3,7 @@ id: IMP-06
 type: improvement
 status: in-progress
 horizon: next
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P2]
 focus: [automation]
 goals: []
@@ -57,10 +57,11 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
 | IMP-06.1 | Build Miro functional QA board (first functional map) | AC | — | doing |
-| IMP-06.2 | Decide home of QA docs and Confluence structure | AC | — | next |
-| IMP-06.3 | Create Confluence automation links page | AC | IMP-06.2 | next |
+| IMP-06.2 | Decide home of QA docs and Confluence structure | AC | — | doing |
+| IMP-06.3 | Create Confluence automation links page | AC | IMP-06.2 | doing |
 | IMP-06.4 | Link references to Jira metrics and coverage items | AC | IMP-06.3, IMP-04.2 | later |
 | IMP-06.5 | Draft first-pass coverage register | AC | IMP-06.1, CH-07.2 | later |
+| IMP-06.6 | Create Confluence pages for the manual and automation packs and their run status | AC | IMP-06.2 | next |
 
 ## Status & Next Action
 

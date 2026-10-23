@@ -1,6 +1,6 @@
 ---
 name: notion-sync
-description: "Two-way bridge between the repo and AC's Notion To Do and Ideas boards: triage new ideas, push approved actions to To Do, and pull long-running or record-tagged to-dos back into records. Use when: notion sync, triage my ideas, push actions to notion, what's on my to do, check my notion, process my to-dos."
+description: "Two-way bridge between the repo and AC's Notion To Do and Ideas boards: triage new ideas, push approved actions to To Do, pull long-running or record-tagged to-dos back into records, and tidy To Do cards against the repo (move finished cards to Done, add Record tags). Use when: notion sync, triage my ideas, push actions to notion, what's on my to do, check my notion, process my to-dos, tidy my cards."
 ---
 
 # Notion Sync
@@ -58,15 +58,32 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
    `{"generated": "YYYY-MM-DD", "cards": [{"title", "status", "records": [...], "created", "due"}], "ideas": {"untriaged": n, "processedTicked": n, "lastTriage": "YYYY-MM-DD" | null}}`
    Include open cards and cards completed in the last 7 days. Convert any real names in titles to aliases. Count Ideas lines that are not ticked as `untriaged`.
 
+## Flow 5 — Card Tidy
+
+Review the open cards (Backlog, To Do, Do Now) against the repo and propose tidy-ups. Run it after Flow 3 and before Flow 4, so the snapshot reflects the tidied board. Reading a card's body and comments is allowed (same card, no links followed); never open other pages.
+
+For each open card, look for:
+
+1. **Done in the repo, still open in Notion** — the matching roadmap step is `done`, or a record, progress log, achievement or `state/now.md` says it is finished. Read the card's body and comments first for anything pertinent (a blocker, a follow-up, a change of plan). If nothing contradicts it, propose **move to Done**; if a comment raises a follow-up, propose that as a new card or roadmap step instead.
+2. **Done in Notion, repo not updated** — a Done card whose roadmap step is still `doing`/`next`: propose marking the step `done` (and the next step `doing`/`next` if it is now unblocked).
+3. **Missing `Record` tag** — an untagged card that clearly relates to one record (title, body, or a matching roadmap step): propose the tag, and say which step it matches. Add the option first if the record is new. Quick untagged reminders that match nothing stay untagged.
+4. **Wrong or stale tag** — a tag whose record is resolved, closed or dropped, or a card whose step was dropped: propose retagging, moving to Done, or deleting. Never delete without explicit approval.
+5. **Duplicates and drift** — two cards for the same step, or a card whose title no longer matches the step wording: propose merging or renaming (short, plain, verb-first, no bracket prefix).
+6. **Status mismatch** — a Do Now card for a `later` step, or a `doing` step whose card sits in Backlog: propose the status change.
+
+Present one table (Card · Current status/tags · Evidence from the repo · Proposed change). Apply only the changes AC approves, one write at a time, and show each before making it. Repo changes that follow (marking steps done, new steps) go through the normal show-then-commit rule.
+
 ## Output
 
 - **Ideas:** one block per idea group (top-level line, with its sub-bullets summarised) → verdict → for Enrich, each proposed addition and the record/section it goes into.
 - **Actions out:** list of proposed cards.
 - **To Do back in:** churn count; tracked cards with proposed record updates; long-open cards.
+- **Card tidy:** the table of proposed moves to Done, new tags, retags and merges, with the repo evidence for each.
 - **Not recorded:** anything stripped under the people-records standard.
 
 ## Rules
 
 - Only the two boards in `context/notion-boards.md`. No search, no browsing, no other pages.
 - Show every Notion write before making it.
+- Card status moves and deletions are never made without AC's approval; check the card's body and comments before proposing Done.
 - Aliases only in anything written to Notion or the repo.

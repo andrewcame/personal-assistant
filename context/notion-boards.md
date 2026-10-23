@@ -13,7 +13,7 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 
 ## Rules
 
-1. **Fetch these boards by link or ID only.** Never use Notion search, never list or browse other pages, never follow links from a card to other pages.
+1. **Fetch these boards by link or ID only.** Never use Notion search, never list or browse other pages, never follow links from a card to other pages. A card's own body and comments may be read when tidying or tracking it.
 2. **Show before writing.** Every create or update in Notion is shown to AC first, the same as a commit.
 3. **Tag with record IDs.** A card created from the repo carries its record ID (see Conventions below). An idea promoted to a record gets the new ID written back next to it.
 4. **Nothing sensitive goes to Notion** — the people-records standard applies to card text too.

@@ -3,7 +3,7 @@ id: CH-04
 type: challenge
 status: active-monitoring
 horizon: later
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P1, P6]
 focus: [people]
 goals: []
@@ -138,6 +138,8 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 ## Status & Next Action
 
 **Status:** Open — Web 3 capacity and Website QA accountability need a short-term response and structural review. GL has offered his support in a 2026-09-17 touch-base and agreed a two-part plan (see [Leadership Direction, 2026-09-17](../context/leadership-direction.md)).
+
+_2026-10-23:_ moving TMW onto Web has given the area more support. TMW can act as a secondary lead and is closely involved in Web 3, where JFG reports to her.
 
 **Short-term:** DA is covering the current Web 2 gap created by a holiday absence, with defined, visible work for this period rather than open-ended cover. I am meeting the engineering lead shortly to work through delivery strategies for this period, including whether the interim support currently in place should be extended to give more time to embed the wider ways of working. 2026-09-18: a Web 2 ticket was reassigned to LM as an interim fix; cover expectations agreed with DA on 2026-09-22.
 
