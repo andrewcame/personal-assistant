@@ -1,7 +1,7 @@
 ---
 id: INI-01
 type: initiative
-status: draft
+status: in-progress
 horizon: now
 updated: 2026-10-23
 pillars: [P4, P5]

@@ -22,6 +22,7 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-10-14 · reviews · Calibration ratings and sensitive fields are drafted in chat only, never saved. · Subject access request exposure.
 - 2026-10-14 · planning · 2026 goals are provisional; tag evidence to pillars and JD items regardless. · Proper goals start in 2027.
 - 2026-10-23 · planning · The Exerp Assistant is a test tool, not a backend service; don't list it as a backend coverage gap or treat its card as a backend duplicate. · AC correction.
+- 2026-10-23 · all · When mentioning a CH-, IMP- or INI- record, or a roadmap step such as INI-01.3, always give its title too, not just the ID. · AC can't always remember what each one is and finds cross-referencing hard.
 
 ## Retired
 
