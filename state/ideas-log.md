@@ -6,7 +6,7 @@ One row per **idea group** (a top-level line plus its sub-bullets). Verdicts: **
 
 | Date | Idea group (summary) | Verdict | Record / card | What was added |
 |------|----------------------|---------|---------------|----------------|
-| 2026-10-16 | QA harness for automation rules/standards ahead of GL's 2027 harness | Enrich | IMP-05 | Context line; new step IMP-05.8 |
+| 2026-10-23 | AI tool to read Jira tickets and comments for search terms ("did we test x?") | Enrich | IMP-04 | New step IMP-04.10; filter by people first |
 | 2026-10-16 | AI-focused outcome: right tests, not one per case; periodic scope review | Enrich | CH-11 | Update: right tests, periodic scope review |
 | 2026-10-16 | Reporting: quality metrics, Report Portal (PDEX) vs Claude reports | Enrich + To Do | IMP-04, To Do | New step IMP-04.8; card created |
 | 2026-10-16 | QA strategy for testing a ticket: focus on the initiative, shift left, AI | Enrich | CH-11 | Update: test the initiative, not the ticket |

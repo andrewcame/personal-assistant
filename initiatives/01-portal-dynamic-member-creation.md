@@ -98,7 +98,7 @@ Making this change within the Pico front-end repo first lets us establish the pa
 | INI-01.5 | Extend Playwright helpers to create members via WunderGraph | DA | INI-01.4 | later |
 | INI-01.6 | Migrate state-changing Portal tests to created members | DA | INI-01.5 | later |
 | INI-01.7 | Document reusable pattern for App adoption | DA | INI-01.6 | later |
-| INI-01.8 | Help DA refine the initiative ready for kick-off | AC | — | doing |
+| INI-01.8 | Help DA refine the initiative ready for kick-off | AC | — | done |
 
 ## Progress Log
 
@@ -116,4 +116,4 @@ Making this change within the Pico front-end repo first lets us establish the pa
 
 ### 2026-10-23
 
-- DA has written the tickets; the team is reviewing them. Once approved, the work kicks off (expected next week).
+- DA has written the tickets; the team has reviewed them. AC approved them on 2026-10-23; kick-off is next week.

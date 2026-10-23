@@ -152,6 +152,12 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - **Further measures to consider:** success of dev-QA tickets vs normal QA; right-first-time / rework. Which metrics drive decisions, and what should we surface first?
 - **Parked:** a record of ticket changes over time (useful, but possibly not one of the measures needed).
 
+### 2026-10-23 (ideas triage)
+
+_From the Ideas triage on 2026-10-23 ([ideas log](../state/ideas-log.md))._
+
+- **AI coverage check on Jira tickets:** an AI tool that reads Jira tickets and comments for search terms, to answer "did we test x?". It is resource heavy, so filter by people first. Enriched as a later step once the JQL queries exist (new step IMP-04.10).
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
@@ -165,6 +171,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | IMP-04.7 | Agree metrics home alongside the Confluence tidy-up | AC | IMP-06.2 | later |
 | IMP-04.8 | Set up Report Portal access with PDEX; compare with Claude reports | AC | — | next |
 | IMP-04.9 | Build a separate Jira dashboard from the JQL queries | AC | IMP-04.3 | later |
+| IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people | AC | IMP-04.3 | later |
 
 ## Status & Next Action
 

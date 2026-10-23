@@ -52,6 +52,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | GD    | Tech Lead                             | CMS (Payload)        | Current |                                             |
 | AA    | Senior Engineer                       | AI / Backend         | Current |                                             |
 | LMo   | Technical Lead                        | Pico architecture    | Current | Not LM (LM is the Contract QA); contributed to CH-10 |
+| JR    | Delivery                              | Delivery             | Current |                                             |
 
 ## Configuration
 
