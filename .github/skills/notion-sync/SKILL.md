@@ -41,6 +41,8 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 1. Gather candidate actions: from the action-extraction skill, a record's next action, or what AC asks for.
 2. Propose cards with a short, plain, verb-first title (no bracket prefix) and the record ID in the `Record` property (add the option if it's a new record), with a due date only if AC gave one.
 3. Create them in To Do only after AC approves the list.
+4. **Always set `To-Do Completion` on every card you create:** `["https://app.notion.com/45cea035c7f183fc9462817b8425947b"]` (the same value cards created in the Notion UI get). Every view on the board filters on this relation, so a card without it is invisible to AC, and the Backlog column disappears if its only cards lack it. Set `Status` explicitly too. Don't read or edit the To-Do Completion database itself.
+5. After creating cards, confirm none are missing the relation: query the data source for rows where `To-Do Completion` is null (expect none).
 
 ## Flow 3 — To Do Back In
 
@@ -56,7 +58,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 1. For every CII in the Now or Next horizon, find its first-up roadmap steps (`doing`/`next`). Each AC-owned first-up step should have an open To Do card tagged with the record ID. Propose cards for any that are missing (Flow 2); steps owned by others are reported as "waiting on", not carded.
 2. Write `reports/notion-snapshot.json` for the dashboard (no approval needed — it's a generated, git-ignored file):
    `{"generated": "YYYY-MM-DD", "cards": [{"title", "status", "records": [...], "created", "due"}], "ideas": {"untriaged": n, "processedTicked": n, "lastTriage": "YYYY-MM-DD" | null}}`
-   Include open cards and cards completed in the last 7 days. Convert any real names in titles to aliases. Count Ideas lines that are not ticked as `untriaged`.
+   Include open cards and cards completed in the last 7 days. Convert any real names in titles to aliases (snapshot only; leave the Notion titles as they are). Count Ideas lines that are not ticked as `untriaged`.
 
 ## Flow 5 — Card Tidy
 
@@ -71,6 +73,9 @@ For each open card, look for:
 5. **Duplicates and drift** — two cards for the same step, or a card whose title no longer matches the step wording: propose merging or renaming (short, plain, verb-first, no bracket prefix).
 6. **Status mismatch** — a Do Now card for a `later` step, or a `doing` step whose card sits in Backlog: propose the status change.
 
+7. **Missing relation** — any card (open or Done) whose `To-Do Completion` is empty: it is hidden from every view. Propose setting it (value in Flow 2, step 4). Check this first on every run.
+8. **Fortnightly Done clear-out** — a Done card that has not been edited for 14 days or more. Before proposing it, make sure its outcome is already in the matching record or achievement (Flow 3). Then propose archiving all such cards in one batch (move to Trash, restorable); never archive without AC's approval. Run this on the first sync of each fortnight (record the date of the last clear-out in `state/now.md`, under Open Threads, as "To Do Done clear-out: last YYYY-MM-DD"). Cards that fed an open record's progress line stay until that line is written.
+
 Present one table (Card · Current status/tags · Evidence from the repo · Proposed change). Apply only the changes AC approves, one write at a time, and show each before making it. Repo changes that follow (marking steps done, new steps) go through the normal show-then-commit rule.
 
 ## Output
@@ -78,7 +83,7 @@ Present one table (Card · Current status/tags · Evidence from the repo · Prop
 - **Ideas:** one block per idea group (top-level line, with its sub-bullets summarised) → verdict → for Enrich, each proposed addition and the record/section it goes into.
 - **Actions out:** list of proposed cards.
 - **To Do back in:** churn count; tracked cards with proposed record updates; long-open cards.
-- **Card tidy:** the table of proposed moves to Done, new tags, retags and merges, with the repo evidence for each.
+- **Card tidy:** the table of proposed moves to Done, new tags, retags, merges, missing relations and the fortnightly Done clear-out, with the repo evidence for each.
 - **Not recorded:** anything stripped under the people-records standard.
 
 ## Rules
@@ -86,4 +91,4 @@ Present one table (Card · Current status/tags · Evidence from the repo · Prop
 - Only the two boards in `context/notion-boards.md`. No search, no browsing, no other pages.
 - Show every Notion write before making it.
 - Card status moves and deletions are never made without AC's approval; check the card's body and comments before proposing Done.
-- Aliases only in anything written to Notion or the repo.
+- Aliases only in the repo (records, snapshot, `state/`). Notion card titles are AC's own text: don't rewrite real names there; convert them to aliases only when copying into the repo.

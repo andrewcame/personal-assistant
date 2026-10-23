@@ -21,8 +21,10 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 
 ## Conventions
 
-**To-Do Database schema (as at 2026-10-15):** `Name` (title), `Status` (Backlog · To Do · Do Now · Done), `Priority` (High · Medium · Low), `Due date`, `Record` (multi-select of record IDs, e.g. `IMP-08`, `CH-12`), `To-Do Completion` (relation).
+**To-Do Database schema (as at 2026-10-23):** `Name` (title), `Status` (Backlog · To Do · Do Now · Done), `Priority` (High · Medium · Low), `Due date`, `Record` (multi-select of record IDs, e.g. `IMP-08`, `CH-12`; `IMP-11` added 2026-10-23), `To-Do Completion` (relation, required — see below).
 
+- **`To-Do Completion` must be set on every card an agent creates**, to `https://app.notion.com/45cea035c7f183fc9462817b8425947b`. All views (Status, Calendar, Today, This week, etc.) filter on it; cards created via the API without it are invisible in AC's views (found 2026-10-23, fixed on all 12 affected cards). Agents never edit the To-Do Completion database itself.
+- **Done clear-out:** every fortnight, Done cards not edited for 14+ days are proposed for archiving (Trash, restorable) once their outcome is in the repo. AC approves each batch.
 - **Titles:** short and plain, no `[CATEGORY]` prefix (retired 2026-10-15). Detail can go in the card body — agents read the body of tracked cards.
 - **Record IDs:** go in the `Record` property. Add a new option there when a new record is created; untagged cards are fine for quick tasks.
 - **"Open"** means Status is Backlog, To Do, or Do Now.

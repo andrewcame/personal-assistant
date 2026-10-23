@@ -27,6 +27,7 @@ _Short week (2 days) — expect minimal progress._
 - BrowserStack renews in November — renewal call held 2026-10-19; plan options and SDK docs link awaited (IMP-10).
 - QA in AI-paired delivery: tentatively agreed QA does one e2e ticket once coding is done, with input throughout; the longer-term QA model still needs thinking. Dynamic Portal member creation enables the automation (CH-11).
 - Backend test pack gaps, Exerp Assistant first — opened IMP-11.
+- Notion To Do: all cards now carry the `To-Do Completion` relation (views were hiding API-created cards). Done clear-out: last — none yet; first due 2026-11-06.
 
 ## Recent Decisions
 
