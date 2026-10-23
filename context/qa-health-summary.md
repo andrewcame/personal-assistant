@@ -28,6 +28,7 @@ These held in the September baseline and still apply after the reassignment.
 - **End-to-end ownership** — component testing and the old microsite split leave gaps between services; checking Exerp, database state, and member comms should be normal practice.
 - **Communication routes** — decision routes and technical-lead responsibilities in Web teams are still settling; ticket test notes need concrete steps and expected outcomes.
 - **Knowledge concentration** — Payments, Exerp/BGW release, and staging promotions knowledge is held informally by a few people.
+- **Speed versus quality, and AI use** — the most common complaint in conference conversations (2026-10-21) was the tension between speed and quality and the over-use of AI; the QA approach needs to address it explicitly (see [CH-11](../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md)).
 
 ## Open Team-Level Questions
 

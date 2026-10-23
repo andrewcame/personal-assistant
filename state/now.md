@@ -15,7 +15,7 @@ _Short week (2 days) — expect minimal progress._
 ## Open Threads
 
 - Web Team Two settling after TMW's move: TMW acts as secondary Web lead and is closely involved in Web 3 (JFG reports to her); DA on Web. KB App lead with AC's support; IY onboarding (CH-04).
-- Awards ceremony (Tue–Thu this week) produced business context — AC to update separately.
+- Awards ceremony (2026-10-21) captured: business pillars Grow / Simplify / Improve in [leadership-direction](../context/leadership-direction.md); team chats in [discovery note](../context/discovery-calls/2026-10-21-annual-conference-team-conversations.md). Open: square speed vs quality and AI use into the QA approach. Industry research on test-in-prod vs mocking vs real integration done (CH-10.9, logged as an industry signal); AC's flagged real-Exerp integration tier is to be fleshed out in IMP-11.5. Driving theme unchanged.
 - LM contract extended into 2027; E2E knowledge transfer continues — AC maps the Portal part in Miro first, then AI for the rest. Stays live until a sound data and environment strategy is agreed, since that enables earlier testing (CH-07).
 - INI-01: AC is sponsor. DA has written the tickets; the team is reviewing them, and work kicks off once approved.
 - INI-02: app simplification kick-off held; awaiting tickets to scope the work. Two epics (make tests pass; pipelines) plus a third aligned to app simplification; AI/OpenSpec enablement likely comes with it. Delivery and the team agreed the implementation details.
@@ -31,6 +31,7 @@ _Short week (2 days) — expect minimal progress._
 
 ## Recent Decisions
 
+- 2026-10-23 — CTO renamed CTTO in the people lookup (same person; older entries keep "CTO"); LMo added for the Technical Lead / Pico architect.
 - 2026-10-23 — Tentative CH-11 agreement: QA does one e2e ticket once coding is done; the team manages delivery.
 - 2026-10-23 — INI-02 shaped as two epics (make tests pass; pipelines) plus a third aligned to app simplification.
 - 2026-10-16 — INI-01 sponsor is AC; no higher sponsor needed.

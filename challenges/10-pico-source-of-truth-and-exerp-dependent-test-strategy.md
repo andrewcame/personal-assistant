@@ -3,12 +3,12 @@ id: CH-10
 type: challenge
 status: open
 horizon: next
-updated: 2026-10-16
+updated: 2026-10-23
 pillars: [P4, P5]
 focus: [automation]
 goals: []
 links: [CH-08, IMP-02, INI-01]
-people: []
+people: [LMo]
 ---
 
 # Challenge 10 — Pico Source-Of-Truth And Exerp-Dependent Test Strategy
@@ -82,6 +82,17 @@ The immediate opportunity is the planned backend-testing initiative. It should f
 
 Over time, the multi-tenant environment model needs an explicit architecture and cost decision. The right answer may combine dedicated real paths for the flagship platform with controlled mocks, sandbox alternatives, or shared services for other brands. Until that decision is made, tests should be clear about what each tier proves and what it cannot prove.
 
+## 2026-10-21 Update — Conference Conversation
+
+Source: [2026-10-21 annual conference team conversations](../context/discovery-calls/2026-10-21-annual-conference-team-conversations.md).
+
+- LMo (Technical Lead, Pico architect) favours leaning on production testing through SRE with mocking; AC favours real integration. GL agreed with both. It is a disagreement, not a blocker, and the two can coexist.
+- AC's position: no "no real QA with Exerp" until later, as that still feels risky. This matches the existing tiered model (Pico-first mocks by default, a small number of deliberate real-Exerp journeys).
+- Follow-up: research wider industry practice on this for distributed systems (CH-10.9) before the test-tier rules are agreed (CH-10.5).
+- **Research done (CH-10.9, 2026-10-23):** logged as an [industry signal](../context/industry-signals.md). Mocks by default is mainstream but doubles need verifying against the real service; production testing complements rather than replaces pre-production testing; keep real-dependency tests few. Sources are older and about owned services, and nothing covers payments.
+- **AC's position on the tiers (feeds CH-10.5 / CH-10.6):** in the front end, Exerp cannot be decoupled (Portal auth and synchronous calls such as cancel). The Join journey can break the reliance, but that has failed before (members never getting a subscription). In the backend, keep select real-Exerp integration tests, flagged in the packs, which may not block releases but run overnight and flag issues. Fleshing this out is tracked in IMP-11.5.
+- **Exerp simulator precedent (2026-10-23):** Dootrix mocked Exerp for the bookings service by building an Exerp simulator, and LMo noted it was a good test tool. Real-Exerp testing in that work was manual. AC's view: automate what is manual, and layer the tests; better to have tests and not enable them than to need them and not have them. The simulator is a candidate for the mock tier alongside the real-Exerp tier.
+
 ## 2026-10-16 Update — Ideas Triage
 
 _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
@@ -104,6 +115,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-10.6 | Run one real-Exerp PoC journey with dynamic data | AC | CH-10.5, INI-01.5 | later |
 | CH-10.7 | Record multi-tenant Exerp environment architecture decision | AC | CH-10.6 | later |
 | CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem | AC | CH-10.1 | next |
+| CH-10.9 | Research industry practice: test in production/SRE vs mocking vs real integration for distributed systems | AC | — | done |
 
 ## Status & Next Action
 

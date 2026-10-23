@@ -16,7 +16,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 |-------|---------------------------------------|-------------|---------|-------------------------------------------|
 | CEO   | Chief Executive Officer               | Exec        | Current | Role only                                 |
 | COO   | Chief Operating Officer               | Exec        | Current | Role only                                 |
-| CTO   | Chief Technology Officer              | Exec        | Current | Role only; GL's manager                   |
+| CTTO  | CTTO                                  | Exec        | Current | Role only; GL's manager; recorded as "CTO" in entries before 2026-10-23 |
 | CIO   | Chief Information Officer             | Exec        | Current | Role only (role per AC, 2026-10-16)       |
 | GL    | Group Software Engineering Director   | Engineering | Current | AC's manager; "director level" in agents  |
 | GH    | Head of Software Engineering          | Engineering | Current |                                           |
@@ -51,6 +51,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | RT    | Tech Lead                             | Payments             | Current |                                             |
 | GD    | Tech Lead                             | CMS (Payload)        | Current |                                             |
 | AA    | Senior Engineer                       | AI / Backend         | Current |                                             |
+| LMo   | Technical Lead                        | Pico architecture    | Current | Not LM (LM is the Contract QA); contributed to CH-10 |
 
 ## Configuration
 

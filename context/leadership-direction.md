@@ -6,11 +6,12 @@ It is **not** a task list. Tasks live in Notion. This is for themes and signals 
 
 The idea-validator agent should load this file alongside the job spec and the [horizons plan](my-role/horizons.md) when sense-checking ideas.
 
-## Standing Themes (as at 2026-10-14)
+## Standing Themes (as at 2026-10-23)
 
 Durable direction distilled from all entries, including [archived ones](archive/leadership-direction-2026-q3.md). Dates point to the source entries.
 
-- **Microsite sunset is the gating priority** — the CTO expects account and bookings microsites to be gone by end of 2026 (team forecast: March 2027), and it is the standing answer to resourcing, promotion, and investment questions. (2026-09-11, 2026-09-30)
+- **Business pillars: Grow, Simplify, Improve** — Grow means more gyms and members (US organic and franchise, Switzerland after the latest acquisition; smaller, varied formats; older franchise markets deprioritised). Simplify and Improve sit with the CTTO, who is AI-led and speed-focused; the COO wants lean cost and a strong growth story. Cross-department communication supports the "no product" decision. (2026-10-21)
+- **Microsite sunset is the gating priority** — the CTTO (recorded as CTO in earlier entries) expects account and bookings microsites to be gone by end of 2026 (team forecast: March 2027), and it is the standing answer to resourcing, promotion, and investment questions. (2026-09-11, 2026-09-30)
 - **Morale and progression sit behind microsite sunset** — progression and investment are held until sunset, while low morale makes it harder; treat sunset as the unlock narrative and show visible progress against it. (2026-09-30)
 - **In-house technical ownership, closer to the business** — a more autonomous engineering function with direct stakeholder relationships, faster decisions, ownership pushed down, and the Tech Lead Chapter in place of the architecture council; QA takes custody of staging alerting. (2026-07-29, 2026-09-03, 2026-09-11)
 - **Pace with proportionate quality** — fewer, more valuable tests mapped to member-critical journeys; test when a feature is ready rather than every micro-deploy, backed by deterministic regression and leadership-owned risk; front-end-first while services migrate. (2026-09-07, 2026-09-11, 2026-09-30)
@@ -50,6 +51,19 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 ---
 
 ## Entries
+
+### 2026-10-21 — Annual conference and awards: business pillars from the CEO, COO and CTTO
+
+- **Date** — 2026-10-21 (conference and awards ceremony, Wednesday)
+- **Source** — Annual conference presentations by the CEO, COO and CTTO, plus a department-mixed table exercise
+- **Theme** — Three business pillars: **Grow, Simplify, Improve**. Grow is about opening more gyms (more gyms = more members = more money). The big targets this year are the US estate (organic *and* franchise) and Switzerland, where another gym company was just bought. The CEO is strongly motivated by member growth through openings, so the ability to scale and support new openings matters.
+- **Theme** — Direction shift: the older franchise markets (the old US and KSA/UAE franchises) were not generating enough money and are not a focus. Organic growth is, using smaller, more varied gym formats to maximise members.
+- **Theme** — Simplify and Improve are the CTTO's objectives. He is strongly AI-led: AI-generated videos, AI already in property search, and a "do it in six months, but I want it quicker" emphasis on speed. Engineering (web and app) was not named. His remit is broad, which reads as the engineering leaders (GL, GH, DJ and me) being expected to drive engineering culture.
+- **Theme** — The COO (a former CFO) is motivated by cash gains: staying lean, keeping costs low, and having a credible growth story through a cost-of-living squeeze.
+- **Theme** — The CTTO stressed cross-department communication (a table exercise with one person per department, then "how did we do?"). This supports the earlier "no product" decision. AI leads the way.
+- **Implication** — No change to the Driving Theme (get off the microsites); the business direction has not moved much since the last signals. Scalable, repeatable quality that supports openings and new markets (US, Switzerland) is the growth lens; lean cost and speed are the COO and CTTO lenses on the QA approach.
+- **Implication** — Expect pressure on speed and AI use to continue. The QA approach needs to say explicitly how it balances speed and quality and where AI is used with accountability (see [CH-11](../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md), [CH-10](../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md)).
+- **My read** — Engineering was absent from the headlines, so culture and direction for engineering are ours to set.
 
 ### Undated — CIO priorities (recorded 2026-10-16)
 
