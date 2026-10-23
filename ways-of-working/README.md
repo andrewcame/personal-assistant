@@ -19,7 +19,7 @@ It is not a meeting-notes archive or task tracker. Use it to understand operatin
 - [cadences.md](cadences.md) - register of regular calls, forums, and recurring processes.
 - [engineering-behaviors.md](engineering-behaviors.md) - the agreed engineering ways-of-working principles (debate, disagreement, decision ownership).
 - [assistant-routine.md](assistant-routine.md) - how AC uses this assistant: what lives where, the weekly rhythm, cross-model review.
-
+- [model-and-token-guide.md](model-and-token-guide.md) - which model for which agent or skill, how to cut token spend, and running the routines without Claude.
 Person-specific guides (e.g. 1:1 escalation paths) live with that person's profile in [team](../team), not here.
 
 Use [the meeting cadence template](../templates/meeting-cadence.md) when adding a new recurring call or forum.

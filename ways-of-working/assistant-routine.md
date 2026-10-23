@@ -19,7 +19,7 @@ How AC works with this harness day to day. Agreed 2026-10-15; adjust as it beds 
 | **Notion — To Do** | AC's task list. Quick reminders come and go; long-running or record-tagged cards flow back into the repo |
 | **Notion — Ideas** | Loose thoughts. Triaged weekly: park, link to a record, or promote |
 | **Claude (Cowork)** | The interface: capture, bounce ideas, research, sense-check, run the routines, commit after AC's OK |
-| **Copilot (VS Code)** | Same instructions via `AGENTS.md`; used for cross-model review and quick edits |
+| **Copilot (VS Code)** | Same instructions via `AGENTS.md`; used for cross-model review and quick edits, and as the backup when Claude credits run out ([model and token guide](model-and-token-guide.md)) |
 | **Quality Leadership Board** | The dashboard AC reads instead of the markdown files; refreshed every Friday |
 
 ## Any Time

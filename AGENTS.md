@@ -71,6 +71,16 @@ Capture is the router — full rules in [`.github/agents/capture.agent.md`](.git
 
 If your tool doesn't load these automatically, read the file and follow it.
 
+## Model And Token Discipline
+
+Applies to every task, whatever the prompt says. Full guide: [`ways-of-working/model-and-token-guide.md`](ways-of-working/model-and-token-guide.md).
+
+- **Right-size the model.** Mechanical filing → Haiku-class; capture, weekly review, Notion sync, research → Sonnet-class; calibration, reviews, goals, horizon review → Opus-class; cross-review → a different model family. You can't switch models yourself: if the task is clearly mismatched to the current one, say so in one line and carry on unless AC switches.
+- **Read the minimum.** Start from the four start-here files; use folder `README.md` indexes, `grep` and `view_range`; never open `reports/*.html` or `reports/data.json` or `context/archive/` unless asked.
+- **No sub-agents** for work you can finish in a few direct reads.
+- **One task per chat.** If a chat has drifted onto a new, unrelated task, suggest a fresh one.
+- **Batch** related captures into one pass and one checks run.
+
 ## Checks
 
 After any write, run `python scripts/check.py all` (or ask AC to) and fix errors before proposing a commit.
