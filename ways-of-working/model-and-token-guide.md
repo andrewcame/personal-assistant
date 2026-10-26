@@ -27,7 +27,7 @@ Rules of thumb:
 1. **One task per chat.** Start fresh for each job. Long chats re-send their whole history every turn.
 2. **Start from the standard four files only:** `state/now.md`, `context/role-brief.md`, `state/learnings.md`, `ways-of-working/assistant-routine.md`. Open others only when those don't answer the question; prefer folder `README.md` indexes.
 3. **Name the file or record in the prompt** (e.g. "file this call, then update CH-12") so the agent doesn't explore.
-4. **Never open generated output.** `reports/*.html` and `reports/data.json` are 100 KB+ and git-ignored. Run `report.py`; don't read it.
+4. **Never open generated output.** `reports/*.html` and `reports/*.json` are large and git-ignored. Run `python scripts/report.py` / `python scripts/people_report.py`; don't read them. For "why does the dashboard show X", read [dashboards.md](dashboards.md).
 5. **Read ranges, not whole files.** Use `grep` and `view_range` for anything over ~20 KB (`cadences.md`, `engineering-behaviors.md`, `software-delivery-lifecycle.md`, long call notes).
 6. **Batch captures.** Paste several notes into one chat rather than one chat each.
 7. **No sub-agents for small jobs.** Direct reads are cheaper than spinning up a delegate.
@@ -39,6 +39,6 @@ Rules of thumb:
 
 Scheduled runs are just skills, so ask for them by name in a fresh chat: "run the weekly-review skill" (Fridays), "run horizon-review" (1st of the month), "run calibration-prep" (2 Nov). Nothing runs on a schedule in VS Code, so set a calendar reminder.
 
-- **Checks:** `python scripts/check.py all` and `python scripts/report.py` need Python 3 (standard library only).
+- **Checks and dashboards:** `python scripts/check.py all`, `python scripts/report.py` and `python scripts/people_report.py` need Python 3 (standard library only). Rebuild both dashboards after the Friday routines.
 - **Notion:** needs the Notion MCP connected in VS Code. Without it, paste the Ideas page and open To Do cards into the chat and write the verdicts back by hand.
 - **Approval rules are unchanged:** nothing is committed or written to Notion without AC's OK.

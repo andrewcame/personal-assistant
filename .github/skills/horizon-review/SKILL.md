@@ -36,4 +36,5 @@ Keeps `context/my-role/horizons.md` an accurate plan rather than a wish list. Ru
 - Propose, then write only after the user confirms.
 - Move rows rather than deleting them; Done rows stay with a link to the achievement.
 - When a row moves, update the linked records' `horizon:` front-matter so `check.py index` stays consistent, and run `python scripts/check.py all` afterwards if you can.
+- Plan-only rows (no record in Carried by) need a **Source** and show amber on the dashboard; propose opening a challenge or improvement for any that are moving into Now. Job-spec items nothing tracks show as Role cards: check the `jd:` tags on records before concluding a gap (see [dashboards.md](../../../ways-of-working/dashboards.md)).
 - Bump **Last refreshed** in `role-brief.md` when its Now line changes.

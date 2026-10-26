@@ -6,6 +6,7 @@ horizon: later
 updated: 2026-10-15
 pillars: [P8, P10]
 focus: [ownership]
+jd: [JD-15, JD-17]
 goals: []
 links: []
 people: []

@@ -20,7 +20,8 @@ How AC works with this harness day to day. Agreed 2026-10-15; adjust as it beds 
 | **Notion — Ideas** | Loose thoughts. Triaged weekly: park, link to a record, or promote |
 | **Claude (Cowork)** | The interface: capture, bounce ideas, research, sense-check, run the routines, commit after AC's OK |
 | **Copilot (VS Code)** | Same instructions via `AGENTS.md`; used for cross-model review and quick edits, and as the backup when Claude credits run out ([model and token guide](model-and-token-guide.md)) |
-| **Quality Leadership Board** | The dashboard AC reads instead of the markdown files; refreshed every Friday |
+| **Quality Leadership Board** | The dashboard AC reads instead of the markdown files (this week, plan, signals); refreshed every Friday with `python scripts/report.py` |
+| **People & Objectives Board** | Team readiness, evidence and framework coverage, ahead of calibration and reviews; built with `python scripts/people_report.py` |
 
 ## Any Time
 
@@ -31,11 +32,15 @@ How AC works with this harness day to day. Agreed 2026-10-15; adjust as it beds 
 
 ## Weekly Rhythm (scheduled in Cowork)
 
+Every run starts with a Notion sync so the dashboards work on fresh data: **light** on Monday and Wednesday (snapshot and coverage only), **full** on Friday. The exact prompts are in [scheduled-prompts.md](scheduled-prompts.md), the master copy to paste into the Cowork scheduler.
+
 | When | Routine | What AC gets |
 |---|---|---|
-| ~~Monday 08:30~~ (paused 2026-10-16 to save usage) | Week ahead | Focus from `state/now.md`, open To Do cards tagged to records, what's due or stale, suggested top 3 |
-| ~~Wednesday 12:30~~ (paused 2026-10-16 to save usage) | How are we getting on | Short mid-week check: progress on the top 3, anything blocked, new ideas waiting for triage |
-| **Friday 15:00** | Weekly report | Weekly review (moved, stale, wins to log, next week), Notion sync (churn count, tracked to-dos, ideas triage), refreshed dashboard |
+| Monday 08:30 (**paused 2026-10-16 to save usage; resume with the light-sync version**) | Week ahead | Light Notion sync and dashboard refresh; suggested top 3 tied to challenges/improvements and their to-dos; Needs attention gaps; waiting on; dated items; stale Now records |
+| Wednesday 12:30 (**paused 2026-10-16 to save usage; resume with the light-sync version**) | How are we getting on | Light Notion sync and dashboard refresh; short mid-week check on progress, blockers, chases, new gaps, ideas awaiting triage (count) |
+| **Friday 15:00** | Weekly report | Weekly review, **full** Notion sync (churn count, tracked to-dos, ideas triage, card tidy), refreshed dashboards, artifact published |
+
+To run any of these by hand, or without Claude, paste the matching prompt from [scheduled-prompts.md](scheduled-prompts.md) into a fresh chat, or just ask for "the notion-sync skill, light" / "the weekly-review skill".
 
 ## Monthly And Seasonal
 

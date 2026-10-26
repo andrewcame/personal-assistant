@@ -4,6 +4,7 @@ type: initiative
 status: draft           # draft | submitted | in-progress | done | rejected
 horizon: none
 updated: YYYY-MM-DD
+origin: []              # REQUIRED: the CH-/IMP- this initiative delivers (an initiative always comes from one)
 pillars: []
 focus: []
 goals: []
@@ -76,6 +77,6 @@ So that ...
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| XX-NN.1 | | AC | — | next |
+| ID | Step | Owner | Depends on | Status | Ticket |
+|----|------|-------|------------|--------|--------|
+| XX-NN.1 | | AC | — | next | — |

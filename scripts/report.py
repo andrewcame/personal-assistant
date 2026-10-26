@@ -4,8 +4,10 @@
 Usage (from the repo root):
     python scripts/report.py            # writes reports/dashboard.html (open locally), reports/artifact.html (publish), reports/data.json
     python scripts/report.py --json     # print the data only
+    python scripts/report.py --week     # print only the This week panels as compact text (for agents)
 
 The HTML template lives in scripts/report_template.html; this script injects the data.
+Team readiness, evidence and framework coverage are on the separate People & Objectives board (scripts/people_report.py), which reuses the parsers below.
 People data is limited to aliases, profile dates, and evidence counts — never ratings.
 """
 from __future__ import annotations
@@ -50,17 +52,26 @@ def bullets(block: str) -> list[str]:
 
 # ---------------------------------------------------------------- sources
 
+REF_RE = re.compile(r"^((?:CH|IMP|INI)-\d\d)(?:\.\d+)?\b[^—]*—\s*(.+)$")
+
+
+def entries(block: str) -> list[dict]:
+    """now.md bullets shaped 'IMP-08 Short label — one point'; anything else is filed under General."""
+    out = []
+    for b in bullets(block):
+        m = REF_RE.match(b)
+        if m:
+            out.append({"ref": m.group(1), "text": m.group(2).strip()})
+        else:
+            out.append({"ref": None, "text": re.sub(r"^General\s*—\s*", "", b)})
+    return out
+
+
 def now_state() -> dict:
+    """Only Upcoming is read from now.md; Focus and Waiting On on the dashboard come from To Do cards and roadmaps."""
     text = check.read(ROOT / "state" / "now.md")
     m = re.search(r"\*\*Updated:\*\*\s*(\S+)", text)
-    return {
-        "updated": m.group(1) if m else None,
-        "focus": bullets(section(text, "This Week's Focus")),
-        "threads": bullets(section(text, "Open Threads")),
-        "decisions": bullets(section(text, "Recent Decisions")),
-        "waiting": bullets(section(text, "Waiting On")),
-        "upcoming": bullets(section(text, "Upcoming")),
-    }
+    return {"updated": m.group(1) if m else None, "upcoming": entries(section(text, "Upcoming"))}
 
 
 def records() -> tuple[list[dict], list[dict]]:
@@ -71,40 +82,59 @@ def records() -> tuple[list[dict], list[dict]]:
             calls.append({"id": fm.get("id"), "date": fm.get("date"), "title": re.sub(r"^\d{4}-\d{2}-\d{2}\s*-\s*", "", r["title"]),
                           "pillars": fm.get("pillars", []), "file": check.rel(r["path"])})
             continue
-        na = re.search(r"\*\*Next action[^*]*\*\*:?\s*(.*)", r["text"])
-        nxt = strip_md(na.group(1)) if na and na.group(1).strip() else ""
-        if not nxt and na:
-            after = r["text"][na.end():]
-            first = bullets(after.split("\n\n**")[0])
-            nxt = first[0] if first else ""
+        roadmap = r.get("roadmap") or []
+        nxt = next((st for st in roadmap if st["status"] == "doing"), None) or next((st for st in roadmap if st["status"] == "next"), None)
         recs.append({
             "id": fm.get("id"), "kind": r["kind"], "title": r["title"], "status": fm.get("status"),
             "horizon": fm.get("horizon"), "updated": fm.get("updated"), "age": age(fm.get("updated")),
-            "pillars": fm.get("pillars", []), "links": fm.get("links", []), "next": nxt[:260],
-            "closed": fm.get("status") in check.CLOSED, "file": check.rel(r["path"]),
-            "roadmap": r.get("roadmap") or [],
+            "pillars": fm.get("pillars", []), "focus": fm.get("focus", []), "links": fm.get("links", []),
+            "origin": fm.get("origin", []), "initiativeNeed": fm.get("initiative", "tbc"), "jd": fm.get("jd", []),
+            "nextStep": nxt, "closed": fm.get("status") in check.CLOSED, "file": check.rel(r["path"]),
+            "roadmap": roadmap,
         })
+    # a challenge/improvement is delivered by every initiative that names it as an origin
+    by_id = {r["id"]: r for r in recs}
+    for r in recs:
+        r["initiatives"] = [{"id": i["id"], "title": i["title"], "status": i["status"]} for i in recs
+                            if i["kind"] == "initiative" and r["id"] in i["origin"] and not i["closed"]]
     return recs, calls
 
 
-def horizons(rec_by_file: dict) -> dict:
+def parent_of(rec_id: str, by_id: dict) -> str:
+    """Initiatives roll up into the challenge or improvement they deliver."""
+    r = by_id.get(rec_id)
+    if r and r["kind"] == "initiative" and r["origin"]:
+        return r["origin"][0]
+    return rec_id
+
+
+def plan_only() -> list[dict]:
+    """Plan rows (horizons.md) that no challenge or improvement carries yet."""
+    out = []
+    for row in check.plan_rows():
+        if re.search(r"\]\(\.\./\.\./", row["carried"]):
+            continue
+        src = strip_md(row["source"]).strip("—- ") or "plan"
+        out.append({"horizon": row["horizon"], "outcome": strip_md(row["outcome"]), "focus": row["focus"].lower(),
+                    "status": strip_md(row["status"]), "source": src, "jd": re.findall(r"JD-\d+", src)})
+    return out
+
+
+def role_items(recs: list[dict], orphans: list[dict]) -> list[dict]:
+    """Job-spec responsibilities that no open challenge/improvement and no plan item covers."""
+    tax = check.read(ROOT / "context" / "_taxonomy.md")
+    jd = re.findall(r"^\|\s*(JD-\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|", tax, re.M)
+    covered = {j for r in recs if not r["closed"] and r["kind"] != "initiative" for j in r["jd"]}
+    covered |= {j for o in orphans for j in o["jd"]}
+    return [{"id": i, "area": area, "label": label} for i, area, label in jd if i not in covered]
+
+
+def horizons() -> dict:
     text = check.read(ROOT / "context" / "my-role" / "horizons.md")
     theme = re.search(r"\*\*Get off the microsites\.\*\*(.*?)\n", text)
     meta = re.search(r"_Set (\d{4}-\d{2}-\d{2}) from ([^(]+?)\s*\(", text)
-    out = {"theme": strip_md("Get off the microsites." + (theme.group(1) if theme else "")), "rows": [],
-           "themeSet": meta.group(1) if meta else None, "themeSource": meta.group(2).strip() if meta else None}
-    for hz in ["Now", "Next", "Later"]:
-        block = section(text, hz)
-        for line in block.splitlines():
-            cells = [c.strip() for c in line.strip().strip("|").split("|")]
-            if len(cells) != 4 or cells[0] in ("Outcome", "") or set(cells[0]) <= set("-"):
-                continue
-            files = re.findall(r"\]\(\.\./\.\./([^)]+)\)", cells[2])
-            ids = [rec_by_file[f]["id"] for f in files if f in rec_by_file]
-            ages = [rec_by_file[f]["age"] for f in files if f in rec_by_file and rec_by_file[f]["age"] is not None]
-            out["rows"].append({"horizon": hz.lower(), "outcome": strip_md(cells[0]), "focus": cells[1].lower(),
-                                "carried": ids, "status": strip_md(cells[3]), "freshest": min(ages) if ages else None})
-    return out
+    return {"theme": strip_md("Get off the microsites." + (theme.group(1) if theme else "")),
+            "themeSet": meta.group(1) if meta else None, "themeSource": meta.group(2).strip() if meta else None}
 
 
 def achievements() -> list[dict]:
@@ -176,7 +206,7 @@ def coverage(recs, calls, achs) -> dict:
         pillars.append({
             "id": p, "label": label, "mission": mission_of.get(p),
             "achievements": sum(1 for a in achs if p in a["tags"]),
-            "live": sum(1 for r in recs if p in r["pillars"] and not r["closed"]),
+            "open": sum(1 for r in recs if p in r["pillars"] and not r["closed"] and r["kind"] != "initiative"),
             "calls": sum(1 for c in calls if p in c["pillars"]),
         })
     jd = [{"id": j, "label": l, "achievements": sum(1 for a in achs if j in a["tags"])} for j, l in jds.items()]
@@ -193,82 +223,94 @@ def notion_snapshot() -> dict | None:
         return None
 
 
-def roadmap_view(recs: list[dict], snap: dict | None) -> dict:
-    """First-up steps, card coverage, and a Mermaid graph of Now/Next roadmaps."""
-    open_cards = [c for c in (snap or {}).get("cards", []) if c.get("status") != "Done"]
-    carded = {rid for c in open_cards for rid in c.get("records", [])}
-    live = [r for r in recs if not r["closed"] and r["horizon"] in ("now", "next")]
-    first_up, attention = [], []
-    for r in live:
-        fu = [st for st in r["roadmap"] if st["status"] in check.FIRST_UP]
-        if not r["roadmap"]:
-            attention.append({"id": r["id"], "title": r["title"], "issue": "No roadmap yet"})
-        elif not fu and r["status"] != "on-hold":
-            attention.append({"id": r["id"], "title": r["title"], "issue": "No first-up step"})
-        for st in fu:
-            first_up.append({**st, "record": r["id"], "horizon": r["horizon"], "recordTitle": r["title"]})
-        if snap is not None and any(st["owner"] == "AC" for st in fu) and r["id"] not in carded:
-            attention.append({"id": r["id"], "title": r["title"], "issue": "First-up step has no To Do card"})
-    for r in recs:
-        if not r["closed"] and r["age"] is not None and r["age"] >= STALE_DAYS:
-            attention.append({"id": r["id"], "title": r["title"], "issue": f"No update for {r['age']} days"})
-    # Mermaid graph for Now/Next records
-    def nid(x):
-        return x.replace("-", "_").replace(".", "_")
-    def esc(t):
-        return re.sub(r'["<>#;]', "", t)[:48]
-    lines = ["flowchart LR",
-             "classDef done fill:#C0E498,stroke:#38A169,color:#1C2B2B",
-             "classDef doing fill:#00C1C6,stroke:#00999D,color:#1C2B2B",
-             "classDef next fill:#D6F1F2,stroke:#00999D,stroke-width:2px,color:#1C2B2B",
-             "classDef later fill:#EEF2F2,stroke:#9DB3B3,color:#5B6E6E",
-             "classDef blocked fill:#FFBAB9,stroke:#E53E3E,color:#1C2B2B"]
-    shown = {st["id"] for r in live for st in r["roadmap"]}
-    for r in sorted(live, key=lambda x: (x["horizon"] != "now", x["id"])):
-        if not r["roadmap"]:
+def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: dict | None) -> dict:
+    """To-do-led view. Each open challenge/improvement (initiatives roll up into theirs) is asked: does it have a task?
+    A To Do card on AC -> Focus. A first-up roadmap step owned by someone else -> Waiting on.
+    Neither (or an AC step with no card) -> Needs attention. Plan and role items with no record also go to Needs attention."""
+    by_id = {r["id"]: r for r in recs}
+    ciis = [r for r in recs if r["kind"] != "initiative" and not r["closed"]]
+    cards_by: dict[str, list[dict]] = {}
+    for card in (snap or {}).get("cards", []):
+        if card.get("status") == "Done":
             continue
-        lines.append(f'subgraph {nid(r["id"])}["{r["id"]} · {esc(r["title"])}"]')
-        lines.append("direction LR")
-        for st in r["roadmap"]:
-            lines.append(f'{nid(st["id"])}["{st["id"].split(".")[-1]}. {esc(st["step"])}"]:::{st["status"] if st["status"] in check.STEP_STATUSES else "later"}')
-        lines.append("end")
-    for r in live:
-        for st in r["roadmap"]:
-            for d in st["deps"]:
-                if d in shown:
-                    same = d.rsplit(".", 1)[0] == r["id"]
-                    lines.append(f'{nid(d)} {"-->" if same else "-.->"} {nid(st["id"])}')
-    order = {"now": 0, "next": 1}
-    first_up.sort(key=lambda x: (order.get(x["horizon"], 2), x["record"]))
-    return {"firstUp": first_up, "attention": attention, "mermaid": "\n".join(lines),
-            "cardedRecords": sorted(carded)}
+        for rid in card.get("records", []):
+            p = parent_of(rid, by_id)
+            if p in by_id and by_id[p]["kind"] != "initiative" and card not in cards_by.setdefault(p, []):
+                cards_by[p].append(card)
+    rank = {"Do Now": 0, "To Do": 1}
+    horizon_order = {"now": 0, "next": 1, "later": 2}
+    focus, waiting, no_todo = [], [], []
+    for c in sorted(ciis, key=lambda r: (horizon_order.get(r["horizon"], 3), r["id"])):
+        steps = list(c["roadmap"]) + [s for i in c["initiatives"] for s in by_id[i["id"]]["roadmap"]]
+        first_up = [s for s in steps if s["status"] in check.FIRST_UP]
+        mine = [s for s in first_up if s["owner"] == "AC"]
+        theirs = [s for s in first_up if s["owner"] != "AC"]
+        cards = cards_by.get(c["id"], [])
+        c["todoOpen"] = len(cards)
+        c["waitingOn"] = sorted({s["owner"] for s in theirs})
+        if not c["nextStep"] and first_up:
+            c["nextStep"] = next((s for s in first_up if s["status"] == "doing"), first_up[0])
+        tasks = sorted((x for x in cards if x.get("status") in rank), key=lambda x: rank[x["status"]])
+        if tasks:
+            focus.append({"ref": c["id"], "tasks": [{"title": t["title"], "status": t["status"], "due": t.get("due"),
+                                                      "url": t.get("url")} for t in tasks]})
+        if theirs:
+            waiting.append({"ref": c["id"], "tasks": [{"title": s["step"], "owner": s["owner"], "step": s["id"]} for s in theirs]})
+        if snap is None or c["horizon"] not in ("now", "next") or c["status"] == "on-hold" or cards:
+            continue
+        if mine:
+            no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Needs a To Do: {mine[0]['step']} ({mine[0]['id']})"})
+        elif not theirs:
+            no_todo.append({"id": c["id"], "title": c["title"], "issue": "No To Do and no next step on the roadmap"})
+    no_cii = [{"kind": "plan", "title": o["outcome"], "detail": f"{o['horizon'].capitalize()} · {o['source']}"} for o in orphans]
+    no_cii += [{"kind": "role", "title": r["label"], "detail": f"{r['id']} · {r['area']}"} for r in roles]
+    return {"focus": focus, "waiting": waiting, "noTodo": no_todo, "noCii": no_cii}
 
 
 def build() -> dict:
     recs, calls = records()
-    by_file = {r["file"]: r for r in recs}
-    achs = achievements()
     snap = notion_snapshot()
+    orphans = plan_only()
+    roles = role_items(recs, orphans)
+    week = this_week(recs, orphans, roles, snap)
+    by_id = {r["id"]: r for r in recs}
+    now = now_state()
+    for e in now["upcoming"]:
+        if e["ref"]:
+            e["ref"] = parent_of(e["ref"], by_id)
     data = {
         "generated": TODAY.isoformat(),
         "staleDays": STALE_DAYS,
-        "now": now_state(),
-        "horizons": horizons(by_file),
+        "now": now,
+        "horizons": horizons(),
         "records": recs,
+        "planOnly": orphans,
         "calls": sorted(calls, key=lambda c: c["date"] or "", reverse=True),
-        "achievements": achs,
         "leadership": leadership(),
         "industry": industry(),
-        "team": team(),
-        "coverage": coverage(recs, calls, achs),
         "notion": snap,
-        "roadmap": roadmap_view(recs, snap),
+        "week": week,
+        "roles": roles,
     }
     return data
 
 
 def main(argv: list[str]) -> int:
     data = build()
+    if "--week" in argv:
+        # compact text for agents: avoids opening the large generated files
+        w = data["week"]
+        for f in w["focus"]:
+            print(f"FOCUS {f['ref']}: " + "; ".join(f"[{t['status']}] {t['title']}" for t in f["tasks"]))
+        for f in w["waiting"]:
+            print(f"WAITING {f['ref']}: " + "; ".join(f"{t['owner']}: {t['title']} ({t['step']})" for t in f["tasks"]))
+        for n in w["noTodo"]:
+            print(f"NO-TODO {n['id']} {n['title']}: {n['issue']}")
+        for n in w["noCii"]:
+            print(f"NO-CII [{n['kind']}] {n['title']} ({n['detail']})")
+        for e in data["now"]["upcoming"]:
+            print(f"UPCOMING {e['ref'] or 'General'}: {e['text']}")
+        return 0
     if "--json" in argv:
         print(json.dumps(data, indent=1))
         return 0
@@ -276,15 +318,13 @@ def main(argv: list[str]) -> int:
     out_dir.mkdir(exist_ok=True)
     (out_dir / "data.json").write_text(json.dumps(data, indent=1), encoding="utf-8")
     template = (Path(__file__).parent / "report_template.html").read_text(encoding="utf-8")
-    import html as _h
     html = template.replace("/*__DATA__*/null", json.dumps(data).replace("</", "<\\/"))
-    html = html.replace("<!--__MERMAID__-->", _h.escape(data["roadmap"]["mermaid"], quote=False))
     # artifact.html is the bare page for publishing (the host adds the document skeleton);
     # dashboard.html is a standalone copy for opening locally in a browser.
     (out_dir / "artifact.html").write_text(html, encoding="utf-8")
-    standalone = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>\n' + html + '\n<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true});</script>\n</body></html>\n'
+    standalone = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body>\n' + html + '\n</body></html>\n'
     (out_dir / "dashboard.html").write_text(standalone, encoding="utf-8")
-    print(f"report: reports/dashboard.html ({len(data['records'])} records, {len(data['achievements'])} achievements)")
+    print(f"report: reports/dashboard.html ({len(data['records'])} records)")
     return 0
 
 

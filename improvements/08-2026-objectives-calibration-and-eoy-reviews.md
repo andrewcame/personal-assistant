@@ -6,6 +6,7 @@ horizon: now
 updated: 2026-10-19
 pillars: [P1]
 focus: [people]
+jd: [JD-01, JD-03]
 goals: []
 links: [IMP-05]
 people: [TMW, DA, MP, KB, JS, JFG, GL]

@@ -6,6 +6,7 @@ horizon: next
 updated: 2026-10-23
 pillars: [P6]
 focus: [productivity]
+jd: [JD-09]
 goals: []
 links: [IMP-06]
 people: []

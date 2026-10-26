@@ -1,0 +1,84 @@
+<!--__HEAD__-->
+
+<div class="wrap" style="padding-block:0">
+  <header class="top">
+    <div class="eyebrow" id="gen">QA &amp; Test Engineering</div>
+    <h1>People &amp; Objectives Board</h1>
+    <p class="theme-line">Role coverage, evidence and team readiness ahead of calibration and year-end reviews. What you are doing day to day lives on the <a href="dashboard.html">Quality Leadership Board</a>.</p>
+  </header>
+</div>
+<nav class="sections" aria-label="Sections"><div class="inner">
+  <a href="#team">Team readiness</a><a href="#evidence">Evidence</a><a href="#framework">Framework</a><a href="#help">How to read</a><a href="dashboard.html">Quality Leadership Board &#8599;</a>
+</div></nav>
+<div class="wrap">
+  <section id="team">
+    <h2>Team readiness</h2>
+    <p class="sub" id="calib"></p>
+    <div class="tablewrap"><table><thead><tr><th>Alias</th><th>Role</th><th>Objectives agreed</th><th>WHAT evidence</th><th>HOW evidence</th><th>Self / manager</th><th>Profile reviewed</th></tr></thead><tbody id="teamrows"></tbody></table></div>
+    <p class="note">Counts only. Ratings, matrix positions and retention views are never stored in the repo or shown here.</p>
+  </section>
+
+  <section id="evidence">
+    <h2>Evidence</h2>
+    <p class="sub">Achievements logged this year, newest first, with their taxonomy tags.</p>
+    <div class="timeline" id="achs"></div>
+  </section>
+
+  <section id="framework">
+    <h2>Framework coverage</h2>
+    <p class="sub">Every role pillar against the evidence behind it: logged achievements, <b>open CIIs</b> (challenges and improvements not yet closed, i.e. work in flight), and discovery calls. Pillars with no achievements are outlined in coral.</p>
+    <div class="missions" id="missions"></div>
+    <div class="panel" style="margin-top:18px"><h3>Job description evidence</h3><div class="jd" id="jd"></div></div>
+  </section>
+
+  <section id="help" class="help">
+    <h2>How to read this board</h2>
+    <p class="sub">Generated from the personal-assistant repo by <code>scripts/people_report.py</code>. Run <code>python scripts/people_report.py</code> to rebuild; <code>python scripts/report.py</code> rebuilds the Quality Leadership Board.</p>
+    <dl>
+      <dt>Team readiness</dt><dd>For each permanent team member: objectives agreed for the year, dated WHAT and HOW evidence, and whether it came from them (self) or from what you observed (manager). Counts only — ratings and sensitive fields are never stored or shown.<span class="src">Source: team/&lt;alias&gt;.md · YYYY Objectives and Year-End Evidence</span></dd>
+      <dt>Evidence</dt><dd>Your achievements timeline, newest first, with the pillar, job-description, goal and value tags each one supports.<span class="src">Source: achievements/</span></dd>
+      <dt>Framework coverage</dt><dd>How much evidence sits behind each role pillar: <b>Achievements</b> logged, <b>Open CIIs</b> (challenges and improvements tagged to the pillar that aren't closed), and <b>Calls</b> (discovery conversations). Pillars with no achievements are the gaps to fill before reviews.<span class="src">Source: achievement Tags lines, record and discovery-call front-matter</span></dd>
+      <dt>Job description evidence</dt><dd>Achievements logged against each job-description responsibility (<code>JD-</code>). Zero is coral: nothing yet evidences it.<span class="src">Source: achievement Tags lines; context/_taxonomy.md</span></dd>
+    </dl>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ageCell = (a) => a == null ? "" : `<span class="age ${a >= DATA.staleDays ? "stale" : ""}">${a === 0 ? "today" : a + "d ago"}</span>`;
+const daysTo = (iso) => Math.round((new Date(iso + "T00:00:00") - new Date(DATA.generated + "T00:00:00")) / 86400000);
+
+function render() {
+  const d = DATA;
+  $("#gen").textContent = `QA & Test Engineering \u00b7 generated ${d.generated}`;
+
+  const calib = daysTo("2026-11-11");
+  $("#calib").textContent = `Calibration on 11 November (${calib} days). WHAT is rated against agreed objectives, so each person needs objectives recorded and dated evidence for both WHAT and HOW.`;
+  const num = (n) => `<span class="count ${n ? "" : "zero"}">${n}</span>`;
+  $("#teamrows").innerHTML = d.team.map((t) => `<tr><td><b>${t.alias}</b></td><td>${esc(t.role)}</td><td>${num(t.objectives)}</td><td>${num(t.what)}</td><td>${num(t.how)}</td>
+    <td><span class="count">${t.selfEvidence} / ${t.managerEvidence}</span></td><td>${t.reviewed ? `${t.reviewed} ${ageCell(t.reviewedAge)}` : "\u2014"}</td></tr>`).join("");
+
+  $("#achs").innerHTML = d.achievements.map((a) => `<article class="ach"><div class="d">${a.date}</div><div><div class="t">${esc(a.title)}</div><p class="s">${esc(a.summary)}</p>
+    <div class="tags">${a.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div></div></article>`).join("") || "<p>No achievements yet.</p>";
+
+  const maxA = Math.max(1, ...d.coverage.pillars.map((p) => p.achievements));
+  const maxL = Math.max(1, ...d.coverage.pillars.map((p) => p.open));
+  const maxC = Math.max(1, ...d.coverage.pillars.map((p) => p.calls));
+  const bar = (label, v, max, color) => `<div class="bar"><span>${label}</span><span class="track"><span class="fill" style="display:block;width:${(v / max) * 100}%;background:${color}"></span></span><span class="v">${v}</span></div>`;
+  $("#missions").innerHTML = Object.entries(d.coverage.missions).map(([mid, mlabel]) => {
+    const ps = d.coverage.pillars.filter((p) => p.mission === mid);
+    return `<div class="mission"><h3>${esc(mlabel)}</h3>${ps.map((p) => `<div class="pillar ${p.achievements ? "" : "gap"}">
+      <div class="head"><span class="pid">${p.id}</span><span class="name">${esc(p.label)}</span></div>
+      <div class="bars">${bar("Achievements", p.achievements, maxA, "var(--teal-bright)")}${bar("Open CIIs", p.open, maxL, "var(--deep)")}${bar("Calls", p.calls, maxC, "var(--purple)")}</div>
+      ${p.achievements ? "" : `<span class="gapnote">No achievements yet</span>`}</div>`).join("")}</div>`;
+  }).join("");
+  $("#jd").innerHTML = d.coverage.jd.map((j) => `<div class="row ${j.achievements ? "" : "none"}"><span class="id">${j.id}</span><span class="label">${esc(j.label)}</span><span class="v">${j.achievements}</span></div>`).join("");
+
+  $("#foot").innerHTML = `Generated from the personal-assistant repo on ${d.generated} by <code>scripts/people_report.py</code>.`;
+}
+if (DATA) render(); else document.querySelector("#gen").textContent = "No data — run python scripts/people_report.py";
+</script>

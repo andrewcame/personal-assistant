@@ -4,6 +4,7 @@ type: initiative
 status: in-progress
 horizon: next
 updated: 2026-10-23
+origin: [CH-09]
 pillars: [P4, P9]
 focus: [automation]
 goals: []

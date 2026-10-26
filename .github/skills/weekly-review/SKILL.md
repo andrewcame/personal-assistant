@@ -18,7 +18,7 @@ A short, repeatable end-of-week pass that keeps `state/now.md` honest and catche
 ## Method
 
 1. **Moved** — list records updated this week and what changed, in one line each.
-2. **Last week's focus** — for each item in "This Week's Focus", say done / progressed / not touched, with evidence. Don't infer progress that isn't recorded; ask.
+2. **Last week's focus** — the dashboard's Focus is Notion To Do cards, so judge done / progressed / not touched from the Notion snapshot (cards now Done) and the roadmaps, plus the narrative focus notes in `now.md`. Don't infer progress that isn't recorded; ask.
 3. **Wins to log** — spot outcomes that look like achievements but have no entry in `achievements/<year>.md`. Ask the user to confirm each one before handing it to Capture. Never write an achievement from inference alone.
 4. **Stale Now items** — any Now record not updated in 7+ days: ask whether it is genuinely active. If not, propose moving it to Next.
 5. **Next week** — propose up to three focus items, anchored on the Now horizon. If leadership direction or a stuck challenge argues for something else, say why.
@@ -27,11 +27,11 @@ A short, repeatable end-of-week pass that keeps `state/now.md` honest and catche
 ## Output
 
 - **Moved this week** · **Last week's focus: outcome** · **Wins to log (confirm?)** · **Stale Now items** · **Proposed focus for next week** · **Housekeeping**
-- Then a proposed new `state/now.md`, shown in full.
+- Then a proposed new `state/now.md`, shown in full. After the user confirms and checks pass, run `python scripts/report.py` and `python scripts/people_report.py` to refresh both dashboards (see [dashboards.md](../../../ways-of-working/dashboards.md)); never open their output.
 
 ## Writing Rules
 
-- Only write `state/now.md` after the user confirms. Set **Updated:** to today.
+- Only write `state/now.md` after the user confirms. Set **Updated:** to today. The dashboard reads only **Upcoming** from it (one point per bullet, starting with the related record, e.g. `IMP-08 Short label — the point`, or `General — …`). Its Focus and Waiting On come from Notion To Do cards and roadmap owners, so make next week's focus real by proposing To Do cards (tagged with the record) rather than free text.
 - Keep `state/now.md` to one screen: drop resolved threads, move decisions older than ~4 weeks out (they live in their records), and keep "Recent Decisions" to the last five.
 - Achievements, challenge updates, and status changes go through Capture (or the Capture rules) — not this skill.
 - Aliases only. The user may speak candidly about people; use it as context, but anything written to `state/now.md` or handed to Capture follows the [people-records standard](../../../team/README.md#writing-standard) — say what was left out.

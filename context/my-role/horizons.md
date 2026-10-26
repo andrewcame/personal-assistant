@@ -24,46 +24,47 @@ The four focus areas from the original plan still apply as the lens across every
 - **Next** — agreed as worthwhile, starts when a Now item frees up capacity.
 - **Later** — direction of travel; revisit quarterly.
 - Link each item to the challenge, improvement, or initiative that carries the detail. This file holds the plan, not the working notes.
+- An item with no record in **Carried by** is plan-only: its **Source** says where it came from (30/60/90-day plan, with the JD- ID if it is also a job-spec responsibility) and the dashboard flags it as needing a challenge or improvement. Rows with a record put `—` in Source. Job-spec responsibilities (JD-) that no challenge or improvement (`jd:` front-matter) and no plan row covers show on the dashboard as **Role** items.
 
 ## Now (short term)
 
-| Outcome | Focus | Carried by | Status |
-|---|---|---|---|
-| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — AC sponsoring; DA's tickets in team review, kick-off once approved |
-| Staging monitoring and alerting has a clear owner and daily routine | Productivity | [Improvement 01](../../improvements/01-staging-monitoring-and-alerting-ownership.md) | In progress — AC running checks manually; next: DLQ issues and AI-run checks |
-| QA engagement model agreed for paired, AI-assisted initiative delivery | Ownership | [Challenge 11](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md) | Open — interim model tentatively agreed: QA does one e2e ticket once coding is done |
-| 2026 objectives recorded for AC and the team; calibration and EOY reviews delivered | People | [Improvement 08](../../improvements/08-2026-objectives-calibration-and-eoy-reviews.md) | In progress — calls being booked; calibration 2026-11-11 |
-| BrowserStack renewed at lower cost; device strategy for mobile automation reviewed | Productivity | [Improvement 10](../../improvements/10-browserstack-renewal-and-device-strategy.md) | In progress — call held 2026-10-19; plan list awaited from BrowserStack; renewal November |
-| Assistant harness improved and used weekly (quick wins) | Productivity | [Improvement 05](../../improvements/05-assistant-skill-backlog.md) | In progress — evals baseline and first cross-review next |
+| Outcome | Focus | Carried by | Status | Source |
+|---|---|---|---|---|
+| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — AC sponsoring; DA's tickets in team review, kick-off once approved | — |
+| Staging monitoring and alerting has a clear owner and daily routine | Productivity | [Improvement 01](../../improvements/01-staging-monitoring-and-alerting-ownership.md) | In progress — AC running checks manually; next: DLQ issues and AI-run checks | — |
+| QA engagement model agreed for paired, AI-assisted initiative delivery | Ownership | [Challenge 11](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md) | Open — interim model tentatively agreed: QA does one e2e ticket once coding is done | — |
+| 2026 objectives recorded for AC and the team; calibration and EOY reviews delivered | People | [Improvement 08](../../improvements/08-2026-objectives-calibration-and-eoy-reviews.md) | In progress — calls being booked; calibration 2026-11-11 | — |
+| BrowserStack renewed at lower cost; device strategy for mobile automation reviewed | Productivity | [Improvement 10](../../improvements/10-browserstack-renewal-and-device-strategy.md) | In progress — call held 2026-10-19; plan list awaited from BrowserStack; renewal November | — |
+| Assistant harness improved and used weekly (quick wins) | Productivity | [Improvement 05](../../improvements/05-assistant-skill-backlog.md) | In progress — evals baseline and first cross-review next | — |
 
 ## Next (mid term)
 
 _Mostly the original 60-day "stabilise and reduce friction" intent, re-sequenced behind microsite work._
 
-| Outcome | Focus | Carried by | Status |
-|---|---|---|---|
-| First-pass coverage register (journey, market, repo, owner, cadence, gap) | Automation | [Improvement 06](../../improvements/06-qa-knowledge-and-coverage-baseline.md) | In progress |
-| QA flow metrics baseline in Jira (one-team proof of concept) | Productivity | [Improvement 04](../../improvements/04-jira-qa-flow-metrics-baseline.md) | In progress |
-| Domain ownership model for automation code; flaky-pack response agreed | Ownership | — | Not started |
-| Test data strategy agreed across teams (beyond the Portal MVP) | Automation | [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Challenge 10](../../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md) | Not started |
-| Defined, risk-based process for Exerp release and upgrade testing | Ownership | [Challenge 12](../../challenges/12-exerp-release-testing-process.md), [Improvement 09](../../improvements/09-exerp-release-testing-process.md) | Not started — discuss with leads |
-| AI-led Appium first pass expands coverage of high-value mobile journeys | Automation | [Initiative 02](../../initiatives/02-appium-ai-led-first-pass.md) | In progress — kick-off held; awaiting app simplification tickets to scope (two epics plus one aligned to simplification) |
-| Backend test pack covers priority services (Exerp Assistant first) | Automation | [Improvement 11](../../improvements/11-backend-test-pack-coverage.md) | Not started |
-| E2E knowledge transfer and continuity (AI-assisted) | People | [Challenge 07](../../challenges/07-end-to-end-quality-ownership-and-continuity.md) | Open — LM extended into 2027 |
-| CI/CD quality gate model defined | Automation | — | Not started |
+| Outcome | Focus | Carried by | Status | Source |
+|---|---|---|---|---|
+| First-pass coverage register (journey, market, repo, owner, cadence, gap) | Automation | [Improvement 06](../../improvements/06-qa-knowledge-and-coverage-baseline.md) | In progress | — |
+| QA flow metrics baseline in Jira (one-team proof of concept) | Productivity | [Improvement 04](../../improvements/04-jira-qa-flow-metrics-baseline.md) | In progress | — |
+| Domain ownership model for automation code; flaky-pack response agreed | Ownership | — | Not started | 60-day plan; job spec |
+| Test data strategy agreed across teams (beyond the Portal MVP) | Automation | [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Challenge 10](../../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md) | Not started | — |
+| Defined, risk-based process for Exerp release and upgrade testing | Ownership | [Challenge 12](../../challenges/12-exerp-release-testing-process.md), [Improvement 09](../../improvements/09-exerp-release-testing-process.md) | Not started — discuss with leads | — |
+| AI-led Appium first pass expands coverage of high-value mobile journeys | Automation | [Initiative 02](../../initiatives/02-appium-ai-led-first-pass.md) | In progress — kick-off held; awaiting app simplification tickets to scope (two epics plus one aligned to simplification) | — |
+| Backend test pack covers priority services (Exerp Assistant first) | Automation | [Improvement 11](../../improvements/11-backend-test-pack-coverage.md) | Not started | — |
+| E2E knowledge transfer and continuity (AI-assisted) | People | [Challenge 07](../../challenges/07-end-to-end-quality-ownership-and-continuity.md) | Open — LM extended into 2027 | — |
+| CI/CD quality gate model defined | Automation | — | Not started | 60-day plan; JD-08 |
 
 ## Later (long term)
 
 _Mostly the original 90-day "build capability and momentum" intent._
 
-| Outcome | Focus | Carried by | Status |
-|---|---|---|---|
-| QA Chapter reset as an open Testing Chapter with a purpose in the Pico model and a champion | People | — | Deferred (behind chapter reset) |
-| NFR partnership with Head of SE and Principal SE; NFR coverage visible | Ownership | [Improvement 03](../../improvements/03-front-end-load-and-performance-testing.md) | Not started |
-| Web and App ownership model holds; Join / Portal split decided in 2027 planning | People | [Challenge 04](../../challenges/04-web-qa-capacity-and-accountability.md) | Active monitoring — TMW + DA on Web; KB App lead |
-| Payments QA cross-training and cover | People | [Improvement 07](../../improvements/07-payments-qa-cross-training-and-cover.md) | Not started — JFG backfill plan with TMW; behind sunset work |
-| Population-scale mobile testing approach for low-incidence defects | Automation | [Challenge 09](../../challenges/09-population-scale-mobile-app-testing.md) | Open |
-| Stakeholder coverage cadence with Finance and commercial teams | Ownership | [Challenge 02](../../challenges/02-direct-business-stakeholder-connection.md) | Open |
+| Outcome | Focus | Carried by | Status | Source |
+|---|---|---|---|---|
+| QA Chapter reset as an open Testing Chapter with a purpose in the Pico model and a champion | People | — | Deferred (behind chapter reset) | 30-day and 90-day plans; JD-10 |
+| NFR partnership with Head of SE and Principal SE; NFR coverage visible | Ownership | [Improvement 03](../../improvements/03-front-end-load-and-performance-testing.md) | Not started | — |
+| Web and App ownership model holds; Join / Portal split decided in 2027 planning | People | [Challenge 04](../../challenges/04-web-qa-capacity-and-accountability.md) | Active monitoring — TMW + DA on Web; KB App lead | — |
+| Payments QA cross-training and cover | People | [Improvement 07](../../improvements/07-payments-qa-cross-training-and-cover.md) | Not started — JFG backfill plan with TMW; behind sunset work | — |
+| Population-scale mobile testing approach for low-incidence defects | Automation | [Challenge 09](../../challenges/09-population-scale-mobile-app-testing.md) | Open | — |
+| Stakeholder coverage cadence with Finance and commercial teams | Ownership | [Challenge 02](../../challenges/02-direct-business-stakeholder-connection.md) | Open | — |
 
 ## Carried Over From The 30-Day Close-Out
 

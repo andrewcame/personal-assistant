@@ -7,6 +7,11 @@ description: "Two-way bridge between the repo and AC's Notion To Do and Ideas bo
 
 Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It lists the only two boards you may touch and the rules. **If the board links there are still "to add", stop and ask AC for them. Never search Notion to find them.**
 
+## Run Modes
+
+- **Full run (Friday, or when asked):** all five flows below.
+- **Light run (Monday and Wednesday scheduled jobs, or "light notion sync"):** read the To Do board and the Ideas page once, then do **Flow 4 only**: write `reports/notion-snapshot.json` (this is what keeps the dashboards' Focus fresh), then rebuild both dashboards. Report only: how many cards are open, any AC-owned next step with no card (propose it, don't create it), any card that looks done, and the count of untriaged ideas. Do **not** triage ideas or tidy cards (Flows 1, 3 and 5) in a light run; leave that for Friday. Same approval rules: no Notion writes, no commits.
+
 ## Flow 1 — Ideas Triage
 
 ### Reading the page
@@ -57,8 +62,10 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 1. For every CII in the Now or Next horizon, find its first-up roadmap steps (`doing`/`next`). Each AC-owned first-up step should have an open To Do card tagged with the record ID. Propose cards for any that are missing (Flow 2); steps owned by others are reported as "waiting on", not carded.
 2. Write `reports/notion-snapshot.json` for the dashboard (no approval needed — it's a generated, git-ignored file):
-   `{"generated": "YYYY-MM-DD", "cards": [{"title", "status", "records": [...], "created", "due"}], "ideas": {"untriaged": n, "processedTicked": n, "lastTriage": "YYYY-MM-DD" | null}}`
+   `{"generated": "YYYY-MM-DD", "cards": [{"title", "status", "records": [...], "created", "due", "url"}], "ideas": {"untriaged": n, "processedTicked": n, "lastTriage": "YYYY-MM-DD" | null}}`
+   `url` is the card's Notion page URL (optional; the dashboard links each Focus to-do to it). The dashboard's Focus lists open To Do / Do Now cards by their `records` tags, with initiative tags rolling up into the challenge or improvement they deliver.
    Include open cards and cards completed in the last 7 days. Convert any real names in titles to aliases (snapshot only; leave the Notion titles as they are). Count Ideas lines that are not ticked as `untriaged`.
+3. Rebuild the dashboards (`python scripts/report.py`, `python scripts/people_report.py`). Don't open the output; see [dashboards.md](../../../ways-of-working/dashboards.md) for what each panel reads.
 
 ## Flow 5 — Card Tidy
 

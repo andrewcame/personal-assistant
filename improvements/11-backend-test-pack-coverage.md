@@ -6,6 +6,7 @@ horizon: next
 updated: 2026-10-23
 pillars: [P4, P8]
 focus: [automation]
+jd: [JD-05]
 goals: []
 links: [IMP-06, CH-10]
 people: []

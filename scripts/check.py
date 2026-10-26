@@ -38,6 +38,7 @@ FOCUS = ["people", "ownership", "automation", "productivity"]
 INDEX_START, INDEX_END = "<!-- index:start -->", "<!-- index:end -->"
 STEP_STATUSES = ["done", "doing", "next", "later", "blocked", "dropped"]
 FIRST_UP = {"doing", "next"}
+INITIATIVE_NEEDS = ["tbc", "needed", "not-needed"]
 
 
 # ---------------------------------------------------------------- io helpers
@@ -128,7 +129,9 @@ def parse_roadmap(text: str) -> list[dict] | None:
         if len(cells) < 5 or not re.fullmatch(r"(CH|IMP|INI)-\d\d\.\d+", cells[0]):
             continue
         deps = [d.strip() for d in re.split(r"[,;]", cells[3]) if d.strip() and d.strip() not in ("—", "-")]
-        steps.append({"id": cells[0], "step": cells[1], "owner": cells[2], "deps": deps, "status": cells[4].lower()})
+        ticket = cells[5] if len(cells) > 5 and cells[5] not in ("", "—", "-") else ""
+        steps.append({"id": cells[0], "step": cells[1], "owner": cells[2], "deps": deps, "status": cells[4].lower(),
+                      "ticket": ticket})
     return steps
 
 
@@ -146,6 +149,21 @@ def load_records() -> list[dict]:
         records.append({"kind": "discovery-call", "path": path, "fm": parse_front_matter(text) or {},
                         "text": text, "num": None, "prefix": "DC", "title": title_of(text, "discovery-call")})
     return records
+
+
+def plan_rows() -> list[dict]:
+    """Rows of the Now / Next / Later tables in horizons.md (Outcome | Focus | Carried by | Status | Source)."""
+    text = read(ROOT / "context" / "my-role" / "horizons.md")
+    rows = []
+    for hz in ("Now", "Next", "Later"):
+        m = re.search(rf"^## {hz}[^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+        for line in (m.group(1) if m else "").splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if len(cells) < 4 or cells[0] in ("Outcome", "") or set(cells[0]) <= set("-"):
+                continue
+            rows.append({"horizon": hz.lower(), "outcome": cells[0], "focus": cells[1], "carried": cells[2],
+                         "status": cells[3], "source": cells[4] if len(cells) > 4 else ""})
+    return rows
 
 
 def load_achievements() -> list[dict]:
@@ -197,12 +215,24 @@ def validate() -> int:
         for f in fm.get("focus", []):
             if f not in FOCUS:
                 err(path, f"unknown focus '{f}'")
+        for j in fm.get("jd", []):
+            if j not in tax["jd"]:
+                err(path, f"unknown job-spec id '{j}'")
         for link in fm.get("links", []):
             if link not in known_ids:
                 err(path, f"link '{link}' does not match any record id")
         for a in fm.get("people", []):
             if a not in tax["people"]:
                 err(path, f"alias '{a}' not in context/people.md")
+        if kind == "initiative":
+            origin = fm.get("origin", [])
+            if not origin:
+                err(path, "initiative needs 'origin: [CH-NN or IMP-NN]' — the challenge or improvement it delivers")
+            for o in origin:
+                if o not in known_ids or o.startswith(("INI-", "DC-")):
+                    err(path, f"origin '{o}' must be a challenge or improvement id")
+        elif kind in ("challenge", "improvement") and fm.get("initiative", "tbc") not in INITIATIVE_NEEDS:
+            err(path, f"initiative '{fm.get('initiative')}' not in {INITIATIVE_NEEDS}")
 
     # roadmaps
     all_steps = {st["id"] for r in records for st in (r.get("roadmap") or [])}
@@ -229,6 +259,23 @@ def validate() -> int:
             warn(r["path"], "Now/Next record has no 'doing' or 'next' roadmap step")
 
     valid_tags = tax["pillars"] | tax["jd"] | tax["goals"] | tax["lenses"] | tax["values"] | known_ids
+
+    # the plan tables and record front-matter must agree on horizon; CII-less rows must say where they came from
+    by_file = {r["path"].name: r for r in records if r["kind"] != "discovery-call"}
+    listed: dict[str, set] = {}
+    for row in plan_rows():
+        files = re.findall(r"\]\(\.\./\.\./[^)]*?/([^/)]+\.md)\)", row["carried"])
+        if not files and row["source"] in ("", "—", "-"):
+            warn(ROOT / "context" / "my-role" / "horizons.md", f"'{row['outcome'][:50]}' has no CII and no Source")
+        for f in files:
+            listed.setdefault(f, set()).add(row["horizon"])
+        for j in re.findall(r"JD-\d+", row["source"]):
+            if j not in tax["jd"]:
+                err(ROOT / "context" / "my-role" / "horizons.md", f"Source cites unknown job-spec id '{j}'")
+    for f, horizons_listed in listed.items():
+        rec = by_file.get(f)
+        if rec and rec["fm"].get("horizon") not in horizons_listed:
+            warn(rec["path"], f"horizon '{rec['fm'].get('horizon')}' but horizons.md lists it under {', '.join(sorted(horizons_listed))}")
     for a in load_achievements():
         if a["tags"] is None:
             warn(a["path"], f"achievement '{a['date']} - {a['title']}' has no Tags line")

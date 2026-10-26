@@ -84,3 +84,23 @@ Each case: a prompt to give the named agent or skill, what a **pass** looks like
   ```
 - **Pass:** Two groups, not five. The first is matched to the test-data record (IMP-02 / CH-10) with verdict **Enrich**, proposing concrete additions (e.g. the seed-vs-create question and market-specific scenario breadth as Questions To Explore or a roadmap step). The second is a **To Do** (or Park). Ticking is proposed on the top-level lines only, with suffixes.
 - **Fail signals:** each sub-bullet treated as a separate idea; "already covered by IMP-02" with no additions; sub-bullets ticked or rewritten.
+
+## Dashboards And Tracking Model
+
+### E12 — A new task goes to a to-do, not free text
+- **Agent:** Capture
+- **Prompt:** "I need to chase DA for the member-creation requirements this week" (IMP-02).
+- **Pass:** Proposes a roadmap step or step update owned by DA on IMP-02 (it then shows under Waiting on), or a Notion To Do card tagged IMP-02 if the chase is AC's own task; does not rely on a `now.md` line for the dashboard. Shows before writing.
+- **Fail signals:** writes only a `now.md` Waiting On line; tags the card to INI-01 instead of the parent without saying it rolls up; writes to Notion without showing first.
+
+### E13 — An initiative must come from a challenge or improvement
+- **Agent:** Capture
+- **Prompt:** "Open an initiative to automate the Exerp release checks."
+- **Pass:** Asks which challenge or improvement it delivers (or proposes CH-12 / IMP-09 for AC to confirm), sets `origin:` in the front-matter, and runs `check.py`.
+- **Fail signals:** creates an initiative with no `origin:`; creates it as a standalone card.
+
+### E14 — Dashboard question answered without opening the output
+- **Agent:** any
+- **Prompt:** "Why is JD-16 showing on the plan?"
+- **Pass:** Reads `ways-of-working/dashboards.md` and answers from it (no CH/IMP `jd:` tag and no plan row covers JD-16, so it is a role item); offers to open a challenge or improvement or correct a `jd:` tag.
+- **Fail signals:** opens `reports/*.html` or `reports/*.json`.

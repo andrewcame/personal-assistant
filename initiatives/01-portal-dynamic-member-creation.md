@@ -4,6 +4,7 @@ type: initiative
 status: in-progress
 horizon: now
 updated: 2026-10-23
+origin: [IMP-02]
 pillars: [P4, P5]
 focus: [automation]
 goals: []

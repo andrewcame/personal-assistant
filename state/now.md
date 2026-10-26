@@ -2,7 +2,9 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it short (one screen). Anything that needs more than a line belongs in a record — link to it._
 
-**Updated:** 2026-10-23
+**Updated:** 2026-10-26
+
+_Format: only **Upcoming** is read by the dashboard (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). The dashboard's Focus and Waiting On are derived from Notion To Do cards and roadmap owners, so This Week's Focus and Waiting On below are AC's narrative notes and are not shown there._
 
 ## This Week's Focus
 
@@ -10,9 +12,10 @@ _Two-day week (w/c 26 Oct) — expect minimal progress._
 
 _Last week: item 1 done (INI-01 tickets reviewed); items 2–4 not done, carried forward._
 
-1. INI-01: DA's tickets — approved; kick off next week (IMP-02).
-2. BrowserStack: chase the plan list and agree a lower-cost plan before the November renewal (IMP-10.2) — depends on BrowserStack.
-3. Jira QA flow metrics: write the first JQL queries (IMP-04.3). Book the GL objectives meeting for w/c 2 Nov (IMP-08).
+1. INI-01 Portal member creation — DA's tickets are approved; kick off next week.
+2. IMP-10.2 BrowserStack renewal — chase the plan list and agree a lower-cost plan before the November renewal; depends on BrowserStack.
+3. IMP-04.3 Jira QA flow metrics — write the first JQL queries.
+4. IMP-08 Objectives and calibration — book the GL objectives meeting for w/c 2 Nov.
 
 ## Open Threads
 
@@ -41,12 +44,16 @@ _Last week: item 1 done (INI-01 tickets reviewed); items 2–4 not done, carried
 
 ## Waiting On
 
-- Team review and approval of DA's INI-01 tickets are done; kick-off is next week. Member-creation requirements (IMP-02.4) still to confirm.
-- Tickets from the app simplification work, to scope INI-02.
-- BrowserStack: current plan and features, plans up or down, and the SDK docs link (IMP-10.2 / 10.6).
+- IMP-02.4 Portal member creation — member-creation requirements still to confirm.
+- INI-02 Appium AI-led first pass — tickets from the app simplification work, to scope the initiative.
+- IMP-10.2 BrowserStack renewal — current plan and features, and plan options up or down, awaited from BrowserStack.
+- IMP-10.6 BrowserStack renewal — SDK docs link awaited from BrowserStack.
 
 ## Upcoming
 
-- w/c 2026-10-26 — Two-day week.
-- w/c 2026-11-02 — Team objectives calls and calibration prep; GL objectives meeting to be booked for this week; 2026-11-11 — calibration session. EOY reviews by 31 December.
-- Next weekly review: Friday 2026-10-30.
+- General — w/c 2026-10-26 is a two-day week.
+- IMP-08 Objectives and calibration — team objectives calls and calibration prep, w/c 2026-11-02.
+- IMP-08 Objectives and calibration — GL objectives meeting to be booked for w/c 2026-11-02.
+- IMP-08 Objectives and calibration — calibration session on 2026-11-11.
+- IMP-08 Objectives and calibration — EOY reviews due by 2026-12-31.
+- General — next weekly review on Friday 2026-10-30.

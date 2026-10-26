@@ -8,7 +8,7 @@ A personal documentation assistant for AC, QA & Test Engineering Manager at Pure
 
 ## Start Every Session Here
 
-1. [`state/now.md`](state/now.md) — this week's focus, open threads, recent decisions, waiting on.
+1. [`state/now.md`](state/now.md) — working memory: Upcoming (dated items), narrative focus and waiting-on notes, open threads, recent decisions. The dashboards' Focus and Waiting On come from Notion To Do cards and roadmaps, not from this file.
 2. [`context/role-brief.md`](context/role-brief.md) — condensed role, plan, pillars, decision lens.
 3. [`state/learnings.md`](state/learnings.md) — accepted corrections from earlier sessions. Follow them.
 4. [`ways-of-working/assistant-routine.md`](ways-of-working/assistant-routine.md) — the working agreement: how AC uses Notion, chats and the weekly/monthly routines.
@@ -30,8 +30,9 @@ Open full source files only when these don't answer the question. Prefer folder 
 | `team/` | Per-person development profiles under the writing standard |
 | `templates/` | Formats for every record type |
 | `scripts/check.py` | Validate, regenerate indexes, coverage, stale report |
+| `scripts/report.py`, `scripts/people_report.py` | Build the two dashboards (Quality Leadership Board; People & Objectives Board) into git-ignored `reports/`. How they work and what feeds them: [`ways-of-working/dashboards.md`](ways-of-working/dashboards.md). Run them; never open the output |
 | `evals/` | Behaviour checks for agents and skills |
-| `ways-of-working/assistant-routine.md` | The weekly rhythm: what runs when, and how AC uses the harness |
+| `ways-of-working/assistant-routine.md` | The weekly rhythm: what runs when, and how AC uses the harness. Scheduler prompts (master copy): [`scheduled-prompts.md`](ways-of-working/scheduled-prompts.md) |
 | `state/cross-review/` | Findings from cross-model reviews, with AC's responses |
 
 ## Non-Negotiable Rules
@@ -45,7 +46,7 @@ Open full source files only when these don't answer the question. Prefer folder 
 7. **Show before saving; never commit without AC's explicit OK.** Summarise changes, run checks, then pause. Small, focused commit messages on `main`.
 8. **Preserve formatting.** Keep CRLF line endings and aligned markdown tables as found.
 9. **Notion: two boards only.** Read and write only the boards listed in [`context/notion-boards.md`](context/notion-boards.md). Never search the workspace or open other pages — it also holds AC's personal life admin. Show every Notion write first.
-10. **Every live CII has a roadmap.** Challenges, improvements and initiatives in Now/Next keep a `## Roadmap` table (format in `context/_taxonomy.md`) with at least one `doing`/`next` step; AC-owned first-up steps have a tagged Notion To Do card.
+10. **Every live CII has a task and a roadmap.** Challenges (CH) and improvements (IMP) are tracked through tasks: a Notion To Do card tagged with the record ID for AC, a roadmap step owned by someone else otherwise. In Now/Next each keeps a `## Roadmap` table (format in `context/_taxonomy.md`) with at least one `doing`/`next` step, and each AC-owned next step has a card. An initiative (INI) is the Jira-level work item for a CH/IMP: it must name it in `origin:` and is never tracked on its own. Plan items and job-spec (`JD-`) items with no CH/IMP are flagged on the dashboard until one exists.
 
 ## Routing (summary)
 
@@ -76,7 +77,7 @@ If your tool doesn't load these automatically, read the file and follow it.
 Applies to every task, whatever the prompt says. Full guide: [`ways-of-working/model-and-token-guide.md`](ways-of-working/model-and-token-guide.md).
 
 - **Right-size the model.** Mechanical filing → Haiku-class; capture, weekly review, Notion sync, research → Sonnet-class; calibration, reviews, goals, horizon review → Opus-class; cross-review → a different model family. You can't switch models yourself: if the task is clearly mismatched to the current one, say so in one line and carry on unless AC switches.
-- **Read the minimum.** Start from the four start-here files; use folder `README.md` indexes, `grep` and `view_range`; never open `reports/*.html` or `reports/data.json` or `context/archive/` unless asked.
+- **Read the minimum.** Start from the four start-here files; use folder `README.md` indexes, `grep` and `view_range`; never open `reports/*.html`, `reports/*.json` or `context/archive/` unless asked. To answer a dashboard question, read [`ways-of-working/dashboards.md`](ways-of-working/dashboards.md), not the output.
 - **No sub-agents** for work you can finish in a few direct reads.
 - **One task per chat.** If a chat has drifted onto a new, unrelated task, suggest a fresh one.
 - **Batch** related captures into one pass and one checks run.

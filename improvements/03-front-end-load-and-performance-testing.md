@@ -6,6 +6,7 @@ horizon: later
 updated: 2026-10-16
 pillars: [P7]
 focus: [automation]
+jd: [JD-11]
 goals: []
 links: []
 people: [GL, GH, DJ]

@@ -55,6 +55,27 @@ Source: [horizons.md](my-role/horizons.md)
 
 `people`, `ownership`, `automation`, `productivity`
 
+The focus area is the **category** shown on every dashboard card. It is stored in the `focus:` front-matter of each challenge, improvement and initiative (and in the Focus column of the horizons tables).
+
+## Hierarchy: Challenge Or Improvement, Then Tasks, Then (Maybe) An Initiative
+
+1. AC identifies a **challenge** or **improvement** (original plan, reviews, discussions) and tracks it through **tasks** (Notion To Do cards, and roadmap steps owned by others). Progress is recorded on the challenge or improvement.
+2. If delivery needs code changes or work by the team, an **initiative** is created: the higher-level work item tracked in Jira. It always comes from a challenge or improvement, which stays the record of progress. Not every challenge or improvement needs one.
+3. On the dashboard the initiative is shown on its parent's card; it is never a card or a This week line of its own. Notion cards and roadmap steps on an initiative count towards its parent.
+
+| Field | On | Meaning |
+|---|---|---|
+| `origin: [CH-NN / IMP-NN]` | Initiative (required) | The challenge or improvement this initiative delivers. `check.py` errors if it is missing. The dashboard derives the initiative shown on the parent from this. |
+| `initiative: tbc \| needed \| not-needed` | Challenge, improvement (optional, default `tbc`) | Whether delivery needs an initiative. |
+| `jd: [JD-NN]` | Challenge, improvement (optional) | The job-spec responsibilities this delivers. Used to find role expectations nothing tracks. |
+
+## Plan Items And Role Items Without A Record
+
+- **Plan item** — a row in the Now / Next / Later tables of [horizons.md](my-role/horizons.md) with no record in **Carried by**: something AC said he would do. Its **Source** column says where it came from (30/60/90-day plan, with a `JD-` ID if it is also a job-spec responsibility). Shown as an amber card.
+- **Role item** — a `JD-` responsibility that no open challenge or improvement (`jd:`) and no plan item (JD ID in Source) covers: something the role expects that nothing tracks. Shown as a purple card with category **Role**.
+
+Both appear under Needs attention on the dashboard until a challenge or improvement is created for them.
+
 ## Horizons
 
 `now`, `next`, `later`
@@ -112,9 +133,10 @@ Every challenge, improvement and initiative (a **CII**) carries a `## Roadmap` t
 | Owner | Alias (`AC`, `DA`, …) |
 | Depends on | Step IDs (any record) or `—` |
 | Status | `done` · `doing` · `next` · `later` · `blocked` · `dropped` (no longer needed; keep the row for history) |
+| Ticket | Optional. Jira key once the step is raised (e.g. `PICO-123`); shown on the dashboard as the card's next ticket. `—` if none yet |
 
 - **First up** = steps with status `doing` or `next`. Every CII in the Now or Next horizon (unless `on-hold`) must have at least one, and each first-up step owned by AC should have an open Notion To Do card tagged with the record ID. A first-up step owned by someone else is tracked as "waiting on" rather than a card.
-- Cross-record dependencies (e.g. `INI-01.2` depends on `CH-10.3`) drive the roadmap view on the dashboard.
+- Cross-record dependencies (e.g. `INI-01.2` depends on `CH-10.3`) are kept in the roadmap tables; the dashboard no longer draws them. The first `doing` (else `next`) step is the card's **next ticket** on the Plan.
 
 ## Status Values
 

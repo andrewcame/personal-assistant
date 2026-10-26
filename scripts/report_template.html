@@ -70,27 +70,46 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter
 ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 ul.plain li { padding-left: 14px; position: relative; }
 ul.plain li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; background: var(--teal-bright); border-radius: 1px; }
-ol.focus { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
-ol.focus li::marker { font-family: var(--font-display); font-weight: 700; color: var(--teal); }
+.entries { display: grid; gap: 12px; }
+.entry { display: grid; gap: 2px; }
+.entry .who { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.entry .who .general { font-family: var(--font-mono); font-size: 12px; padding: 1px 6px; border-radius: 3px; background: var(--sunk); }
 .idchip { font-family: var(--font-mono); font-size: 12px; padding: 1px 6px; border-radius: 3px; background: var(--teal-soft); color: var(--ink); border: 0; cursor: pointer; white-space: nowrap; }
 .idchip:hover, .idchip:focus-visible { outline: 2px solid var(--teal-bright); outline-offset: 1px; }
 .tag { font-family: var(--font-mono); font-size: 11px; padding: 1px 5px; border-radius: 3px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
 .pill { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; display: inline-block; }
 .pill.open, .pill.in-progress, .pill.active-monitoring { background: var(--teal-soft); color: var(--ink); }
-.pill.not-started, .pill.draft, .pill.submitted { background: var(--sunk); color: var(--muted); }
+.pill.not-started, .pill.draft, .pill.submitted, .pill.on-hold { background: var(--sunk); color: var(--muted); }
 .pill.blocked { background: var(--red-bg); color: var(--ink); }
 .pill.done, .pill.resolved, .pill.closed { background: var(--green-bg); color: var(--ink); }
 .age { font-family: var(--font-mono); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .age.stale { color: var(--coral); font-weight: 500; }
 .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 @media (max-width: 860px) { .board { grid-template-columns: 1fr; } }
-.lane { background: var(--sunk); border-radius: 6px; padding: 12px; display: grid; gap: 10px; align-content: start; }
+.lane { background: var(--sunk); border-radius: 6px; padding: 12px; display: grid; gap: 10px; align-content: start; min-width: 0; }
 .lane > header { display: flex; justify-content: space-between; align-items: baseline; }
 .lane > header b { font-family: var(--font-display); font-size: 22px; text-transform: uppercase; letter-spacing: .03em; }
 .lane > header span { color: var(--muted); font-size: 13px; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: 10px 12px; display: grid; gap: 6px; }
 .card.stale { box-shadow: inset 3px 0 0 var(--coral); }
-.card .outcome { font-weight: 500; }
+.card.plan-only { border: 1px dashed var(--amber); background: var(--amber-bg); }
+.attn-group { margin-bottom: 14px; }
+.attn-group h4 { margin: 0 0 6px; font-size: 13px; font-weight: 600; }
+.task-line { display: flex; gap: 8px; align-items: baseline; font-size: 14px; }
+.task-line .st { font-family: var(--font-mono); font-size: 11px; color: var(--muted); min-width: 52px; white-space: nowrap; }
+.task-line .st.donow { color: var(--coral); font-weight: 600; }
+.entry .group-h { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.card .head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.card .kind { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.card .kv { display: grid; grid-template-columns: 74px 1fr; gap: 2px 8px; font-size: 13px; }
+.card .kv dt { color: var(--muted); }
+.card .kv dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.card .warnnote { color: var(--amber); font-weight: 600; }
+.card.plan-only .warnnote { color: var(--ink); }
+.card .tkey { font-family: var(--font-mono); font-size: 12px; padding: 0 5px; border-radius: 3px; background: var(--sunk); }
+.card .tags { margin-top: 2px; }
+.card .outcome { font-weight: 500; overflow-wrap: anywhere; }
+.card { min-width: 0; }
 .card .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
 .focus-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--purple); }
 .missions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
@@ -125,6 +144,7 @@ th { text-align: left; font-family: var(--font-mono); font-size: 11px; font-weig
 td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
 tr.flash td { background: var(--teal-soft); transition: background .6s; }
+.card.flash { outline: 2px solid var(--teal-bright); transition: outline .6s; }
 td.next { color: var(--muted); font-size: 13px; min-width: 260px; }
 td .title { font-weight: 500; }
 .timeline { display: grid; gap: 12px; }
@@ -155,19 +175,6 @@ a.stat:hover, a.stat:focus-visible { border-color: var(--teal-bright); outline: 
 .attn { display: grid; gap: 6px; }
 .attn .row { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 14px; }
 .attn .issue { color: var(--coral); font-size: 13px; font-weight: 500; }
-.group { display: grid; gap: 6px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-.group:last-child { border-bottom: 0; }
-.group .gh { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-weight: 500; }
-.task { display: flex; gap: 8px; align-items: baseline; font-size: 14px; padding-left: 4px; }
-.task .st { font-family: var(--font-mono); font-size: 11px; color: var(--muted); min-width: 52px; }
-.task.done { color: var(--muted); text-decoration: line-through; }
-.bignum { font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 1; }
-.firstup { color: var(--ink); font-size: 13px; }
-.firstup b { color: var(--teal); font-weight: 600; }
-.mermaid-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 12px; margin-top: 16px; }
-pre.mermaid { margin: 0; background: transparent; font-size: 12px; }
-.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 8px; }
-.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -2px; margin-right: 4px; border: 1px solid var(--line); }
 .help dt { font-family: var(--font-display); font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: .03em; color: var(--deep); margin-top: 14px; }
 .help dd { margin: 4px 0 0; max-width: 75ch; }
 .help dd .src { display: block; margin-top: 2px; }
@@ -188,65 +195,28 @@ html { scroll-behavior: smooth; }
   </header>
 </div>
 <nav class="sections" aria-label="Sections"><div class="inner">
-  <a href="#overview">Overview</a><a href="#todo">To Do</a><a href="#plan">Plan</a><a href="#roadmap">Roadmap</a><a href="#framework">Framework</a><a href="#activity">Activity</a><a href="#evidence">Evidence</a><a href="#signals">Signals</a><a href="#team">Team</a><a href="#help">Help</a>
+  <a href="#overview">This week</a><a href="#plan">Plan</a><a href="#signals">Signals</a><a href="#help">How to read</a><a href="people.html">People &amp; Objectives &#8599;</a>
 </div></nav>
 <div class="wrap">
   <section id="overview">
     <h2>This week</h2>
+    <p class="sub">Led by to-dos. Each open challenge or improvement (its initiative rolls up into it) is asked: does it have a task? A To Do on you is Focus; a task on someone else is Waiting on; no task at all is Needs attention.</p>
     <div class="stats" id="stats"></div>
     <div class="cols" style="margin-top:16px">
-      <div class="panel"><h3>Focus</h3><p class="src" id="focusMeta"></p><ol class="focus" id="focus"></ol></div>
-      <div class="panel"><h3>Needs attention</h3><p class="src">CIIs missing a roadmap, first-up step, or To Do card; records quiet <span class="stale-days"></span>+ days</p><div class="attn" id="attn"></div></div>
+      <div class="panel" id="p-focus"><h3>Focus</h3><p class="src">Your open To Do cards in Notion, by challenge or improvement</p><div class="entries" id="focus"></div></div>
+      <div class="panel" id="p-waiting"><h3>Waiting on</h3><p class="src">Next roadmap steps owned by someone else</p><div class="entries" id="waiting"></div></div>
     </div>
     <div class="cols" style="margin-top:16px">
-      <div class="panel"><h3>Waiting on</h3><ul class="plain" id="waiting"></ul><h3 style="margin-top:16px">Coming up</h3><ul class="plain" id="upcoming"></ul></div>
-      <div class="panel"><h3>Watching</h3><p class="src">Live situations to keep in mind — context, not tasks</p><ul class="plain" id="threads"></ul></div>
-    </div>
-  </section>
-
-  <section id="todo">
-    <h2>To Do &amp; Ideas</h2>
-    <p class="sub">A snapshot of the Notion To Do board and Ideas page, refreshed by the Friday sync. Cards are grouped by the CII they move forward; untagged cards are ad hoc asks.</p>
-    <p class="src" id="todoMeta"></p>
-    <div class="cols">
-      <div class="panel"><h3>For CIIs</h3><div id="todoByRecord"></div></div>
-      <div class="panel"><h3>Ad hoc</h3><div id="todoAdhoc"></div></div>
-      <div class="panel"><h3>Ideas</h3><div id="ideas"></div></div>
+      <div class="panel" id="p-attn"><h3>Needs attention</h3><div id="attn"></div></div>
+      <div class="panel" id="p-upcoming"><h3>Coming up</h3><p class="src">Dated items not covered above, from state/now.md</p><div class="entries" id="upcoming"></div></div>
     </div>
   </section>
 
   <section id="plan">
     <h2>Plan</h2>
-    <p class="sub">Now, Next and Later outcomes. A coral edge means the freshest linked record hasn't moved in <span class="stale-days"></span>+ days.</p>
+    <p class="sub">Every open challenge and improvement, by when we are targeting it. We track each through to-dos; if it needs code changes or team work it also has an initiative, shown on the card. Amber dashed cards are things you said you'd do (30/60/90-day plan) or the job spec expects of you (category Role, shown in Later) that have no challenge or improvement yet. A coral edge means no update for <span class="stale-days"></span>+ days.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filter plan"></div>
     <div class="board" id="board"></div>
-  </section>
-
-  <section id="roadmap">
-    <h2>Roadmap</h2>
-    <p class="sub">The path to completion for every challenge, improvement and initiative in Now and Next. "First up" steps are what should be on the To Do board this week. Dotted arrows are dependencies between CIIs.</p>
-    <div class="tablewrap"><table><thead><tr><th>CII</th><th>First-up step</th><th>Owner</th><th>Status</th><th>To Do card</th></tr></thead><tbody id="fuRows"></tbody></table></div>
-    <div class="mermaid-wrap"><pre class="mermaid"><!--__MERMAID__--></pre></div>
-    <div class="legend"><span><i style="background:#C0E498"></i>done</span><span><i style="background:#00C1C6"></i>doing</span><span><i style="background:#D6F1F2"></i>next</span><span><i style="background:#EEF2F2"></i>later</span><span><i style="background:#FFBAB9"></i>blocked</span><span>solid arrow = within a CII · dotted = across CIIs</span></div>
-  </section>
-
-  <section id="framework">
-    <h2>Framework coverage</h2>
-    <p class="sub">Every pillar against the evidence behind it: logged achievements, live records, and discovery calls. Pillars with no achievements are outlined in coral.</p>
-    <div class="missions" id="missions"></div>
-    <div class="panel" style="margin-top:18px"><h3>Job description evidence</h3><div class="jd" id="jd"></div></div>
-  </section>
-
-  <section id="activity">
-    <h2>Activity</h2>
-    <p class="sub">Challenges, improvements and initiatives. Actions live in Notion; this shows status and the next step recorded on each.</p>
-    <div class="filters" id="filters" role="group" aria-label="Filter records"></div>
-    <div class="tablewrap"><table><thead><tr><th>ID</th><th>Record</th><th>Status</th><th>Horizon</th><th>Pillars</th><th>Updated</th><th>Next step</th></tr></thead><tbody id="rows"></tbody></table></div>
-  </section>
-
-  <section id="evidence">
-    <h2>Evidence</h2>
-    <p class="sub">Achievements logged this year, newest first, with their taxonomy tags.</p>
-    <div class="timeline" id="achs"></div>
   </section>
 
   <section id="signals">
@@ -258,27 +228,19 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <section id="team">
-    <h2>Team readiness</h2>
-    <p class="sub" id="calib"></p>
-    <div class="tablewrap"><table><thead><tr><th>Alias</th><th>Role</th><th>Objectives agreed</th><th>WHAT evidence</th><th>HOW evidence</th><th>Self / manager</th><th>Profile reviewed</th></tr></thead><tbody id="teamrows"></tbody></table></div>
-    <p class="note">Counts only. Ratings, matrix positions and retention views are never stored in the repo or shown here.</p>
-  </section>
-
   <section id="help" class="help">
     <h2>How to read this board</h2>
-    <p class="sub">Everything here is generated from the personal-assistant repo by <code>scripts/report.py</code>. To change what you see, change the source — usually by telling the assistant.</p>
+    <p class="sub">Everything here is generated from the personal-assistant repo by <code>scripts/report.py</code>. To change what you see, change the source — usually by telling the assistant. Run <code>python scripts/report.py</code> to rebuild.</p>
     <dl>
       <dt>Driving theme</dt><dd>The one direction everything else hangs off. A new leadership signal that could change it is flagged to you before anything changes.<span class="src">Source: context/my-role/horizons.md · Driving Theme</span></dd>
-      <dt>Overview tiles</dt><dd><b>Now priorities</b>: outcomes in the Now column of the plan. <b>Needs attention</b>: CIIs missing a roadmap, a first-up step or a To Do card, plus records with no update for 3+ weeks. <b>My evidence</b>: your own logged achievements this year and how many role pillars still have none. <b>Calibration</b>: days to the 11 November session.<span class="src">Source: horizons.md, record front-matter and roadmaps, achievements/2026.md, Notion snapshot</span></dd>
-      <dt>Focus · Waiting on · Coming up · Watching</dt><dd><b>Focus</b> is this week's top three, set on Monday and reviewed Friday. <b>Waiting on</b> is anything blocked by someone else. <b>Coming up</b> is anything with a date. <b>Watching</b> holds live situations worth keeping in mind that aren't a single task.<span class="src">Source: state/now.md (updated by Capture and the weekly routines after you confirm)</span></dd>
-      <dt>To Do &amp; Ideas</dt><dd>Your Notion To Do cards grouped by the CII they move forward, ad hoc cards, and how many ideas are waiting for triage. Notion is where you work day to day; this is a weekly snapshot.<span class="src">Source: reports/notion-snapshot.json, written by the Friday Notion sync</span></dd>
-      <dt>Plan</dt><dd>The big-ticket outcomes in Now, Next and Later, each delivered through one or more CIIs. A coral edge means none of its CIIs has moved for 3+ weeks.<span class="src">Source: context/my-role/horizons.md</span></dd>
-      <dt>Roadmap</dt><dd>Each CII's ordered steps to completion, with dependencies across CIIs. First-up steps (doing/next) owned by you should each have a To Do card; steps owned by others show as waiting.<span class="src">Source: the ## Roadmap table in each challenge, improvement and initiative</span></dd>
-      <dt>Framework coverage · JD evidence</dt><dd>How much evidence sits behind each role pillar and each job-description responsibility. Pillars with no achievements are the gaps to fill before reviews.<span class="src">Source: achievement Tags lines, record and discovery-call front-matter</span></dd>
-      <dt>Activity</dt><dd>Every CII with status, horizon, pillars, last update and the recorded next step.<span class="src">Source: challenges/, improvements/, initiatives/</span></dd>
-      <dt>Evidence · Signals</dt><dd>Your achievements timeline; recent leadership direction, industry signals by stance, and recent conversations.<span class="src">Source: achievements/, context/leadership-direction.md, context/industry-signals.md, context/discovery-calls/</span></dd>
-      <dt>Team readiness</dt><dd>For each permanent team member: objectives agreed for the year, dated WHAT and HOW evidence, and whether it came from them (self) or from what you observed (manager). Counts only — ratings and sensitive fields are never stored or shown.<span class="src">Source: team/&lt;alias&gt;.md · YYYY Objectives and Year-End Evidence</span></dd>
+      <dt>This week</dt><dd>Led by to-dos. A <b>challenge or improvement</b> (CII) is how a problem or idea is tracked; its initiative, if any, is the higher-level work item and rolls up into it. Each open CII in Now or Next is asked: does it have a task? The four tiles summarise this section only: to-dos on you, tasks waiting on others, items needing attention, dated items coming up.<span class="src">Source: Notion To Do snapshot, CII roadmaps</span></dd>
+      <dt>Focus</dt><dd>Your open To Do cards (To Do or Do Now) grouped by the CII they are tagged to. The text is the card title, so every line is a real to-do. Cards tagged to an initiative show under its challenge or improvement. Backlog cards count as having a task but are not shown.<span class="src">Source: reports/notion-snapshot.json, written by the Friday Notion sync</span></dd>
+      <dt>Waiting on</dt><dd>Next roadmap steps (doing or next) owned by someone other than you, grouped by CII.<span class="src">Source: ## Roadmap tables (owner column)</span></dd>
+      <dt>Needs attention</dt><dd>Two groups. <b>Challenges and improvements without a to-do</b>: a Now/Next CII with no open To Do card and either a next step you own or no next step at all. <b>Plan and role items without a challenge or improvement</b>: things you said you would do (30/60/90-day plan) and job-spec responsibilities (<code>JD-</code>) that nothing tracks yet.<span class="src">Source: roadmaps, Notion snapshot, horizons.md, jd: front-matter</span></dd>
+      <dt>Coming up</dt><dd>Anything date-related that isn't a to-do above: calls, deadlines, sessions.<span class="src">Source: state/now.md · Upcoming</span></dd>
+      <dt>Plan</dt><dd>One card per open challenge (CH) or improvement (IMP) in the Now / Next / Later lane set by its <code>horizon</code>. Each card shows its <b>category</b> (focus area: people, ownership, automation, productivity), its <b>initiative</b> (the INI id, title and status, or Needed / Not needed / Not assessed), its <b>status</b>, how many <b>to-dos</b> it has (or who it is waiting on), and its <b>next ticket</b>: the roadmap step marked doing, else next, with a Jira key if one is recorded. <b>Amber dashed cards</b> are plan items (things you said you would do) and role expectations (job-spec responsibilities, category Role, shown in Later) that no challenge or improvement covers yet. Both need a challenge or improvement.<span class="src">Source: challenges/ and improvements/ front-matter and ## Roadmap tables; initiatives/ (origin links); horizons.md (plan items); jd: tags against context/_taxonomy.md (role items)</span></dd>
+      <dt>Signals</dt><dd>Recent leadership direction, industry signals by stance, and recent conversations.<span class="src">Source: context/leadership-direction.md, context/industry-signals.md, context/discovery-calls/</span></dd>
+      <dt>People &amp; Objectives board</dt><dd>Team readiness, your evidence timeline and framework coverage live on a separate board, <a href="people.html">people.html</a>, built by <code>scripts/people_report.py</code>.<span class="src">Source: team/, achievements/, context/_taxonomy.md</span></dd>
     </dl>
   </section>
 
@@ -301,94 +263,88 @@ function render() {
   $("#themeMeta").textContent = d.horizons.themeSet ? `Set ${d.horizons.themeSet} \u00b7 from ${d.horizons.themeSource}` : "";
   document.querySelectorAll(".stale-days").forEach((e) => (e.textContent = d.staleDays));
 
-  const open = d.records.filter((r) => !r.closed);
-  const stale = open.filter((r) => r.age != null && r.age >= d.staleDays);
-  const nowRows = d.horizons.rows.filter((r) => r.horizon === "now");
-  const pGap = d.coverage.pillars.filter((p) => p.achievements === 0).length;
-  const jdGap = d.coverage.jd.filter((j) => j.achievements === 0).length;
-  const calib = daysTo("2026-11-11");
-  const attn = d.roadmap.attention;
+  const w = d.week;
+  const byId = Object.fromEntries(d.records.map((r) => [r.id, r]));
+  const who = (ref) => ref ? `<button class="idchip" data-id="${ref}">${ref}</button><span>${esc((byId[ref] || {}).title || "")}</span>` : `<span class="general">General</span>`;
+  const focusN = w.focus.reduce((n, f) => n + f.tasks.length, 0);
+  const waitN = w.waiting.reduce((n, f) => n + f.tasks.length, 0);
+  const attnN = w.noTodo.length + w.noCii.length;
   const stats = [
-    ["#plan", nowRows.length, "Now priorities", nowRows.length <= 6 ? "ok" : "warn"],
-    ["#overview", attn.length, "need attention", attn.length ? "warn" : "ok"],
-    ["#evidence", `${d.achievements.length} \u00b7 ${pGap}/10`, "my wins \u00b7 pillars with none", pGap ? "warn" : "ok"],
-    ["#team", calib >= 0 ? calib : "\u2014", "days to calibration (11 Nov)", calib <= 21 ? "warn" : "ok"],
+    ["#p-focus", focusN, "to-dos on me", "ok"],
+    ["#p-waiting", waitN, "waiting on others", "ok"],
+    ["#p-attn", attnN, "need attention", attnN ? "warn" : "ok"],
+    ["#p-upcoming", d.now.upcoming.length, "coming up", "ok"],
   ];
   $("#stats").innerHTML = stats.map(([href, n, l, c]) => `<a class="stat ${c}" href="${href}"><span class="n">${n}</span><span class="l">${esc(l)}</span></a>`).join("");
-  $("#focusMeta").textContent = `Set in state/now.md \u00b7 updated ${d.now.updated || "\u2014"}`;
-  $("#attn").innerHTML = attn.length ? attn.map((a) => `<div class="row"><button class="idchip" data-id="${a.id}">${a.id}</button><span>${esc(a.title)}</span><span class="issue">${esc(a.issue)}</span></div>`).join("") : "<p>Nothing needs attention.</p>";
 
-  const snap = d.notion;
-  if (!snap) {
-    $("#todoMeta").textContent = "No Notion snapshot yet \u2014 it is written by the Friday Notion sync.";
-  } else {
-    $("#todoMeta").textContent = `Snapshot ${snap.generated}`;
-    const open = snap.cards.filter((c) => c.status !== "Done");
-    const done = snap.cards.filter((c) => c.status === "Done");
-    const recIds = d.records.map((r) => r.id);
-    const byRec = {};
-    open.forEach((c) => (c.records || []).filter((x) => recIds.includes(x)).forEach((x) => (byRec[x] = byRec[x] || []).push(c)));
-    const title = (id) => (d.records.find((r) => r.id === id) || {}).title || "";
-    const task = (c) => `<div class="task ${c.status === "Done" ? "done" : ""}"><span class="st">${esc(c.status)}</span><span>${esc(c.title)}</span></div>`;
-    $("#todoByRecord").innerHTML = Object.keys(byRec).sort().map((id) => `<div class="group"><div class="gh"><button class="idchip" data-id="${id}">${id}</button>${esc(title(id))}</div>${byRec[id].map(task).join("")}</div>`).join("") || "<p>No cards tagged to a CII.</p>";
-    const adhoc = open.filter((c) => !(c.records || []).some((x) => recIds.includes(x)));
-    $("#todoAdhoc").innerHTML = (adhoc.map(task).join("") || "<p>None.</p>") + (done.length ? `<p class="note">${done.length} completed in the last 7 days</p>` : "");
-    const ideas = snap.ideas || {};
-    $("#ideas").innerHTML = `<div class="bignum">${ideas.untriaged ?? "\u2014"}</div><p class="note" style="margin-top:4px">ideas waiting for triage</p><p class="note">Last triage: ${esc(ideas.lastTriage || "not yet")} \u00b7 ${ideas.processedTicked || 0} ticked, ready to purge</p>`;
-  }
-
-  $("#fuRows").innerHTML = d.roadmap.firstUp.map((f) => {
-    const carded = d.roadmap.cardedRecords.includes(f.record);
-    const cardCell = f.owner !== "AC" ? `<span class="note">waiting on ${esc(f.owner)}</span>` : (carded ? "Yes" : `<span class="zero">Missing</span>`);
-    return `<tr><td><button class="idchip" data-id="${f.record}">${f.record}</button></td><td><span class="title">${esc(f.step)}</span><br><span class="src">${f.id}</span></td><td>${esc(f.owner)}</td><td><span class="pill ${f.status}">${f.status}</span></td><td>${d.notion ? cardCell : "\u2014"}</td></tr>`;
-  }).join("");
-  $("#focus").innerHTML = d.now.focus.map((f) => `<li>${linkIds(f)}</li>`).join("") || "<li>Nothing set</li>";
-  const list = (sel, arr) => ($(sel).innerHTML = arr.length ? arr.map((x) => `<li>${linkIds(x)}</li>`).join("") : `<li>None</li>`);
-  list("#waiting", d.now.waiting); list("#upcoming", d.now.upcoming); list("#threads", d.now.threads);
+  const group = (ref, lines) => `<div class="entry"><div class="who">${who(ref)}</div>${lines}</div>`;
+  const cardLink = (t) => t.url ? `<a href="${esc(t.url)}">${esc(t.title)}</a>` : esc(t.title);
+  $("#focus").innerHTML = w.focus.map((f) => group(f.ref, f.tasks.map((t) => `<div class="task-line"><span class="st ${t.status === "Do Now" ? "donow" : ""}">${esc(t.status)}</span><span>${cardLink(t)}${t.due ? ` <span class="src">due ${esc(t.due)}</span>` : ""}</span></div>`).join(""))).join("") || "<p>No open To Do cards are tagged to a challenge or improvement.</p>";
+  $("#waiting").innerHTML = w.waiting.map((f) => group(f.ref, f.tasks.map((t) => `<div class="task-line"><span class="st">${esc(t.owner)}</span><span>${esc(t.title)} <span class="src">${t.step}</span></span></div>`).join(""))).join("") || "<p>Nothing waiting on anyone else.</p>";
+  $("#upcoming").innerHTML = d.now.upcoming.map((e) => `<div class="entry"><div class="who">${who(e.ref)}</div><div>${esc(e.text)}</div></div>`).join("") || "<p>None.</p>";
+  const attnRow = (a) => `<div class="row"><button class="idchip" data-id="${a.id}">${a.id}</button><span>${esc(a.title)}</span><span class="issue">${esc(a.issue)}</span></div>`;
+  const noCiiRow = (a) => `<div class="row"><span class="tag">${a.kind === "plan" ? "Plan" : "Role"}</span><span>${esc(a.title)}</span><span class="src">${esc(a.detail)}</span></div>`;
+  $("#attn").innerHTML = attnN
+    ? (w.noTodo.length ? `<div class="attn-group"><h4>Challenges and improvements without a to-do (${w.noTodo.length})</h4><div class="attn">${w.noTodo.map(attnRow).join("")}</div></div>` : "")
+      + (w.noCii.length ? `<div class="attn-group"><h4>Plan and role items without a challenge or improvement (${w.noCii.length})</h4><div class="attn">${w.noCii.map(noCiiRow).join("")}</div></div>` : "")
+    : "<p>Nothing needs attention.</p>";
 
   const lanes = [["now", "Now", "short term"], ["next", "Next", "mid term"], ["later", "Later", "long term"]];
-  $("#board").innerHTML = lanes.map(([k, label, hint]) => {
-    const rows = d.horizons.rows.filter((r) => r.horizon === k);
-    return `<div class="lane"><header><b>${label}</b><span>${rows.length} \u00b7 ${hint}</span></header>${rows.map((r) => {
-      const isStale = r.freshest != null && r.freshest >= d.staleDays;
-      return `<div class="card ${isStale ? "stale" : ""}"><div class="outcome">${esc(r.outcome)}</div>
-        <div class="meta"><span class="focus-label">${esc(r.focus)}</span>${r.carried.map((id) => `<button class="idchip" data-id="${id}">${id}</button>`).join("")}</div>
-        <div class="meta">${esc(r.status)}${r.freshest != null ? " \u00b7 " + ageCell(r.freshest) : ""}</div>${(() => { const fu = d.roadmap.firstUp.filter((f) => r.carried.includes(f.record)); return fu.length ? `<div class="firstup"><b>First up:</b> ${esc(fu[0].step)} <span class="src">${fu[0].id}</span></div>` : ""; })()}</div>`;
-    }).join("")}</div>`;
-  }).join("");
-
-  const maxA = Math.max(1, ...d.coverage.pillars.map((p) => p.achievements));
-  const maxL = Math.max(1, ...d.coverage.pillars.map((p) => p.live));
-  const maxC = Math.max(1, ...d.coverage.pillars.map((p) => p.calls));
-  const bar = (label, v, max, color) => `<div class="bar"><span>${label}</span><span class="track"><span class="fill" style="display:block;width:${(v / max) * 100}%;background:${color}"></span></span><span class="v">${v}</span></div>`;
-  $("#missions").innerHTML = Object.entries(d.coverage.missions).map(([mid, mlabel]) => {
-    const ps = d.coverage.pillars.filter((p) => p.mission === mid);
-    return `<div class="mission"><h3>${esc(mlabel)}</h3>${ps.map((p) => `<div class="pillar ${p.achievements ? "" : "gap"}">
-      <div class="head"><span class="pid">${p.id}</span><span class="name">${esc(p.label)}</span></div>
-      <div class="bars">${bar("Achievements", p.achievements, maxA, "var(--teal-bright)")}${bar("Live records", p.live, maxL, "var(--deep)")}${bar("Calls", p.calls, maxC, "var(--purple)")}</div>
-      ${p.achievements ? "" : `<span class="gapnote">No achievements yet</span>`}</div>`).join("")}</div>`;
-  }).join("");
-  $("#jd").innerHTML = d.coverage.jd.map((j) => `<div class="row ${j.achievements ? "" : "none"}"><span class="id">${j.id}</span><span class="label">${esc(j.label)}</span><span class="v">${j.achievements}</span></div>`).join("");
-
-  const kinds = [["all", "All"], ["challenge", "Challenges"], ["improvement", "Improvements"], ["initiative", "Initiatives"], ["stale", "Quiet " + d.staleDays + "d+"]];
-  let filter = "all";
-  $("#filters").innerHTML = kinds.map(([k, l]) => `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("");
-  const drawRows = () => {
-    const rows = d.records.filter((r) => filter === "all" || r.kind === filter || (filter === "stale" && !r.closed && r.age >= d.staleDays));
-    $("#rows").innerHTML = rows.map((r) => `<tr id="row-${r.id}"><td><span class="idchip" style="cursor:default">${r.id}</span></td><td><span class="title">${esc(r.title)}</span></td>
-      <td><span class="pill ${r.status}">${esc((r.status || "").replace(/-/g, " "))}</span></td><td>${esc(r.horizon === "none" ? "—" : r.horizon)}</td>
-      <td><span class="tags">${r.pillars.map((p) => `<span class="tag">${p}</span>`).join("")}</span></td><td>${ageCell(r.age)}</td><td class="next">${linkIds(r.next)}</td></tr>`).join("");
+  const cap = (s) => s ? s[0].toUpperCase() + s.slice(1) : "";
+  const kindLabel = { challenge: "Challenge", improvement: "Improvement" };
+  const initiativeCell = (r) => {
+    if (r.initiatives.length) return r.initiatives.map((i) => `<div><button class="idchip" data-id="${i.id}">${i.id}</button> ${esc(i.title)} <span class="note" style="margin:0">\u00b7 ${esc(i.status.replace(/-/g, " "))}</span></div>`).join("");
+    if (r.initiativeNeed === "needed") return `<span class="warnnote">Needed \u2014 none raised</span>`;
+    if (r.initiativeNeed === "not-needed") return "Not needed";
+    return `<span class="note" style="margin:0">Not assessed</span>`;
   };
-  drawRows();
+  const nextCell = (r) => {
+    const s = r.nextStep;
+    if (!s) return `<span class="warnnote">No next step</span>`;
+    return `${esc(s.step)} <span class="note" style="margin:0">\u00b7 ${esc(s.owner)} \u00b7 ${s.id}</span>${s.ticket ? ` <span class="tkey">${esc(s.ticket)}</span>` : ""}`;
+  };
+  const todoCell = (r) => {
+    const parts = [];
+    if (r.todoOpen) parts.push(`${r.todoOpen} open`);
+    if (r.waitingOn.length) parts.push(`waiting on ${r.waitingOn.map(esc).join(", ")}`);
+    if (parts.length) return parts.join(" \u00b7 ");
+    return ["now", "next"].includes(r.horizon) && r.status !== "on-hold" ? `<span class="warnnote">None</span>` : `<span class="note" style="margin:0">None yet</span>`;
+  };
+  const cards = d.records.filter((r) => r.kind !== "initiative" && !r.closed && lanes.some(([k]) => k === r.horizon)).map((r) => ({
+    cii: true, rec: r, horizon: r.horizon, key: r.id,
+    tags: [r.kind, ...r.focus, r.initiatives.length ? "has-initiative" : "no-initiative", r.age != null && r.age >= d.staleDays ? "stale" : ""],
+  })).concat(d.planOnly.map((p) => ({ cii: false, plan: p, horizon: p.horizon, key: "~" + p.outcome, tags: ["needs-cii", p.focus] })))
+    // role expectations nothing tracks sit in Later as plan items with category Role
+    .concat(d.roles.map((j) => ({ cii: false, plan: { outcome: j.label, focus: "role", status: "Not started", source: `Job spec, ${j.id} (${j.area})` }, horizon: "later", key: "~~" + j.id, tags: ["needs-cii", "role"] })));
+  const filters = [["all", "All"], ["challenge", "Challenges"], ["improvement", "Improvements"], ["has-initiative", "Has initiative"], ["no-initiative", "No initiative"], ["needs-cii", "Needs a challenge/improvement"], ["stale", "Quiet " + d.staleDays + "d+"]];
+  let filter = "all";
+  $("#filters").innerHTML = filters.map(([k, l]) => `<button type="button" data-k="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("");
+  const drawBoard = () => {
+    $("#board").innerHTML = lanes.map(([k, label, hint]) => {
+      const items = cards.filter((c) => c.horizon === k && (filter === "all" || c.tags.includes(filter)))
+        .sort((a, b) => a.key.localeCompare(b.key, "en", { numeric: true }));
+      return `<div class="lane"><header><b>${label}</b><span>${items.length} \u00b7 ${hint}</span></header>${items.map((c) => {
+        if (!c.cii) {
+          const p = c.plan;
+          return `<div class="card plan-only"><div class="head"><span class="kind">${p.focus === "role" ? "Role expectation" : "Plan item"}</span><span class="pill later">${esc(p.status)}</span></div><div class="outcome">${esc(p.outcome)}</div>
+            <dl class="kv"><dt>Category</dt><dd>${esc(cap(p.focus))}</dd><dt>Source</dt><dd>${esc(p.source)}</dd><dt>Next</dt><dd><span class="warnnote">Needs a challenge or improvement</span></dd></dl></div>`;
+        }
+        const r = c.rec;
+        const isStale = r.age != null && r.age >= d.staleDays;
+        return `<div class="card ${isStale ? "stale" : ""}" id="card-${r.id}"><div class="head"><span><button class="idchip" data-id="${r.id}">${r.id}</button> <span class="kind">${kindLabel[r.kind]}</span></span><span class="pill ${r.status}">${esc((r.status || "").replace(/-/g, " "))}</span></div>
+          <div class="outcome">${esc(r.title)}</div>
+          <dl class="kv"><dt>Category</dt><dd>${r.focus.map((f) => esc(cap(f))).join(", ") || "\u2014"}</dd><dt>Initiative</dt><dd>${initiativeCell(r)}</dd><dt>To do</dt><dd>${todoCell(r)}</dd><dt>Next ticket</dt><dd>${nextCell(r)}</dd></dl>
+          <div class="meta"><span class="tags">${r.pillars.map((p) => `<span class="tag">${p}</span>`).join("")}</span>${ageCell(r.age)}</div></div>`;
+      }).join("") || "<p class=\"note\">Nothing here.</p>"}</div>`;
+    }).join("");
+  };
+  drawBoard();
   $("#filters").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     filter = b.dataset.k;
     document.querySelectorAll("#filters button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
-    drawRows();
+    drawBoard();
   });
-
-  $("#achs").innerHTML = d.achievements.map((a) => `<article class="ach"><div class="d">${a.date}</div><div><div class="t">${esc(a.title)}</div><p class="s">${esc(a.summary)}</p>
-    <div class="tags">${a.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div></div></article>`).join("") || "<p>No achievements yet.</p>";
 
   $("#lead").innerHTML = d.leadership.slice(0, 5).map((l) => `<div class="sig"><span class="d">${l.date}</span><span class="t">${esc(l.title)}</span>${l.implication ? `<span class="i">${esc(l.implication)}</span>` : ""}</div>`).join("");
   const counts = {}; d.industry.forEach((s) => (counts[s.stance] = (counts[s.stance] || 0) + 1));
@@ -396,19 +352,16 @@ function render() {
   $("#ind").innerHTML = d.industry.slice(0, 6).map((s) => `<div class="sig"><span class="d">${s.date} \u00b7 <span class="st-${s.stance}" style="padding:0 5px;border-radius:3px">${s.stance}</span></span><span class="t">${esc(s.title)}</span></div>`).join("");
   $("#calls").innerHTML = d.calls.slice(0, 6).map((c) => `<div class="sig"><span class="d">${c.date}</span><span class="t">${esc(c.title)}</span><span class="tags">${c.pillars.map((p) => `<span class="tag">${p}</span>`).join("")}</span></div>`).join("");
 
-  $("#calib").textContent = `Calibration on 11 November (${calib} days). WHAT is rated against agreed objectives, so each person needs objectives recorded and dated evidence for both WHAT and HOW.`;
-  const num = (n) => `<span class="count ${n ? "" : "zero"}">${n}</span>`;
-  $("#teamrows").innerHTML = d.team.map((t) => `<tr><td><b>${t.alias}</b></td><td>${esc(t.role)}</td><td>${num(t.objectives)}</td><td>${num(t.what)}</td><td>${num(t.how)}</td>
-    <td><span class="count">${t.selfEvidence} / ${t.managerEvidence}</span></td><td>${t.reviewed ? `${t.reviewed} ${ageCell(t.reviewedAge)}` : "\u2014"}</td></tr>`).join("");
-
   $("#foot").innerHTML = `Generated from the personal-assistant repo on ${d.generated} by <code>scripts/report.py</code>. Working memory last updated ${esc(d.now.updated || "—")}.`;
 
   document.addEventListener("click", (e) => {
     const chip = e.target.closest("button.idchip"); if (!chip) return;
     filter = "all";
     document.querySelectorAll("#filters button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.k === "all")));
-    drawRows();
-    const row = document.getElementById("row-" + chip.dataset.id);
+    const rec = byId[chip.dataset.id];
+    const target = rec && rec.kind === "initiative" && rec.origin.length ? rec.origin[0] : chip.dataset.id;
+    drawBoard();
+    const row = document.getElementById("card-" + target);
     if (row) { row.scrollIntoView({ block: "center" }); row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1400); }
   });
 }

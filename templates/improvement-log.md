@@ -6,6 +6,8 @@ horizon: none           # now | next | later | none
 updated: YYYY-MM-DD
 pillars: []             # see context/_taxonomy.md
 focus: []
+jd: []                  # job-spec responsibilities this delivers, e.g. [JD-05]
+initiative: tbc         # tbc | needed | not-needed — does delivery need a Jira initiative (INI-)?
 goals: []
 links: []
 people: []
@@ -37,9 +39,9 @@ people: []
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| XX-NN.1 | | AC | — | next |
+| ID | Step | Owner | Depends on | Status | Ticket |
+|----|------|-------|------------|--------|--------|
+| XX-NN.1 | | AC | — | next | — |
 
 ## Status & Next Action
 

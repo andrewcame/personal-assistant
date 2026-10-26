@@ -6,6 +6,7 @@ horizon: now
 updated: 2026-10-19
 pillars: [P4, P9]
 focus: [automation, productivity]
+jd: [JD-05]
 goals: []
 links: [INI-02, CH-09]
 people: []

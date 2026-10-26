@@ -6,6 +6,7 @@ horizon: next
 updated: 2026-10-16
 pillars: [P5, P8, P6]
 focus: [ownership, productivity]
+jd: [JD-09]
 goals: []
 links: [CH-12]
 people: [MJ]

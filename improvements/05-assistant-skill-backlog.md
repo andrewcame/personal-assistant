@@ -6,6 +6,7 @@ horizon: now
 updated: 2026-10-16
 pillars: []
 focus: [productivity]
+jd: [JD-07]
 goals: []
 links: []
 people: []
