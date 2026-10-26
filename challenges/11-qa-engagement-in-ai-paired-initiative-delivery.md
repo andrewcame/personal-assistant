@@ -153,7 +153,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-11.6 | Agree QA engagement model for AI-paired delivery | AC | CH-11.4, CH-11.5 | later |
 | CH-11.7 | Own discovery: read research brief, then talk to engineers and leads | AC | — | doing |
 | CH-11.8 | Agree interim model: QA does one e2e ticket once coding is done, with input throughout (tentative) | AC | — | done |
-| CH-11.9 | Automate the e2e ticket using dynamic Portal member creation | AC | INI-01.6, CH-11.8 | later |
+| CH-11.9 | Automate the e2e ticket using dynamic Portal member creation | AC | CH-11.8 | later |
 
 ## Status & Next Action
 

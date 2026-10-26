@@ -91,7 +91,7 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 | INI-02.2 | Make AI flows reusable; revert non-standard repo changes | AC | — | dropped |
 | INI-02.3 | Re-scope initiative from the app simplification plan, then prioritise journeys | AC | INI-02.9 | blocked |
 | INI-02.4 | Generate AI-led Appium tests for priority journeys | AC | INI-02.3 | later |
-| INI-02.5 | Adopt dynamic member creation for app web journeys | AC | INI-01.7 | later |
+| INI-02.5 | Adopt dynamic member creation for app web journeys | AC | — | later |
 | INI-02.6 | Get first-pass tests passing reliably in the pipeline | AC | INI-02.4, INI-02.5 | later |
 | INI-02.7 | Document remaining coverage; define follow-on initiative | AC | INI-02.6 | later |
 | INI-02.8 | Join app simplification kick-off (w/c 2026-10-19) | AC | — | done |

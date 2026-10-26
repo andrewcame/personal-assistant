@@ -113,7 +113,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-10.3 | Raise data isolation and event opt-in design questions | AC | CH-10.1 | later |
 | CH-10.4 | Map high-risk journeys by dependency type | AC | — | later |
 | CH-10.5 | Agree test-tier rules and Pico assertion boundary | AC | CH-10.4 | later |
-| CH-10.6 | Run one real-Exerp PoC journey with dynamic data | AC | CH-10.5, INI-01.5 | later |
+| CH-10.6 | Run one real-Exerp PoC journey with dynamic data | AC | CH-10.5 | later |
 | CH-10.7 | Record multi-tenant Exerp environment architecture decision | AC | CH-10.6 | later |
 | CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem | AC | CH-10.1 | next |
 | CH-10.9 | Research industry practice: test in production/SRE vs mocking vs real integration for distributed systems | AC | — | done |

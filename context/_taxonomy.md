@@ -124,7 +124,7 @@ Derived from the file number in each folder — no separate registration needed.
 
 ## Roadmap Steps (CII)
 
-Every challenge, improvement and initiative (a **CII**) carries a `## Roadmap` table: the ordered steps to completion. Step IDs extend the record ID (`IMP-02.1`, `IMP-02.2`); never renumber, append instead.
+Every challenge and improvement (a **CII**) carries a `## Roadmap` table: the ordered steps to completion. Step IDs extend the record ID (`IMP-02.1`, `IMP-02.2`); never renumber, append instead. **Initiatives have no roadmap.** Their status note says what happens next, and any dependency on initiative work points at the parent challenge or improvement step.
 
 | Column | Meaning |
 |---|---|

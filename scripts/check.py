@@ -242,7 +242,7 @@ def validate() -> int:
         rid, fm, rm = r["fm"].get("id"), r["fm"], r.get("roadmap")
         live = fm.get("status") not in CLOSED
         if rm is None:
-            if live and fm.get("horizon") in ("now", "next"):
+            if live and fm.get("horizon") in ("now", "next") and r["kind"] != "initiative":
                 warn(r["path"], "no ## Roadmap section (required for Now/Next records)")
             continue
         for st in rm:

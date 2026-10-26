@@ -241,8 +241,8 @@ def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: di
     horizon_order = {"now": 0, "next": 1, "later": 2}
     focus, waiting, no_todo = [], [], []
     for c in sorted(ciis, key=lambda r: (horizon_order.get(r["horizon"], 3), r["id"])):
-        steps = list(c["roadmap"]) + [s for i in c["initiatives"] for s in by_id[i["id"]]["roadmap"]]
-        first_up = [s for s in steps if s["status"] in check.FIRST_UP]
+        # Tasks and waiting-on are tracked on challenges and improvements only; initiative steps roll up into their CII.
+        first_up = [s for s in c["roadmap"] if s["status"] in check.FIRST_UP]
         mine = [s for s in first_up if s["owner"] == "AC"]
         theirs = [s for s in first_up if s["owner"] != "AC"]
         cards = cards_by.get(c["id"], [])
@@ -251,17 +251,22 @@ def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: di
         if not c["nextStep"] and first_up:
             c["nextStep"] = next((s for s in first_up if s["status"] == "doing"), first_up[0])
         tasks = sorted((x for x in cards if x.get("status") in rank), key=lambda x: rank[x["status"]])
+        # Plan status follows the Notion card: To Do = In progress, Backlog = Open, no card = Not started.
+        c["taskState"] = "In progress" if tasks else ("Open" if cards else "Not started")
         if tasks:
             focus.append({"ref": c["id"], "tasks": [{"title": t["title"], "status": t["status"], "due": t.get("due"),
                                                       "url": t.get("url")} for t in tasks]})
         if theirs:
             waiting.append({"ref": c["id"], "tasks": [{"title": s["step"], "owner": s["owner"], "step": s["id"]} for s in theirs]})
-        if snap is None or c["horizon"] not in ("now", "next") or c["status"] == "on-hold" or cards:
+        # Now work needs a To Do card; Next work needs a Backlog card.
+        needed = tasks if c["horizon"] == "now" else cards
+        if snap is None or c["horizon"] not in ("now", "next") or c["status"] == "on-hold" or needed:
             continue
+        card_word = "To Do" if c["horizon"] == "now" else "Backlog card"
         if mine:
-            no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Needs a To Do: {mine[0]['step']} ({mine[0]['id']})"})
+            no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Needs a {card_word}: {mine[0]['step']} ({mine[0]['id']})"})
         elif not theirs:
-            no_todo.append({"id": c["id"], "title": c["title"], "issue": "No To Do and no next step on the roadmap"})
+            no_todo.append({"id": c["id"], "title": c["title"], "issue": f"No {card_word} and no next step on the roadmap"})
     no_cii = [{"kind": "plan", "title": o["outcome"], "detail": f"{o['horizon'].capitalize()} · {o['source']}"} for o in orphans]
     no_cii += [{"kind": "role", "title": r["label"], "detail": f"{r['id']} · {r['area']}"} for r in roles]
     return {"focus": focus, "waiting": waiting, "noTodo": no_todo, "noCii": no_cii}
