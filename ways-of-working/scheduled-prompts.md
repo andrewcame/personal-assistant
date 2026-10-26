@@ -14,15 +14,16 @@ Common opening, used by all three:
 >
 > Task: Monday week-ahead brief.
 >
-> 1. Run the notion-sync skill in **light** mode (.github/skills/notion-sync/SKILL.md, "Run Modes"): refresh reports/notion-snapshot.json, then run `python scripts/report.py` and `python scripts/people_report.py`. If context/notion-boards.md has no board links, say so and skip.
-> 2. Read state/now.md, state/learnings.md, context/role-brief.md and context/my-role/horizons.md (Now section). Run `python scripts/check.py stale 14`.
+> 1. Run the notion-sync skill in **light** mode (.github/skills/notion-sync/SKILL.md, "Run Modes"): refresh reports/notion-snapshot.json, apply Done reconciliation (Flow 6) to any card that moved to Done since the last snapshot, then run `python scripts/report.py` and `python scripts/people_report.py`. If context/notion-boards.md has no board links, say so and skip.
+> 2. Read state/now.md, state/learnings.md, context/role-brief.md and context/my-role/horizons.md (Now section). Run `python scripts/check.py stale 14`. Check that now.md, horizons.md and the records agree with the Done and open cards in the snapshot; fix any conflict under Flow 6 and report it.
 > 3. Produce a one-screen brief:
 >    - **Suggested top 3** for the week, anchored on Now, each tied to a challenge or improvement ID and an open To Do card (name the card).
 >    - **Needs attention, Focus and Waiting on**, from `python scripts/report.py --week` (compact text; do not open the HTML or JSON): challenges/improvements with no to-do, plan and role items with no challenge or improvement, open to-dos by challenge/improvement, and steps waiting on others.
 >    - **Dated items this week** (the UPCOMING lines of the same output).
 >    - Stale Now records; cards that look stuck (open more than 14 days).
+>    - Every ID, step or card you cite must come from a Notion card or a repo roadmap row. Name the source in brackets, e.g. `(card: "…")` or `(roadmap IMP-02.4, DA)`.
 >    - At most one question for AC.
-> 4. Propose any `state/now.md` change (Upcoming, narrative focus). Do not write it until AC confirms. Do not commit.
+> 4. Apply Done-card changes via Flow 6 (AC's own Notion move is the approval). Propose any other `state/now.md` change (Upcoming, narrative focus) and do not write it until AC confirms. Do not commit.
 
 ## Wednesday: how are we getting on
 

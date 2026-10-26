@@ -31,7 +31,7 @@ A short, repeatable end-of-week pass that keeps `state/now.md` honest and catche
 
 ## Writing Rules
 
-- Only write `state/now.md` after the user confirms. Set **Updated:** to today. The dashboard reads only **Upcoming** from it (one point per bullet, starting with the related record, e.g. `IMP-08 Short label — the point`, or `General — …`). Its Focus and Waiting On come from Notion To Do cards and roadmap owners, so make next week's focus real by proposing To Do cards (tagged with the record) rather than free text.
+- Only write `state/now.md` after the user confirms. Exception: Done reconciliation (notion-sync Flow 6) applies directly when AC has moved a card to Done. Set **Updated:** to today. The dashboard reads only **Upcoming** from it (one point per bullet, starting with the related record, e.g. `IMP-08 Short label — the point`, or `General — …`). Its Focus and Waiting On come from Notion To Do cards and roadmap owners, so make next week's focus real by proposing To Do cards (tagged with the record) rather than free text.
 - Keep `state/now.md` to one screen: drop resolved threads, move decisions older than ~4 weeks out (they live in their records), and keep "Recent Decisions" to the last five.
 - Achievements, challenge updates, and status changes go through Capture (or the Capture rules) — not this skill.
 - Aliases only. The user may speak candidly about people; use it as context, but anything written to `state/now.md` or handed to Capture follows the [people-records standard](../../../team/README.md#writing-standard) — say what was left out.

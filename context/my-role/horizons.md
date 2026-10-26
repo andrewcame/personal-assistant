@@ -30,7 +30,7 @@ The four focus areas from the original plan still apply as the lens across every
 
 | Outcome | Focus | Carried by | Status | Source |
 |---|---|---|---|---|
-| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | Draft — AC sponsoring; DA's tickets in team review, kick-off once approved | — |
+| Dynamic member creation available for Portal automation (Web MVP) | Automation | [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md), [Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md) | In progress — AC sponsoring; tickets approved 2026-10-23, kick-off done 2026-10-26; DA scoping the plan (INI-01.3) | — |
 | Staging monitoring and alerting has a clear owner and daily routine | Productivity | [Improvement 01](../../improvements/01-staging-monitoring-and-alerting-ownership.md) | In progress — AC running checks manually; next: DLQ issues and AI-run checks | — |
 | QA engagement model agreed for paired, AI-assisted initiative delivery | Ownership | [Challenge 11](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md) | Open — interim model tentatively agreed: QA does one e2e ticket once coding is done | — |
 | 2026 objectives recorded for AC and the team; calibration and EOY reviews delivered | People | [Improvement 08](../../improvements/08-2026-objectives-calibration-and-eoy-reviews.md) | In progress — calls being booked; calibration 2026-11-11 | — |

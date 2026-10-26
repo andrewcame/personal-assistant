@@ -118,3 +118,7 @@ Making this change within the Pico front-end repo first lets us establish the pa
 ### 2026-10-23
 
 - DA has written the tickets; the team has reviewed them. AC approved them on 2026-10-23; kick-off is next week.
+
+### 2026-10-26
+
+- Notion card "Check DA's initiative and kick it off" marked Done by AC. Scoping with AC, MP and probably TMW (INI-01.3) is next.

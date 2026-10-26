@@ -27,6 +27,10 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 - **Done clear-out:** every fortnight, Done cards not edited for 14+ days are proposed for archiving (Trash, restorable) once their outcome is in the repo. AC approves each batch.
 - **Titles:** short and plain, no `[CATEGORY]` prefix (retired 2026-10-15). Detail can go in the card body — agents read the body of tracked cards.
 - **Record IDs:** go in the `Record` property. Add a new option there when a new record is created; untagged cards are fine for quick tasks.
+- **Column rule:** a card for a **Now** step sits in `To Do`; a card for a **Next** or **Later** step sits in `Backlog`. Only Now work goes in To Do.
+- **No initiative cards:** cards are created for improvements (`IMP-`) and challenges (`CH-`) only. Initiatives (`INI-`) are tracked in Jira and in the repo; their tasks go against the parent improvement.
+- **Admin-only mapping:** `Admin` (BAU) is the only category value. A card with no `Record` value, or only `Admin`, is unmapped and ties to no CII. Only a CII ID in `Record` links a card to a challenge, improvement or initiative.
+- **Cards owned by others:** title them "Monitor X", not "Do X".
 - **"Open"** means Status is Backlog, To Do, or Do Now.
 
 - **To Do:** quick reminders that open and close within the week are counted as "weekly churn" in the weekly review and otherwise ignored. Cards tagged with a record ID, or open for more than 14 days, are processed: progress or blockers go into the matching record; completed ones may become evidence.

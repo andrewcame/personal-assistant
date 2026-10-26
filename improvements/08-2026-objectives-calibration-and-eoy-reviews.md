@@ -3,7 +3,7 @@ id: IMP-08
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-19
+updated: 2026-10-26
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -46,11 +46,15 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 - Team objectives and status harvested from the performance system. Recorded so far: DA's three objectives (DA-O1 to DA-O3) in [DA's profile](../team/da.md), KB's three (KB-O1 to KB-O3) in [KB's profile](../team/kb.md), MP's four (MP-O1 to MP-O4) in [MP's profile](../team/mp.md) and TMW's four (TMW-O1 to TMW-O4) in [TMW's profile](../team/tmw.md). DA's, KB's and TMW's have no updates logged; MP's four carry MP's own comments, including a scope change on MP-O1 and a proposed rewording of MP-O4. KB's and TMW's objectives pre-date their 2026-10 team moves. JS's and JFG's objectives are not available to AC and are not recorded here; for them, preparation is limited to alignment details. The Notion card is updated: what remains is the objectives call and preparing the team's calibration stats, both w/c 2026-11-02.
 
+### 2026-10-26
+
+- Notion card "Book objectives meeting with GL" marked Done by AC. The meeting date is still to confirm; the team objectives calls and calibration stats remain for w/c 2026-11-02.
+
 ## Roadmap
 
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
-| IMP-08.1 | Book and hold objectives meeting with GL | AC | — | next |
+| IMP-08.1 | Book objectives meeting with GL | AC | — | done |
 | IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02) | AC | — | doing |
 | IMP-08.3 | Record objectives and evidence in team profiles | AC | IMP-08.2 | doing |
 | IMP-08.4 | Run calibration prep; fill People template (w/c 2026-11-02) | AC | IMP-08.3 | later |

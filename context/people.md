@@ -54,6 +54,13 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | LMo   | Technical Lead                        | Pico architecture    | Current | Not LM (LM is the Contract QA); contributed to CH-10 |
 | JR    | Delivery                              | Delivery             | Current |                                             |
 
+## Developer Experience (PDEX)
+
+| Alias | Role                                  | Area                 | Status  | Notes                                       |
+|-------|---------------------------------------|----------------------|---------|---------------------------------------------|
+| AE    | Developer Experience team member      | PDEX                 | Current |                                             |
+| DM    | Developer Experience team member      | PDEX                 | Current |                                             |
+
 ## Configuration
 
 | Alias | Role                                  | Area                 | Status  | Notes                                       |

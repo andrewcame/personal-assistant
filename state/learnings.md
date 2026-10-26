@@ -22,6 +22,11 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-10-14 · reviews · Calibration ratings and sensitive fields are drafted in chat only, never saved. · Subject access request exposure.
 - 2026-10-14 · planning · 2026 goals are provisional; tag evidence to pillars and JD items regardless. · Proper goals start in 2027.
 - 2026-10-23 · planning · The Exerp Assistant is a test tool, not a backend service; don't list it as a backend coverage gap or treat its card as a backend duplicate. · AC correction.
+- 2026-10-26 · all · Cite a source for every ID in a brief (card or roadmap row). Apply Done-card changes to the repo directly and list them afterwards. · Briefs presented IDs that were not Notion cards as cards, and AC needs to see where each one comes from.
+- 2026-10-26 · notion · Only the `Admin` Record value means BAU. A card with no Record, or only Admin, is unmapped and ties to no CII. Cards owned by others are titled "Monitor X", not "Do X". · AC's rules for Notion-to-repo mapping.
+- 2026-10-26 · notion · To Do cards are for challenges (CH-) and improvements (IMP-) only, never initiatives (INI-); an initiative's tasks go against its parent improvement. · An initiative is tracked in Jira and the repo, so a card duplicates it.
+- 2026-10-26 · notion · The To Do board has Backlog, To Do and Done. Now steps go in To Do; Next and Later steps go in Backlog. · AC's board structure.
+- 2026-10-26 · notion · Don't create cards for Next or Later steps that have none; AC adds his own. Existing cards are triaged, not expanded. · Future work isn't detailed yet, and extra cards bloat the board.
 - 2026-10-23 · all · When mentioning a CH-, IMP- or INI- record, or a roadmap step such as INI-01.3, always give its title too, not just the ID. · AC can't always remember what each one is and finds cross-referencing hard.
 
 ## Retired

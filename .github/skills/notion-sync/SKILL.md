@@ -10,7 +10,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 ## Run Modes
 
 - **Full run (Friday, or when asked):** all five flows below.
-- **Light run (Monday and Wednesday scheduled jobs, or "light notion sync"):** read the To Do board and the Ideas page once, then do **Flow 4 only**: write `reports/notion-snapshot.json` (this is what keeps the dashboards' Focus fresh), then rebuild both dashboards. Report only: how many cards are open, any AC-owned next step with no card (propose it, don't create it), any card that looks done, and the count of untriaged ideas. Do **not** triage ideas or tidy cards (Flows 1, 3 and 5) in a light run; leave that for Friday. Same approval rules: no Notion writes, no commits.
+- **Light run (Monday and Wednesday scheduled jobs, or "light notion sync"):** read the To Do board and the Ideas page once, then do **Flow 4 and Flow 6**: write `reports/notion-snapshot.json` (this is what keeps the dashboards' Focus fresh), apply Done reconciliation (Flow 6) to any card that has moved to Done, then rebuild both dashboards. Report only: how many cards are open, any AC-owned next step with no card (propose it, don't create it), and the count of untriaged ideas. Do **not** triage ideas or tidy cards (Flows 1, 3 and 5) in a light run; leave that for Friday. No Notion writes and no commits.
 
 ## Flow 1 — Ideas Triage
 
@@ -44,8 +44,8 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 ## Flow 2 — Actions Out
 
 1. Gather candidate actions: from the action-extraction skill, a record's next action, or what AC asks for.
-2. Propose cards with a short, plain, verb-first title (no bracket prefix) and the record ID in the `Record` property (add the option if it's a new record), with a due date only if AC gave one.
-3. Create them in To Do only after AC approves the list.
+2. Propose cards with a short, plain, verb-first title (no bracket prefix) and the record ID in the `Record` property (add the option if it's a new record), with a due date only if AC gave one. **Cards are never created for initiatives (`INI-`).** An initiative is tracked in Jira and in the repo, and its tasks are allocated to its parent improvement (`IMP-`) instead.
+3. Create them only after AC approves the list. **Status follows the horizon:** a card for a Now step is `To Do`; a card for a Next or Later step is `Backlog`. Use `Do Now` only if AC asks for it.
 4. **Always set `To-Do Completion` on every card you create:** `["https://app.notion.com/45cea035c7f183fc9462817b8425947b"]` (the same value cards created in the Notion UI get). Every view on the board filters on this relation, so a card without it is invisible to AC, and the Backlog column disappears if its only cards lack it. Set `Status` explicitly too. Don't read or edit the To-Do Completion database itself.
 5. After creating cards, confirm none are missing the relation: query the data source for rows where `To-Do Completion` is null (expect none).
 
@@ -60,8 +60,13 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 ## Flow 4 — Roadmap Coverage And Snapshot
 
-1. For every CII in the Now or Next horizon, find its first-up roadmap steps (`doing`/`next`). Each AC-owned first-up step should have an open To Do card tagged with the record ID. Propose cards for any that are missing (Flow 2); steps owned by others are reported as "waiting on", not carded.
-2. Write `reports/notion-snapshot.json` for the dashboard (no approval needed — it's a generated, git-ignored file):
+1. For every CII in the Now or Next horizon, find its first-up roadmap steps (`doing`/`next`). Every first-up step of an improvement or challenge, whoever owns it, should have an open card. Initiatives are excluded (Flow 2). Mapping rules:
+   - A card maps to a CII only through its `Record` tag (the CII ID). No tag, or a tag that is only `Admin`, means the card is unmapped and does not tie to any CII.
+   - `Admin` means BAU. It is the only category. Do not use "BAU" as a separate label.
+   - A card for a step owned by someone else is titled "Monitor X", not "Do X".
+   - Column rule: a card for a **Now** step sits in `To Do`; a card for a **Next** or **Later** step sits in `Backlog`. Propose a status change for any card in the wrong column (Flow 4 tidy-up, step 6).
+   - For any missing card, show the proposed title, owner wording, Record tag and column, then create it on AC's OK (Flow 2). Never create it silently.
+2. Before overwriting the snapshot, read the old one: any card that was open there and is now Done is a Done transition, which feeds Flow 6. Then write `reports/notion-snapshot.json` for the dashboard (no approval needed — it's a generated, git-ignored file):
    `{"generated": "YYYY-MM-DD", "cards": [{"title", "status", "records": [...], "created", "due", "url"}], "ideas": {"untriaged": n, "processedTicked": n, "lastTriage": "YYYY-MM-DD" | null}}`
    `url` is the card's Notion page URL (optional; the dashboard links each Focus to-do to it). The dashboard's Focus lists open To Do / Do Now cards by their `records` tags, with initiative tags rolling up into the challenge or improvement they deliver.
    Include open cards and cards completed in the last 7 days. Convert any real names in titles to aliases (snapshot only; leave the Notion titles as they are). Count Ideas lines that are not ticked as `untriaged`.
@@ -74,22 +79,33 @@ Review the open cards (Backlog, To Do, Do Now) against the repo and propose tidy
 For each open card, look for:
 
 1. **Done in the repo, still open in Notion** — the matching roadmap step is `done`, or a record, progress log, achievement or `state/now.md` says it is finished. Read the card's body and comments first for anything pertinent (a blocker, a follow-up, a change of plan). If nothing contradicts it, propose **move to Done**; if a comment raises a follow-up, propose that as a new card or roadmap step instead.
-2. **Done in Notion, repo not updated** — a Done card whose roadmap step is still `doing`/`next`: propose marking the step `done` (and the next step `doing`/`next` if it is now unblocked).
+2. **Done in Notion, repo not updated** — a Done card whose roadmap step is still `doing`/`next`: handled by Flow 6 and applied directly, not proposed.
 3. **Missing `Record` tag** — an untagged card that clearly relates to one record (title, body, or a matching roadmap step): propose the tag, and say which step it matches. Add the option first if the record is new. Quick untagged reminders that match nothing stay untagged.
 4. **Wrong or stale tag** — a tag whose record is resolved, closed or dropped, or a card whose step was dropped: propose retagging, moving to Done, or deleting. Never delete without explicit approval.
 5. **Duplicates and drift** — two cards for the same step, or a card whose title no longer matches the step wording: propose merging or renaming (short, plain, verb-first, no bracket prefix).
-6. **Status mismatch** — a Do Now card for a `later` step, or a `doing` step whose card sits in Backlog: propose the status change.
+6. **Status mismatch** — a card for a Next or Later step sitting in `To Do` or `Do Now`, a card for a Now step sitting in `Backlog`, or a Do Now card for a `later` step: propose the status change. Cards for initiatives (`INI-`) are never on the board (Flow 2), so flag any that exist.
 
 7. **Missing relation** — any card (open or Done) whose `To-Do Completion` is empty: it is hidden from every view. Propose setting it (value in Flow 2, step 4). Check this first on every run.
 8. **Fortnightly Done clear-out** — a Done card that has not been edited for 14 days or more. Before proposing it, make sure its outcome is already in the matching record or achievement (Flow 3). Then propose archiving all such cards in one batch (move to Trash, restorable); never archive without AC's approval. Run this on the first sync of each fortnight (record the date of the last clear-out in `state/now.md`, under Open Threads, as "To Do Done clear-out: last YYYY-MM-DD"). Cards that fed an open record's progress line stay until that line is written.
 
 Present one table (Card · Current status/tags · Evidence from the repo · Proposed change). Apply only the changes AC approves, one write at a time, and show each before making it. Repo changes that follow (marking steps done, new steps) go through the normal show-then-commit rule.
 
+## Flow 6 — Done Reconciliation
+
+When AC moves a card to Done in Notion, the repo must follow it. The move in Notion is AC's own approval, so these repo updates are applied directly (no Notion write, no commit).
+
+1. **Match the card to its record** by title against the roadmap step wording and the record's progress log. If there is no confident match, list the card under "Unmatched Done cards" and ask AC. Never guess a record or step ID.
+2. **Mark the step `done`** in the record's roadmap (advance the next step to `doing`/`next` if it is now unblocked). Add a dated line to the record's progress log that names the card.
+3. **Check for contradictions** in `state/now.md` first (Focus, Open Threads, Upcoming, Waiting On), then `context/my-role/horizons.md` and the record's own text. Amend or remove any line that still presents the card as open. Set **Updated:** in `now.md` to today.
+4. **Bump `updated:`** in every record changed, and correct any horizons row whose status line is now out of date.
+5. **Verify**: run `python scripts/check.py validate`, then rebuild the dashboards. List each card, the repo changes made, and any unmatched cards in the output.
+
 ## Output
 
 - **Ideas:** one block per idea group (top-level line, with its sub-bullets summarised) → verdict → for Enrich, each proposed addition and the record/section it goes into.
 - **Actions out:** list of proposed cards.
 - **To Do back in:** churn count; tracked cards with proposed record updates; long-open cards.
+- **Done reconciliation:** each card moved to Done, the repo changes made, and unmatched cards.
 - **Card tidy:** the table of proposed moves to Done, new tags, retags, merges, missing relations and the fortnightly Done clear-out, with the repo evidence for each.
 - **Not recorded:** anything stripped under the people-records standard.
 
@@ -98,4 +114,6 @@ Present one table (Card · Current status/tags · Evidence from the repo · Prop
 - Only the two boards in `context/notion-boards.md`. No search, no browsing, no other pages.
 - Show every Notion write before making it.
 - Card status moves and deletions are never made without AC's approval; check the card's body and comments before proposing Done.
+- Exception: repo updates that follow a card AC has already moved to Done (Flow 6) are applied directly and listed afterwards.
+- Every record ID, step ID or card title cited in a brief or output must come from a Notion card or a repo roadmap row. Name the source in brackets, e.g. `(card: "…")` or `(roadmap IMP-02.4, DA)`.
 - Aliases only in the repo (records, snapshot, `state/`). Notion card titles are AC's own text: don't rewrite real names there; convert them to aliases only when copying into the repo.
