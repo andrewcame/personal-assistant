@@ -1,5 +1,6 @@
 ---
 id: IMP-02
+tag: Member data
 type: improvement
 status: in-progress
 horizon: now

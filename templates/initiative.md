@@ -1,5 +1,6 @@
 ---
 id: INI-NN
+tag: Short label
 type: initiative
 status: draft           # draft | submitted | in-progress | done | rejected
 horizon: none

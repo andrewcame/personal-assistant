@@ -1,5 +1,6 @@
 ---
 id: IMP-07
+tag: Payments cover
 type: improvement
 status: not-started
 horizon: next

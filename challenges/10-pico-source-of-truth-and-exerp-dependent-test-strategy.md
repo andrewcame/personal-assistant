@@ -1,5 +1,6 @@
 ---
 id: CH-10
+tag: Pico source of truth
 type: challenge
 status: open
 horizon: next

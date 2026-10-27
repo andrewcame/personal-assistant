@@ -65,6 +65,7 @@ The focus area is the **category** shown on every dashboard card. It is stored i
 
 | Field | On | Meaning |
 |---|---|---|
+| `tag: Short label` | Challenge, improvement, initiative (required while live) | 1–3 word label. Notion `Record` values are `<ID> <tag>` (e.g. `IMP-02 Member data`); agents and the dashboard read the ID from the start of the value. Unique across records. |
 | `origin: [CH-NN / IMP-NN]` | Initiative (required) | The challenge or improvement this initiative delivers. `check.py` errors if it is missing. The dashboard derives the initiative shown on the parent from this. |
 | `initiative: tbc \| needed \| not-needed` | Challenge, improvement (optional, default `tbc`) | Whether delivery needs an initiative. |
 | `jd: [JD-NN]` | Challenge, improvement (optional) | The job-spec responsibilities this delivers. Used to find role expectations nothing tracks. |

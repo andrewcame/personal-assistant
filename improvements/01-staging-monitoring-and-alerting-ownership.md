@@ -1,5 +1,6 @@
 ---
 id: IMP-01
+tag: Staging SRE
 type: improvement
 status: in-progress
 horizon: now

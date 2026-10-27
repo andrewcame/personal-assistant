@@ -1,5 +1,6 @@
 ---
 id: IMP-06
+tag: Coverage baseline
 type: improvement
 status: in-progress
 horizon: now

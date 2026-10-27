@@ -1,5 +1,6 @@
 ---
 id: IMP-08
+tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now

@@ -233,7 +233,9 @@ def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: di
     for card in (snap or {}).get("cards", []):
         if card.get("status") == "Done":
             continue
-        for rid in card.get("records", []):
+        for value in card.get("records", []):
+            # Notion Record values are "<ID> <tag>"; match on the ID.
+            rid = value.split(" ", 1)[0]
             p = parent_of(rid, by_id)
             if p in by_id and by_id[p]["kind"] != "initiative" and card not in cards_by.setdefault(p, []):
                 cards_by[p].append(card)

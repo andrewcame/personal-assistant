@@ -1,5 +1,6 @@
 ---
 id: CH-07
+tag: E2E continuity
 type: challenge
 status: open
 horizon: next

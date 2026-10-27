@@ -1,5 +1,6 @@
 ---
 id: INI-01
+tag: Portal member creation
 type: initiative
 status: in-progress
 horizon: now

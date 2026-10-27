@@ -21,12 +21,12 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 
 ## Conventions
 
-**To-Do Database schema (as at 2026-10-23):** `Name` (title), `Status` (Backlog · To Do · Do Now · Done), `Priority` (High · Medium · Low), `Due date`, `Record` (multi-select of record IDs, e.g. `IMP-08`, `CH-12`; `IMP-11` added 2026-10-23; `CH-09` added 2026-10-27), `To-Do Completion` (relation, required — see below).
+**To-Do Database schema (as at 2026-10-23):** `Name` (title), `Status` (Backlog · To Do · Do Now · Done), `Priority` (High · Medium · Low), `Due date`, `Record` (multi-select of `<ID> <tag>` values, e.g. `IMP-08 Objectives & reviews`; switched from bare IDs on 2026-10-27, tag from each record's `tag:` front-matter), `To-Do Completion` (relation, required — see below).
 
 - **`To-Do Completion` must be set on every card an agent creates**, to `https://app.notion.com/45cea035c7f183fc9462817b8425947b`. All views (Status, Calendar, Today, This week, etc.) filter on it; cards created via the API without it are invisible in AC's views (found 2026-10-23, fixed on all 12 affected cards). Agents never edit the To-Do Completion database itself.
 - **Done clear-out:** every fortnight, Done cards not edited for 14+ days are proposed for archiving (Trash, restorable) once their outcome is in the repo. AC approves each batch.
 - **Titles:** short and plain, no `[CATEGORY]` prefix (retired 2026-10-15). Detail can go in the card body — agents read the body of tracked cards.
-- **Record IDs:** go in the `Record` property. Add a new option there when a new record is created; untagged cards are fine for quick tasks.
+- **Record values:** go in the `Record` property as `<ID> <tag>`. The ID at the start is what agents and the dashboard match on, so never drop it. Add a new option when a new record is created; untagged cards are fine for quick tasks.
 - **Column rule:** a card for a **Now** step sits in `To Do`; a card for a **Next** or **Later** step sits in `Backlog`. Only Now work goes in To Do.
 - **No initiative cards:** cards are created for improvements (`IMP-`) and challenges (`CH-`) only. Initiatives (`INI-`) are tracked in Jira and in the repo; their tasks go against the parent improvement.
 - **Admin-only mapping:** `Admin` (BAU) is the only category value. A card with no `Record` value, or only `Admin`, is unmapped and ties to no CII. Only a CII ID in `Record` links a card to a challenge, improvement or initiative.

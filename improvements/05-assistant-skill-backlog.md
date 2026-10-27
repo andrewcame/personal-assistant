@@ -1,5 +1,6 @@
 ---
 id: IMP-05
+tag: Assistant
 type: improvement
 status: in-progress
 horizon: later

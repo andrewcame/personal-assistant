@@ -204,6 +204,8 @@ def validate() -> int:
                 err(path, f"horizon '{fm.get('horizon')}' not in {HORIZONS}")
             if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", fm.get("updated", "")):
                 err(path, "updated must be YYYY-MM-DD")
+            if fm.get("status") not in CLOSED and not fm.get("tag"):
+                warn(path, "live record has no 'tag:' (short label used in Notion Record values)")
             for g in fm.get("goals", []):
                 if g not in tax["goals"]:
                     err(path, f"unknown goal '{g}'")
@@ -233,6 +235,14 @@ def validate() -> int:
                     err(path, f"origin '{o}' must be a challenge or improvement id")
         elif kind in ("challenge", "improvement") and fm.get("initiative", "tbc") not in INITIATIVE_NEEDS:
             err(path, f"initiative '{fm.get('initiative')}' not in {INITIATIVE_NEEDS}")
+
+    tag_owner: dict[str, str] = {}
+    for r in records:
+        t = (r["fm"] or {}).get("tag")
+        if t and t.lower() in tag_owner:
+            err(r["path"], f"tag '{t}' already used by {tag_owner[t.lower()]}")
+        elif t:
+            tag_owner[t.lower()] = r["fm"].get("id")
 
     # roadmaps
     all_steps = {st["id"] for r in records for st in (r.get("roadmap") or [])}

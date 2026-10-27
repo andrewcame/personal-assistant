@@ -1,5 +1,6 @@
 ---
 id: IMP-04
+tag: QA metrics
 type: improvement
 status: in-progress
 horizon: now

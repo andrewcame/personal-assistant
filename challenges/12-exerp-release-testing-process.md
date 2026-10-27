@@ -1,5 +1,6 @@
 ---
 id: CH-12
+tag: Exerp release risk
 type: challenge
 status: open
 horizon: next

@@ -1,5 +1,6 @@
 ---
 id: IMP-NN
+tag: Short label
 type: improvement
 status: not-started     # not-started | in-progress | blocked | done
 horizon: none           # now | next | later | none

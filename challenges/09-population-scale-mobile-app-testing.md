@@ -1,5 +1,6 @@
 ---
 id: CH-09
+tag: Mobile coverage
 type: challenge
 status: open
 horizon: now

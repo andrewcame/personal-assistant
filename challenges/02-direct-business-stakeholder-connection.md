@@ -1,5 +1,6 @@
 ---
 id: CH-02
+tag: Business stakeholders
 type: challenge
 status: open
 horizon: later

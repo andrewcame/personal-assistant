@@ -44,7 +44,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 ## Flow 2 — Actions Out
 
 1. Gather candidate actions: from the action-extraction skill, a record's next action, or what AC asks for.
-2. Propose cards with a short, plain, verb-first title (no bracket prefix) and the record ID in the `Record` property (add the option if it's a new record), with a due date only if AC gave one. **Cards are never created for initiatives (`INI-`).** An initiative is tracked in Jira and in the repo, and its tasks are allocated to its parent improvement (`IMP-`) instead.
+2. Propose cards with a short, plain, verb-first title (no bracket prefix) and the record in the `Record` property as `<ID> <tag>` (e.g. `IMP-02 Member data`; the tag is the record's `tag:` front-matter; add the option if it's a new record), with a due date only if AC gave one. **Cards are never created for initiatives (`INI-`).** An initiative is tracked in Jira and in the repo, and its tasks are allocated to its parent improvement (`IMP-`) instead.
 3. Create them only after AC approves the list. **Status follows the horizon:** a card for a Now step is `To Do`; a card for a Next or Later step is `Backlog`. Use `Do Now` only if AC asks for it.
 4. **Always set `To-Do Completion` on every card you create:** `["https://app.notion.com/45cea035c7f183fc9462817b8425947b"]` (the same value cards created in the Notion UI get). Every view on the board filters on this relation, so a card without it is invisible to AC, and the Backlog column disappears if its only cards lack it. Set `Status` explicitly too. Don't read or edit the To-Do Completion database itself.
 5. After creating cards, confirm none are missing the relation: query the data source for rows where `To-Do Completion` is null (expect none).
@@ -61,7 +61,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 ## Flow 4 — Roadmap Coverage And Snapshot
 
 1. For every CII in the Now or Next horizon, find its first-up roadmap steps (`doing`/`next`). Every first-up step of an improvement or challenge, whoever owns it, should have an open card. Initiatives are excluded (Flow 2). Mapping rules:
-   - A card maps to a CII only through its `Record` tag (the CII ID). No tag, or a tag that is only `Admin`, means the card is unmapped and does not tie to any CII.
+   - A card maps to a CII only through its `Record` value, read by the ID at its start (`IMP-02 Member data` → `IMP-02`). No value, or only `Admin`, means the card is unmapped and does not tie to any CII.
    - `Admin` means BAU. It is the only category. Do not use "BAU" as a separate label.
    - A card for a step owned by someone else is titled "Monitor X", not "Do X".
    - Column rule: a card for a **Now** step sits in `To Do`; a card for a **Next** or **Later** step sits in `Backlog`. Propose a status change for any card in the wrong column (Flow 4 tidy-up, step 6).

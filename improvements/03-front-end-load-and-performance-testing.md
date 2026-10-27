@@ -1,5 +1,6 @@
 ---
 id: IMP-03
+tag: Load testing
 type: improvement
 status: not-started
 horizon: later

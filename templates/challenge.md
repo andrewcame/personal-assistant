@@ -1,5 +1,6 @@
 ---
 id: CH-NN
+tag: Short label
 type: challenge
 status: open            # open | active-monitoring | resolved | closed
 horizon: none           # now | next | later | none

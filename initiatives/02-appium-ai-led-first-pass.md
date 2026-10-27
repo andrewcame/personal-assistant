@@ -1,5 +1,6 @@
 ---
 id: INI-02
+tag: Appium first pass
 type: initiative
 status: in-progress
 horizon: now

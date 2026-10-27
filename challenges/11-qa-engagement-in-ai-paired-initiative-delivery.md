@@ -1,5 +1,6 @@
 ---
 id: CH-11
+tag: QA in AI delivery
 type: challenge
 status: open
 horizon: later
