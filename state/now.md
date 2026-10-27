@@ -2,7 +2,7 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it short (one screen). Anything that needs more than a line belongs in a record — link to it._
 
-**Updated:** 2026-10-26
+**Updated:** 2026-10-27
 
 _Format: only **Upcoming** is read by the dashboard (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). The dashboard's Focus and Waiting On are derived from Notion To Do cards and roadmap owners, so This Week's Focus and Waiting On below are AC's narrative notes and are not shown there._
 
@@ -19,11 +19,11 @@ _Last week: item 1 done (INI-01 tickets reviewed); items 2–4 not done, carried
 
 ## Open Threads
 
-- Web Team Two settling after TMW's move: TMW acts as secondary Web lead and is closely involved in Web 3 (JFG reports to her); DA on Web. KB App lead with AC's support; IY onboarding (CH-04).
+- Web Team Two settling after TMW's move: TMW acts as secondary Web lead and is closely involved in Web 3 (JFG reports to her); DA on Web. KB App lead with AC's support; IY onboarding. CH-04 closed 2026-10-27 — monitoring is BAU.
 - Awards ceremony (2026-10-21) captured: business pillars Grow / Simplify / Improve in [leadership-direction](../context/leadership-direction.md); team chats in [discovery note](../context/discovery-calls/2026-10-21-annual-conference-team-conversations.md). Open: square speed vs quality and AI use into the QA approach. Industry research on test-in-prod vs mocking vs real integration done (CH-10.9, logged as an industry signal); AC's flagged real-Exerp integration tier is to be fleshed out in IMP-11.5. Driving theme unchanged.
 - LM contract extended into 2027; E2E knowledge transfer continues — AC maps the Portal part in Miro first, then AI for the rest. Stays live until a sound data and environment strategy is agreed, since that enables earlier testing (CH-07).
 - INI-01: AC is sponsor. DA has written the tickets, the team has reviewed them, approval is done, and the kick-off card is Done (26 Oct).
-- INI-02: app simplification kick-off held; awaiting tickets to scope the work. Two epics (make tests pass; pipelines) plus a third aligned to app simplification; AI/OpenSpec enablement likely comes with it. Delivery and the team agreed the implementation details.
+- INI-02: epics APP-352 (stabilise and baseline existing tests) and APP-353 (optimise pipeline runs) raised; third epic (simpler tests for functionality not changing in app simplification) still to write. Moved to Now under CH-09.
 - Jira QA flow metrics: AC adds the JQL queries, then a separate dashboard; Report Portal access to compare with Claude reports (IMP-04).
 - Staging checks (IMP-01) still manual; Claude-run checks likely from next week. AC to speak to PDEX about that environment.
 - Copilot is now the back-up harness while Claude tokens are exhausted.
@@ -36,6 +36,9 @@ _Last week: item 1 done (INI-01 tickets reviewed); items 2–4 not done, carried
 
 ## Recent Decisions
 
+- 2026-10-27 — Re-plan: IMP-11, CH-09, IMP-06 and IMP-04 moved to Now; IMP-07 to Next; CH-11, IMP-05 and the CI/CD quality gate plan item to Later. Notion cards moved to match. Now holds 8 items as a one-off; aim to bring it down.
+- 2026-10-27 — CH-04 Web QA capacity and accountability closed; ongoing monitoring is BAU.
+- 2026-10-27 — CH-09 rescoped to "Appropriate and reliable Mobile App test coverage": Phase 1 stabilise existing tests via INI-02; population-scale testing becomes Phase 2. INI-02 moved to Now with it; initiatives sit in their parent's row and don't add to the Now count.
 - 2026-10-26 — Notion To Do cards are for CH- and IMP- records only, never INI-. Initiatives are tracked in their own Jira process. The duplicate "Monitor DA scoping" card for INI-01 is closed. Now items sit in To Do; Next and Later items sit in Backlog.
 - 2026-10-23 — CTO renamed CTTO in the people lookup (same person; older entries keep "CTO"); LMo added for the Technical Lead / Pico architect.
 - 2026-10-23 — Tentative CH-11 agreement: QA does one e2e ticket once coding is done; the team manages delivery.

@@ -1,9 +1,9 @@
 ---
 id: CH-04
 type: challenge
-status: active-monitoring
-horizon: later
-updated: 2026-10-23
+status: closed
+horizon: none
+updated: 2026-10-27
 pillars: [P1, P6]
 focus: [people]
 jd: [JD-01]
@@ -130,15 +130,17 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 |----|------|-------|------------|--------|
 | CH-04.1 | Agree interim Web 2 cover expectations with DA | AC | — | done |
 | CH-04.2 | Reassign platforms: TMW to Web Team Two, KB to App | AC | — | done |
-| CH-04.3 | Review DA's Web visibility expectations at next 1:1 | AC | — | later |
+| CH-04.3 | Review DA's Web visibility expectations at next 1:1 | AC | — | dropped |
 | CH-04.4 | Agree ownership and coverage model across Web and App | AC | CH-04.2 | done |
-| CH-04.5 | Document JFG crossover support and resilient Exerp release ownership | AC | CH-04.4, IMP-09.4 | later |
-| CH-04.6 | Decide whether the reporting line should change | AC | CH-04.4 | later |
-| CH-04.7 | Decide Join / Portal split for Web in 2027 planning | AC | CH-04.4 | later |
+| CH-04.5 | Document JFG crossover support and resilient Exerp release ownership | AC | CH-04.4, IMP-09.4 | dropped |
+| CH-04.6 | Decide whether the reporting line should change | AC | CH-04.4 | dropped |
+| CH-04.7 | Decide Join / Portal split for Web in 2027 planning | AC | CH-04.4 | dropped |
 
 ## Status & Next Action
 
-**Status:** Open — Web 3 capacity and Website QA accountability need a short-term response and structural review. GL has offered his support in a 2026-09-17 touch-base and agreed a two-part plan (see [Leadership Direction, 2026-09-17](../context/leadership-direction.md)).
+_2026-10-27 — Closed._ TMW has moved onto Web and DA has substantial work to own (INI-01 Portal dynamic member creation). What remains is monitoring through 1:1s and the QA lead sync, which is BAU rather than a challenge. Open steps dropped: DA's Web visibility is followed up in 1:1s; Exerp release ownership sits with IMP-09 (Exerp release testing process); the reporting-line and Join / Portal questions return in 2027 planning if needed.
+
+**Status (before closure):** Open — Web 3 capacity and Website QA accountability need a short-term response and structural review. GL has offered his support in a 2026-09-17 touch-base and agreed a two-part plan (see [Leadership Direction, 2026-09-17](../context/leadership-direction.md)).
 
 _2026-10-23:_ moving TMW onto Web has given the area more support. TMW can act as a secondary lead and is closely involved in Web 3, where JFG reports to her.
 

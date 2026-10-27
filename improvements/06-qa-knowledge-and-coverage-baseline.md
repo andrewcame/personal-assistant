@@ -2,8 +2,8 @@
 id: IMP-06
 type: improvement
 status: in-progress
-horizon: next
-updated: 2026-10-23
+horizon: now
+updated: 2026-10-27
 pillars: [P2]
 focus: [automation]
 jd: [JD-09]

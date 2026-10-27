@@ -2,8 +2,8 @@
 id: CH-11
 type: challenge
 status: open
-horizon: now
-updated: 2026-10-23
+horizon: later
+updated: 2026-10-27
 pillars: [P3, P6, P9]
 focus: [ownership]
 jd: [JD-07, JD-13]

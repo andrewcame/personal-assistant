@@ -2,8 +2,8 @@
 id: IMP-07
 type: improvement
 status: not-started
-horizon: later
-updated: 2026-10-15
+horizon: next
+updated: 2026-10-27
 pillars: [P1, P6]
 focus: [people]
 jd: [JD-02]
@@ -44,7 +44,7 @@ people: [TMW, JFG]
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
 | IMP-07.1 | Confirm Web responsibilities stable after TMW's move | AC | CH-04.4 | done |
-| IMP-07.2 | Agree shadowing or paired-testing scope with TMW and JFG | AC | IMP-07.1 | later |
+| IMP-07.2 | Agree shadowing or paired-testing scope with TMW and JFG | AC | IMP-07.1 | next |
 | IMP-07.3 | Agree how Payments requests support without a bottleneck | AC | IMP-07.2 | later |
 | IMP-07.4 | Start bounded Payments shadowing with JFG | TMW | IMP-07.2, IMP-07.3 | later |
 | IMP-07.5 | Follow up with TMW (line manager) and MP (Payments lead) on JFG's Payments KT plan — 2027 | AC | IMP-07.1 | later |

@@ -2,8 +2,8 @@
 id: IMP-04
 type: improvement
 status: in-progress
-horizon: next
-updated: 2026-10-23
+horizon: now
+updated: 2026-10-27
 pillars: [P6]
 focus: [productivity]
 jd: [JD-09]

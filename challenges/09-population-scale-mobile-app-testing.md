@@ -2,21 +2,29 @@
 id: CH-09
 type: challenge
 status: open
-horizon: later
-updated: 2026-10-16
+horizon: now
+updated: 2026-10-27
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
 goals: []
-links: [CH-01]
+links: [CH-01, INI-02]
 people: []
 ---
 
-# Challenge 09 — Population-Scale Mobile App Testing And Low-Incidence Defects
+# Challenge 09 — Appropriate And Reliable Mobile App Test Coverage
+
+_Renamed 2026-10-27 from "Population-Scale Mobile App Testing And Low-Incidence Defects". The scope is now general mobile coverage and reliability; population-scale testing is Phase 2._
 
 ---
 
 ## Context
+
+The Mobile App is live, but only a small part of it has automated coverage, and the tests that exist are not yet reliable. The Appium framework is built but has only a few tests, held back by app-side issues (defects, PKCE, view hierarchy, automation IDs) and competing priorities. The team relies heavily on manual regression, and recent member-facing production issues have shown the risk.
+
+[Initiative 02 — AI-led Appium first pass](../initiatives/02-appium-ai-led-first-pass.md) delivers the first phase: stabilise the existing tests, get them running reliably in the pipelines, then extend coverage to high-value, high-risk journeys.
+
+### Phase 2 — Population-Scale Testing And Low-Incidence Defects
 
 Current Mobile App testing is primarily functional and singular. A tester may exercise a feature across only three or four locally available devices, proving that individual functions and selected journeys work under a small number of known conditions.
 
@@ -28,7 +36,11 @@ This concern is related to [Challenge 01 — Mobile Automation Strategy](01-mobi
 
 ## Challenge
 
-How do we build a Mobile App test strategy that can detect low-incidence defects before members encounter them, by exercising the app at sufficient scale and across representative patterns of usage, data regeneration, and state variation?
+How do we give the Mobile App appropriate automated coverage that passes reliably, and then grow it into a strategy that catches defects only a minority of members hit?
+
+**Phase 1 — sort the existing tests out (via INI-02):** stabilise the existing Appium tests, get them passing reliably in the pipelines, and extend coverage to the journeys members use most and that carry the most risk.
+
+**Phase 2 — population-scale testing:** how do we build a Mobile App test strategy that can detect low-incidence defects before members encounter them, by exercising the app at sufficient scale and across representative patterns of usage, data regeneration, and state variation?
 
 The strategy needs to move beyond proving that isolated functions work and create evidence that member journeys remain reliable across:
 
@@ -40,6 +52,8 @@ The strategy needs to move beyond proving that isolated functions work and creat
 - combinations of app, API, integration, environment, and data conditions that may produce intermittent failures
 
 ## Questions To Explore
+
+_The questions below are for Phase 2. Phase 1 scope and questions sit in INI-02._
 
 ### Scale And Detection
 
@@ -78,6 +92,8 @@ The strategy needs to move beyond proving that isolated functions work and creat
 
 ## Initial Position
 
+Reliable basic coverage comes first. Population-scale testing adds little while the existing tests fail for app, framework or pipeline reasons, so Phase 2 waits until Phase 1 has a stable pack running in the pipelines.
+
 Passing a function on a few devices is necessary evidence, but it is not evidence that the app will behave reliably across the member population. The strategy should retain focused functional testing while adding a population-oriented layer for the journeys where low-incidence failure has meaningful member or business impact.
 
 The first step should not be to multiply the same tests unchanged. Repetition will add limited value if every run uses the same member state, data, sequence, and timing. A useful proof of concept should combine controlled variation with enough executions to expose intermittent behaviour, while preserving the seed, data, device, state, and journey trace needed to reproduce a failure.
@@ -93,19 +109,24 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-09.1 | Analyse a recent low-incidence escaped app defect | AC | — | later |
-| CH-09.2 | Define PoC journey, member states and variations | AC | CH-09.1 | later |
-| CH-09.3 | Set execution count and frequency for target incidence | AC | CH-09.2 | later |
-| CH-09.4 | Confirm per-run data generation and replay evidence | AC | CH-09.2 | later |
-| CH-09.5 | Run PoC through the existing Appium pipeline | AC | CH-09.3, CH-09.4, INI-02.6 | later |
+| ID | Step | Owner | Depends on | Status | Ticket |
+|----|------|-------|------------|--------|--------|
+| CH-09.1 | Phase 2: Analyse a recent low-incidence escaped app defect | AC | CH-09.8 | later | — |
+| CH-09.2 | Phase 2: Define PoC journey, member states and variations | AC | CH-09.1 | later | — |
+| CH-09.3 | Phase 2: Set execution count and frequency for target incidence | AC | CH-09.2 | later | — |
+| CH-09.4 | Phase 2: Confirm per-run data generation and replay evidence | AC | CH-09.2 | later | — |
+| CH-09.5 | Phase 2: Run PoC through the existing Appium pipeline | AC | CH-09.3, CH-09.4, INI-02.6 | later | — |
+| CH-09.6 | Phase 1: Stabilise and baseline existing Appium tests (INI-02 epic 1) | AC | — | next | APP-352 |
+| CH-09.7 | Phase 1: Optimise pipeline runs for maximum value and benefit (INI-02 epic 2) | AC | CH-09.6 | later | APP-353 |
+| CH-09.8 | Phase 1: Write simpler Appium tests for functionality not changing in the app simplification work (INI-02 epic 3, not yet written) | AC | CH-09.6 | later | — |
 
 ## Status & Next Action
 
-**Status:** Open — captured on 2026-09-24. Current functional and Appium coverage does not yet provide evidence at the volume or behavioural diversity needed to detect low-incidence member defects.
+**Status:** Open — captured on 2026-09-24; rescoped 2026-10-27 to cover reliable mobile coverage first (Phase 1, via INI-02) and population-scale testing second (Phase 2).
 
-**Next action:**
+**Next action (Phase 1):** start the first INI-02 epic — stabilise and baseline the existing Appium tests (CH-09.6, APP-352). The app simplification work is expected to bring its own Appium tests, so the third epic covers functionality that is not changing or moving.
+
+**Next action (Phase 2, later):**
 
 1. Select a recent escaped Mobile App defect, ideally one affecting a known minority such as 8% of members, and identify the conditions associated with it.
 2. Define one critical journey and a small set of representative member states, data variations, device profiles, and behavioural variations for a proof of concept.
@@ -123,4 +144,5 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Related
 
+- [Initiative 02 — AI-led Appium first pass](../initiatives/02-appium-ai-led-first-pass.md) — delivers Phase 1.
 - [Challenge 01 — Mobile Automation Strategy (Appium vs Maestro)](01-mobile-automation-strategy.md) — addresses framework direction, ownership, and layered automation; this challenge addresses execution scale, representative population behaviour, varied state and data, and low-incidence defect detection.

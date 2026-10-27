@@ -2,8 +2,8 @@
 id: INI-02
 type: initiative
 status: in-progress
-horizon: next
-updated: 2026-10-23
+horizon: now
+updated: 2026-10-27
 origin: [CH-09]
 pillars: [P4, P9]
 focus: [automation]
@@ -96,7 +96,13 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 | INI-02.7 | Document remaining coverage; define follow-on initiative | AC | INI-02.6 | later |
 | INI-02.8 | Join app simplification kick-off (w/c 2026-10-19) | AC | — | done |
 | INI-02.9 | Receive the app simplification tickets so the work can be scoped | AC | INI-02.8 | doing |
-| INI-02.10 | Shape as two epics (make tests pass; pipelines) plus a third aligned to app simplification, with AI/OpenSpec enablement | AC | INI-02.9 | next |
+| INI-02.10 | Shape as two epics (make tests pass; pipelines) plus a third aligned to app simplification, with AI/OpenSpec enablement | AC | INI-02.9 | doing |
+
+## Progress Update - 2026-10-27
+
+- Two epics raised: APP-352 "[Appium] Stabilize and baseline existing tests" and APP-353 "[Appium] Optimise pipeline runs for maximum value and benefit". They are tracked as CH-09.6 and CH-09.7 on the parent challenge.
+- Third epic not yet written: simpler tests to support the app simplification work, likely covering functionality that is not changing or moving, since the simplification work will probably bring its own Appium tests (CH-09.8).
+- Moved to Now with its parent, CH-09 (Appropriate and reliable Mobile App test coverage).
 
 ## Progress Update - 2026-10-23
 

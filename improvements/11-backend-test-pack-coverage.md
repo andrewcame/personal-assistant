@@ -2,8 +2,8 @@
 id: IMP-11
 type: improvement
 status: not-started
-horizon: next
-updated: 2026-10-23
+horizon: now
+updated: 2026-10-27
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]

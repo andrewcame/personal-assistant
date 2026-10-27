@@ -30,6 +30,8 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-10-26 · planning · Initiatives have no roadmap; step dependencies point at the parent record's steps. · Initiative tracking sits in Jira and the status note, so a roadmap duplicates it.
 - 2026-10-26 · notion · Every Now and Next to-do on a record exists as a Notion card, and card titles carry no internal step IDs (e.g. IMP-02.4). Where a step is covered by a broader card, the mapping goes in `context/notion-boards.md`. · AC needs every task visible in Notion, and internal IDs are not for Notion.
 - 2026-10-23 · all · When mentioning a CH-, IMP- or INI- record, or a roadmap step such as INI-01.3, always give its title too, not just the ID. · AC can't always remember what each one is and finds cross-referencing hard.
+- 2026-10-27 · all · "C&I" / "C&Is" in AC's messages means challenges and improvements (CH- and IMP- records), i.e. the same as CII. · AC's shorthand.
+- 2026-10-27 · planning · An initiative is listed in its parent C&I's horizons row, never its own row, and doesn't count toward the Now limit. · Initiatives are children of a challenge or improvement.
 
 ## Retired
 
