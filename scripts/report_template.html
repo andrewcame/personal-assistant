@@ -208,8 +208,6 @@ html { scroll-behavior: smooth; }
     <div class="cols" style="margin-top:16px">
       <div class="panel" id="p-focus"><h3>Focus</h3><p class="src">Your open To Do cards in Notion, by challenge or improvement</p><div class="entries" id="focus"></div></div>
       <div class="panel" id="p-attn"><h3>Needs attention</h3><div id="attn"></div></div>
-    </div>
-    <div class="cols" style="margin-top:16px">
       <div class="panel" id="p-upcoming"><h3>Coming up</h3><p class="src">Dated items not covered above, from state/now.md</p><div class="entries" id="upcoming"></div></div>
     </div>
   </section>
@@ -235,7 +233,7 @@ html { scroll-behavior: smooth; }
     <p class="sub">Everything here is generated from the personal-assistant repo by <code>scripts/report.py</code>. To change what you see, change the source — usually by telling the assistant. Run <code>python scripts/report.py</code> to rebuild.</p>
     <dl>
       <dt>Driving theme</dt><dd>The one direction everything else hangs off. A new leadership signal that could change it is flagged to you before anything changes.<span class="src">Source: context/my-role/horizons.md · Driving Theme</span></dd>
-      <dt>This week</dt><dd>Led by to-dos. A <b>challenge or improvement</b> (CII) is how a problem or idea is tracked. Initiatives roll up into their CII and are not tracked on their own, so they get no to-do cards and do not appear here. Each open CII in Now or Next is asked: does it have a card? Now work needs a To Do card; Next work needs a Backlog card. The three tiles summarise this section only: to-dos on you, items needing attention, dated items coming up.<span class="src">Source: Notion To Do snapshot, CII roadmaps</span></dd>
+      <dt>This week</dt><dd>Led by to-dos. A <b>challenge or improvement</b> (CII) is how a problem or idea is tracked. Initiatives roll up into their CII and are not tracked on their own, so they get no to-do cards and do not appear here. Each open CII in Now or Next is asked: does it have a card? Now work needs a To Do card; Next work needs a Backlog card. The three tiles summarise this section only: to do, items needing attention, dated items coming up.<span class="src">Source: Notion To Do snapshot, CII roadmaps</span></dd>
       <dt>Focus</dt><dd>Your open To Do cards (To Do or Do Now) grouped by the CII they are tagged to. The text is the card title, so every line is a real to-do. Backlog cards count as having a task but are not shown.<span class="src">Source: reports/notion-snapshot.json, written by the Friday Notion sync</span></dd>
       <dt>Needs attention</dt><dd>Two groups. <b>Challenges and improvements without a card</b>: a Now CII with no To Do card, or a Next CII with no Backlog card, whoever owns the next step (a step owned by someone else needs a "Monitor …" card). <b>Plan and role items without a challenge or improvement</b>: things you said you would do (30/60/90-day plan) and job-spec responsibilities (<code>JD-</code>) that nothing tracks yet.<span class="src">Source: roadmaps, Notion snapshot, horizons.md, jd: front-matter</span></dd>
       <dt>Coming up</dt><dd>Anything date-related that isn't a to-do above: calls, deadlines, sessions.<span class="src">Source: state/now.md · Upcoming</span></dd>
@@ -270,7 +268,7 @@ function render() {
   const focusN = w.focus.reduce((n, f) => n + f.tasks.length, 0);
   const attnN = w.noTodo.length + w.noCii.length;
   const stats = [
-    ["#p-focus", focusN, "to-dos on me", "ok"],
+    ["#p-focus", focusN, "to do", "ok"],
     ["#p-attn", attnN, "need attention", attnN ? "warn" : "ok"],
     ["#p-upcoming", d.now.upcoming.length, "coming up", "ok"],
   ];
