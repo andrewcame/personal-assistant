@@ -203,14 +203,13 @@ html { scroll-behavior: smooth; }
 <div class="wrap">
   <section id="overview">
     <h2>This week</h2>
-    <p class="sub">Led by to-dos. Each open challenge or improvement is asked: does it have a card? A To Do on you is Focus; a first-up roadmap step owned by someone else is Waiting on; no card at all is Needs attention. Initiatives roll up into their challenge or improvement and are not tracked on their own.</p>
+    <p class="sub">Led by to-dos. Each open challenge or improvement is asked: does it have a card? A To Do on you is Focus; no card at all is Needs attention. Initiatives roll up into their challenge or improvement and are not tracked on their own.</p>
     <div class="stats" id="stats"></div>
     <div class="cols" style="margin-top:16px">
       <div class="panel" id="p-focus"><h3>Focus</h3><p class="src">Your open To Do cards in Notion, by challenge or improvement</p><div class="entries" id="focus"></div></div>
-      <div class="panel" id="p-waiting"><h3>Waiting on</h3><p class="src">Next roadmap steps owned by someone else</p><div class="entries" id="waiting"></div></div>
+      <div class="panel" id="p-attn"><h3>Needs attention</h3><div id="attn"></div></div>
     </div>
     <div class="cols" style="margin-top:16px">
-      <div class="panel" id="p-attn"><h3>Needs attention</h3><div id="attn"></div></div>
       <div class="panel" id="p-upcoming"><h3>Coming up</h3><p class="src">Dated items not covered above, from state/now.md</p><div class="entries" id="upcoming"></div></div>
     </div>
   </section>
@@ -236,12 +235,11 @@ html { scroll-behavior: smooth; }
     <p class="sub">Everything here is generated from the personal-assistant repo by <code>scripts/report.py</code>. To change what you see, change the source — usually by telling the assistant. Run <code>python scripts/report.py</code> to rebuild.</p>
     <dl>
       <dt>Driving theme</dt><dd>The one direction everything else hangs off. A new leadership signal that could change it is flagged to you before anything changes.<span class="src">Source: context/my-role/horizons.md · Driving Theme</span></dd>
-      <dt>This week</dt><dd>Led by to-dos. A <b>challenge or improvement</b> (CII) is how a problem or idea is tracked. Initiatives roll up into their CII and are not tracked on their own, so they get no to-do cards and do not appear here. Each open CII in Now or Next is asked: does it have a card? Now work needs a To Do card; Next work needs a Backlog card. The four tiles summarise this section only: to-dos on you, tasks waiting on others, items needing attention, dated items coming up.<span class="src">Source: Notion To Do snapshot, CII roadmaps</span></dd>
+      <dt>This week</dt><dd>Led by to-dos. A <b>challenge or improvement</b> (CII) is how a problem or idea is tracked. Initiatives roll up into their CII and are not tracked on their own, so they get no to-do cards and do not appear here. Each open CII in Now or Next is asked: does it have a card? Now work needs a To Do card; Next work needs a Backlog card. The three tiles summarise this section only: to-dos on you, items needing attention, dated items coming up.<span class="src">Source: Notion To Do snapshot, CII roadmaps</span></dd>
       <dt>Focus</dt><dd>Your open To Do cards (To Do or Do Now) grouped by the CII they are tagged to. The text is the card title, so every line is a real to-do. Backlog cards count as having a task but are not shown.<span class="src">Source: reports/notion-snapshot.json, written by the Friday Notion sync</span></dd>
-      <dt>Waiting on</dt><dd>Next roadmap steps (doing or next) on a challenge or improvement, owned by someone other than you, grouped by CII. Initiative steps are not shown.<span class="src">Source: ## Roadmap tables (owner column) of challenges and improvements</span></dd>
-      <dt>Needs attention</dt><dd>Two groups. <b>Challenges and improvements without a card</b>: a Now CII with no To Do card, or a Next CII with no Backlog card, where the next step is yours or there is no next step at all. <b>Plan and role items without a challenge or improvement</b>: things you said you would do (30/60/90-day plan) and job-spec responsibilities (<code>JD-</code>) that nothing tracks yet.<span class="src">Source: roadmaps, Notion snapshot, horizons.md, jd: front-matter</span></dd>
+      <dt>Needs attention</dt><dd>Two groups. <b>Challenges and improvements without a card</b>: a Now CII with no To Do card, or a Next CII with no Backlog card, whoever owns the next step (a step owned by someone else needs a "Monitor …" card). <b>Plan and role items without a challenge or improvement</b>: things you said you would do (30/60/90-day plan) and job-spec responsibilities (<code>JD-</code>) that nothing tracks yet.<span class="src">Source: roadmaps, Notion snapshot, horizons.md, jd: front-matter</span></dd>
       <dt>Coming up</dt><dd>Anything date-related that isn't a to-do above: calls, deadlines, sessions.<span class="src">Source: state/now.md · Upcoming</span></dd>
-      <dt>Plan</dt><dd>One card per open challenge (CH) or improvement (IMP) in the Now / Next / Later lane set by its <code>horizon</code>. Each card shows its <b>category</b> (focus area: people, ownership, automation, productivity), its <b>initiative</b> (the INI id, title and status, or Needed / Not needed / Not assessed), its <b>status</b> from its Notion card: <b>In progress</b> = a To Do card, <b>Open</b> = a Backlog card only, <b>Not started</b> = no card. It also shows how many <b>to-dos</b> it has (or who it is waiting on), and its <b>next ticket</b>: the roadmap step marked doing, else next, with a Jira key if one is recorded. <b>Amber dashed cards</b> are plan items (things you said you would do) and role expectations (job-spec responsibilities, category Role, shown in Later) that no challenge or improvement covers yet. They are always Not started, and both need a challenge or improvement.<span class="src">Source: challenges/ and improvements/ front-matter and ## Roadmap tables; initiatives/ (origin links); Notion snapshot (card status); horizons.md (plan items); jd: tags against context/_taxonomy.md (role items)</span></dd>
+      <dt>Plan</dt><dd>One card per open challenge (CH) or improvement (IMP) in the Now / Next / Later lane set by its <code>horizon</code>. Each card shows its <b>category</b> (focus area: people, ownership, automation, productivity), its <b>initiative</b> (the INI id, title and status, or Needed / Not needed / Not assessed), its <b>status</b> from its Notion card: <b>In progress</b> = a To Do card, <b>Open</b> = a Backlog card only, <b>Not started</b> = no card. It also shows how many <b>to-dos</b> it has, and its <b>next ticket</b>: the roadmap step marked doing, else next, with a Jira key if one is recorded. <b>Amber dashed cards</b> are plan items (things you said you would do) and role expectations (job-spec responsibilities, category Role, shown in Later) that no challenge or improvement covers yet. They are always Not started, and both need a challenge or improvement.<span class="src">Source: challenges/ and improvements/ front-matter and ## Roadmap tables; initiatives/ (origin links); Notion snapshot (card status); horizons.md (plan items); jd: tags against context/_taxonomy.md (role items)</span></dd>
       <dt>Signals</dt><dd>Recent leadership direction, industry signals by stance, and recent conversations.<span class="src">Source: context/leadership-direction.md, context/industry-signals.md, context/discovery-calls/</span></dd>
       <dt>People &amp; Objectives board</dt><dd>Team readiness, your evidence timeline and framework coverage live on a separate board, <a href="people.html">people.html</a>, built by <code>scripts/people_report.py</code>.<span class="src">Source: team/, achievements/, context/_taxonomy.md</span></dd>
     </dl>
@@ -270,11 +268,9 @@ function render() {
   const byId = Object.fromEntries(d.records.map((r) => [r.id, r]));
   const who = (ref) => ref ? `<button class="idchip" data-id="${ref}">${ref}</button><span>${esc((byId[ref] || {}).title || "")}</span>` : `<span class="general">General</span>`;
   const focusN = w.focus.reduce((n, f) => n + f.tasks.length, 0);
-  const waitN = w.waiting.reduce((n, f) => n + f.tasks.length, 0);
   const attnN = w.noTodo.length + w.noCii.length;
   const stats = [
     ["#p-focus", focusN, "to-dos on me", "ok"],
-    ["#p-waiting", waitN, "waiting on others", "ok"],
     ["#p-attn", attnN, "need attention", attnN ? "warn" : "ok"],
     ["#p-upcoming", d.now.upcoming.length, "coming up", "ok"],
   ];
@@ -283,7 +279,6 @@ function render() {
   const group = (ref, lines) => `<div class="entry"><div class="who">${who(ref)}</div>${lines}</div>`;
   const cardLink = (t) => t.url ? `<a href="${esc(t.url)}">${esc(t.title)}</a>` : esc(t.title);
   $("#focus").innerHTML = w.focus.map((f) => group(f.ref, f.tasks.map((t) => `<div class="task-line"><span class="st ${t.status === "Do Now" ? "donow" : ""}">${esc(t.status)}</span><span>${cardLink(t)}${t.due ? ` <span class="src">due ${esc(t.due)}</span>` : ""}</span></div>`).join(""))).join("") || "<p>No open To Do cards are tagged to a challenge or improvement.</p>";
-  $("#waiting").innerHTML = w.waiting.map((f) => group(f.ref, f.tasks.map((t) => `<div class="task-line"><span class="st">${esc(t.owner)}</span><span>${esc(t.title)} <span class="src">${t.step}</span></span></div>`).join(""))).join("") || "<p>Nothing waiting on anyone else.</p>";
   $("#upcoming").innerHTML = d.now.upcoming.map((e) => `<div class="entry"><div class="who">${who(e.ref)}</div><div>${esc(e.text)}</div></div>`).join("") || "<p>None.</p>";
   const attnRow = (a) => `<div class="row"><button class="idchip" data-id="${a.id}">${a.id}</button><span>${esc(a.title)}</span><span class="sub issue">${esc(a.issue)}</span></div>`;
   const noCiiRow = (a) => `<div class="row"><span class="tag">${a.kind === "plan" ? "Plan" : "Role"}</span><span>${esc(a.title)}</span><span class="sub src">${esc(a.detail)}</span></div>`;
@@ -309,7 +304,6 @@ function render() {
   const todoCell = (r) => {
     const parts = [];
     if (r.todoOpen) parts.push(`${r.todoOpen} open`);
-    if (r.waitingOn.length) parts.push(`waiting on ${r.waitingOn.map(esc).join(", ")}`);
     if (parts.length) return parts.join(" \u00b7 ");
     return ["now", "next"].includes(r.horizon) && r.status !== "on-hold" ? `<span class="warnnote">None</span>` : `<span class="note" style="margin:0">None yet</span>`;
   };

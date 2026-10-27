@@ -21,10 +21,9 @@ Rebuild both after any change to records, `horizons.md`, `now.md` or the Notion 
 | Section | Shows | Source of truth |
 |---|---|---|
 | **This week · Focus** | Open To Do / Do Now cards, grouped by CH/IMP (initiative tags roll up) | `reports/notion-snapshot.json` (Friday Notion sync) |
-| **This week · Waiting on** | First-up roadmap steps (`doing`/`next`) owned by someone other than AC | `## Roadmap` tables, Owner column |
-| **This week · Needs attention** | (a) Now/Next CH/IMP with no open card and either an AC-owned next step or no next step; (b) plan items and role items with no CH/IMP | roadmaps, snapshot, `horizons.md`, `jd:` tags |
+| **This week · Needs attention** | (a) Now/Next CH/IMP with no open card (whoever owns the next step); (b) plan items and role items with no CH/IMP | roadmaps, snapshot, `horizons.md`, `jd:` tags |
 | **This week · Coming up** | Dated items not covered above | `state/now.md` → Upcoming |
-| **Four tiles** | Counts of the four panels above (this section only) | derived |
+| **Three tiles** | Counts of the three panels above (this section only) | derived |
 | **Plan** | One card per open CH/IMP in Now / Next / Later (lane = `horizon:`): category, initiative, status, to-dos, next ticket. Amber dashed cards: plan and role items | record front-matter and roadmaps; `horizons.md` Source column; `_taxonomy.md` JD list |
 | **Signals** | Leadership direction, industry signals, recent conversations | `context/leadership-direction.md`, `industry-signals.md`, `discovery-calls/` |
 
@@ -39,7 +38,7 @@ People & Objectives Board: Team readiness from `team/<alias>.md` (counts only, n
 | `origin: [CH-/IMP-]` | INI (required) | The CH/IMP it delivers; check.py errors if missing |
 | `initiative: tbc\|needed\|not-needed` | CH/IMP (optional, default tbc) | Shown on the card |
 | `jd: [JD-NN]` | CH/IMP (optional) | Which job-spec responsibilities it delivers; untracked JDs become role items |
-| Roadmap `Owner` | `## Roadmap` | `AC` = a To Do card is expected; anyone else = Waiting on |
+| Roadmap `Owner` | `## Roadmap` | Shown on the card's next ticket. Every first-up step needs a card whoever owns it ("Monitor …" for someone else's) |
 | Roadmap `Ticket` (optional 6th column) | `## Roadmap` | Jira key shown on the card next to the next step |
 | `Source` column | `horizons.md` tables | `—` when a record carries the row; else where it came from (e.g. `60-day plan; JD-08`) |
 | Card `url` (optional) | `notion-snapshot.json` | Makes each Focus to-do a link |
@@ -69,6 +68,6 @@ Definitions: `context/_taxonomy.md` (hierarchy, fields, roadmap format). Validat
 
 ## Known Limits
 
-- Waiting on only covers roadmap steps owned by an alias (external parties such as a vendor need an owner alias or a tagged Notion card).
+- No Waiting on panel or logic (removed 2026-10-27): there is no reliable signal yet for what is waiting on others. Possible future home: a separate "team monitoring" board, once AC has a way to mark what is waiting.
 - Focus is as fresh as the last Notion sync (`notion-snapshot.json`). Without the Notion MCP, paste the open To Do cards into a chat and ask for the snapshot to be written.
 - The `jd:` tags were assigned by inference from record titles on 2026-10-26; correct them in the record if a role item looks wrong.

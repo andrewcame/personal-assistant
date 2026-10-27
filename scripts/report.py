@@ -68,7 +68,7 @@ def entries(block: str) -> list[dict]:
 
 
 def now_state() -> dict:
-    """Only Upcoming is read from now.md; Focus and Waiting On on the dashboard come from To Do cards and roadmaps."""
+    """Only Upcoming is read from now.md; Focus on the dashboard comes from To Do cards."""
     text = check.read(ROOT / "state" / "now.md")
     m = re.search(r"\*\*Updated:\*\*\s*(\S+)", text)
     return {"updated": m.group(1) if m else None, "upcoming": entries(section(text, "Upcoming"))}
@@ -225,8 +225,8 @@ def notion_snapshot() -> dict | None:
 
 def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: dict | None) -> dict:
     """To-do-led view. Each open challenge/improvement (initiatives roll up into theirs) is asked: does it have a task?
-    A To Do card on AC -> Focus. A first-up roadmap step owned by someone else -> Waiting on.
-    Neither (or an AC step with no card) -> Needs attention. Plan and role items with no record also go to Needs attention."""
+    A To Do card on AC -> Focus. No card for the work -> Needs attention.
+    Plan and role items with no record also go to Needs attention."""
     by_id = {r["id"]: r for r in recs}
     ciis = [r for r in recs if r["kind"] != "initiative" and not r["closed"]]
     cards_by: dict[str, list[dict]] = {}
@@ -241,15 +241,12 @@ def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: di
                 cards_by[p].append(card)
     rank = {"Do Now": 0, "To Do": 1}
     horizon_order = {"now": 0, "next": 1, "later": 2}
-    focus, waiting, no_todo = [], [], []
+    focus, no_todo = [], []
     for c in sorted(ciis, key=lambda r: (horizon_order.get(r["horizon"], 3), r["id"])):
-        # Tasks and waiting-on are tracked on challenges and improvements only; initiative steps roll up into their CII.
+        # Tasks are tracked on challenges and improvements only; initiative steps roll up into their CII.
         first_up = [s for s in c["roadmap"] if s["status"] in check.FIRST_UP]
-        mine = [s for s in first_up if s["owner"] == "AC"]
-        theirs = [s for s in first_up if s["owner"] != "AC"]
         cards = cards_by.get(c["id"], [])
         c["todoOpen"] = len(cards)
-        c["waitingOn"] = sorted({s["owner"] for s in theirs})
         if not c["nextStep"] and first_up:
             c["nextStep"] = next((s for s in first_up if s["status"] == "doing"), first_up[0])
         tasks = sorted((x for x in cards if x.get("status") in rank), key=lambda x: rank[x["status"]])
@@ -258,20 +255,19 @@ def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: di
         if tasks:
             focus.append({"ref": c["id"], "tasks": [{"title": t["title"], "status": t["status"], "due": t.get("due"),
                                                       "url": t.get("url")} for t in tasks]})
-        if theirs:
-            waiting.append({"ref": c["id"], "tasks": [{"title": s["step"], "owner": s["owner"], "step": s["id"]} for s in theirs]})
         # Now work needs a To Do card; Next work needs a Backlog card.
         needed = tasks if c["horizon"] == "now" else cards
         if snap is None or c["horizon"] not in ("now", "next") or c["status"] == "on-hold" or needed:
             continue
         card_word = "To Do" if c["horizon"] == "now" else "Backlog card"
-        if mine:
-            no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Needs a {card_word}: {mine[0]['step']} ({mine[0]['id']})"})
-        elif not theirs:
+        if first_up:
+            s = first_up[0]
+            no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Needs a {card_word}: {s['step']} ({s['id']}, {s['owner']})"})
+        else:
             no_todo.append({"id": c["id"], "title": c["title"], "issue": f"No {card_word} and no next step on the roadmap"})
     no_cii = [{"kind": "plan", "title": o["outcome"], "detail": f"{o['horizon'].capitalize()} · {o['source']}"} for o in orphans]
     no_cii += [{"kind": "role", "title": r["label"], "detail": f"{r['id']} · {r['area']}"} for r in roles]
-    return {"focus": focus, "waiting": waiting, "noTodo": no_todo, "noCii": no_cii}
+    return {"focus": focus, "noTodo": no_todo, "noCii": no_cii}
 
 
 def build() -> dict:
@@ -309,8 +305,6 @@ def main(argv: list[str]) -> int:
         w = data["week"]
         for f in w["focus"]:
             print(f"FOCUS {f['ref']}: " + "; ".join(f"[{t['status']}] {t['title']}" for t in f["tasks"]))
-        for f in w["waiting"]:
-            print(f"WAITING {f['ref']}: " + "; ".join(f"{t['owner']}: {t['title']} ({t['step']})" for t in f["tasks"]))
         for n in w["noTodo"]:
             print(f"NO-TODO {n['id']} {n['title']}: {n['issue']}")
         for n in w["noCii"]:
