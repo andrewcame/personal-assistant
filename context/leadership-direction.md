@@ -6,11 +6,12 @@ It is **not** a task list. Tasks live in Notion. This is for themes and signals 
 
 The idea-validator agent should load this file alongside the job spec and the [horizons plan](my-role/horizons.md) when sense-checking ideas.
 
-## Standing Themes (as at 2026-10-23)
+## Standing Themes (as at 2026-11-02)
 
 Durable direction distilled from all entries, including [archived ones](archive/leadership-direction-2026-q3.md). Dates point to the source entries.
 
 - **Business pillars: Grow, Simplify, Improve** — Grow means more gyms and members (US organic and franchise, Switzerland after the latest acquisition; smaller, varied formats; older franchise markets deprioritised). Simplify and Improve sit with the CTTO, who is AI-led and speed-focused; the COO wants lean cost and a strong growth story. Cross-department communication supports the "no product" decision. (2026-10-21)
+- **2027 direction (provisional)** — finish the sunset tail (tech debt), roll out to other brands (assumed), grow organically mainly in the US, and use Microsoft Foundry for agentic workflows and automation across PureGym once capacity frees up. Mostly assumed, not announced. (2026-11-02)
 - **Microsite sunset is the gating priority** — the CTTO (recorded as CTO in earlier entries) expects account and bookings microsites to be gone by end of 2026 (team forecast: March 2027), and it is the standing answer to resourcing, promotion, and investment questions. (2026-09-11, 2026-09-30)
 - **Morale and progression sit behind microsite sunset** — progression and investment are held until sunset, while low morale makes it harder; treat sunset as the unlock narrative and show visible progress against it. (2026-09-30)
 - **In-house technical ownership, closer to the business** — a more autonomous engineering function with direct stakeholder relationships, faster decisions, ownership pushed down, and the Tech Lead Chapter in place of the architecture council; QA takes custody of staging alerting. (2026-07-29, 2026-09-03, 2026-09-11)
@@ -51,6 +52,19 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 ---
 
 ## Entries
+
+### 2026-11-02 — 2027 direction taking shape: sunset tail, other brands, US growth, Foundry-led agentic automation
+
+- **Date** — 2026-11-02 (heard on or just before this date; the tech leadership workshop was "yesterday", i.e. about 2026-11-01)
+- **Source** — AC's understanding of the early 2027 steer from engineering leadership; the Foundry item is from the tech leadership team's workshop with the UK Managing Director (UKMD). Not formally announced. Items 2 and 3 are assumed rather than confirmed.
+- **Theme** — 1. **Finish the microsite sunset.** By 2027 it is assumed to be mostly done, so what remains is tech-debt clean-up (confirmed as intent; scope assumed).
+- **Theme** — 2. **Roll out to other brands.** Not confirmed; assumed.
+- **Theme** — 3. **Big organic growth, mainly in the US.** Consistent with the Grow pillar (2026-10-21).
+- **Theme** — 4. **Use Microsoft Foundry to deliver agentic workflows and automation across PureGym.** In the workshop's words: the tech leadership team "started mapping out the use of Foundry to deliver agentic workflows and automation at PureGym in preparation for capacity to become available". Engineering's skills are to be used to speed up other areas of the business once microsite sunset frees capacity.
+- **Implication** — Possible Driving Theme change (for AC to decide; not updated): "get off the microsites" is expected to shrink to a tail in 2027, with the next themes being multi-brand and US scale (repeatable quality for openings and new brands) and agentic automation. Nothing changes for 2026 while sunset is still the gate.
+- **Implication** — QA is likely to be asked how to test and release agents built for other departments, not only software built by Engineering. Background and a proposed approach are in [the research brief](research/2026-11-02-foundry-agentic-workflows-qa.md). Possible destination for any work: a new improvement, once AC decides it is worth doing (not created).
+- **Implication** — Brand rollout and US growth strengthen the repeatability lens (see CH-10 Pico source of truth and Exerp-dependent test strategy, and IMP-06 QA knowledge and coverage baseline) but need no new work until confirmed.
+- **My read** — Not recorded yet.
 
 ### 2026-10-21 — Annual conference and awards: business pillars from the CEO, COO and CTTO
 

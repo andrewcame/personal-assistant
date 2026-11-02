@@ -18,6 +18,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | COO   | Chief Operating Officer               | Exec        | Current | Role only                                 |
 | CTTO  | CTTO                                  | Exec        | Current | Role only; GL's manager; recorded as "CTO" in entries before 2026-10-23 |
 | CIO   | Chief Information Officer             | Exec        | Current | Role only (role per AC, 2026-10-16)       |
+| UKMD  | UK Managing Director                  | Exec        | Current | Role only; joined the tech leadership Foundry workshop (2026-11-01) |
 | GL    | Group Software Engineering Director   | Engineering | Current | AC's manager; "director level" in agents  |
 | GH    | Head of Software Engineering          | Engineering | Current |                                           |
 | DJ    | Head of Delivery                      | Delivery    | Current |                                           |
