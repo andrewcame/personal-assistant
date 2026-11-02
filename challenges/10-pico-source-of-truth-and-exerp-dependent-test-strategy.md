@@ -4,7 +4,7 @@ tag: Pico source of truth
 type: challenge
 status: open
 horizon: next
-updated: 2026-10-23
+updated: 2026-11-02
 pillars: [P4, P5]
 focus: [automation]
 jd: [JD-06, JD-09]
@@ -94,6 +94,8 @@ Source: [2026-10-21 annual conference team conversations](../context/discovery-c
 - **Research done (CH-10.9, 2026-10-23):** logged as an [industry signal](../context/industry-signals.md). Mocks by default is mainstream but doubles need verifying against the real service; production testing complements rather than replaces pre-production testing; keep real-dependency tests few. Sources are older and about owned services, and nothing covers payments.
 - **AC's position on the tiers (feeds CH-10.5 / CH-10.6):** in the front end, Exerp cannot be decoupled (Portal auth and synchronous calls such as cancel). The Join journey can break the reliance, but that has failed before (members never getting a subscription). In the backend, keep select real-Exerp integration tests, flagged in the packs, which may not block releases but run overnight and flag issues. Fleshing this out is tracked in IMP-11.5.
 - **Exerp simulator precedent (2026-10-23):** Dootrix mocked Exerp for the bookings service by building an Exerp simulator, and LMo noted it was a good test tool. Real-Exerp testing in that work was manual. AC's view: automate what is manual, and layer the tests; better to have tests and not enable them than to need them and not have them. The simulator is a candidate for the mock tier alongside the real-Exerp tier.
+- **Agent-built simulators (2026-11-02):** a [2026 practitioner account](../context/industry-signals.md) describes StrongDM having coding agents generate simulations of Slack, Jira and Okta from public API docs and client libraries, so tests ran without rate limits at near-zero marginal cost. One company and secondhand, but it makes the mock tier cheap to build. The fidelity risk still applies: a simulator built from documentation can drift from the real service, which is what the real-Exerp tier and periodic contract checks are for. Unchecked: whether the Exerp documentation we hold is enough to generate one.
+- **AC's position: layers by environment and blocking power (2026-11-02, feeds CH-10.5):** the simulated-versus-real debate does not need a winner. Keep several layers, some real e2e, some mocked, some lower level, spread across environments and each gated by a different release-blocking capacity (what blocks a release, what runs overnight and alerts). Starting point to test: preview uses less Exerp integration (mostly mocked or simulated), while staging and prod use real Exerp. This extends the tiered model above and still needs the per-tier rules in CH-10.5.
 
 ## 2026-10-16 Update — Ideas Triage
 

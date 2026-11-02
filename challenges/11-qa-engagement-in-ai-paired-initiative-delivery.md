@@ -4,7 +4,7 @@ tag: QA in AI delivery
 type: challenge
 status: open
 horizon: later
-updated: 2026-10-27
+updated: 2026-11-02
 pillars: [P3, P6, P9]
 focus: [ownership]
 jd: [JD-07, JD-13]
@@ -141,6 +141,17 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - **Role shift:** the ability to write tests is no longer the differentiator — the value is analysis, asking questions and risk assessment. Work out how QA time splits between repetitive work (basic tests, manual testing) and high-judgement work (refinement, exploratory, edge cases, risk) to size the AI opportunity.
 - **Empowerment:** can QA block releases? Visibility, and an opinion that matters (feeds the CI/CD quality gate item in Next).
 - **AI options to explore:** suggest test scenarios and regression scope from a well-formed Jira ticket, again once the PR is known, possibly raising a PR of test changes to review (dev-friendly, so devs can spot a misunderstood implementation); expand a thin dev-written ticket once the implementation is known; "auto" manual regression.
+
+## 2026-11-02 Update — External Reading
+
+_From two reads logged as [industry signals](../context/industry-signals.md): Narayanan and Kapoor on the decide-execute-deliver sandwich, and Simon Willison on dark factories. Evidence, not decisions._
+
+- **Verification is the constraint:** a 100,000-developer study found 8x more code but only about 30% more releases, so output is not the bottleneck. This is the strongest external evidence so far that QA's work (verify and be accountable) is where the pace is decided, and supports reporting releases and rework rather than output.
+- **Exposed work is execution-only testing:** the durable QA work is risk framing before the build and verification and accountability after it. This reinforces the role-shift note above and gives it a source.
+- **Dark factory as the far end of "on the loop":** StrongDM reportedly replaced the QA hand-off with simulated users and simulated third-party services built by agents. One company, security software, a very high token spend and a secondhand account, with no outcome data; treat it as a pattern to test, not proof. Willison also says simulated users are not credible for proving which design is right, so human exploratory and usability judgement stays.
+- **Tension with "right tests, not more tests" (2026-10-16):** Willison now tolerates very verbose suites because agents maintain them. That answers the maintenance-cost argument but not run time, flakiness or review burden, so the scope review stays.
+- **Mid-career risk:** one account says new starters and experts benefit from AI and the mid-career group is most exposed. Unsettled, and it cuts across the junior-pipeline worry in the team and capability questions above.
+- **Own load:** supervising several agents is reported as exhausting; keep an eye on team load as AI-assisted work scales.
 
 ## Roadmap
 
