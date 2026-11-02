@@ -75,21 +75,22 @@ _Proposal for engineering discussion, not an architectural decision._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-02.1 | Agree Tech Challenges Board route for member creation | AC | — | done |
-| IMP-02.2 | Clarify scope and limits in Pico architecture discovery | AC | — | done |
-| IMP-02.3 | Scope Portal Web MVP as Initiative 01 | AC | IMP-02.2 | done |
-| IMP-02.4 | Draft lookup, state-sourcing and disposable-state requirements | DA | IMP-02.2 | next |
-| IMP-02.5 | Shape requirements with the Backend Chapter | AC | IMP-02.4 | later |
-| IMP-02.6 | Propose architecture through the Tech Challenges Board | AC | IMP-02.5, CH-10.7 | later |
-| IMP-02.7 | Agree cross-team test data strategy beyond Portal MVP | AC | IMP-02.6 | later |
+| ID       | Step                                                                       | Owner | Depends on        | Status |
+|----------|----------------------------------------------------------------------------|-------|-------------------|--------|
+| IMP-02.1 | Agree Tech Challenges Board route for member creation                      | AC    | —                 | done   |
+| IMP-02.2 | Clarify scope and limits in Pico architecture discovery                    | AC    | —                 | done   |
+| IMP-02.3 | Scope Portal Web MVP as Initiative 01                                      | AC    | IMP-02.2          | done   |
+| IMP-02.4 | Draft lookup, state-sourcing and disposable-state requirements             | DA    | IMP-02.2          | done   |
+| IMP-02.5 | Shape requirements with the Backend Chapter                                | AC    | IMP-02.4          | later  |
+| IMP-02.6 | Propose architecture through the Tech Challenges Board                     | AC    | IMP-02.5, CH-10.7 | later  |
+| IMP-02.7 | Agree cross-team test data strategy beyond Portal MVP                      | AC    | IMP-02.6          | later  |
+| IMP-02.8 | Monitor DA delivering Portal member creation (INI-01; 1 of 5 tickets done) | DA    | IMP-02.4          | doing  |
 
 ## Status & Next Action
 
 **Status:** In progress — formal delivery has graduated to [Initiative 01 — Portal Dynamic Member Creation](../initiatives/01-portal-dynamic-member-creation.md) (Draft). This file keeps the wider test-data architecture direction; the initiative holds the scoped Web MVP.
 
-**Next action:** Draft requirements for internal member lookup/state sourcing and disposable-state scenarios, including Pico/Exerp consistency criteria; use Backend Chapter discussion to inform the skeleton initiative before proposing an architecture through the Tech Challenges Board.
+**Next action:** Monitor DA delivering Portal member creation under INI-01 (1 of 5 tickets done; Notion card "Monitor DA working on member creation initiative"). IMP-02.4 requirements gathering is done. When the initiative completes it is done, but IMP-02 stays open for other member data improvements (to be confirmed), then shape requirements with the Backend Chapter (IMP-02.5).
 
 ## Outcome
 

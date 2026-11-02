@@ -2,20 +2,20 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it short (one screen). Anything that needs more than a line belongs in a record — link to it._
 
-**Updated:** 2026-10-27
+**Updated:** 2026-11-02
 
 _Format: only **Upcoming** is read by the dashboard (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). The dashboard's Focus and Waiting On are derived from Notion To Do cards and roadmap owners, so This Week's Focus and Waiting On below are AC's narrative notes and are not shown there._
 
 ## This Week's Focus
 
-_Two-day week (w/c 26 Oct) — expect minimal progress._
+_Full five-day week (w/c 2 Nov). Calibration session is 11 Nov._
 
-_Last week: item 1 done (INI-01 tickets reviewed); items 2–4 not done, carried forward._
+_Last week (two-day week): INI-01 kick-off done; BrowserStack plan, first JQL queries and team objectives calls carried forward._
 
-1. INI-01 Portal member creation — tickets approved and kick-off done (26 Oct); DA scopes the plan next (INI-01.3).
-2. IMP-10.2 BrowserStack renewal — chase the plan list and agree a lower-cost plan before the November renewal; depends on BrowserStack.
-3. IMP-04.3 Jira QA flow metrics — write the first JQL queries.
-4. IMP-08 Objectives and calibration — GL objectives meeting booked (26 Oct); team objectives calls w/c 2 Nov.
+1. IMP-08 Objectives and calibration — hold team objectives calls and record them in team profiles, ready for calibration on 11 Nov.
+2. IMP-10 BrowserStack renewal — BrowserStack's offer is in; awaiting Softcat's offer. Compare both and agree a lower-cost plan before the November renewal.
+3. INI-01 Portal member creation (under IMP-02 Dynamic member creation and test data) — DA scopes the plan (INI-01.3); monitor DA's progress.
+4. IMP-04 Jira QA flow metrics — write the first JQL queries.
 
 ## Open Threads
 
@@ -48,16 +48,16 @@ _Last week: item 1 done (INI-01 tickets reviewed); items 2–4 not done, carried
 
 ## Waiting On
 
-- IMP-02.4 Portal member creation — member-creation requirements still to confirm.
+- IMP-02 Dynamic member creation and test data — DA delivering Portal member creation (INI-01); 1 of 5 tickets done.
 - INI-02 Appium AI-led first pass — tickets from the app simplification work, to scope the initiative.
-- IMP-10.2 BrowserStack renewal — current plan and features, and plan options up or down, awaited from BrowserStack.
+- IMP-10.2 BrowserStack renewal — BrowserStack's offer received; Softcat's offer awaited.
 - IMP-10.6 BrowserStack renewal — SDK docs link awaited from BrowserStack.
 
 ## Upcoming
 
-- General — w/c 2026-10-26 is a two-day week.
 - IMP-08 Objectives and calibration — team objectives calls and calibration prep, w/c 2026-11-02.
 - IMP-08 Objectives and calibration — GL objectives meeting booked (26 Oct); date to confirm.
 - IMP-08 Objectives and calibration — calibration session on 2026-11-11.
 - IMP-08 Objectives and calibration — EOY reviews due by 2026-12-31.
-- General — next weekly review on Friday 2026-10-30.
+- General — Notion Done clear-out first due 2026-11-06.
+- General — next weekly review on Friday 2026-11-06.
