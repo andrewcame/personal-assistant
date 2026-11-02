@@ -32,6 +32,9 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-10-23 · all · When mentioning a CH-, IMP- or INI- record, or a roadmap step such as INI-01.3, always give its title too, not just the ID. · AC can't always remember what each one is and finds cross-referencing hard.
 - 2026-10-27 · all · "C&I" / "C&Is" in AC's messages means challenges and improvements (CH- and IMP- records), i.e. the same as CII. · AC's shorthand.
 - 2026-10-27 · planning · An initiative is listed in its parent C&I's horizons row, never its own row, and doesn't count toward the Now limit. · Initiatives are children of a challenge or improvement.
+- 2026-11-02 · all · When talking to AC, give the C&I's Notion tag (e.g. "IMP-02 Member data") with the ID, not just the ID or title. · AC doesn't recall them by ID.
+- 2026-11-02 · planning · Notion is the master for the next in-progress task. If a repo roadmap step has no Notion card: if an open card is linked to that C&I, that card is the next task; if none, propose the card. · The repo roadmap is a plan; Notion shows what is actually being worked.
+- 2026-11-02 · notion · "To Do" means in progress (there is no separate in-progress column). A Now C&I can have several To Do cards because AC adds them as he thinks of them, so more than one card is not a duplicate. · AC's board structure.
 
 ## Retired
 
