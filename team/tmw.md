@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-10-19                    |
+| Profile last reviewed  | 2026-11-03                    |
 
 ## Experience And Specialism
 
@@ -95,27 +95,33 @@ _Last discussed: 2026-10-08_
 
 ## 2026 Objectives
 
-_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `TMW-O<n>`. The objectives pre-date the move to Web Team Two on 2026-10-08._
+_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `TMW-O<n>`. TMW-O1 to O4 pre-date the move to Web Team Two on 2026-10-08; TMW-O5 and O6 were agreed afterwards, in the first objective alignment call on 2026-11-03. No other objectives were changed or added in that call, and comments were recorded against all six._
 
 | ID      | Objective                                                                | Agreed                   | Status                          |
 |---------|--------------------------------------------------------------------------|--------------------------|---------------------------------|
-| TMW-O1  | QA and QA leadership for the DK mobile app                               | 2026 (date not recorded) | Not assessed (no update logged) |
-| TMW-O2  | Extend Appium automation to cover 10 functional areas in Q1/Q2           | 2026 (date not recorded) | Not assessed (no update logged) |
-| TMW-O3  | Learn to lean into courageous conversations                              | 2026 (date not recorded) | Not assessed (no update logged) |
-| TMW-O4  | Extend ByteSmith guidance so AI can generate reliable Appium tests in H2 | 2026 (date not recorded) | Not assessed (no update logged) |
+| TMW-O1  | QA and QA leadership for the DK mobile app                               | 2026 (date not recorded) | Comment added 2026-11-03        |
+| TMW-O2  | Extend Appium automation to cover 10 functional areas in Q1/Q2           | 2026 (date not recorded) | Comment added 2026-11-03        |
+| TMW-O3  | Learn to lean into courageous conversations                              | 2026 (date not recorded) | Comment added 2026-11-03        |
+| TMW-O4  | Extend ByteSmith guidance so AI can generate reliable Appium tests in H2 | 2026 (date not recorded) | Comment added 2026-11-03        |
+| TMW-O5  | Be the quality champion for the app team                                 | 2026-11-03               | Comment added 2026-11-03        |
+| TMW-O6  | Investigate Pico backend test coverage and gaps                          | 2026-11-03               | Agreed; no comment yet          |
 
 ### TMW-O1 — QA and QA leadership for the DK mobile app (Jan–May 2026)
 
 - The system shows the period as "January to May 2024"; recorded as 2026 as a likely typo.
 - Provide QA and QA leadership for the Danish mobile app across core areas, including Exerp login, brand setup and refresh, the scan-to-enter gym journey and more.
 - Includes oversight of the QA Chapter NFR 4b mobile accessibility testing, delegated to and performed by a mobile QA, who delivers a findings report by the end of March 2026 so remediations can begin.
-- Updates logged in the system: none.
+- Comment (2026-11-03): the DK app was descoped because business priorities changed, from rolling the app out to multiple brands to simplifying and fixing the app on Pico. Initial testing covered the QR code and login flows, including adding automation tests.
 
 ### TMW-O2 — Extend Appium automation to 10 functional areas (Jan–Jun 2026)
 
 - Extend Appium automation to cover 10 functional areas during Q1/Q2; plan, execute and start to benefit from the automation.
 - Ensure delegation to other mobile app QA engineers helps achieve this.
-- Updates logged in the system: none.
+- Comment (2026-11-03): not possible, due to several technical blockers:
+  - the pages and functions to automate were missing critical automation IDs, so extra work was needed to add them
+  - app blockers such as crashes, emulator incompatibility and Appium Inspector not working; the development team recognised this and raised an epic to remove them (APP-27)
+  - local development issues on Mac and Rider that could not be fixed, even with developer help
+- Comment (2026-11-03): as the only QA from May onwards, TMW was responsible for testing all tickets and releases, so time was also a constraint. The team agreed collectively that Appium was not a priority.
 
 ### TMW-O3 — Courageous conversations (Mar–Jun 2026)
 
@@ -125,7 +131,7 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
   - develop direct reports
   - raise the bar on quality standards
   - grow and be performance-focused
-- Updates logged in the system: none.
+- Comment (2026-11-03): course attended.
 
 ### TMW-O4 — ByteSmith AI-generated Appium tests (Jul–Dec 2026)
 
@@ -133,7 +139,29 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - By December, a small measurable auto-generated Appium extension of tests (for example 10%) should be evidenced.
 - Ensure rigorous reviews so the tests are viable, repeatable and robust.
 - Work with GH, MP, DA and a mobile QA.
-- Updates logged in the system: none.
+- Comment (2026-11-03): created AI skills to update pipelines and code for new test categories and brands.
+
+### TMW-O5 — Be the quality champion for the app team (Nov–Dec 2026)
+
+- Be the voice of quality and of the member within the app team, so issues found in testing are visible and get fixed.
+- Raise every issue found in testing, with the member impact clear.
+- Communicate issues to developers and stakeholders so they can triage and fix them.
+- Consider the member's perspective when testing each ticket.
+- Context: set up so TMW can show success in apps work that is not linked to the Appium challenges.
+- Comment (2026-11-03), examples of this behaviour:
+  - worked with product and stakeholders so issues were understood and considered for releases (for example, during the .NET 10 upgrade)
+  - partnered with developers during the major release (.NET 10) to reproduce issues and support resolution
+  - worked to get to the bottom of why things were not working, showing an SDET mindset
+
+### TMW-O6 — Investigate Pico backend test coverage and gaps (Nov–Dec 2026)
+
+- Scope an initiative to improve Pico backend test coverage, so the work can be planned for 2027.
+- Assess coverage and gaps across portal, join and payments.
+- Recommend the right level of coverage for Kafka and GraphQL.
+- Expand the use of AI skills for writing backend tests.
+- Write up a scoped initiative proposal by the end of December.
+- Context: gives a measure of TMW's success in Web Team Two, and ties to a future initiative she will work on. Related: [IMP-11 Backend tests — Backend Test Pack Coverage](../improvements/11-backend-test-pack-coverage.md).
+- Comment (2026-11-03): none yet.
 
 ## Progression And Review Evidence
 
@@ -152,4 +180,4 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 
 _Keep operational actions in Notion; link or summarize only the context needed here._
 
--
+- 2026-11-03: TMW asked to send (1) top 3 achievements with rough dates and impact, (2) top 3 behaviours tied to PG values, and (3) key improvements and development areas, to add to the objective comments ahead of the 2026-11-11 calibration session. Record the answers here when received.
