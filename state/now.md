@@ -53,6 +53,7 @@ _Last week (two-day week): INI-01 kick-off done; BrowserStack plan, first JQL qu
 - IMP-10.2 BrowserStack renewal — BrowserStack's offer received; Softcat's offer awaited.
 - IMP-10.6 BrowserStack renewal — SDK docs link awaited from BrowserStack.
 - IMP-08 Objectives and calibration — TMW's answers on top 3 achievements (WHAT), top 3 behaviours (HOW, tied to PG values) and improvement/development areas, ahead of calibration on 11 Nov.
+- IMP-08 Objectives and calibration — MP's answers to the same three questions (WHAT, HOW, improvement/development areas), to be sent separately; some overlap with the objective comments expected.
 
 ## Upcoming
 

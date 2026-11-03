@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-10-19                    |
+| Profile last reviewed  | 2026-11-03                    |
 
 ## Experience And Specialism
 
@@ -95,14 +95,14 @@ _Last discussed: 2026-09-03_
 
 ## 2026 Objectives
 
-_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `MP-O<n>`. Comments below are MP's, as logged in the system (dates not captured)._
+_As held in the performance system, recorded 2026-10-19; comments refreshed 2026-11-03 after calibration. The WHAT rating is judged against these. Stable IDs: `MP-O<n>`. No objectives were added or changed. Comments below are MP's, as logged in the system (dates not captured)._
 
 | ID     | Objective                                                               | Agreed                   | Status                             |
 |--------|-------------------------------------------------------------------------|--------------------------|------------------------------------|
-| MP-O1  | Payments automation merge with Pico codebase (UK only)                  | 2026 (date not recorded) | Changed (scope; 50% reported)      |
+| MP-O1  | Payments automation merge with Pico codebase (UK only)                  | 2026 (date not recorded) | Changed (scope; 80%; to close)     |
 | MP-O2  | DK payments: robust, relevant E2E QA test coverage                      | 2026 (date not recorded) | Marked complete (agreed with GL)   |
 | MP-O3  | CH payments: robust, relevant E2E QA test coverage                      | 2026 (date not recorded) | Update logged (CH live)            |
-| MP-O4  | Adapt and extend ByteSmith guidance so AI can generate Playwright tests | 2026 (date not recorded) | Update logged (rewording proposed) |
+| MP-O4  | Adapt and extend ByteSmith guidance so AI can generate Playwright tests | 2026 (date not recorded) | Updates logged (reword proposed)   |
 
 ### MP-O1 — Payments automation merge with Pico codebase, UK only (Mar–Jun 2026)
 
@@ -111,7 +111,11 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Gap analysis in Q1; remediation plan and completion by June 2026.
 - Note: Pico playground remains the early warning system.
 - MP's update: the scope has changed. Merging the payments codebase into Pico is no longer realistic, so that work is delayed until fully off the microsite, when it can be revisited. The focus has shifted to test coverage, because some payments services have moved from the payments repo to the Pico repo and coverage in that area must not be lost.
-- MP's update: progress reported at 50%. A Miro board documents the post-payment processing flow. Next steps are to identify where existing coverage exists and how to add anything missing.
+- MP's update 1: progress reported at 50%. A Miro board documents the post-payment processing flow. Next steps are to identify where existing coverage exists and how to add anything missing.
+- MP's update 2: progress reported at 80%. A handful of tests now run in the Pico repo, confirming that payment agreements and subscriptions are created after the join process. These were reviewed and tickets raised for the remaining gaps (PAYTEAM-282, PAYTEAM-283, PAYTEAM-284).
+  - Remaining: implement the changes in those tickets.
+  - Future improvement, likely next year due to time: tests for the change payment details and payment date functionality that is moving into Pico.
+- MP's update 3: the team has been redirected to sunsetting the microsites, so all QA focus is on a successful transition to the members portal. This objective is no longer a priority and will be closed at the end of the year. The tickets raised for the gaps can be picked up as part of initiative work next year.
 
 ### MP-O2 — DK payments (Jan–Jun 2026)
 
@@ -131,8 +135,15 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Baseline the test pack so improvements can be measured.
 - Mentor others within the QA team.
 - Target: a minimum 10% increase in AI-generated automation coverage by Q4 2026.
-- MP's update: not sure the objective is realistic, and prefers not to set an arbitrary percentage of AI-created tests. MP would prefer it reworded to focus on how AI can help the QA process (writing code, suggesting coverage, analysis, assisting manual QA), noting this is hard to measure. MP also noted limited time to work on it.
+- MP's update 1: not sure the objective is realistic, and prefers not to set an arbitrary percentage of AI-created tests. MP would prefer it reworded to focus on how AI can help the QA process (writing code, suggesting coverage, analysis, assisting manual QA), noting this is hard to measure. MP also noted limited time to work on it.
 - Suggested by GL: record the wins from using AI and its limitations, then use that evidence to shape a more formal strategy later.
+- MP's update 2: AI wins so far this year:
+  - Researching and learning Pico functionality for payment agreement and subscription creation, which allowed a far more detailed "Pico - Post payment processing" flow than would otherwise have been possible.
+  - Migrating tests from one workflow to another (PAYTEAM-82): AI mapped the tests across multiple pipelines, brands and shards, a consolidation that would have taken hours or days by hand, and flagged a couple of mistakes in the PR.
+  - Helping identify the root cause of PAYTEAM-292, which MP says they could not have spotted themselves; this saved another person a chunk of time.
+  - A skill that suggests potential tests from a PR and ticket, cross-referenced against MP's own test plan to check for gaps. Still being refined.
+  - The GitHub Copilot app is much nicer to use than the command prompt and the VS Code extension.
+- MP's update 2, limitations: limited use for creating automated tests, because the work did not suit automation, there was no suitable platform (for example the member portal), or workload meant developers picked up tests. MP is wary that overreliance on AI creates cognitive debt: running agents ticket after ticket loses the product understanding needed for good decisions, and could leave a large test suite that works but that nobody fully understands or can confidently evolve.
 
 ## Progression And Review Evidence
 
