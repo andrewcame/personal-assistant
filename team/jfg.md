@@ -9,7 +9,7 @@
 | Reports to             | TMW                    |
 | Direct report to me    | No                     |
 | Last promoted          | Unknown                |
-| Profile last reviewed  | 2026-09-14             |
+| Profile last reviewed  | 2026-11-03             |
 
 ## Experience And Specialism
 
@@ -74,6 +74,33 @@ _Last discussed: 2026-09-14_
 - Evidence of next-level behaviours: Strong technical capability and a credible promotion case; further evidence is needed in communication, visibility, meeting participation, and broader front-end ownership.
 - Gaps or areas needing more evidence: Consistent attendance and contribution in meetings, proactive communication, and sustained ownership of web front-end work.
 - Promotion discussion status: Exploring
+
+## Year-End Evidence (2026)
+
+_Feeds calibration prep. Source for this block: JFG's own notes and TMW's observations (reviewed by TMW), recorded 2026-11-03. Where AC saw the work directly (from working in the same team) it is tagged **AC direct**. Individual dates were not supplied. Objectives are held in the performance system, not here._
+
+### WHAT - impact against objectives
+
+- 2026 (date not recorded) - Coverage ownership - self/TMW - Identified a regression coverage gap in services outside the MXBE/MXWEB/WEB3 account and metadata domains and took ownership of it. Reviewed the services currently excluded from integration coverage, set up meetings with the teams involved to agree scope and dependencies, and mapped regression coverage to delivery tickets for traceability. Basket service is the pilot area.
+- 2026 (date not recorded) - Regression speed and reliability - self/TMW; AC direct on flakiness and test data - Regression runs locally in under 1 minute and in the pipeline in under 3 minutes (earlier run times not recorded; optimisations were made). Added validation checkpoints during test data creation so system state is correct before assertions, health checks and notifications to reduce flakiness, and diagnostics that separate environment/data issues from genuine failures and surface deployment and database issues earlier.
+- 2026 (date not recorded) - Mentoring and knowledge sharing - self/TMW; AC direct - Guided LM through end-to-end testing in Pico and cross-system data flows involving Braze and BGW, including an issue that looked correct at system level but had hidden downstream failures, and the operational risks of BGW retirement. Walked IY (a QA returning to do web work) through the Exerp, Backend and Frontend architecture and showed several ways to create test data.
+- 2026 (date not recorded) - AI-assisted QA workflow (early stage) - self/TMW - Started using GitHub Copilot to review existing test suites, find coverage gaps and draft candidate regression scenarios, validated locally and through peer-reviewed pull requests before adoption. Applied first to Basket service coverage. No completed outcome recorded yet.
+
+### HOW - behaviours against the values
+
+- 2026 (date not recorded) - V-DIFF - self/TMW - Looked for service coverage gaps beyond his assigned tickets and took accountability for quality across several services rather than one feature area.
+- 2026 (date not recorded) - V-DETAIL - self/TMW; AC direct on test data checks - Checked system state during test data creation and separated environment/data causes from genuine failures; spotted a downstream failure that was not visible at system level.
+- 2026 (date not recorded) - V-SHOULDER - self/TMW; AC direct on mentoring - Set up meetings and stakeholder engagement across teams to agree scope and dependencies; mentored LM and IY.
+
+### Development
+
+- No separate development input supplied for 2026. Use the areas already in this profile: communication and visibility, meeting attendance, and speaking up in calls; plus front-end and Portal confidence.
+
+### Open evidence questions
+
+- What has been merged or delivered from the coverage work?
+- What did the Basket pilot produce (scenarios added, gaps found)?
+- Does the backend coverage work feed IMP-11.1 / CH-10?
 
 ## Team Movement Considerations
 

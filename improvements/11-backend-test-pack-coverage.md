@@ -2,15 +2,15 @@
 id: IMP-11
 tag: Backend tests
 type: improvement
-status: not-started
+status: in-progress
 horizon: now
-updated: 2026-10-27
+updated: 2026-11-03
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
 goals: []
 links: [IMP-06, CH-10]
-people: []
+people: [TMW, JFG]
 ---
 
 # Improvement 11 — Backend Test Pack Coverage
@@ -35,6 +35,12 @@ people: []
 
 ## Actions & Progress
 
+### 2026-11-03
+
+- Learned from the JFG calibration evidence that JFG is already reviewing regression coverage for backend services outside the MXBE/MXWEB/WEB3 account and metadata domains, with Basket as the pilot, using Copilot to find gaps and draft scenarios. What has been delivered is not yet confirmed (open question, Notion card "Close open JFG calibration evidence questions").
+- TMW's 2026 objective TMW-O6 (agreed 2026-11-03) is to scope a Pico backend coverage initiative by the end of December. Plan: AC sets up the initiative this week so TMW and JFG can work on it together. Added IMP-11.6.
+- Status moved to in-progress; TMW and JFG added to people.
+
 ### 2026-10-23
 
 - Added a step to flesh out a flagged integration tier: select real-Exerp integration tests, flag them in the packs, and decide per test whether it blocks releases or runs overnight and alerts. Basis: AC's view that no Exerp tests in the backend is not acceptable, and the [2026-10-23 industry signal](../context/industry-signals.md).
@@ -55,12 +61,13 @@ people: []
 | IMP-11.3 | Fix Kafka Web Sender and decide whether to expand its use | AC | IMP-11.1 | later |
 | IMP-11.4 | Agree priority gaps and owners; add the tests | AC | IMP-11.1, IMP-11.2 | later |
 | IMP-11.5 | Flesh out a flagged integration tier: select real-Exerp tests, flag them in the packs, decide blocking vs overnight-and-alert | AC | CH-10.5 | later |
+| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December) | AC | — | next |
 
 ## Status & Next Action
 
-**Status:** Not started
+**Status:** In progress (JFG is already working on coverage gaps; initiative to be set up with TMW)
 
-**Next action:** List the backend pack's coverage gaps across the priority backend services.
+**Next action:** Set up the backend test coverage initiative with TMW and JFG this week, then confirm what JFG's coverage work has delivered.
 
 ## Outcome
 
