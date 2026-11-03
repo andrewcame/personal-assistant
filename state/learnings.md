@@ -35,6 +35,7 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-11-02 · all · When talking to AC, give the C&I's Notion tag (e.g. "IMP-02 Member data") with the ID, not just the ID or title. · AC doesn't recall them by ID.
 - 2026-11-02 · planning · Notion is the master for the next in-progress task. If a repo roadmap step has no Notion card: if an open card is linked to that C&I, that card is the next task; if none, propose the card. · The repo roadmap is a plan; Notion shows what is actually being worked.
 - 2026-11-02 · notion · "To Do" means in progress (there is no separate in-progress column). A Now C&I can have several To Do cards because AC adds them as he thinks of them, so more than one card is not a duplicate. · AC's board structure.
+- 2026-11-03 · people · People-system objectives are light (title, one intent line, 2–4 bullets); detail belongs in the EOY review. · AC correction after objectives were over-written.
 
 ## Retired
 

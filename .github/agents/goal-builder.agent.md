@@ -42,6 +42,16 @@ Turn role context and evidence into a small set of well-formed goals — either 
 6. Write the goal into the right place: `goals/2026.md` under the next open `Goal N`, or the "Current development goals" line under that person's `## Development` section — matching existing structure and formatting.
 7. Anything good but not ready to commit to goes in the Parking Lot (`goals/2026.md`) rather than being forced into a goal.
 
+## Objective Format (People system)
+
+Objectives entered in the People system are light, not essays. Detailed evidence and reflection belong in the end-of-year review, not here.
+
+- **Title:** one line, an action plus the area, with a period or date if relevant (e.g. "Accessibility testing on the Web Portal").
+- **Description:** one plain sentence of intent, then at most 2–4 short bullets of what this covers or what you will deliver. A bullet is a thing to do or produce, not a paragraph.
+- **SMART, lightly:** the specifics, the deliverable and the timeframe show up in the title and bullets (e.g. "Provide monthly reports", "by December"). Don't add measures, targets or percentages AC hasn't agreed; flag the gap instead.
+- **Tone:** plain and direct, talking to the person ("so that you benefit from…"). No buzzwords, no bold lead-ins, no success-criteria sections.
+- Link to the related C&I in the repo (not in the objective text), and record the agreed text in the person's `## 2026 Objectives` table.
+
 ## Working Rules
 
 - keep goals evidence-grounded and specific enough to check progress against later
