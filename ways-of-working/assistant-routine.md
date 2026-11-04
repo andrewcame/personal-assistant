@@ -40,6 +40,8 @@ Every run starts with a Notion sync so the dashboards work on fresh data: **ligh
 | Wednesday 12:30 (**paused 2026-10-16 to save usage; resume next month with the light-sync version**) | How are we getting on | Light Notion sync and dashboard refresh; short mid-week check on progress, blockers, chases, new gaps, ideas awaiting triage (count) |
 | **Friday 15:00** | Weekly report | Weekly review, **full** Notion sync (churn count, tracked to-dos, ideas triage, card tidy), refreshed dashboards, artifact published |
 
+Suggested models per job (Monday Sonnet-class, Wednesday Haiku-class, Friday Sonnet-class) are in [scheduled-prompts.md](scheduled-prompts.md#suggested-models-credit-use).
+
 To run any of these by hand, or without Claude, paste the matching prompt from [scheduled-prompts.md](scheduled-prompts.md) into a fresh chat, or just ask for "the notion-sync skill, light" / "the weekly-review skill".
 
 ## Monthly And Seasonal

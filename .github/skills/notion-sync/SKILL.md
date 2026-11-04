@@ -9,7 +9,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 
 ## Run Modes
 
-- **Full run (Friday, or when asked):** all five flows below.
+- **Full run (Friday, or when asked):** all six flows below.
 - **Light run (Monday and Wednesday scheduled jobs, or "light notion sync"):** read the To Do board and the Ideas page once, then do **Flow 4 and Flow 6**: write `reports/notion-snapshot.json` (this is what keeps the dashboards' Focus fresh), apply Done reconciliation (Flow 6) to any card that has moved to Done, then rebuild both dashboards. Report only: how many cards are open, any AC-owned next step with no card (propose it, don't create it), and the count of untriaged ideas. Do **not** triage ideas or tidy cards (Flows 1, 3 and 5) in a light run; leave that for Friday. No Notion writes and no commits.
 
 ## Flow 1 — Ideas Triage

@@ -1,8 +1,20 @@
 # Scheduled Prompts (Claude Cowork)
 
-The three prompts AC pastes into the Cowork scheduler. The scheduler lives outside the repo, so **this file is the master copy**: change it here, then re-paste into Cowork. Updated 2026-10-26. Context: [assistant-routine.md](assistant-routine.md); dashboards: [dashboards.md](dashboards.md).
+The three prompts AC pastes into the Cowork scheduler. The scheduler lives outside the repo, so **this file is the master copy**: change it here, then re-paste into Cowork. Updated 2026-11-04. Context: [assistant-routine.md](assistant-routine.md); dashboards: [dashboards.md](dashboards.md).
 
-Design: every run refreshes Notion data first (the dashboards' Focus reads `reports/notion-snapshot.json`), so each day starts from fresh data. Monday and Wednesday run a **light** Notion sync (snapshot only); Friday runs the **full** sync. All runs prepare proposals only: nothing is committed or written to Notion without AC's OK.
+Design: every run refreshes Notion data first (the dashboards' Focus reads `reports/notion-snapshot.json`), so each day starts from fresh data. Monday and Wednesday run a **light** Notion sync (snapshot plus Done reconciliation, Flow 6); Friday runs the **full** sync. A card AC has moved to Done in Notion is applied to the repo directly (Flow 6); everything else is a proposal: nothing is committed or otherwise written to Notion without AC's OK.
+
+## Suggested Models (credit use)
+
+Set per scheduled task in Cowork. Tiers follow the [model and token guide](model-and-token-guide.md); check current multipliers in the picker.
+
+| Job | Suggested model | Reasoning effort | Why |
+|---|---|---|---|
+| Monday | **Sonnet-class** | default | Grounded top 3 tied to real cards, plus Flow 6 repo edits |
+| Wednesday | **Haiku-class** | low | A nudge built from evidence: sync, `git log`, compare against the snapshot. Biggest saving |
+| Friday | **Sonnet-class** | default | Ideas triage and enrichment, weekly review, card tidy, all under the people-records standard |
+
+Use Opus-class only for calibration prep and the monthly horizon review, not these runs. If a Haiku Wednesday invents an ID or card, move it to Sonnet; the "name the source" rule in the prompt is the guard.
 
 Common opening, used by all three:
 
@@ -31,10 +43,10 @@ Common opening, used by all three:
 >
 > Task: Wednesday check. Keep it short, this is a nudge, not a report.
 >
-> 1. Run the notion-sync skill in **light** mode, then rebuild both dashboards (`python scripts/report.py`, `python scripts/people_report.py`).
-> 2. Compare to Monday using evidence only: To Do cards now Done (snapshot), `git log --since="3 days ago" --name-only` (with `-c safe.directory=*`), and roadmap steps that changed.
-> 3. Reply with: progress per challenge/improvement that had open to-dos (moved / not yet / blocked), anything in Waiting on that needs a chase, new items under Needs attention, ideas awaiting triage (count), and at most two questions.
-> 4. Offer to capture updates AC replies with. Do not write or commit anything unless AC asks and confirms.
+> 1. Run the notion-sync skill in **light** mode (.github/skills/notion-sync/SKILL.md, "Run Modes"): refresh reports/notion-snapshot.json, apply Done reconciliation (Flow 6) to any card that moved to Done since the last snapshot, then rebuild both dashboards (`python scripts/report.py`, `python scripts/people_report.py`). If context/notion-boards.md has no board links, say so and skip.
+> 2. Compare to Monday using evidence only: To Do cards now Done (snapshot), `git log --since="3 days ago" --name-only` (with `-c safe.directory=*`), and roadmap steps that changed. Use `python scripts/report.py --week` for the current Focus, Waiting on and Needs attention (do not open the HTML or JSON).
+> 3. Reply with: progress per challenge/improvement that had open to-dos (moved / not yet / blocked), anything in Waiting on that needs a chase, new items under Needs attention, ideas awaiting triage (count), and at most two questions. Every ID, step or card you cite must come from a Notion card or a repo roadmap row; name the source in brackets, e.g. `(card: "…")` or `(roadmap IMP-02.4, DA)`.
+> 4. Apply Done-card changes via Flow 6 (AC's own Notion move is the approval). Offer to capture any other updates AC replies with. Do not write anything else or commit unless AC asks and confirms.
 
 ## Friday: weekly report
 
@@ -43,7 +55,7 @@ Common opening, used by all three:
 > Task: Friday weekly report.
 >
 > 1. Run the weekly-review skill (.github/skills/weekly-review/SKILL.md): moved this week, last week's focus outcome (judged from Notion cards now Done and the roadmaps), wins to log (ask before logging), stale Now items, proposed focus for next week (as To Do cards tagged to a challenge or improvement), housekeeping, and a proposed new state/now.md.
-> 2. Run the notion-sync skill in **full** mode (all flows): churn count, tracked and long-open cards with proposed record updates, ideas triage proposals, card tidy, roadmap coverage and the snapshot. If context/notion-boards.md has no board links, say so and skip.
+> 2. Run the notion-sync skill in **full** mode (all six flows, including Done reconciliation, Flow 6): churn count, tracked and long-open cards with proposed record updates, ideas triage proposals, card tidy, roadmap coverage and the snapshot. If context/notion-boards.md has no board links, say so and skip.
 > 3. Refresh both dashboards: `python scripts/report.py` and `python scripts/people_report.py`. Then publish reports/artifact.html with the Artifact tool to the existing artifact URL https://claude.ai/artifact/4XdEtoM1UQwmreP7ioUagD (pass it as `url`; read it first if required). If publishing isn't possible, say so. The People & Objectives board (reports/people.html) stays local.
 > 4. Present one weekly report AC can read in a few minutes, then list the proposed repo and Notion changes and wait for AC's OK. When AC approves, apply them, run `python scripts/check.py all`, show the summary, and commit only after a further explicit OK. AC pushes to GitHub himself.
 
