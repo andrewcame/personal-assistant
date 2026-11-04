@@ -2,7 +2,7 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it short (one screen). Anything that needs more than a line belongs in a record — link to it._
 
-**Updated:** 2026-11-02
+**Updated:** 2026-11-04
 
 _Format: only **Upcoming** is read by the dashboard (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). The dashboard's Focus and Waiting On are derived from Notion To Do cards and roadmap owners, so This Week's Focus and Waiting On below are AC's narrative notes and are not shown there._
 
@@ -44,7 +44,8 @@ _Last week (two-day week): INI-01 kick-off done; BrowserStack plan, first JQL qu
 - 2026-10-23 — Tentative CH-11 agreement: QA does one e2e ticket once coding is done; the team manages delivery.
 - 2026-10-23 — INI-02 shaped as two epics (make tests pass; pipelines) plus a third aligned to app simplification.
 - 2026-10-16 — INI-01 sponsor is AC; no higher sponsor needed.
-- 2026-10-16 — Ideas page fully triaged (43 groups); IMP-11 opened. Monday and Wednesday scheduled runs paused until next month (AC out of credits); resume then.
+- 2026-11-04 — Monday and Wednesday scheduled runs resumed with the light Notion sync (models: Monday Sonnet-class, Wednesday Haiku-class, Friday Sonnet-class; see scheduled-prompts.md).
+- 2026-10-16 — Ideas page fully triaged (43 groups); IMP-11 opened. Monday and Wednesday scheduled runs paused until next month (AC out of credits).
 
 ## Waiting On
 
