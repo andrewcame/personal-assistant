@@ -108,13 +108,14 @@ _Last discussed: 2026-10-08_
 
 ## 2026 Objectives
 
-_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `KB-O<n>`. The objectives pre-date the move to Mobile App on 2026-10-08._
+_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `KB-O<n>`. KB-O1 to O3 pre-date the move to Mobile App on 2026-10-08; KB-O4 was agreed afterwards, in the calibration call on 2026-11-04, when comments were also recorded against O1 to O3._
 
 | ID     | Objective                                                                                    | Agreed                   | Status                          |
 |--------|----------------------------------------------------------------------------------------------|--------------------------|---------------------------------|
-| KB-O1  | CoP E2E automation with comms team QAs                                                       | 2026 (date not recorded) | Not assessed (no update logged) |
-| KB-O2  | GCMv2 automation: setup, message creation, scheduling, audience filtering, Braze integration | 2026 (date not recorded) | Not assessed (no update logged) |
-| KB-O3  | Adapt and extend ByteSmith guidance so AI can generate automation tests                      | 2026 (date not recorded) | Not assessed (no update logged) |
+| KB-O1  | CoP E2E automation with comms team QAs                                                       | 2026 (date not recorded) | Comment added 2026-11-04        |
+| KB-O2  | GCMv2 automation: setup, message creation, scheduling, audience filtering, Braze integration | 2026 (date not recorded) | Comment added 2026-11-04        |
+| KB-O3  | Adapt and extend ByteSmith guidance so AI can generate automation tests                      | 2026 (date not recorded) | Comment added 2026-11-04        |
+| KB-O4  | Onboard to the mobile app team and deliver QA in line with the simplify app mission          | 2026-11-04               | Agreed; no comment yet          |
 
 ### KB-O1 — CoP E2E automation with comms team QAs (Mar–Nov 2026)
 
@@ -123,6 +124,7 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Support back-end CoP API automation to ensure coverage of key functionality, either by creating a separate back-end test suite or by working with JS on one shared suite (KB's choice).
 - Ensure the work can be reused for CH / DK as the Pico programme expands.
 - Updates logged in the system: none.
+- Comment (2026-11-04): the CoP platform was deprioritised by the business in favour of segmented journeys, so the automation has been pushed back to a later date. Promotions are already automated in the pico.frontend pack, so they are covered through the front-end join journey.
 
 ### KB-O2 — GCMv2 automation (Mar–Nov 2026)
 
@@ -133,6 +135,7 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Automate the UK GCM solution using the agreed framework, ensuring reliability, reusability and CI/CD integration.
 - Extend the automation to the CH and DK brands.
 - Updates logged in the system: none.
+- Comment (2026-11-04): the objective was written when the Integration team was operating. Some preparatory work was done: an automation test plan, a Confluence risk assessment, and account IDs obtained ready for GCMv2 testing. It was paused when KB moved to the CoP team, and the focus since has been sunsetting the microsites, so it will not be achieved this year.
 
 ### KB-O3 — ByteSmith AI-generated automation (Jul–Nov 2026)
 
@@ -143,6 +146,14 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Mentor others within the QA team.
 - Target: a minimum 10% increase in AI-generated automation coverage by Q4 2026.
 - Updates logged in the system: none.
+- Comment (2026-11-04): KB has been a firm adopter of AI-first test creation and tooling, for example 100% AI test case generation in the Comms team, and new AI skills added to his personal tooling repo. In the app team there are opportunities to add skills for Appium automation and local debugging.
+
+### KB-O4 — Onboard to the mobile app team and deliver QA in line with the simplify app mission (5 Oct–31 Dec 2026)
+
+- Understand the app: architecture, release process, environments and test coverage. Flag any risk areas and gaps by the end of December.
+- Deliver QA for the app simplification and CAPI sunset missions.
+- Contribute to the Appium initiative: understand the framework, get comfortable with local setup and debugging, add any AI skills, and add new tests.
+- Comment (2026-11-04): none yet.
 
 ## Progression And Review Evidence
 
