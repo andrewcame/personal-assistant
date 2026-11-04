@@ -33,7 +33,7 @@ It is not meant to become:
 - [state](state) - [now.md](state/now.md): short working memory (upcoming dated items, narrative focus and waiting-on notes, open threads, recent decisions). [learnings.md](state/learnings.md): corrections AC has accepted, consolidated into agents at each horizon review. Every agent reads both first.
 - [evals](evals) - Behaviour checks for agents and skills; re-run after changing instructions or models.
 - [scripts](scripts) - Repo health checks (`python scripts/check.py all`): validates front-matter, IDs, tags and links; regenerates folder indexes; reports evidence coverage by pillar/JD and stale records. Also builds the two dashboards in git-ignored `reports/`: `python scripts/report.py` (Quality Leadership Board: this week, plan, signals) and `python scripts/people_report.py` (People & Objectives Board: team readiness, evidence, framework coverage). How they work: [dashboards.md](ways-of-working/dashboards.md). Standard-library Python only.
-- [initiatives](initiatives) - The Jira-level work item for a challenge or improvement that needs code changes or team work. Each names the challenge or improvement it delivers (`origin:`) and shows on that record's dashboard card.
+- [context/jira-initiatives](context/jira-initiatives) - Source briefs for Jira initiatives (history). Delivery is tracked only in Jira; the parent challenge or improvement carries a `jira:` label.
 - [context](context) - [Taxonomy](context/_taxonomy.md) (stable IDs for JD items, pillars, lenses, values, goals, records), [People lookup](context/people.md) (alias → role; no real names anywhere in the repo), personal role context, team role expectations, discovery calls, QA health, industry signals, objective lenses, role pillars, and QA banding.
 - [goals](goals) - Annual priorities, active goals, milestones, and review anchors.
 - [improvements](improvements) - Numbered records of in-flight improvement initiatives, tracked until folded into an achievement.
@@ -48,7 +48,7 @@ It is not meant to become:
 - Mission model: focus on the big items, not the small things
 - Ongoing capture: leadership signals, QA/discovery calls, cadence updates, and industry signals, filed as they come in rather than batched
 - Challenge tracking: open management problems logged and updated over time until resolved
-- Improvement tracking: initiatives worth pursuing logged in `improvements/` while in flight, then folded into an achievement once delivered
+- Improvement tracking: improvements worth pursuing logged in `improvements/` while in flight, then closed into an achievement (yours) or team evidence once delivered
 - Achievement logging: keep one yearly file in `achievements/` as the evidence trail
 - Team development: progression, review context, observations, and goals kept per person in `team/`
 - Review cycle: retain the engineer checkpoint as archive material, then use the manager track for objectives and review preparation
@@ -58,7 +58,7 @@ It is not meant to become:
 1. Use the context files to understand questions and updates.
 2. Capture leadership signals, QA/discovery calls, cadence updates, achievements, and reading as they happen, using the **Capture** agent — it routes each note to the right file and format regardless of which chat it came from.
 3. Log and update open problems in [challenges](challenges) as they develop.
-4. Track improvement initiatives in [improvements](improvements) while they're in flight, folding each into an achievement once delivered, using the **Capture** agent.
+4. Track improvements and challenges in [improvements](improvements) and [challenges](challenges) while they're in flight; when one closes, Capture asks whether it is an achievement, team evidence, both or neither.
 5. Build or refine role goals in [goals/2026.md](goals/2026.md) and team member development goals in [team](team), using the **Goal Builder** agent.
 6. Map achievements to goals, values, and objective lenses before drafting a review, using the **Review Writer** agent.
 7. Keep [team](team) profiles current for development, progression, and review context.

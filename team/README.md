@@ -29,10 +29,12 @@ Anyone can make a subject access request for information held about them, and al
 
 - Motives, personality labels, or speculation about feelings, confidence, or intentions
 - Retention / flight risk, job-seeking, pay or compensation, health, or personal circumstances
-- Second-hand comments about a person, or comparisons that rank one person against another
+- Second-hand comments about a person, or comparisons that rank one person against another (one exception, below)
 - Ratings, calibration positions, succession views, or details of any formal process (PDP/PIP/capability). These go into the official People templates and systems only; at most, note "formal plan in place — held with People BP"
 
 **Test:** would I be comfortable if this person read it? If not, rewrite it as a fact or leave it out.
+
+**Exception: calibration evidence for people AC doesn't line manage** (e.g. JFG, whose line manager is TMW). AC covers their calibration, not their EOY review. Second-hand evidence that their line manager has reviewed may be recorded as a Year-End Evidence line, source `line-manager`, with AC's own direct evidence marked `manager`. It must still be dated, observable work and impact, never opinion, motive or comparison. Evidence sources are `self` (what they tell AC), `manager` (what AC saw) and `line-manager` (reviewed by their line manager).
 
 ### Talk Freely, Record Neutrally
 

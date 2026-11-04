@@ -170,6 +170,18 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Gaps or areas needing more evidence:
 - Promotion discussion status: Not discussed
 
+## Year-End Evidence (2026)
+
+_Feeds calibration prep and the end-of-year review. Add dated, linked evidence through the year. Source: **self** (what they tell AC), **manager** (what AC saw) or **line-manager** (see team/README.md)._
+
+### WHAT — impact against objectives
+
+- 2026-10-08 — (no 2026 objective; change of team) — manager — Moved from Mobile App to Web (Web Team Two). With DA, owns Web QA: broadly TMW the backend side and DA the front end. This resolved the Web QA capacity and accountability challenge (closed 2026-10-27) — [CH-04](../challenges/04-web-qa-capacity-and-accountability.md), [achievement](../achievements/2026.md)
+
+### HOW — behaviours against the values
+
+-
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Has moved to Website (Web Team Two) and said she is positive about the change.

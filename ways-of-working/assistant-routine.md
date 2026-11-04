@@ -8,19 +8,19 @@ How AC works with this harness day to day. Agreed 2026-10-15; adjust as it beds 
 2. **To-dos** — AC adds them to the Notion To Do board as they come. The agent checks them and pulls long-running or record-tagged cards into the matching CII.
 3. **Developments** — AC messages new calls, ideas, decisions and challenges in a new chat in this project. The agent files them into the repo (neutral record, "Not recorded" line) and keeps CIIs, horizons and `state/now.md` current.
 4. **Suggestions** — the agent proposes improvements monthly (industry scan + horizon review), and flags anything urgent in the weekly report.
-5. **Two-way monitoring** — the agent keeps CII roadmaps and Notion in step: every first-up step owned by AC has a card; completed cards move roadmap steps on; new records get a `Record` tag option.
-6. **Approval** — nothing is committed, and nothing is written to Notion, without AC's OK (cards AC has explicitly approved in the conversation count). AC pushes to GitHub.
+5. **Two-way monitoring** — the agent keeps roadmaps and Notion in step: every first-up step owned by AC has a card named in the roadmap's `Card` column; completed cards move roadmap steps on; new records get a `Record` tag option. When the last step of a challenge or improvement completes, Capture asks where the result goes (your achievements, a team member's evidence, both or neither).
+6. **Approval** — nothing is committed without AC's OK. Notion card writes (create, retag, move column) are applied and listed afterwards for awareness; deleting, archiving and moving to Done still need AC's OK. AC pushes to GitHub.
 
 ## What Lives Where
 
 | Tool | Job |
 |---|---|
-| **This repo** | Memory: context, records (challenges, improvements, initiatives), evidence, objectives, team development |
+| **This repo** | Memory: context (sources), challenges and improvements, achievements (AC's), team evidence, objectives |
 | **Notion — To Do** | AC's task list. Quick reminders come and go; long-running or record-tagged cards flow back into the repo |
 | **Notion — Ideas** | Loose thoughts. Triaged weekly: park, link to a record, or promote |
 | **Claude (Cowork)** | The interface: capture, bounce ideas, research, sense-check, run the routines, commit after AC's OK |
 | **Copilot (VS Code)** | Same instructions via `AGENTS.md`; used for cross-model review and quick edits, and as the backup when Claude credits run out ([model and token guide](model-and-token-guide.md)) |
-| **Quality Leadership Board** | The dashboard AC reads instead of the markdown files (this week, plan, signals); refreshed every Friday with `python scripts/report.py` |
+| **Quality Leadership Board** | The dashboard AC reads instead of the markdown files (this week, plan, tasks and whether they are on Notion, signals); refreshed every Friday with `python scripts/report.py` |
 | **People & Objectives Board** | Team readiness, evidence and framework coverage, ahead of calibration and reviews; built with `python scripts/people_report.py` |
 
 ## Any Time
@@ -42,13 +42,13 @@ Every run starts with a Notion sync so the dashboards work on fresh data: **ligh
 
 Suggested models per job (Monday Sonnet-class, Wednesday Haiku-class, Friday Sonnet-class) are in [scheduled-prompts.md](scheduled-prompts.md#suggested-models-credit-use).
 
-To run any of these by hand, or without Claude, paste the matching prompt from [scheduled-prompts.md](scheduled-prompts.md) into a fresh chat, or just ask for "the notion-sync skill, light" / "the weekly-review skill".
+To run any of these by hand, or without Claude, paste the matching prompt from [scheduled-prompts.md](scheduled-prompts.md) into a fresh chat, or just ask for "the notion-sync skill, light" / "the weekly-review skill". For a whole-board audit and clean-up, ask for "check-card-status".
 
 ## Monthly And Seasonal
 
 | When | Routine |
 |---|---|
-| 1st of the month | Industry scan on current Now themes; horizon review (re-plan, consolidate learnings) |
+| 1st of the month | Industry scan on current Now themes; horizon review (re-plan, consolidate learnings, turn plan items and job-spec gaps into records) |
 | Quarterly | Run all evals; roll up long context files into `context/archive/`; cross-review of the quarter's changes |
 | 2026-11-02 | Calibration prep for the 11 November session (tracked in [IMP-08](../improvements/08-2026-objectives-calibration-and-eoy-reviews.md)) |
 

@@ -5,6 +5,7 @@ Usage (from the repo root):
     python scripts/report.py            # writes reports/dashboard.html (open locally), reports/artifact.html (publish), reports/data.json
     python scripts/report.py --json     # print the data only
     python scripts/report.py --week     # print only the This week panels as compact text (for agents)
+    python scripts/report.py --tasks    # print every open task per challenge/improvement and its Notion state (for agents)
 
 The HTML template lives in scripts/report_template.html; this script injects the data.
 Team readiness, evidence and framework coverage are on the separate People & Objectives board (scripts/people_report.py), which reuses the parsers below.
@@ -52,7 +53,9 @@ def bullets(block: str) -> list[str]:
 
 # ---------------------------------------------------------------- sources
 
-REF_RE = re.compile(r"^((?:CH|IMP|INI)-\d\d)(?:\.\d+)?\b[^—]*—\s*(.+)$")
+REF_RE = re.compile(r"^((?:CH|IMP)-\d\d)(?:\.\d+)?\b[^—]*—\s*(.+)$")
+# Notion cards tagged before initiatives were folded into their parent record
+LEGACY_TAGS = {"INI-01": "IMP-02", "INI-02": "CH-09"}
 
 
 def entries(block: str) -> list[dict]:
@@ -88,45 +91,17 @@ def records() -> tuple[list[dict], list[dict]]:
             "id": fm.get("id"), "kind": r["kind"], "title": r["title"], "status": fm.get("status"),
             "horizon": fm.get("horizon"), "updated": fm.get("updated"), "age": age(fm.get("updated")),
             "pillars": fm.get("pillars", []), "focus": fm.get("focus", []), "links": fm.get("links", []),
-            "origin": fm.get("origin", []), "initiativeNeed": fm.get("initiative", "tbc"), "jd": fm.get("jd", []),
+            "jira": fm.get("jira", []), "jd": fm.get("jd", []), "outcome": fm.get("outcome"),
             "nextStep": nxt, "closed": fm.get("status") in check.CLOSED, "file": check.rel(r["path"]),
             "roadmap": roadmap,
         })
-    # a challenge/improvement is delivered by every initiative that names it as an origin
-    by_id = {r["id"]: r for r in recs}
-    for r in recs:
-        r["initiatives"] = [{"id": i["id"], "title": i["title"], "status": i["status"]} for i in recs
-                            if i["kind"] == "initiative" and r["id"] in i["origin"] and not i["closed"]]
     return recs, calls
 
 
-def parent_of(rec_id: str, by_id: dict) -> str:
-    """Initiatives roll up into the challenge or improvement they deliver."""
-    r = by_id.get(rec_id)
-    if r and r["kind"] == "initiative" and r["origin"]:
-        return r["origin"][0]
-    return rec_id
-
-
-def plan_only() -> list[dict]:
-    """Plan rows (horizons.md) that no challenge or improvement carries yet."""
-    out = []
-    for row in check.plan_rows():
-        if re.search(r"\]\(\.\./\.\./", row["carried"]):
-            continue
-        src = strip_md(row["source"]).strip("—- ") or "plan"
-        out.append({"horizon": row["horizon"], "outcome": strip_md(row["outcome"]), "focus": row["focus"].lower(),
-                    "status": strip_md(row["status"]), "source": src, "jd": re.findall(r"JD-\d+", src)})
-    return out
-
-
-def role_items(recs: list[dict], orphans: list[dict]) -> list[dict]:
-    """Job-spec responsibilities that no open challenge/improvement and no plan item covers."""
-    tax = check.read(ROOT / "context" / "_taxonomy.md")
-    jd = re.findall(r"^\|\s*(JD-\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|", tax, re.M)
-    covered = {j for r in recs if not r["closed"] and r["kind"] != "initiative" for j in r["jd"]}
-    covered |= {j for o in orphans for j in o["jd"]}
-    return [{"id": i, "area": area, "label": label} for i, area, label in jd if i not in covered]
+def record_id(value: str) -> str:
+    """Notion Record values are '<ID> <tag>'; match on the ID."""
+    rid = value.split(" ", 1)[0]
+    return LEGACY_TAGS.get(rid, rid)
 
 
 def horizons() -> dict:
@@ -189,10 +164,11 @@ def team() -> list[dict]:
         ev = [e for e in ev if not e.startswith("YYYY")]
         self_n = sum(1 for e in ev if re.search(r"—\s*self\s*—", e))
         mgr_n = sum(1 for e in ev if re.search(r"—\s*manager\s*—", e))
+        line_mgr_n = sum(1 for e in ev if re.search(r"—\s*line-manager\s*—", e))
         out.append({"alias": alias, "role": role.group(1).strip() if role else "",
                     "reviewed": rev.group(1) if rev else None, "reviewedAge": age(rev.group(1) if rev else None),
                     "what": what, "how": how, "objectives": len(objs),
-                    "selfEvidence": self_n, "managerEvidence": mgr_n})
+                    "selfEvidence": self_n, "managerEvidence": mgr_n, "lineManagerEvidence": line_mgr_n})
     return out
 
 
@@ -206,7 +182,7 @@ def coverage(recs, calls, achs) -> dict:
         pillars.append({
             "id": p, "label": label, "mission": mission_of.get(p),
             "achievements": sum(1 for a in achs if p in a["tags"]),
-            "open": sum(1 for r in recs if p in r["pillars"] and not r["closed"] and r["kind"] != "initiative"),
+            "open": sum(1 for r in recs if p in r["pillars"] and not r["closed"]),
             "calls": sum(1 for c in calls if p in c["pillars"]),
         })
     jd = [{"id": j, "label": l, "achievements": sum(1 for a in achs if j in a["tags"])} for j, l in jds.items()]
@@ -223,33 +199,70 @@ def notion_snapshot() -> dict | None:
         return None
 
 
-def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: dict | None) -> dict:
-    """To-do-led view. Each open challenge/improvement (initiatives roll up into theirs) is asked: does it have a task?
-    A To Do card on AC -> Focus. No card for the work -> Needs attention.
-    Plan and role items with no record also go to Needs attention."""
-    by_id = {r["id"]: r for r in recs}
-    ciis = [r for r in recs if r["kind"] != "initiative" and not r["closed"]]
-    cards_by: dict[str, list[dict]] = {}
+def norm(title: str) -> str:
+    return re.sub(r"\s+", " ", title or "").strip().lower()
+
+
+def card_map(snap: dict | None) -> dict[str, list[dict]]:
+    """Notion cards by the challenge/improvement their Record tag names (Done cards included)."""
+    out: dict[str, list[dict]] = {}
     for card in (snap or {}).get("cards", []):
-        if card.get("status") == "Done":
-            continue
         for value in card.get("records", []):
-            # Notion Record values are "<ID> <tag>"; match on the ID.
-            rid = value.split(" ", 1)[0]
-            p = parent_of(rid, by_id)
-            if p in by_id and by_id[p]["kind"] != "initiative" and card not in cards_by.setdefault(p, []):
-                cards_by[p].append(card)
-    rank = {"Do Now": 0, "To Do": 1}
+            lst = out.setdefault(record_id(value), [])
+            if card not in lst:
+                lst.append(card)
+    return out
+
+
+def task_list(c: dict, cards: list[dict], snap: dict | None) -> list[dict]:
+    """Every open roadmap step plus any other open Notion card tagged to the record, with where it stands in Notion.
+    Notion state: the card's column (To Do / Backlog), 'Needs card' for a doing/next step with no card (or whose named
+    card is not on the board), '' for later or blocked steps (no card expected yet), 'Card done' if the named card is
+    Done but the step is not, 'Untracked' for an open card no step names (notion-sync adds it to the roadmap)."""
+    by_title = {norm(x["title"]): x for x in cards}
+    used, rows = set(), []
+    for s in c["roadmap"]:
+        if s["status"] in ("done", "dropped"):
+            continue
+        card = by_title.get(norm(s["card"])) if s["card"] else None
+        if card:
+            used.add(norm(card["title"]))
+        if snap is None:
+            state = "Unknown"
+        elif card:
+            state = "Card done" if card.get("status") == "Done" else (card.get("status") or "Unknown")
+        else:
+            state = "Needs card" if s["status"] in check.FIRST_UP else ""
+        rows.append({"id": s["id"], "task": s["step"], "owner": s["owner"], "status": s["status"], "ticket": s["ticket"],
+                     "notion": state, "card": card["title"] if card else s["card"], "url": (card or {}).get("url")})
+    for card in cards:
+        if card.get("status") != "Done" and norm(card["title"]) not in used:
+            rows.append({"id": "", "task": card["title"], "owner": "AC", "status": "untracked card", "ticket": "",
+                         "notion": "Untracked", "card": card["title"], "url": card.get("url")})
+    return rows
+
+
+def this_week(recs: list[dict], snap: dict | None) -> dict:
+    """To-do-led view. Each open challenge/improvement is asked: does it have a task?
+    A To Do card on AC -> Focus. No card for the work -> Needs attention. Also builds each record's task list."""
+    ciis = [r for r in recs if not r["closed"]]
+    all_cards = card_map(snap)
     horizon_order = {"now": 0, "next": 1, "later": 2}
     focus, no_todo = [], []
     for c in sorted(ciis, key=lambda r: (horizon_order.get(r["horizon"], 3), r["id"])):
-        # Tasks are tracked on challenges and improvements only; initiative steps roll up into their CII.
         first_up = [s for s in c["roadmap"] if s["status"] in check.FIRST_UP]
-        cards = cards_by.get(c["id"], [])
+        every = all_cards.get(c["id"], [])
+        cards = [x for x in every if x.get("status") != "Done"]
         c["todoOpen"] = len(cards)
+        c["tasks"] = task_list(c, every, snap)
+        for t in c["tasks"]:
+            if t["notion"] == "Untracked":
+                no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Card not on the roadmap: {t['task']}"})
+            elif t["notion"] == "Card done":
+                no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Card is Done but step {t['id']} is not: {t['task']}"})
         if not c["nextStep"] and first_up:
             c["nextStep"] = next((s for s in first_up if s["status"] == "doing"), first_up[0])
-        tasks = sorted((x for x in cards if x.get("status") in rank), key=lambda x: rank[x["status"]])
+        tasks = [x for x in cards if x.get("status") in ("To Do", "Do Now")]
         # Plan status follows the Notion card: To Do = In progress, Backlog = Open, no card = Not started.
         c["taskState"] = "In progress" if tasks else ("Open" if cards else "Not started")
         if tasks:
@@ -265,41 +278,41 @@ def this_week(recs: list[dict], orphans: list[dict], roles: list[dict], snap: di
             no_todo.append({"id": c["id"], "title": c["title"], "issue": f"Needs a {card_word}: {s['step']} ({s['id']}, {s['owner']})"})
         else:
             no_todo.append({"id": c["id"], "title": c["title"], "issue": f"No {card_word} and no next step on the roadmap"})
-    no_cii = [{"kind": "plan", "title": o["outcome"], "detail": f"{o['horizon'].capitalize()} · {o['source']}"} for o in orphans]
-    no_cii += [{"kind": "role", "title": r["label"], "detail": f"{r['id']} · {r['area']}"} for r in roles]
-    return {"focus": focus, "noTodo": no_todo, "noCii": no_cii}
+    return {"focus": focus, "noTodo": no_todo}
 
 
 def build() -> dict:
     recs, calls = records()
     snap = notion_snapshot()
-    orphans = plan_only()
-    roles = role_items(recs, orphans)
-    week = this_week(recs, orphans, roles, snap)
-    by_id = {r["id"]: r for r in recs}
+    week = this_week(recs, snap)
     now = now_state()
-    for e in now["upcoming"]:
-        if e["ref"]:
-            e["ref"] = parent_of(e["ref"], by_id)
     data = {
         "generated": TODAY.isoformat(),
         "staleDays": STALE_DAYS,
         "now": now,
         "horizons": horizons(),
         "records": recs,
-        "planOnly": orphans,
         "calls": sorted(calls, key=lambda c: c["date"] or "", reverse=True),
         "leadership": leadership(),
         "industry": industry(),
         "notion": snap,
         "week": week,
-        "roles": roles,
     }
     return data
 
 
 def main(argv: list[str]) -> int:
     data = build()
+    if "--tasks" in argv:
+        # every open task per challenge/improvement, and whether it is on Notion
+        for r in data["records"]:
+            if r["closed"] or r["horizon"] not in ("now", "next", "later"):
+                continue
+            print(f"{r['id']} [{r['horizon']}] {r['title']}")
+            for t in r["tasks"]:
+                who = f" ({t['owner']})" if t["owner"] else ""
+                print(f"  {t['id'] or 'card'} {t['status']}{who}: {t['task']} -> Notion: {t['notion'] or '-'}")
+        return 0
     if "--week" in argv:
         # compact text for agents: avoids opening the large generated files
         w = data["week"]
@@ -307,8 +320,6 @@ def main(argv: list[str]) -> int:
             print(f"FOCUS {f['ref']}: " + "; ".join(f"[{t['status']}] {t['title']}" for t in f["tasks"]))
         for n in w["noTodo"]:
             print(f"NO-TODO {n['id']} {n['title']}: {n['issue']}")
-        for n in w["noCii"]:
-            print(f"NO-CII [{n['kind']}] {n['title']} ({n['detail']})")
         for e in data["now"]["upcoming"]:
             print(f"UPCOMING {e['ref'] or 'General'}: {e['text']}")
         return 0

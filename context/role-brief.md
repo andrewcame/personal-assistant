@@ -1,8 +1,6 @@
 # Role Brief
 
-_The condensed grounding every agent loads first. Open the full source files only when a decision needs the detail. Keep this file under ~3 KB; when a source changes materially, update the matching line here and bump the date._
-
-**Last refreshed:** 2026-10-14
+_The stable grounding every agent loads first. Open the full source files only when a decision needs the detail. It holds only what changes rarely (role, driving theme, pillars, decision lens); the live plan is [horizons.md](my-role/horizons.md) and nothing here needs updating when the plan moves. Keep it under ~3 KB._
 
 ## Role
 
@@ -14,11 +12,9 @@ Time split: people ~25% · technical/tooling ~30% · standards/strategy ~20% · 
 
 The panel asked about: (1) re-energising the team, (2) ways of working, (3) value of automation — tests "running in the dark", (4) visibility with senior stakeholders, (5) what else. Use as a secondary check on goals and evidence. → [interview-task.md](my-role/interview-task.md)
 
-## Current Plan
+## Driving Theme
 
-**Driving theme: get off the microsites.** Leadership treats microsite sunset as the precondition for most investment, progression, and growth work; QA's job is to make the Pico-fronted migration safe and fast while keeping people and capability work alive. Front-end-first test strategy is acceptable for this period. → [horizons.md](my-role/horizons.md), [leadership-direction.md](leadership-direction.md)
-
-Now: dynamic member creation (INI-01) · AI-led Appium first pass (INI-02) · staging monitoring ownership (IMP-01) · QA engagement in paired AI delivery (CH-11) · Web QA cover and E2E knowledge transfer (CH-04, CH-07).
+**Get off the microsites.** Leadership treats microsite sunset as the precondition for most investment, progression, and growth work; QA's job is to make the Pico-fronted migration safe and fast while keeping people and capability work alive. Front-end-first test strategy is acceptable for this period. The plan itself (Now / Next / Later) is in [horizons.md](my-role/horizons.md); the direction is in [leadership-direction.md](leadership-direction.md). A change to the theme is updated here and in horizons.md together.
 
 ## Strategic Frame
 

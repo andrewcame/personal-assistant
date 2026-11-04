@@ -9,7 +9,7 @@ pillars: [P4, P5]
 focus: [automation]
 jd: [JD-06, JD-09]
 goals: []
-links: [CH-08, IMP-02, INI-01]
+links: [CH-08, IMP-02]
 people: [LMo]
 ---
 
@@ -109,17 +109,17 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-10.1 | Review environments direction: one Exerp test per brand | AC | — | done |
-| CH-10.2 | Propose QA impact measures for SOW step 4 | AC | CH-10.8 | later |
-| CH-10.3 | Raise data isolation and event opt-in design questions | AC | CH-10.1 | later |
-| CH-10.4 | Map high-risk journeys by dependency type | AC | — | later |
-| CH-10.5 | Agree test-tier rules and Pico assertion boundary | AC | CH-10.4 | later |
-| CH-10.6 | Run one real-Exerp PoC journey with dynamic data | AC | CH-10.5 | later |
-| CH-10.7 | Record multi-tenant Exerp environment architecture decision | AC | CH-10.6 | later |
-| CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem | AC | CH-10.1 | next |
-| CH-10.9 | Research industry practice: test in production/SRE vs mocking vs real integration for distributed systems | AC | — | done |
+| ID      | Step                                                                                                      | Owner | Depends on | Status | Card                                                            |
+|---------|-----------------------------------------------------------------------------------------------------------|-------|------------|--------|-----------------------------------------------------------------|
+| CH-10.1 | Review environments direction: one Exerp test per brand                                                   | AC    | —          | done   | —                                                               |
+| CH-10.2 | Propose QA impact measures for SOW step 4                                                                 | AC    | CH-10.8    | later  | —                                                               |
+| CH-10.3 | Raise data isolation and event opt-in design questions                                                    | AC    | CH-10.1    | later  | —                                                               |
+| CH-10.4 | Map high-risk journeys by dependency type                                                                 | AC    | —          | later  | —                                                               |
+| CH-10.5 | Agree test-tier rules and Pico assertion boundary                                                         | AC    | CH-10.4    | later  | —                                                               |
+| CH-10.6 | Run one real-Exerp PoC journey with dynamic data                                                          | AC    | CH-10.5    | later  | —                                                               |
+| CH-10.7 | Record multi-tenant Exerp environment architecture decision                                               | AC    | CH-10.6    | later  | —                                                               |
+| CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem                | AC    | CH-10.1    | next   | Pull environment metrics showing why environments are a problem |
+| CH-10.9 | Research industry practice: test in production/SRE vs mocking vs real integration for distributed systems | AC    | —          | done   | —                                                               |
 
 ## Status & Next Action
 

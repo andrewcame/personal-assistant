@@ -155,21 +155,21 @@ _From two reads logged as [industry signals](../context/industry-signals.md): Na
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-11.1 | Raise QA engagement model at leadership call | AC | — | done |
-| CH-11.2 | Take three-touchpoint model to the QA lead sync | AC | CH-11.7 | later |
-| CH-11.3 | Argue environments and test data as precondition with GL | AC | CH-11.7 | later |
-| CH-11.4 | Trial mutation testing on one core domain area | AC | — | later |
-| CH-11.5 | Test slice sizing on the first AI-paired initiative | AC | CH-11.2, INI-02.4 | later |
-| CH-11.6 | Agree QA engagement model for AI-paired delivery | AC | CH-11.4, CH-11.5 | later |
-| CH-11.7 | Own discovery: read research brief, then talk to engineers and leads | AC | — | doing |
-| CH-11.8 | Agree interim model: QA does one e2e ticket once coding is done, with input throughout (tentative) | AC | — | done |
-| CH-11.9 | Automate the e2e ticket using dynamic Portal member creation | AC | CH-11.8 | later |
+| ID      | Step                                                                                               | Owner | Depends on       | Status | Card                                                               |
+|---------|----------------------------------------------------------------------------------------------------|-------|------------------|--------|--------------------------------------------------------------------|
+| CH-11.1 | Raise QA engagement model at leadership call                                                       | AC    | —                | done   | —                                                                  |
+| CH-11.2 | Take three-touchpoint model to the QA lead sync                                                    | AC    | CH-11.7          | later  | —                                                                  |
+| CH-11.3 | Argue environments and test data as precondition with GL                                           | AC    | CH-11.7          | later  | —                                                                  |
+| CH-11.4 | Trial mutation testing on one core domain area                                                     | AC    | —                | later  | —                                                                  |
+| CH-11.5 | Test slice sizing on the first AI-paired initiative                                                | AC    | CH-11.2, CH-09.8 | later  | —                                                                  |
+| CH-11.6 | Agree QA engagement model for AI-paired delivery                                                   | AC    | CH-11.4, CH-11.5 | later  | —                                                                  |
+| CH-11.7 | Own discovery: read research brief, then talk to engineers and leads                               | AC    | —                | doing  | Read QA in AI-paired delivery research brief; plan discovery chats |
+| CH-11.8 | Agree interim model: QA does one e2e ticket once coding is done, with input throughout (tentative) | AC    | —                | done   | —                                                                  |
+| CH-11.9 | Automate the e2e ticket using dynamic Portal member creation                                       | AC    | CH-11.8          | later  | —                                                                  |
 
 ## Status & Next Action
 
-- _2026-10-23:_ tentatively agreed that QA does one e2e ticket once coding is done, with input throughout while the team manages delivery. This should carry the sunset mission; the longer-term QA model still needs thinking (CH-11.6). Dynamic Portal member creation (INI-01) will make automating that ticket possible.
+- _2026-10-23:_ tentatively agreed that QA does one e2e ticket once coding is done, with input throughout while the team manages delivery. This should carry the sunset mission; the longer-term QA model still needs thinking (CH-11.6). Dynamic Portal member creation (IMP-02) will make automating that ticket possible.
 - _2026-10-15:_ research brief started: [QA in AI-paired delivery](../context/research/2026-10-15-qa-in-ai-paired-delivery.md).
 
 _2026-10-15:_ AC wants to do his own discovery and research on QA in AI-paired delivery before taking a model to the lead sync (CH-11.7).

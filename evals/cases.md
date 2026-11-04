@@ -90,17 +90,47 @@ Each case: a prompt to give the named agent or skill, what a **pass** looks like
 ### E12 — A new task goes to a to-do, not free text
 - **Agent:** Capture
 - **Prompt:** "I need to chase DA for the member-creation requirements this week" (IMP-02).
-- **Pass:** Proposes a roadmap step or step update owned by DA on IMP-02 (it then shows under Waiting on), or a Notion To Do card tagged IMP-02 if the chase is AC's own task; does not rely on a `now.md` line for the dashboard. Shows before writing.
-- **Fail signals:** writes only a `now.md` Waiting On line; tags the card to INI-01 instead of the parent without saying it rolls up; writes to Notion without showing first.
+- **Pass:** Proposes a roadmap step or step update owned by DA on IMP-02 (it then shows under Tasks with DA as owner), or a Notion To Do card tagged IMP-02 if the chase is AC's own task (created and listed afterwards); does not rely on a `now.md` line for the dashboard.
+- **Fail signals:** writes only a `now.md` line; tags the card to a retired INI- ID.
 
-### E13 — An initiative must come from a challenge or improvement
+### E13 — Jira delivery is a label, not a record
 - **Agent:** Capture
 - **Prompt:** "Open an initiative to automate the Exerp release checks."
-- **Pass:** Asks which challenge or improvement it delivers (or proposes CH-12 / IMP-09 for AC to confirm), sets `origin:` in the front-matter, and runs `check.py`.
-- **Fail signals:** creates an initiative with no `origin:`; creates it as a standalone card.
+- **Pass:** Explains there is no initiative record; asks which challenge or improvement it delivers (or proposes CH-12 / IMP-09 for AC to confirm), adds the Jira keys to its `jira:` front-matter and the status to its progress log, and runs `check.py`.
+- **Fail signals:** creates a file in `initiatives/`; creates it as a standalone card.
 
 ### E14 — Dashboard question answered without opening the output
 - **Agent:** any
-- **Prompt:** "Why is JD-16 showing on the plan?"
-- **Pass:** Reads `ways-of-working/dashboards.md` and answers from it (no CH/IMP `jd:` tag and no plan row covers JD-16, so it is a role item); offers to open a challenge or improvement or correct a `jd:` tag.
+- **Prompt:** "Is IMP-04's first JQL step on Notion yet?"
+- **Pass:** Runs `python scripts/report.py --tasks` (or reads the roadmap's `Card` column against the snapshot) and answers from it.
 - **Fail signals:** opens `reports/*.html` or `reports/*.json`.
+
+### E15 — Closing a challenge asks where the result goes
+- **Agent:** Capture
+- **Prompt:** "CH-12 is resolved; the Exerp release process is agreed."
+- **Pass:** Asks whether the result is an achievement for AC, evidence for a team member, both or neither; then sets `outcome:`, fills the Outcome section, drops open steps and updates the `horizons.md` row. Does not ask about goals.
+- **Fail signals:** sets the status to resolved with no `outcome:`; writes an achievement without asking; offers to turn the record into a goal.
+
+### E16 — A job-spec gap becomes a record
+- **Agent:** horizon-review
+- **Prompt:** "Run the horizon review."
+- **Pass:** Runs `check.py coverage`, and for each job-spec responsibility with no open record proposes an improvement or challenge (assumed required until AC closes it), with its `horizons.md` row.
+- **Fail signals:** leaves the gap as a note; adds a `horizons.md` row with no record.
+
+### E17 — A tagged card AC adds becomes a roadmap step
+- **Agent:** notion-sync
+- **Prompt:** "Run the light notion sync." (the board has an open card tagged `IMP-04 QA metrics` that no IMP-04 roadmap step names)
+- **Pass:** Adds a new IMP-04 roadmap step (next free number) with the card's exact title in `Card` and status `doing` (To Do) or `next` (Backlog), applies it directly and lists it; rebuilds the dashboards.
+- **Fail signals:** leaves the card as "untracked"; renumbers steps; adopts a card with no `Record` value.
+
+### E18 — Goals are built from records and pillars
+- **Agent:** Goal Builder
+- **Prompt:** "Help me draft goals for 2027."
+- **Pass:** Groups the challenges and improvements by pillar, picks the pillar(s) with the meatiest records (or one or two substantial records), drafts 1–3 goals naming the pillar and records, and offers to tag the records with the goal ID.
+- **Fail signals:** asks only about recently closed records; invents goals with no link to a record or pillar.
+
+### E19 — Card status check lists every task and fixes what's out of step
+- **Agent:** check-card-status
+- **Prompt:** "Check card status."
+- **Pass:** Refreshes the snapshot, lists every open step and card by record (Now, Next, Later), flags Needs card, Untracked, wrong column, stale, unmapped and duplicates, and applies AC's decisions to the roadmap and Notion together ("close this" marks the step done and moves the card to Done, then creates the next card; "drop this" drops the step and archives the card; "open this" adds a step and a card). Applies the check's own fixes (missing first card, adoption, column) directly and lists them. Ends with `report.py --tasks` showing no flags, or says what remains.
+- **Fail signals:** opens `reports/*.html` or `reports/*.json`; updates only the roadmap or only Notion; closes, drops, archives or deletes anything AC didn't ask for; creates cards for Later records.

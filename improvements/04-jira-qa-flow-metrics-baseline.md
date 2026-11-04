@@ -4,7 +4,7 @@ tag: QA metrics
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-27
+updated: 2026-11-04
 pillars: [P6]
 focus: [productivity]
 jd: [JD-09]
@@ -160,20 +160,25 @@ _From the Ideas triage on 2026-10-23 ([ideas log](../state/ideas-log.md))._
 
 - **AI coverage check on Jira tickets:** an AI tool that reads Jira tickets and comments for search terms, to answer "did we test x?". It is resource heavy, so filter by people first. Enriched as a later step once the JQL queries exist (new step IMP-04.10).
 
+### 2026-11-04
+
+- Notion card "Set up Report Portal access with PDEX; compare with Claude reports" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-04.8 marked done. The comparison outcome is not yet recorded here; AC to add it.
+
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-04.1 | Agree five QA flow measures, Jira-first | AC | — | done |
-| IMP-04.2 | Set up Jira placeholders for metrics and coverage | AC | IMP-04.1 | doing |
-| IMP-04.3 | Write first JQL queries | AC | IMP-04.2 | doing |
-| IMP-04.4 | Complete Jira discovery checklist with Delivery or Jira admin | AC | — | later |
-| IMP-04.5 | Vibe-code Jira metric tool for gaps | AC | IMP-04.3 | later |
-| IMP-04.6 | Produce one-team proof-of-concept baseline | AC | IMP-04.3, IMP-04.4 | later |
-| IMP-04.7 | Agree metrics home alongside the Confluence tidy-up | AC | IMP-06.2 | later |
-| IMP-04.8 | Set up Report Portal access with PDEX; compare with Claude reports | AC | — | next |
-| IMP-04.9 | Build a separate Jira dashboard from the JQL queries | AC | IMP-04.3 | later |
-| IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people | AC | IMP-04.3 | later |
+| ID        | Step                                                                                            | Owner | Depends on         | Status | Card                                                                 |
+|-----------|-------------------------------------------------------------------------------------------------|-------|--------------------|--------|----------------------------------------------------------------------|
+| IMP-04.1  | Agree five QA flow measures, Jira-first                                                         | AC    | —                  | done   | —                                                                    |
+| IMP-04.2  | Set up Jira placeholders for metrics and coverage                                               | AC    | IMP-04.1           | doing  | Build first JQL queries into Jira and document results in Confluence |
+| IMP-04.3  | Write first JQL queries                                                                         | AC    | IMP-04.2           | doing  | Build first JQL queries into Jira and document results in Confluence |
+| IMP-04.4  | Complete Jira discovery checklist with Delivery or Jira admin                                   | AC    | —                  | later  | —                                                                    |
+| IMP-04.5  | Vibe-code Jira metric tool for gaps                                                             | AC    | IMP-04.3           | later  | Vibe-code metric tool using Jira API                                 |
+| IMP-04.6  | Produce one-team proof-of-concept baseline                                                      | AC    | IMP-04.3, IMP-04.4 | later  | —                                                                    |
+| IMP-04.7  | Agree metrics home alongside the Confluence tidy-up                                             | AC    | IMP-06.2           | later  | —                                                                    |
+| IMP-04.8  | Set up Report Portal access with PDEX; compare with Claude reports                              | AC    | —                  | done   | —                                                                    |
+| IMP-04.9  | Build a separate Jira dashboard from the JQL queries                                            | AC    | IMP-04.3           | later  | —                                                                    |
+| IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people | AC    | IMP-04.3           | later  | —                                                                    |
+| IMP-04.11 | Learn how to set up Report Portal for automation metrics                                        | AC    | —                  | doing  | Learn how to setup Report Portal for automation metrics              |
 
 ## Status & Next Action
 

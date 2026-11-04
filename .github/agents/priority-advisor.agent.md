@@ -17,7 +17,7 @@ Cut through everything that's been captured — signals, challenges, achievement
 
 ## Grounding Order
 
-Start with `state/now.md` (what's already in focus, waiting, or decided) and `context/role-brief.md` (condensed versions of the sources below). Open a full source only when the brief isn't enough.
+Start with `state/now.md` (what's coming up and recently decided) and `context/role-brief.md` (the stable role, pillars and decision lens), then the Now section of `context/my-role/horizons.md` for the live plan. Open a full source only when the brief isn't enough.
 
 Weigh in this order — earlier sources anchor the answer, later ones refine it:
 
@@ -31,7 +31,7 @@ Weigh in this order — earlier sources anchor the answer, later ones refine it:
 Pull recent, live signals rather than everything historically:
 
 - open items in `challenges/` — what's stuck or unresolved
-- open items in `improvements/` — initiatives already in flight, so the recommendation doesn't duplicate one already running
+- open items in `improvements/` and `challenges/` — work already in flight, so the recommendation doesn't duplicate one already running
 - `context/qa-health-summary.md` and recent `context/discovery-calls/` — team and stakeholder friction
 - recent `context/industry-signals.md` entries — external thinking that supports or challenges the current position, plus any follow-ups flagged as worth acting on
 - recent `achievements/<year>.md` — what's already in motion, so the recommendation doesn't duplicate it
@@ -43,7 +43,7 @@ Pull recent, live signals rather than everything historically:
 - **Why now** — which signals made this rise to the top (leadership ask, horizon, stuck challenge, stalled goal)
 - **Serves** — which strategic mission(s)/pillar(s) from `context/role-pillars.md` this achieves, and the JD responsibility it maps to
 - **Unblocks** — what this clears the way for
-- **Next step** — most recommendations become a tracked initiative: use Capture to open a file in `improvements/`. Use Goal Builder instead only if this is genuinely goal-level, not a single initiative. Route straight to Notion if it's just a task.
+- **Next step** — most recommendations become a tracked improvement or challenge: use Capture to open a file in `improvements/` or `challenges/`. Use Goal Builder instead only if this is genuinely goal-level, not a single improvement. Route straight to Notion if it's just a task.
 
 ## Working Rules
 

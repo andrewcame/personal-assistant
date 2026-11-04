@@ -25,20 +25,19 @@ TODAY = dt.date.today()
 RECORD_DIRS = {
     "challenge": ("challenges", "CH"),
     "improvement": ("improvements", "IMP"),
-    "initiative": ("initiatives", "INI"),
 }
 STATUSES = {
     "challenge": ["open", "active-monitoring", "resolved", "closed"],
     "improvement": ["not-started", "in-progress", "on-hold", "blocked", "done"],
-    "initiative": ["draft", "submitted", "in-progress", "on-hold", "done", "rejected"],
 }
-CLOSED = {"resolved", "closed", "done", "rejected"}
+CLOSED = {"resolved", "closed", "done"}
 HORIZONS = ["now", "next", "later", "none"]
+NOW_LIMIT = 8
+OUTCOMES = ["achievement", "evidence", "both", "none"]
 FOCUS = ["people", "ownership", "automation", "productivity"]
 INDEX_START, INDEX_END = "<!-- index:start -->", "<!-- index:end -->"
 STEP_STATUSES = ["done", "doing", "next", "later", "blocked", "dropped"]
 FIRST_UP = {"doing", "next"}
-INITIATIVE_NEEDS = ["tbc", "needed", "not-needed"]
 
 
 # ---------------------------------------------------------------- io helpers
@@ -107,31 +106,35 @@ def parse_front_matter(text: str) -> dict | None:
 
 
 def title_of(text: str, kind: str) -> str:
-    if kind == "initiative":
-        m = re.search(r"\*\*Initiative Name:\*\*\s*(.+)", text)
-        if m:
-            return m.group(1).strip()
     m = re.search(r"^# (.+)$", text, re.M)
     if not m:
         return "(untitled)"
     t = m.group(1).strip()
-    return re.sub(r"^(Challenge|Improvement|Initiative)\s+\d+\s*[—–-]\s*", "", t)
+    return re.sub(r"^(Challenge|Improvement)\s+\d+\s*[—–-]\s*", "", t)
 
 
 def parse_roadmap(text: str) -> list[dict] | None:
-    """Return roadmap steps from a '## Roadmap' table, or None if the section is missing."""
+    """Return roadmap steps from a '## Roadmap' table, or None if the section is missing.
+    Columns are read by header name: ID, Step, Owner, Depends on, Status, then optional Ticket (Jira key) and
+    Card (exact title of the Notion To Do card for the step)."""
     m = re.search(r"^## Roadmap[^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
     if not m:
         return None
-    steps = []
+    steps, header = [], ["id", "step", "owner", "depends on", "status", "ticket", "card"]
     for line in m.group(1).splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if len(cells) < 5 or not re.fullmatch(r"(CH|IMP|INI)-\d\d\.\d+", cells[0]):
+        if cells and cells[0].lower() == "id":
+            header = [c.lower() for c in cells]
             continue
-        deps = [d.strip() for d in re.split(r"[,;]", cells[3]) if d.strip() and d.strip() not in ("—", "-")]
-        ticket = cells[5] if len(cells) > 5 and cells[5] not in ("", "—", "-") else ""
-        steps.append({"id": cells[0], "step": cells[1], "owner": cells[2], "deps": deps, "status": cells[4].lower(),
-                      "ticket": ticket})
+        if len(cells) < 5 or not re.fullmatch(r"(CH|IMP)-\d\d\.\d+", cells[0]):
+            continue
+        row = dict(zip(header, cells))
+        blank = ("", "—", "-")
+        deps = [d.strip() for d in re.split(r"[,;]", row.get("depends on", "")) if d.strip() and d.strip() not in blank]
+        steps.append({"id": cells[0], "step": row.get("step", ""), "owner": row.get("owner", ""), "deps": deps,
+                      "status": row.get("status", "").lower(),
+                      "ticket": row.get("ticket", "") if row.get("ticket", "") not in blank else "",
+                      "card": row.get("card", "") if row.get("card", "") not in blank else ""})
     return steps
 
 
@@ -152,7 +155,7 @@ def load_records() -> list[dict]:
 
 
 def plan_rows() -> list[dict]:
-    """Rows of the Now / Next / Later tables in horizons.md (Outcome | Focus | Carried by | Status | Source)."""
+    """Rows of the Now / Next / Later tables in horizons.md (Outcome | Focus | Carried by | Status)."""
     text = read(ROOT / "context" / "my-role" / "horizons.md")
     rows = []
     for hz in ("Now", "Next", "Later"):
@@ -162,7 +165,7 @@ def plan_rows() -> list[dict]:
             if len(cells) < 4 or cells[0] in ("Outcome", "") or set(cells[0]) <= set("-"):
                 continue
             rows.append({"horizon": hz.lower(), "outcome": cells[0], "focus": cells[1], "carried": cells[2],
-                         "status": cells[3], "source": cells[4] if len(cells) > 4 else ""})
+                         "status": cells[3]})
     return rows
 
 
@@ -226,15 +229,11 @@ def validate() -> int:
         for a in fm.get("people", []):
             if a not in tax["people"]:
                 err(path, f"alias '{a}' not in context/people.md")
-        if kind == "initiative":
-            origin = fm.get("origin", [])
-            if not origin:
-                err(path, "initiative needs 'origin: [CH-NN or IMP-NN]' — the challenge or improvement it delivers")
-            for o in origin:
-                if o not in known_ids or o.startswith(("INI-", "DC-")):
-                    err(path, f"origin '{o}' must be a challenge or improvement id")
-        elif kind in ("challenge", "improvement") and fm.get("initiative", "tbc") not in INITIATIVE_NEEDS:
-            err(path, f"initiative '{fm.get('initiative')}' not in {INITIATIVE_NEEDS}")
+        if kind in ("challenge", "improvement"):
+            if fm.get("status") in CLOSED and fm.get("outcome") not in OUTCOMES:
+                warn(path, f"closed record needs 'outcome: {' | '.join(OUTCOMES)}' (where did the result land: your achievements, a team member's evidence, both, or neither?)")
+            elif fm.get("outcome") and fm.get("outcome") not in OUTCOMES:
+                err(path, f"outcome '{fm.get('outcome')}' not in {OUTCOMES}")
 
     tag_owner: dict[str, str] = {}
     for r in records:
@@ -252,7 +251,7 @@ def validate() -> int:
         rid, fm, rm = r["fm"].get("id"), r["fm"], r.get("roadmap")
         live = fm.get("status") not in CLOSED
         if rm is None:
-            if live and fm.get("horizon") in ("now", "next") and r["kind"] != "initiative":
+            if live and fm.get("horizon") in ("now", "next"):
                 warn(r["path"], "no ## Roadmap section (required for Now/Next records)")
             continue
         for st in rm:
@@ -270,18 +269,19 @@ def validate() -> int:
 
     valid_tags = tax["pillars"] | tax["jd"] | tax["goals"] | tax["lenses"] | tax["values"] | known_ids
 
-    # the plan tables and record front-matter must agree on horizon; CII-less rows must say where they came from
+    # the plan tables and record front-matter must agree on horizon; every row must be carried by a record
     by_file = {r["path"].name: r for r in records if r["kind"] != "discovery-call"}
     listed: dict[str, set] = {}
-    for row in plan_rows():
+    plan = plan_rows()
+    for row in plan:
         files = re.findall(r"\]\(\.\./\.\./[^)]*?/([^/)]+\.md)\)", row["carried"])
-        if not files and row["source"] in ("", "—", "-"):
-            warn(ROOT / "context" / "my-role" / "horizons.md", f"'{row['outcome'][:50]}' has no CII and no Source")
+        if not files:
+            err(ROOT / "context" / "my-role" / "horizons.md", f"'{row['outcome'][:50]}' is not carried by a challenge or improvement (open one)")
         for f in files:
             listed.setdefault(f, set()).add(row["horizon"])
-        for j in re.findall(r"JD-\d+", row["source"]):
-            if j not in tax["jd"]:
-                err(ROOT / "context" / "my-role" / "horizons.md", f"Source cites unknown job-spec id '{j}'")
+    now_rows = sum(1 for row in plan if row["horizon"] == "now")
+    if now_rows > NOW_LIMIT:
+        warn(ROOT / "context" / "my-role" / "horizons.md", f"Now has {now_rows} items (limit {NOW_LIMIT})")
     for f, horizons_listed in listed.items():
         rec = by_file.get(f)
         if rec and rec["fm"].get("horizon") not in horizons_listed:
@@ -381,6 +381,10 @@ def coverage() -> int:
         a = sum(1 for x in ach if x["tags"] and j in x["tags"])
         rows.append([j, label, str(a), "no evidence yet" if a == 0 else ""])
     print(aligned_table(["JD", "Responsibility", "Achievements", "Gap"], rows))
+    print("\n## Job-spec responsibilities with no open challenge or improvement\n")
+    covered = {j for r in records if r["kind"] in RECORD_DIRS and r["fm"].get("status") not in CLOSED for j in r["fm"].get("jd", [])}
+    gaps = [[j, label] for j, label in jds.items() if j not in covered]
+    print(aligned_table(["JD", "Responsibility"], gaps) if gaps else "None.")
     return 0
 
 

@@ -67,12 +67,12 @@ Start with the highest-value domains, use real journeys rather than abstract req
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-02.1 | Map stakeholders and decision owners for critical domains | AC | — | later |
-| CH-02.2 | Validate business journeys through the domain reviews | AC | CH-02.1 | later |
-| CH-02.3 | Agree regular stakeholder touchpoints for shaping work | AC | CH-02.2 | later |
-| CH-02.4 | Decide which business relationships QA needs to build | AC | CH-02.1 | later |
+| ID      | Step                                                      | Owner | Depends on | Status | Card |
+|---------|-----------------------------------------------------------|-------|------------|--------|------|
+| CH-02.1 | Map stakeholders and decision owners for critical domains | AC    | —          | later  | —    |
+| CH-02.2 | Validate business journeys through the domain reviews     | AC    | CH-02.1    | later  | —    |
+| CH-02.3 | Agree regular stakeholder touchpoints for shaping work    | AC    | CH-02.2    | later  | —    |
+| CH-02.4 | Decide which business relationships QA needs to build     | AC    | CH-02.1    | later  | —    |
 
 ## Status & Next Action
 

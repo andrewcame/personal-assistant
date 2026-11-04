@@ -4,12 +4,12 @@ tag: Member data
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-16
+updated: 2026-11-04
 pillars: [P5]
 focus: [automation]
 jd: [JD-06]
 goals: []
-links: [INI-01, CH-10]
+links: [CH-10]
 people: []
 ---
 
@@ -50,7 +50,7 @@ people: []
 ### 2026-10-13
 
 - Environments discussion leaning towards one Exerp test environment per brand, shared by previews and staging ([notes](../context/discovery-calls/2026-10-13-environments-exerp-per-brand.md)).
-- **Implication:** previews and staging would share member records in PureGym Test. Disposable, dynamically created or reserved members become a prerequisite for reliable preview automation, which strengthens the case for this improvement and Initiative 01.
+- **Implication:** previews and staging would share member records in PureGym Test. Disposable, dynamically created or reserved members become a prerequisite for reliable preview automation, which strengthens the case for this improvement and its Jira initiative (Portal member creation).
 - Payments is still not connected in the proposal, so the fully usable fresh-member limitation recorded on 2026-09-14 remains.
 
 ### 2026-10-15
@@ -75,22 +75,22 @@ _Proposal for engineering discussion, not an architectural decision._
 
 ## Roadmap
 
-| ID       | Step                                                                       | Owner | Depends on        | Status |
-|----------|----------------------------------------------------------------------------|-------|-------------------|--------|
-| IMP-02.1 | Agree Tech Challenges Board route for member creation                      | AC    | —                 | done   |
-| IMP-02.2 | Clarify scope and limits in Pico architecture discovery                    | AC    | —                 | done   |
-| IMP-02.3 | Scope Portal Web MVP as Initiative 01                                      | AC    | IMP-02.2          | done   |
-| IMP-02.4 | Draft lookup, state-sourcing and disposable-state requirements             | DA    | IMP-02.2          | done   |
-| IMP-02.5 | Shape requirements with the Backend Chapter                                | AC    | IMP-02.4          | later  |
-| IMP-02.6 | Propose architecture through the Tech Challenges Board                     | AC    | IMP-02.5, CH-10.7 | later  |
-| IMP-02.7 | Agree cross-team test data strategy beyond Portal MVP                      | AC    | IMP-02.6          | later  |
-| IMP-02.8 | Monitor DA delivering Portal member creation (INI-01; 1 of 5 tickets done) | DA    | IMP-02.4          | doing  |
+| ID       | Step                                                               | Owner | Depends on        | Status | Card                                             |
+|----------|--------------------------------------------------------------------|-------|-------------------|--------|--------------------------------------------------|
+| IMP-02.1 | Agree Tech Challenges Board route for member creation              | AC    | —                 | done   | —                                                |
+| IMP-02.2 | Clarify scope and limits in Pico architecture discovery            | AC    | —                 | done   | —                                                |
+| IMP-02.3 | Scope Portal Web MVP as a Jira initiative                          | AC    | IMP-02.2          | done   | —                                                |
+| IMP-02.4 | Draft lookup, state-sourcing and disposable-state requirements     | DA    | IMP-02.2          | done   | —                                                |
+| IMP-02.5 | Shape requirements with the Backend Chapter                        | AC    | IMP-02.4          | later  | —                                                |
+| IMP-02.6 | Propose architecture through the Tech Challenges Board             | AC    | IMP-02.5, CH-10.7 | later  | —                                                |
+| IMP-02.7 | Agree cross-team test data strategy beyond Portal MVP              | AC    | IMP-02.6          | later  | —                                                |
+| IMP-02.8 | Monitor DA delivering Portal member creation (1 of 5 tickets done) | DA    | IMP-02.4          | doing  | Monitor DA working on member creation initiative |
 
 ## Status & Next Action
 
-**Status:** In progress — formal delivery has graduated to [Initiative 01 — Portal Dynamic Member Creation](../initiatives/01-portal-dynamic-member-creation.md) (Draft). This file keeps the wider test-data architecture direction; the initiative holds the scoped Web MVP.
+**Status:** In progress — Portal member creation is delivered as a Jira initiative (brief: [Dynamic Member Creation & Lookup For Portal Automation](../context/jira-initiatives/01-portal-dynamic-member-creation.md); earlier ID INI-01). This record keeps the wider test-data architecture direction; the Jira initiative holds the scoped Web MVP.
 
-**Next action:** Monitor DA delivering Portal member creation under INI-01 (1 of 5 tickets done; Notion card "Monitor DA working on member creation initiative"). IMP-02.4 requirements gathering is done. When the initiative completes it is done, but IMP-02 stays open for other member data improvements (to be confirmed), then shape requirements with the Backend Chapter (IMP-02.5).
+**Next action:** Monitor DA delivering Portal member creation (1 of 5 tickets done; Notion card "Monitor DA working on member creation initiative"). IMP-02.4 requirements gathering is done. When the Jira initiative completes it is done, but IMP-02 stays open for other member data improvements (to be confirmed), then shape requirements with the Backend Chapter (IMP-02.5).
 
 ## Outcome
 

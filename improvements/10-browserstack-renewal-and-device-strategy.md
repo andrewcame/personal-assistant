@@ -4,12 +4,12 @@ tag: BrowserStack
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-19
+updated: 2026-11-04
 pillars: [P4, P9]
 focus: [automation, productivity]
 jd: [JD-05]
 goals: []
-links: [INI-02, CH-09]
+links: [CH-09]
 people: []
 ---
 
@@ -19,7 +19,7 @@ people: []
 
 - The BrowserStack licence is due for renewal in November 2026. A call with the account manager is booked as a first step.
 - Remote device reliability has contributed to mobile automation noise (see the 2026-09-16 evidence in the closed [Challenge 01](../challenges/01-mobile-automation-strategy.md)).
-- The device platform choice affects how far mobile automation can go: [INI-02](../initiatives/02-appium-ai-led-first-pass.md) (Appium first pass) and [CH-09](../challenges/09-population-scale-mobile-app-testing.md) (population-scale mobile testing).
+- The device platform choice affects how far mobile automation can go: the [Jira initiative brief](../context/jira-initiatives/02-appium-ai-led-first-pass.md) (Appium first pass) and [CH-09](../challenges/09-population-scale-mobile-app-testing.md) (mobile coverage).
 
 ## Objective
 
@@ -52,18 +52,19 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - Account-manager call held; the Notion card is closed.
 - BrowserStack offered additional features during the call.
 - BrowserStack will send: (a) what our current plan includes, including features; (b) the plans we could move to, up or down.
-- BrowserStack shared a link to its SDK documentation, but the link can no longer be found. To be re-requested and assessed as an Appium test improvement (IMP-10.6, links INI-02).
+- BrowserStack shared a link to its SDK documentation, but the link can no longer be found. To be re-requested and assessed as an Appium test improvement (IMP-10.6, links CH-09).
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-10.1 | Hold renewal call with the BrowserStack account manager | AC | — | done |
-| IMP-10.2 | Receive the plan list from BrowserStack, compare options against actual usage and agree a lower-cost plan for November | AC | IMP-10.1 | doing |
-| IMP-10.3 | Baseline device-related failures in mobile automation | AC | — | later |
-| IMP-10.4 | Review alternatives: other device clouds and a local device estate | AC | IMP-10.2, IMP-10.3 | later |
-| IMP-10.5 | Choose the platform that best unlocks mobile automation | AC | IMP-10.4, INI-02.3 | later |
-| IMP-10.6 | Re-request the SDK documentation; assess it as an Appium test improvement (with camera image injection) | AC | IMP-10.1 | later |
+| ID       | Step                                                                                                                   | Owner | Depends on         | Status | Card                                            |
+|----------|------------------------------------------------------------------------------------------------------------------------|-------|--------------------|--------|-------------------------------------------------|
+| IMP-10.1 | Hold renewal call with the BrowserStack account manager                                                                | AC    | —                  | done   | —                                               |
+| IMP-10.2 | Receive the plan list from BrowserStack, compare options against actual usage and agree a lower-cost plan for November | AC    | IMP-10.1           | doing  | Agree lower-cost BrowserStack plan for November |
+| IMP-10.3 | Baseline device-related failures in mobile automation                                                                  | AC    | —                  | later  | —                                               |
+| IMP-10.4 | Review alternatives: other device clouds and a local device estate                                                     | AC    | IMP-10.2, IMP-10.3 | later  | —                                               |
+| IMP-10.5 | Choose the platform that best unlocks mobile automation                                                                | AC    | IMP-10.4, CH-09.9  | later  | —                                               |
+| IMP-10.6 | Re-request the SDK documentation; assess it as an Appium test improvement (with camera image injection)                | AC    | IMP-10.1           | later  | —                                               |
+| IMP-10.7 | Review my BrowserStack access after approval                                                                           | AC    | —                  | doing  | Review my BrowserStack access post “approval”   |
 
 ## Status & Next Action
 

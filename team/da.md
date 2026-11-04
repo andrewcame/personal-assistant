@@ -18,7 +18,7 @@ _Written to the [people-records standard](README.md#writing-standard): dated, ob
 ### Current Focus
 
 - Lead QA owning quality and test automation across Website platforms (Astro-powered web applications, Web Teams 1, 2 and 3).
-- Leading the Dynamic Member Creation initiative ([INI-01](../initiatives/01-portal-dynamic-member-creation.md)) from 2026-10-08.
+- Leading the Dynamic Member Creation initiative ([INI-01](../context/jira-initiatives/01-portal-dynamic-member-creation.md)) from 2026-10-08.
 
 ### Strengths And Specialist Knowledge
 
@@ -132,6 +132,18 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Type: Direct conversation and manager feedback
 - Observation: DA assigned to lead INI-01 with Web cover expectations (see table). Some messages since 2026-09-22 have been abrupt; each instance has been addressed directly at the time, naming the impact and the expected approach.
 - Follow-up: Review INI-01 progress, cover, and communication at regular 1:1s.
+
+## Year-End Evidence (2026)
+
+_Feeds calibration prep and the end-of-year review. Add dated, linked evidence through the year. Source: **self** (what they tell AC), **manager** (what AC saw) or **line-manager** (see team/README.md)._
+
+### WHAT — impact against objectives
+
+- 2026-10-27 — DA-O1 — manager — Owns Web QA alongside TMW, broadly DA the front end and TMW the backend side. This resolved the Web QA capacity and accountability challenge (closed 2026-10-27) — [CH-04](../challenges/04-web-qa-capacity-and-accountability.md), [achievement](../achievements/2026.md)
+
+### HOW — behaviours against the values
+
+-
 
 ## Open Follow-Ups
 

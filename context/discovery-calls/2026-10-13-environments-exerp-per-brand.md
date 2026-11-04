@@ -4,7 +4,7 @@ type: discovery-call
 date: 2026-10-13
 pillars: [P5, P4, P8]
 focus: [automation, productivity, ownership]
-links: [CH-10, CH-08, IMP-02, IMP-01, INI-01]
+links: [CH-10, CH-08, IMP-02, IMP-01]
 people: []
 ---
 
@@ -61,7 +61,7 @@ Principles noted: **single surface**; **opt-in to events** (open question).
 - **Directly stated:** single Exerp test per brand; broadcaster fan-out; pico.deployment for full-stack previews; Payments integration unresolved; a staged SOW with impact measurement at the end.
 - **My interpretation (QA):**
   - This resolves much of the "which Exerp does a preview talk to" drift and the per-environment Exerp configuration effort raised in earlier discovery calls.
-  - **Shared Exerp means shared data.** Previews and staging would read and write the same member records. Static shared test data becomes riskier, so dynamic member creation and disposal ([Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Initiative 01](../../initiatives/01-portal-dynamic-member-creation.md)) becomes more important, not less.
+  - **Shared Exerp means shared data.** Previews and staging would read and write the same member records. Static shared test data becomes riskier, so dynamic member creation and disposal ([Improvement 02](../../improvements/02-dynamic-member-creation-and-test-data.md), [Initiative 01](../jira-initiatives/01-portal-dynamic-member-creation.md)) becomes more important, not less.
   - **Fan-out means every environment sees every event.** Tests and adapters need to tolerate events that belong to another preview, which is presumably what "opt-in to events" is about. Worth defining before step 3a.
   - **Step 4 is where QA can lead.** "Measure the impact" needs agreed measures: preview spin-up time, preview test pass rate and flakiness, environment-caused failures, and Exerp configuration effort.
   - Until Payments is connected, Payments journeys keep a gap in preview coverage; this should be explicit in release-readiness conversations.

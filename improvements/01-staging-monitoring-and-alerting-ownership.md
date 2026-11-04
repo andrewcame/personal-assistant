@@ -4,7 +4,7 @@ tag: Staging SRE
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-23
+updated: 2026-11-04
 pillars: [P5]
 focus: [productivity]
 jd: [JD-06]
@@ -66,6 +66,10 @@ people: [JT]
   - `exerpadapter.extracts.internal.dlq.raw` — check why and when it runs, what it does, and whether it can be disabled in staging if unused; compare with prod.
   - `exerpadapter.product.dlq.raw` — work with JT to learn how to clear and re-run it.
 
+### 2026-11-04
+
+- Notion card "Run staging checks manually" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-01.3 marked done; IMP-01.6 (scope Claude-run checks) is the next step.
+
 ## Proposed Daily First-Response Routine
 
 _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escalation contacts, and permissions with DevEx/Platform before adopting it._
@@ -77,16 +81,16 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-01.1 | Offer to own staging first-response triage | AC | — | done |
-| IMP-01.2 | Complete DevEx/Platform monitoring walkthrough | AC | — | done |
-| IMP-01.3 | Run staging first-response checks manually | AC | IMP-01.2 | doing |
-| IMP-01.4 | Confirm daily first-response routine with DevEx/Platform | AC | IMP-01.2 | dropped |
-| IMP-01.5 | Look into staging DLQ issues | AC | — | next |
-| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC | IMP-01.3 | next |
-| IMP-01.7 | Pilot Claude-run morning checks; AC triages and fixes findings | AC | IMP-01.6 | later |
-| IMP-01.8 | Speak to PDEX about the staging environment to get control of it | AC | — | next |
+| ID       | Step                                                                              | Owner | Depends on | Status  | Card                                            |
+|----------|-----------------------------------------------------------------------------------|-------|------------|---------|-------------------------------------------------|
+| IMP-01.1 | Offer to own staging first-response triage                                        | AC    | —          | done    | —                                               |
+| IMP-01.2 | Complete DevEx/Platform monitoring walkthrough                                    | AC    | —          | done    | —                                               |
+| IMP-01.3 | Run staging first-response checks manually                                        | AC    | IMP-01.2   | done    | —                                               |
+| IMP-01.4 | Confirm daily first-response routine with DevEx/Platform                          | AC    | IMP-01.2   | dropped | —                                               |
+| IMP-01.5 | Look into staging DLQ issues                                                      | AC    | —          | next    | Look into staging DLQ issues                    |
+| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC    | IMP-01.3   | next    | Scope Claude running the morning staging checks |
+| IMP-01.7 | Pilot Claude-run morning checks; AC triages and fixes findings                    | AC    | IMP-01.6   | later   | —                                               |
+| IMP-01.8 | Speak to PDEX about the staging environment to get control of it                  | AC    | —          | next    | Speak to PDEX about the staging environment     |
 
 ## Status & Next Action
 

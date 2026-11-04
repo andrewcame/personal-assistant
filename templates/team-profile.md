@@ -73,7 +73,7 @@ _Agreed objectives for the review year. The WHAT rating is judged against these.
 
 ## Year-End Evidence (YYYY)
 
-_Feeds calibration prep and the end-of-year review. Add dated, linked evidence through the year — not just in November. Tag each line with the objective (or value) it supports and its source: **self** (what they tell you) or **manager** (what you saw)._
+_Feeds calibration prep and the end-of-year review. Add dated, linked evidence through the year — not just in November. Tag each line with the objective (or value) it supports and its source: **self** (what they tell you), **manager** (what you saw) or **line-manager** (second-hand, reviewed by their line manager; only for people you calibrate but don't line manage — see team/README.md). A closing challenge or improvement can land here: Capture adds the line and sets `outcome: evidence` on the record._
 
 ### WHAT — impact against objectives
 

@@ -8,7 +8,8 @@ updated: YYYY-MM-DD
 pillars: []             # see context/_taxonomy.md
 focus: []
 jd: []                  # job-spec responsibilities this delivers, e.g. [JD-05]
-initiative: tbc         # tbc | needed | not-needed — does delivery need a Jira initiative (INI-)?
+jira: []                # optional: Jira epic/ticket keys if delivery is tracked in Jira, e.g. [APP-352]
+outcome:                # set on closing: achievement | evidence | both | none (see Outcome below)
 goals: []
 links: []
 people: []
@@ -18,7 +19,7 @@ people: []
 
 ## Context
 
-- Why this matters now; what prompted it (Priority Advisor recommendation, Idea Validator sense-check, own initiative)
+- Why this matters now; what prompted it (a source: call, management direction, industry signal, job spec, plan, idea; or a Priority Advisor / Idea Validator recommendation)
 
 ## Objective
 
@@ -28,9 +29,8 @@ people: []
 
 - Goal(s): [link from goals/2026.md if applicable — improvements are usually a level below a goal]
 - Role pillar(s): [from context/role-pillars.md]
-- Originating recommendation: [Priority Advisor / Idea Validator / self]
+- Originating recommendation: [source / Priority Advisor / Idea Validator / self]
 - Originating challenge(s): [link, if any]
-- Graduated to initiative: [link, if this needed formal sponsorship — the improvement keeps the wider direction, the initiative holds the scoped delivery]
 
 ## Actions & Progress
 
@@ -40,9 +40,9 @@ people: []
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status | Ticket |
-|----|------|-------|------------|--------|--------|
-| XX-NN.1 | | AC | — | next | — |
+| ID | Step | Owner | Depends on | Status | Ticket | Card |
+|----|------|-------|------------|--------|--------|------|
+| XX-NN.1 | | AC | — | next | — | — |
 
 ## Status & Next Action
 
@@ -53,4 +53,4 @@ people: []
 ## Outcome
 
 - Completed: YYYY-MM-DD
-- Logged achievement: [link once written via Capture]
+- Result: [achievement link in achievements/ · team evidence link in team/<alias>.md · or "none"] — Capture asks and sets `outcome:` above

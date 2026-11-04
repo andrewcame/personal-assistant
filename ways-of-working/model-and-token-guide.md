@@ -11,7 +11,7 @@ The agent cannot switch its own model. AC picks it before sending the prompt.
 | Task | Agent / skill | Tier |
 |---|---|---|
 | Quick filing: one to-do, a roadmap step, a `now.md` line, a status change; running `check.py`; Notion churn count | Capture (small inputs) | **Haiku-class** |
-| Filing calls, achievements and CII updates; weekly review; Notion sync and ideas triage; action extraction; industry research; gap analysis; Idea Validator; Priority Advisor | Capture, weekly-review, notion-sync, action-extraction, industry-research, gap-analysis | **Sonnet-class (default)** |
+| Filing calls, achievements and CII updates; weekly review; Notion sync and ideas triage; card status checks; action extraction; industry research; gap analysis; Idea Validator; Priority Advisor | Capture, weekly-review, notion-sync, check-card-status, action-extraction, industry-research, gap-analysis | **Sonnet-class (default)** |
 | Calibration prep; review writing; goal building; monthly horizon review; anything about an individual's development | calibration-prep, Review Writer, Goal Builder, horizon-review | **Opus-class, sparingly** |
 | Second-opinion sense check | cross-review | **A different family** (e.g. GPT), so the review is independent |
 

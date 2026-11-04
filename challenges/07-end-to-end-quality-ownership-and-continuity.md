@@ -124,15 +124,15 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-07.1 | Map the Portal part of the E2E domain review in Miro | AC | — | next |
-| CH-07.2 | Catalogue priority journeys LM covers, AI-assisted | AC | CH-07.1 | later |
-| CH-07.3 | Publish E2E results page in Confluence | AC | IMP-06.2 | next |
-| CH-07.4 | Pair delivery QAs into upcoming E2E work | AC | CH-07.2 | later |
-| CH-07.5 | Define criteria for a dedicated E2E stage | AC | CH-07.2 | later |
-| CH-07.6 | Review sample of LM findings for escape causes | AC | — | later |
-| CH-07.7 | Recommend E2E resourcing and ownership model before 2027 | AC | CH-07.4, CH-07.6 | later |
+| ID      | Step                                                     | Owner | Depends on       | Status | Card                                                                                  |
+|---------|----------------------------------------------------------|-------|------------------|--------|---------------------------------------------------------------------------------------|
+| CH-07.1 | Map the Portal part of the E2E domain review in Miro     | AC    | —                | next   | Map the Portal part of the E2E domain review in Miro                                  |
+| CH-07.2 | Catalogue priority journeys LM covers, AI-assisted       | AC    | CH-07.1          | later  | —                                                                                     |
+| CH-07.3 | Publish E2E results page in Confluence                   | AC    | IMP-06.2         | next   | Add a Confluence page for links to all E2E results, share with LM and let her update |
+| CH-07.4 | Pair delivery QAs into upcoming E2E work                 | AC    | CH-07.2          | later  | —                                                                                     |
+| CH-07.5 | Define criteria for a dedicated E2E stage                | AC    | CH-07.2          | later  | —                                                                                     |
+| CH-07.6 | Review sample of LM findings for escape causes           | AC    | —                | later  | —                                                                                     |
+| CH-07.7 | Recommend E2E resourcing and ownership model before 2027 | AC    | CH-07.4, CH-07.6 | later  | —                                                                                     |
 
 ## Status & Next Action
 

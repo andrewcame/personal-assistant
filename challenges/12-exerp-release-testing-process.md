@@ -41,11 +41,11 @@ The Head of Configuration is willing to provide earlier version visibility and c
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-12.1 | Discuss Exerp release testing with the Lead QAs | AC | — | next |
-| CH-12.2 | Pilot the agreed process on the next Exerp release | AC | IMP-09.4 | later |
-| CH-12.3 | Confirm challenge resolved after pilot review | AC | CH-12.2 | later |
+| ID      | Step                                               | Owner | Depends on | Status | Card                                                      |
+|---------|----------------------------------------------------|-------|------------|--------|-----------------------------------------------------------|
+| CH-12.1 | Discuss Exerp release testing with the Lead QAs    | AC    | —          | next   | Book time to discuss Exerp release testing with the leads |
+| CH-12.2 | Pilot the agreed process on the next Exerp release | AC    | IMP-09.4   | later  | —                                                         |
+| CH-12.3 | Confirm challenge resolved after pilot review      | AC    | CH-12.2    | later  | —                                                         |
 
 ## Status & Next Action
 

@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-10-26
+updated: 2026-11-04
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -51,16 +51,26 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 - Notion card "Book objectives meeting with GL" marked Done by AC. The meeting date is still to confirm; the team objectives calls and calibration stats remain for w/c 2026-11-02.
 
+### 2026-11-04
+
+- Waiting on TMW's and MP's answers to three questions ahead of calibration on 11 Nov: top 3 achievements (WHAT), top 3 behaviours (HOW, tied to PG values) and improvement/development areas. MP's will be sent separately; some overlap with the objective comments is expected (carried over from `now.md` Waiting On).
+
+### 2026-11-04
+
+- Notion card "Record objectives in team profiles" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-08.3 marked done. IMP-08.2 (objectives calls) and IMP-08.4 (calibration prep) remain open.
+
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-08.1 | Book objectives meeting with GL | AC | — | done |
-| IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02) | AC | — | doing |
-| IMP-08.3 | Record objectives and evidence in team profiles | AC | IMP-08.2 | doing |
-| IMP-08.4 | Run calibration prep; fill People template (w/c 2026-11-02) | AC | IMP-08.3 | later |
-| IMP-08.5 | Attend calibration session (2026-11-11) | AC | IMP-08.4 | later |
-| IMP-08.6 | Deliver end-of-year reviews (by 2026-12-31) | AC | IMP-08.5 | later |
+| ID       | Step                                                        | Owner | Depends on | Status | Card                                                     |
+|----------|-------------------------------------------------------------|-------|------------|--------|----------------------------------------------------------|
+| IMP-08.1 | Book objectives meeting with GL                             | AC    | —          | done   | —                                                        |
+| IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02)        | AC    | —          | doing  | Hold objectives alignment calls with the team            |
+| IMP-08.3 | Record objectives and evidence in team profiles             | AC    | IMP-08.2   | done   | —                                                        |
+| IMP-08.4 | Run calibration prep; fill People template (w/c 2026-11-02) | AC    | IMP-08.3   | later  | —                                                        |
+| IMP-08.5 | Attend calibration session (2026-11-11)                     | AC    | IMP-08.4   | later  | —                                                        |
+| IMP-08.6 | Deliver end-of-year reviews (by 2026-12-31)                 | AC    | IMP-08.5   | later  | —                                                        |
+| IMP-08.7 | Close open JFG calibration evidence questions               | AC    | —          | doing  | Close open JFG calibration evidence questions            |
+| IMP-08.8 | Monitor direct reports sending How/What/Learning data       | AC    | —          | doing  | Monitor direct reports sending me How/What/Learning data |
 
 ## Status & Next Action
 

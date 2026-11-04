@@ -4,7 +4,7 @@ type: discovery-call
 date: 2026-10-09
 pillars: [P2, P3, P4, P5, P9]
 focus: [people, ownership, automation, productivity]
-links: [CH-11, INI-02]
+links: [CH-11, CH-09]
 people: [GH, DG, DW, JT, JB]
 ---
 
@@ -185,12 +185,12 @@ people: [GH, DG, DW, JT, JB]
 
 ## Follow-Ups
 
-- **Future application: implement a similar approach for Appium** - Owner: AC - Destination: [Appium initiative](../../initiatives/02-appium-ai-led-first-pass.md) - Recorded from AC's clarification after the call. No timing or detailed implementation plan is set here; the current focus is understanding the practices.
+- **Future application: implement a similar approach for Appium** - Owner: AC - Destination: [Appium initiative](../jira-initiatives/02-appium-ai-led-first-pass.md) - Recorded from AC's clarification after the call. No timing or detailed implementation plan is set here; the current focus is understanding the practices.
 
 ## Possible Outputs
 
 - Learning reference for [Challenge 11 - QA engagement in AI-assisted delivery](../../challenges/11-qa-engagement-in-ai-paired-initiative-delivery.md): QA methods made reusable within the engineering workflow.
-- Design reference for the [Appium AI-led first pass](../../initiatives/02-appium-ai-led-first-pass.md): context, skills, models and scripts working together. This is not yet an implementation specification.
+- Design reference for the [Appium AI-led first pass](../jira-initiatives/02-appium-ai-led-first-pass.md): context, skills, models and scripts working together. This is not yet an implementation specification.
 
 ## Open Questions
 

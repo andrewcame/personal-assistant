@@ -17,30 +17,33 @@ Turn role context and evidence into a small set of well-formed goals — either 
 
 ## Context To Load
 
-**Start here (always):** `state/now.md` (current focus, threads, decisions) and `context/role-brief.md` (condensed role, plan, pillars, decision lens). Open the full source files below only when the brief doesn't answer the question — they are large.
+**Start here (always):** `state/now.md` (upcoming and recent decisions) and `context/role-brief.md` (stable role, pillars, decision lens). Open the full source files below only when the brief doesn't answer the question — they are large.
 
 **For role goals (`goals/2026.md`):**
+- the challenges and improvements (`challenges/`, `improvements/`, open and closed) and `achievements/<year>.md`, which are the main raw material (see Workflow, step 2)
 - `context/my-role/job-specification.md` and `context/my-role/interview-task.md`
 - `context/my-role/horizons.md` — the live Now / Next / Later plan (30/60/90 files are archived; use only for original intent)
 - `context/role-pillars.md` and `context/objective-lenses.md`
 - `context/leadership-direction.md` — apply the Decision Lens defined there
-- recent `context/discovery-calls/` and `achievements/<year>.md` for evidence of what's already emerging
+- recent `context/discovery-calls/` for evidence of what's already emerging
 - the existing `goals/2026.md` so new goals extend rather than duplicate it
 
 **For team member goals (`team/<alias>.md`):**
 - that person's profile in full — Snapshot, Direction and Sentiment, Development, Observations, Progression sections
+- the challenges and improvements that list them under `people:`
 - `context/qa-banding/competencies/` and `context/qa-banding/rating-model.md` for level-appropriate expectations
 - `context/qa-health-summary.md` for team-wide themes that might shape an individual goal
 
 ## Workflow
 
-1. Confirm whether this is a role goal or a named team member's goal.
-2. Pull the relevant context above; flag anything stale (e.g. profile not reviewed recently) or missing rather than guessing.
-3. Draft 1–3 goals, not an exhaustive list — prefer fewer, meaningful goals over broad coverage.
-4. Tag each with the objective lens(es) genuinely supported (People Developer / Value Creator / Business Operator); labels don't need to appear in the wording itself.
-5. For team member goals, ground the goal in their current level and evidence already in their profile, not aspiration alone.
-6. Write the goal into the right place: `goals/2026.md` under the next open `Goal N`, or the "Current development goals" line under that person's `## Development` section — matching existing structure and formatting.
-7. Anything good but not ready to commit to goes in the Parking Lot (`goals/2026.md`) rather than being forced into a goal.
+1. Confirm whether this is a role goal or a named team member's goal. Goals are created when AC asks for them, not when a challenge or improvement closes.
+2. **Pick the raw material from the records.** List the challenges and improvements (open and closed) and group them by the pillar they link to (`pillars:`). Prefer the pillar that several meaty records roll up into; otherwise pick one or two substantial challenges or improvements on their own. "Meaty" means large, strategic, tied to the driving theme or a JD responsibility, with real outcomes or evidence behind it (achievements tagged to it, `outcome:` set). Skip small or BAU records.
+3. Pull the relevant context above; flag anything stale (e.g. profile not reviewed recently) or missing rather than guessing.
+4. Draft 1–3 goals, not an exhaustive list — prefer fewer, meaningful goals over broad coverage. Each goal names the pillar (and JD responsibilities) it rests on and the records it draws from.
+5. Tag each with the objective lens(es) genuinely supported (People Developer / Value Creator / Business Operator); labels don't need to appear in the wording itself.
+6. For team member goals, ground the goal in their current level and evidence already in their profile, not aspiration alone.
+7. Write the goal into the right place: `goals/2026.md` under the next open `Goal N`, or the "Current development goals" line under that person's `## Development` section — matching existing structure and formatting. Add the goal ID (`G1`, …) to `goals:` in the front-matter of each record it draws on (add the ID to `context/_taxonomy.md` first if it is new).
+8. Anything good but not ready to commit to goes in the Parking Lot (`goals/2026.md`) rather than being forced into a goal.
 
 ## Objective Format (People system)
 

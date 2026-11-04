@@ -4,7 +4,7 @@ tag: Backend tests
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-03
+updated: 2026-11-04
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
@@ -52,16 +52,21 @@ people: [TMW, JFG]
 - Opened. Starting point: list the current pack's coverage against backend services, starting with the Exerp Assistant.
 - Check what the Backend and AI chapters are already doing before adding tests.
 
+### 2026-11-04
+
+- Notion card "List backend pack coverage gaps, starting with the Exerp Assistant" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-11.1 marked done. Next: agree priority gaps and owners (IMP-11.4), once the backend coverage initiative with TMW and JFG is set up (IMP-11.6).
+
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-11.1 | List backend pack coverage gaps across the priority backend services | AC | — | next |
-| IMP-11.2 | Check what the Backend and AI chapters are doing on backend tests | AC | — | later |
-| IMP-11.3 | Fix Kafka Web Sender and decide whether to expand its use | AC | IMP-11.1 | later |
-| IMP-11.4 | Agree priority gaps and owners; add the tests | AC | IMP-11.1, IMP-11.2 | later |
-| IMP-11.5 | Flesh out a flagged integration tier: select real-Exerp tests, flag them in the packs, decide blocking vs overnight-and-alert | AC | CH-10.5 | later |
-| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December) | AC | — | next |
+| ID       | Step                                                                                                                          | Owner | Depends on         | Status | Card                                                         |
+|----------|-------------------------------------------------------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------------|
+| IMP-11.1 | List backend pack coverage gaps across the priority backend services                                                          | AC    | —                  | done   | —                                                            |
+| IMP-11.2 | Check what the Backend and AI chapters are doing on backend tests                                                             | AC    | —                  | later  | —                                                            |
+| IMP-11.3 | Fix Kafka Web Sender and decide whether to expand its use                                                                     | AC    | IMP-11.1           | later  | —                                                            |
+| IMP-11.4 | Agree priority gaps and owners; add the tests                                                                                 | AC    | IMP-11.1, IMP-11.2 | later  | —                                                            |
+| IMP-11.5 | Flesh out a flagged integration tier: select real-Exerp tests, flag them in the packs, decide blocking vs overnight-and-alert | AC    | CH-10.5            | later  | —                                                            |
+| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December)                     | AC    | —                  | next   | Set up the backend test coverage initiative with TMW and JFG |
+| IMP-11.7 | Investigate Exerp Assistant not showing all products                                                                          | AC    | —                  | doing  | Investigate Exerp Assistant not showing all products         |
 
 ## Status & Next Action
 

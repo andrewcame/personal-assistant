@@ -65,17 +65,17 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-05.1 | Add industry-research and action-extraction skills | AC | — | done |
-| IMP-05.2 | Add taxonomy, front-matter and check.py scripts | AC | — | done |
-| IMP-05.3 | Add AGENTS.md, learning loop and evals | AC | IMP-05.2 | done |
-| IMP-05.4 | Build dashboard and Notion bridge | AC | IMP-05.2 | done |
-| IMP-05.5 | Run evals baseline in Copilot and Claude | AC | IMP-05.3 | next |
-| IMP-05.6 | Run the first cross-review | AC | IMP-05.3 | next |
-| IMP-05.7 | Trial weekly-review and gap-analysis; keep, adjust or drop | AC | — | later |
-| IMP-05.8 | Scope a QA automation-standards harness ahead of GL's 2027 harness | AC | — | later |
-| IMP-05.9 | Compare Rovo with Claude + MCP for Jira and Confluence | AC | — | later |
+| ID       | Step                                                               | Owner | Depends on | Status | Card                                                |
+|----------|--------------------------------------------------------------------|-------|------------|--------|-----------------------------------------------------|
+| IMP-05.1 | Add industry-research and action-extraction skills                 | AC    | —          | done   | —                                                   |
+| IMP-05.2 | Add taxonomy, front-matter and check.py scripts                    | AC    | —          | done   | —                                                   |
+| IMP-05.3 | Add AGENTS.md, learning loop and evals                             | AC    | IMP-05.2   | done   | —                                                   |
+| IMP-05.4 | Build dashboard and Notion bridge                                  | AC    | IMP-05.2   | done   | —                                                   |
+| IMP-05.5 | Run evals baseline in Copilot and Claude                           | AC    | IMP-05.3   | next   | Run assistant evals baseline and first cross-review |
+| IMP-05.6 | Run the first cross-review                                         | AC    | IMP-05.3   | next   | Run assistant evals baseline and first cross-review |
+| IMP-05.7 | Trial weekly-review and gap-analysis; keep, adjust or drop         | AC    | —          | later  | —                                                   |
+| IMP-05.8 | Scope a QA automation-standards harness ahead of GL's 2027 harness | AC    | —          | later  | —                                                   |
+| IMP-05.9 | Compare Rovo with Claude + MCP for Jira and Confluence             | AC    | —          | later  | —                                                   |
 
 ## Status & Next Action
 

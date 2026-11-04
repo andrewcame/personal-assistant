@@ -49,13 +49,13 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-03.1 | Design nightly staging performance run and scenarios | AC | — | later |
-| IMP-03.2 | Agree overnight Exerp test instance ramp-up | AC | IMP-03.1 | later |
-| IMP-03.3 | Feed results into morning staging alert review | AC | IMP-03.1, IMP-01.4 | later |
-| IMP-03.4 | Validate staging as the UK load test environment | AC | IMP-03.3, CH-10.7 | later |
-| IMP-03.5 | Retire the Southampton satellite Exerp test instance | AC | IMP-03.4 | later |
+| ID       | Step                                                 | Owner | Depends on         | Status | Card |
+|----------|------------------------------------------------------|-------|--------------------|--------|------|
+| IMP-03.1 | Design nightly staging performance run and scenarios | AC    | —                  | later  | —    |
+| IMP-03.2 | Agree overnight Exerp test instance ramp-up          | AC    | IMP-03.1           | later  | —    |
+| IMP-03.3 | Feed results into morning staging alert review       | AC    | IMP-03.1, IMP-01.4 | later  | —    |
+| IMP-03.4 | Validate staging as the UK load test environment     | AC    | IMP-03.3, CH-10.7  | later  | —    |
+| IMP-03.5 | Retire the Southampton satellite Exerp test instance | AC    | IMP-03.4           | later  | —    |
 
 ## Status & Next Action
 

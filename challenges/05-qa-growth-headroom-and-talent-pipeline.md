@@ -1,9 +1,10 @@
 ---
 id: CH-05
+tag: Growth headroom
 type: challenge
-status: resolved
-horizon: none
-updated: 2026-10-15
+status: open
+horizon: later
+updated: 2026-11-04
 pillars: [P1]
 focus: [people]
 jd: [JD-03, JD-04]
@@ -110,20 +111,25 @@ We must address both ends of the pyramid:
 - The remaining headroom question is the Staff QA route for the two Website Lead QAs (TMW, DA). If one reaches Staff, they step up and the other leads Web; if both do, Web concerns are split between them.
 - Priorities and team shape may change in 2027, so this is resolved for now. Individual progression continues through objectives and development plans ([IMP-08](../improvements/08-2026-objectives-calibration-and-eoy-reviews.md)); reopen at 2027 planning if needed.
 
+## 2026-11-04 Reopened — Later
+
+- Still open, but not active: KB's move to App lead unlocked his growth, but other bottlenecks remain (the Staff QA route for the two Website Lead QAs, and the wider talent pipeline). Parked in Later for 2027 planning; see also [IMP-15 Talent pipeline](../improvements/15-hiring-onboarding-and-qa-talent-pipeline.md).
+
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-05.1 | Review each QA's competency profile in 1:1s | AC | — | dropped |
-| CH-05.2 | Deep-dive each Lead QA area, including growth review | AC | — | dropped |
-| CH-05.3 | Define Staff QA (Level 8) expectations and evidence | AC | — | dropped |
-| CH-05.4 | Define Senior QA II progression options with engineering leadership | AC | — | dropped |
-| CH-05.5 | Agree a Staff QA evidence plan with DA | AC | CH-05.3 | dropped |
-| CH-05.6 | Explore Junior/Graduate QA headcount with GL | AC | — | dropped |
+| ID      | Step                                                                       | Owner | Depends on | Status  | Card |
+|---------|----------------------------------------------------------------------------|-------|------------|---------|------|
+| CH-05.1 | Review each QA's competency profile in 1:1s                                | AC    | —          | dropped | —    |
+| CH-05.2 | Deep-dive each Lead QA area, including growth review                       | AC    | —          | dropped | —    |
+| CH-05.3 | Define Staff QA (Level 8) expectations and evidence                        | AC    | —          | dropped | —    |
+| CH-05.4 | Define Senior QA II progression options with engineering leadership        | AC    | —          | dropped | —    |
+| CH-05.5 | Agree a Staff QA evidence plan with DA                                     | AC    | CH-05.3    | dropped | —    |
+| CH-05.6 | Explore Junior/Graduate QA headcount with GL                               | AC    | —          | dropped | —    |
+| CH-05.7 | Reassess remaining growth bottlenecks and talent pipeline at 2027 planning | AC    | —          | later   | —    |
 
 ## Status & Next Action
 
-**Status:** Resolved for now 2026-10-15. _Previously:_ Open — Identified as a structural team health and retention risk during initial baseline phase.
+**Status:** Open — Later (reopened 2026-11-04 from "Resolved for now"). KB's move to Apps unlocked his growth; other bottlenecks remain. Revisit at 2027 planning. _Previously:_ Resolved for now 2026-10-15. _Before that:_ Open — Identified as a structural team health and retention risk during initial baseline phase.
 
 **Next action:**
 1. Review each QA engineer's current competency profile against the QA Rating Model during the initial 1:1 discovery conversations.

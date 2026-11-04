@@ -3,7 +3,8 @@ id: CH-03
 type: challenge
 status: closed
 horizon: none
-updated: 2026-10-15
+updated: 2026-11-04
+outcome: none
 pillars: [P3, P7]
 focus: [ownership]
 goals: []
@@ -68,13 +69,17 @@ Use the smallest governance mechanism that preserves coherence: clear decision o
 
 - The in-house architecture model is an accepted organisational decision. QA works within it rather than treating it as an open problem. Closed as accepted; reopen only if a specific decision-path problem arises.
 
+## Outcome
+
+- Result: none. Closed as an accepted organisational decision (see "Closed — Accepted" above); nothing was delivered, so there is no achievement or evidence to log.
+
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-03.1 | Confirm decision and escalation path with DG and Tech Lead Chapter | AC | — | dropped |
-| CH-03.2 | Agree decision-recording expectation for consequential choices | AC | CH-03.1 | dropped |
-| CH-03.3 | Define quality concerns QA brings into design discussions | AC | CH-03.1 | dropped |
+| ID      | Step                                                               | Owner | Depends on | Status  | Card |
+|---------|--------------------------------------------------------------------|-------|------------|---------|------|
+| CH-03.1 | Confirm decision and escalation path with DG and Tech Lead Chapter | AC    | —          | dropped | —    |
+| CH-03.2 | Agree decision-recording expectation for consequential choices     | AC    | CH-03.1    | dropped | —    |
+| CH-03.3 | Define quality concerns QA brings into design discussions          | AC    | CH-03.1    | dropped | —    |
 
 ## Status & Next Action
 

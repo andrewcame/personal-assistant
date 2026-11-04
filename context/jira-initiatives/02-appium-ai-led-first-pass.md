@@ -1,17 +1,6 @@
----
-id: INI-02
-tag: Appium first pass
-type: initiative
-status: in-progress
-horizon: now
-updated: 2026-10-27
-origin: [CH-09]
-pillars: [P4, P9]
-focus: [automation]
-goals: []
-links: [CH-09, INI-01, IMP-10]
-people: [GH, KB]
----
+# Jira initiative brief (INI-02, retired ID)
+
+_Source context for the Jira initiative that delivers [Challenge 09 (Mobile coverage)](../../challenges/09-population-scale-mobile-app-testing.md). Progress is tracked on that record (roadmap steps and the Jira label), not here._
 
 **Initiative Name:** Expanding Automated Coverage Of High-Value, High-Risk Mobile App Journeys
 
@@ -84,7 +73,7 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 - Confirm the app-side path for using dynamic member creation from Initiative 01 in the first web-journey tests
 
 **Supporting Context**
-## Roadmap
+## Roadmap (historic, at the time the initiative was folded into CH-09 on 2026-11-04; live steps are in CH-09's roadmap)
 
 | ID | Step | Owner | Depends on | Status |
 |----|------|-------|------------|--------|
@@ -120,17 +109,17 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 
 ## Learning Input - 2026-10-09
 
-- The [Dootrix AI harness call](../context/discovery-calls/2026-10-09-dootrix-ai-harness.md) reinforced the current work on reusable AI skills and cross-platform local setup. AC described already moving repeated emulator/setup work into scripts that skills invoke.
+- The [Dootrix AI harness call](../discovery-calls/2026-10-09-dootrix-ai-harness.md) reinforced the current work on reusable AI skills and cross-platform local setup. AC described already moving repeated emulator/setup work into scripts that skills invoke.
 - The useful learning is the combination of reusable engineering standards, project context, activity-based skills, cross-model review and deterministic scripts. QA expertise can shape those activities rather than being expressed only as a generic QA persona or a late review step.
 - **Future action:** Implement a similar approach for Appium, as confirmed by AC after the call. For now the focus is understanding Dootrix's practices; no detailed implementation plan or timing is set. The discovery note holds the learning, not an additional task list or a commitment to purchase Dootrix's harness.
 
 **Supporting Context**
 
-- [Challenge 01 — Mobile Automation Strategy (Appium vs Maestro)](../challenges/01-mobile-automation-strategy.md)
-- [Challenge 09 — Population-Scale Mobile App Testing And Low-Incidence Defects](../challenges/09-population-scale-mobile-app-testing.md)
-- [2026-09-15 Head of Software Engineering (GH) discovery call](../context/discovery-calls/2026-09-15-head-of-software-engineering-gh.md) — Appium AI experiment origin
-- [2026-09-16 Technical Lead Mobile / RSR discovery call](../context/discovery-calls/2026-09-16-technical-lead-mobile-rsr.md) — layered testing model, shared ownership, AI experiment evaluation
-- [context/my-role/60-day-plan.md](../context/my-role/60-day-plan.md) — agentic AI test creation standards, Appium as first POC
+- [Challenge 01 — Mobile Automation Strategy (Appium vs Maestro)](../../challenges/01-mobile-automation-strategy.md)
+- [Challenge 09 — Population-Scale Mobile App Testing And Low-Incidence Defects](../../challenges/09-population-scale-mobile-app-testing.md)
+- [2026-09-15 Head of Software Engineering (GH) discovery call](../discovery-calls/2026-09-15-head-of-software-engineering-gh.md) — Appium AI experiment origin
+- [2026-09-16 Technical Lead Mobile / RSR discovery call](../discovery-calls/2026-09-16-technical-lead-mobile-rsr.md) — layered testing model, shared ownership, AI experiment evaluation
+- [context/my-role/60-day-plan.md](../my-role/60-day-plan.md) — agentic AI test creation standards, Appium as first POC
 
 ## Progress Update - 2026-10-15
 
@@ -142,9 +131,9 @@ Treat failures caused by changed Portal identifiers or locators (including the R
 
 ## Ideas Input - 2026-10-16
 
-_From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
+_From the Ideas triage on 2026-10-16 ([ideas log](../../state/ideas-log.md))._
 
 - **Accelerating delivery with AI:** can AI skills create the Page, Component and Journey Objects we need, with engineers then connecting journeys into tests? Can AI review the old Xamarin UI tests to inform scope?
 - **Dev support:** the delivery risk affects everyone; devs were involved in the framework and could help get tests done.
 - **Focus:** stop trying to solutionise another approach (Maestro); swarm on a core set of key Appium tests and get them green first.
-- **Re-scope criterion:** current app issues keep revealing long-standing defects because QA tests functionally rather than like the app is used. The re-scope (INI-02.3) should include usage-realistic, non-functional journeys (see [CH-09](../challenges/09-population-scale-mobile-app-testing.md)).
+- **Re-scope criterion:** current app issues keep revealing long-standing defects because QA tests functionally rather than like the app is used. The re-scope (INI-02.3) should include usage-realistic, non-functional journeys (see [CH-09](../../challenges/09-population-scale-mobile-app-testing.md)).

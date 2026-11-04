@@ -88,14 +88,14 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| CH-08.1 | Arrange COP and promotion walkthrough with CR | AC | CH-08.6 | later |
-| CH-08.2 | Map Extractor to Publisher to Pico to front-end flow | AC | CH-08.1 | later |
-| CH-08.3 | Select representative commercial scenarios for staging | AC | CH-08.2 | later |
-| CH-08.4 | Define minimum Exerp-versus-Pico reconciliation checks | AC | CH-08.3 | later |
-| CH-08.5 | Confirm ownership for failed runs, replay and sign-off | AC | CH-08.2 | later |
-| CH-08.6 | Discover Extractor usage and sunset plan; decide if testing is needed | AC | — | later |
+| ID      | Step                                                                  | Owner | Depends on | Status | Card |
+|---------|-----------------------------------------------------------------------|-------|------------|--------|------|
+| CH-08.1 | Arrange COP and promotion walkthrough with CR                         | AC    | CH-08.6    | later  | —    |
+| CH-08.2 | Map Extractor to Publisher to Pico to front-end flow                  | AC    | CH-08.1    | later  | —    |
+| CH-08.3 | Select representative commercial scenarios for staging                | AC    | CH-08.2    | later  | —    |
+| CH-08.4 | Define minimum Exerp-versus-Pico reconciliation checks                | AC    | CH-08.3    | later  | —    |
+| CH-08.5 | Confirm ownership for failed runs, replay and sign-off                | AC    | CH-08.2    | later  | —    |
+| CH-08.6 | Discover Extractor usage and sunset plan; decide if testing is needed | AC    | —          | later  | —    |
 
 ## Status & Next Action
 

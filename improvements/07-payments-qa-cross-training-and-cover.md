@@ -42,13 +42,13 @@ people: [TMW, JFG]
 
 ## Roadmap
 
-| ID | Step | Owner | Depends on | Status |
-|----|------|-------|------------|--------|
-| IMP-07.1 | Confirm Web responsibilities stable after TMW's move | AC | CH-04.4 | done |
-| IMP-07.2 | Agree shadowing or paired-testing scope with TMW and JFG | AC | IMP-07.1 | next |
-| IMP-07.3 | Agree how Payments requests support without a bottleneck | AC | IMP-07.2 | later |
-| IMP-07.4 | Start bounded Payments shadowing with JFG | TMW | IMP-07.2, IMP-07.3 | later |
-| IMP-07.5 | Follow up with TMW (line manager) and MP (Payments lead) on JFG's Payments KT plan — 2027 | AC | IMP-07.1 | later |
+| ID       | Step                                                                                      | Owner | Depends on         | Status | Card                                                                     |
+|----------|-------------------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------------------------|
+| IMP-07.1 | Confirm Web responsibilities stable after TMW's move                                      | AC    | CH-04.4            | done   | —                                                                        |
+| IMP-07.2 | Agree shadowing or paired-testing scope with TMW and JFG                                  | AC    | IMP-07.1           | next   | Agree Payments shadowing scope with TMW and JFG                          |
+| IMP-07.3 | Agree how Payments requests support without a bottleneck                                  | AC    | IMP-07.2           | later  | —                                                                        |
+| IMP-07.4 | Start bounded Payments shadowing with JFG                                                 | TMW   | IMP-07.2, IMP-07.3 | later  | —                                                                        |
+| IMP-07.5 | Follow up with TMW (line manager) and MP (Payments lead) on JFG's Payments KT plan — 2027 | AC    | IMP-07.1           | later  | Follow up with TMW and MP on JFG Payments knowledge-transfer plan (2027) |
 
 ## Status & Next Action
 
