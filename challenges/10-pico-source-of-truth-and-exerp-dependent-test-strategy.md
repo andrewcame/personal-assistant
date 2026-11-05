@@ -4,12 +4,12 @@ tag: Pico source of truth
 type: challenge
 status: open
 horizon: next
-updated: 2026-11-02
+updated: 2026-11-05
 pillars: [P4, P5]
 focus: [automation]
 jd: [JD-06, JD-09]
 goals: []
-links: [CH-08, IMP-02]
+links: [CH-08, IMP-02, IMP-11]
 people: [LMo]
 ---
 
@@ -157,6 +157,7 @@ Source: [2026-10-13 environments discussion](../context/discovery-calls/2026-10-
 
 ## Related
 
+- [IMP-11 — Backend Test Pack Coverage](../improvements/11-backend-test-pack-coverage.md) — maps gaps in Pico backend service coverage; this challenge defines how much testing should use Exerp versus internal, mocked testing.
 - [2026-09-25 Technical Lead, Pico backend / legacy portal architecture](../context/discovery-calls/2026-09-25-technical-lead-pico-backend-legacy-architecture.md) — source discussion on original Pico intent, static data, test boundaries, and the UK environment need.
 - [2026-09-17 Principal Engineer SRE / Pico backend testing strategy](../context/discovery-calls/2026-09-17-principal-engineer-pico-backend-testing-strategy.md) — evidence for using selected real-Exerp journeys with Pico-owned assertion boundaries.
 - [Improvement 02 - Dynamic Member Creation And Automated Test Data Architecture](../improvements/02-dynamic-member-creation-and-test-data.md) — current initiative addressing static, drifting, and brittle automation data.

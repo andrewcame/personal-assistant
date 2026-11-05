@@ -4,7 +4,7 @@ tag: Backend tests
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-04
+updated: 2026-11-05
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
@@ -56,6 +56,12 @@ people: [TMW, JFG]
 
 - Notion card "List backend pack coverage gaps, starting with the Exerp Assistant" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-11.1 marked done. Next: agree priority gaps and owners (IMP-11.4), once the backend coverage initiative with TMW and JFG is set up (IMP-11.6).
 
+### 2026-11-05
+
+- Follow-up answers from TMW/JFG confirm that the regression work to date was a review identifying general gaps in Exerp Adapter and Basket tests; no merged or delivered changes were confirmed. The Basket pilot remains in progress, with no specific scenario additions or detailed findings confirmed yet.
+- This work overlaps IMP-11.1, which maps missing coverage across Pico backend services, and CH-10, which determines the appropriate balance of Exerp-dependent and internal testing. IMP-11 tracks the coverage gaps; CH-10 defines the test strategy.
+- AC plans to set up the backend test coverage initiative and assign it to TMW and JFG so JFG can add the relevant ticket. IMP-11 remains in progress with TMW and JFG as the people involved.
+
 ## Roadmap
 
 | ID       | Step                                                                                                                          | Owner | Depends on         | Status | Card                                                         |
@@ -70,9 +76,9 @@ people: [TMW, JFG]
 
 ## Status & Next Action
 
-**Status:** In progress (JFG is already working on coverage gaps; initiative to be set up with TMW)
+**Status:** In progress (the coverage review has identified general gaps in Exerp Adapter and Basket tests; the Basket pilot is ongoing, and AC plans to set up the initiative with TMW and JFG)
 
-**Next action:** Set up the backend test coverage initiative with TMW and JFG this week, then confirm what JFG's coverage work has delivered.
+**Next action:** Set up the backend test coverage initiative and assign it to TMW and JFG so JFG can add the relevant ticket.
 
 ## Outcome
 

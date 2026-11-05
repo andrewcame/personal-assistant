@@ -77,30 +77,24 @@ _Last discussed: 2026-09-14_
 
 ## Year-End Evidence (2026)
 
-_Feeds calibration prep. Source for this block: JFG's own notes and TMW's observations (reviewed by TMW), recorded 2026-11-03. Where AC saw the work directly (from working in the same team) it is tagged **AC direct**. Individual dates were not supplied. Objectives are held in the performance system, not here._
+_Feeds calibration prep. Source for this block: JFG's own notes and TMW's observations (reviewed by TMW), updated 2026-11-05 with follow-up answers from TMW/JFG. Where AC saw the work directly (from working in the same team) it is tagged **AC direct**. Individual dates were not supplied; the work below was reported as happening in the last three months. Objectives are held in the performance system, not here._
 
 ### WHAT - impact against objectives
 
-- 2026 (date not recorded) - Coverage ownership - self/TMW - Identified a regression coverage gap in services outside the MXBE/MXWEB/WEB3 account and metadata domains and took ownership of it. Reviewed the services currently excluded from integration coverage, set up meetings with the teams involved to agree scope and dependencies, and mapped regression coverage to delivery tickets for traceability. Basket service is the pilot area.
-- 2026 (date not recorded) - Regression speed and reliability - self/TMW; AC direct on flakiness and test data - Regression runs locally in under 1 minute and in the pipeline in under 3 minutes (earlier run times not recorded; optimisations were made). Added validation checkpoints during test data creation so system state is correct before assertions, health checks and notifications to reduce flakiness, and diagnostics that separate environment/data issues from genuine failures and surface deployment and database issues earlier.
-- 2026 (date not recorded) - Mentoring and knowledge sharing - self/TMW; AC direct - Guided LM through end-to-end testing in Pico and cross-system data flows involving Braze and BGW, including an issue that looked correct at system level but had hidden downstream failures, and the operational risks of BGW retirement. Walked IY (a QA returning to do web work) through the Exerp, Backend and Frontend architecture and showed several ways to create test data.
-- 2026 (date not recorded) - AI-assisted QA workflow (early stage) - self/TMW - Started using GitHub Copilot to review existing test suites, find coverage gaps and draft candidate regression scenarios, validated locally and through peer-reviewed pull requests before adoption. Applied first to Basket service coverage. No completed outcome recorded yet.
+- 2026 (exact date not recorded; work reported in the last three months) - Regression coverage review - self/TMW - Reviewed regression coverage and identified general gaps in Exerp Adapter and Basket tests. No merged or delivered changes were confirmed. The Basket pilot remains in progress; specific scenarios added and detailed gaps found have not yet been confirmed. This work informs [IMP-11 — Backend Test Pack Coverage](../improvements/11-backend-test-pack-coverage.md) and [CH-10 — Pico Source-Of-Truth And Exerp-Dependent Test Strategy](../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md).
+- 2026 (exact date not recorded; work reported in the last three months) - Regression speed and reliability - self/TMW; AC direct on flakiness and test data - Made optimisations to keep tests running quickly and efficiently; before-and-after run times are not known. Added validation checkpoints during test data creation so system state is correct before assertions, health checks and notifications to reduce flakiness, and diagnostics that separate environment/data issues from genuine failures and surface deployment and database issues earlier.
+- 2026 (exact date not recorded; work reported in the last three months) - Mentoring and knowledge sharing - self/TMW; AC direct - Guided LM through end-to-end testing in Pico and cross-system data flows involving Braze and BGW, including an issue that looked correct at system level but had hidden downstream failures, and the operational risks of BGW retirement. Walked IY (a QA returning to do web work) through the Exerp, Backend and Frontend architecture and showed several ways to create test data.
+- 2026 (exact date not recorded; work reported in the last three months) - AI-assisted QA workflow (early stage) - self/TMW - Used GitHub Copilot to review regression tests as part of the Basket pilot, which remains in progress.
 
 ### HOW - behaviours against the values
 
-- 2026 (date not recorded) - V-DIFF - self/TMW - Looked for service coverage gaps beyond his assigned tickets and took accountability for quality across several services rather than one feature area.
-- 2026 (date not recorded) - V-DETAIL - self/TMW; AC direct on test data checks - Checked system state during test data creation and separated environment/data causes from genuine failures; spotted a downstream failure that was not visible at system level.
-- 2026 (date not recorded) - V-SHOULDER - self/TMW; AC direct on mentoring - Set up meetings and stakeholder engagement across teams to agree scope and dependencies; mentored LM and IY.
+- 2026 (exact date not recorded; work reported in the last three months) - V-DIFF - self/TMW - Looked for service coverage gaps beyond his assigned tickets and took accountability for quality across several services rather than one feature area.
+- 2026 (exact date not recorded; work reported in the last three months) - V-DETAIL - self/TMW; AC direct on test data checks - Checked system state during test data creation and separated environment/data causes from genuine failures; spotted a downstream failure that was not visible at system level.
+- 2026 (exact date not recorded; work reported in the last three months) - V-SHOULDER - self/TMW; AC direct on mentoring - Set up meetings and stakeholder engagement across teams to agree scope and dependencies; mentored LM and IY.
 
 ### Development
 
 - No separate development input supplied for 2026. Use the areas already in this profile: communication and visibility, meeting attendance, and speaking up in calls; plus front-end and Portal confidence.
-
-### Open evidence questions
-
-- What has been merged or delivered from the coverage work?
-- What did the Basket pilot produce (scenarios added, gaps found)?
-- Does the backend coverage work feed IMP-11.1 / CH-10?
 
 ## Team Movement Considerations
 
