@@ -21,8 +21,9 @@ Take logged achievements and turn them into a review-ready writeup: map each one
 **Start here (always):** `state/now.md` (current focus, threads, decisions) and `context/role-brief.md` (condensed role, plan, pillars, decision lens). Open the full source files below only when the brief doesn't answer the question — they are large.
 
 - `goals/2026.md` for current goals
-- `context/objective-lenses.md` for People Developer / Value Creator / Business Operator classification
-- `context/review-examples/` as the primary style reference for phrasing, structure, and tone
+- `context/performance-process/objective-lenses.md` for People Developer / Value Creator / Business Operator classification
+- `context/performance-process/performance-cycle.md` for what HR expects in mid-year and EOY reviews (EOY covers objectives in detail, achievements, development feedback, rating, next year)
+- `context/performance-process/review-examples/` as the primary style reference for phrasing, structure, and tone
 - the relevant `achievements/<year>.md` entries and any direct feedback supplied
 
 ## Workflow
@@ -30,7 +31,7 @@ Take logged achievements and turn them into a review-ready writeup: map each one
 0. **Start from the tags** — each achievement's `**Tags:**` line already carries pillar, JD, lens, value, and goal IDs (decoded in `context/_taxonomy.md`). Use them as the first-pass mapping and correct them in the source file if the evidence doesn't support a tag. `python scripts/check.py coverage` shows which pillars and JD items have no evidence yet — flag those as gaps rather than stretching weaker evidence to cover them.
 1. **Map** — for each achievement, identify the smallest relevant set of goals, the objective lens(es) genuinely supported by the evidence, and any core value or review theme it evidences. Note missing context instead of guessing.
 2. **Select** — choose the highest-impact items for the review period rather than repeating every logged task; prefer a few strong bullets over many small ones.
-3. **Draft** — write the review in the user's own voice: mirror structure before style from `context/review-examples/`, keep sentences grounded in concrete work and outcomes, minimise buzzwords, and avoid overexplaining.
+3. **Draft** — write the review in the user's own voice: mirror structure before style from `context/performance-process/review-examples/`, keep sentences grounded in concrete work and outcomes, minimise buzzwords, and avoid overexplaining.
 
 ## Output
 
@@ -42,5 +43,6 @@ Take logged achievements and turn them into a review-ready writeup: map each one
 ## Working Rules
 
 - treat objective lenses as a conceptual check, not wording that must appear in the review
+- mid-year reviews do not confirm ratings, and ratings are shared at the EOY review only; keep ratings out of any draft or file
 - consult a named `team/` profile only for that person's own review, progression, or promotion work
 - keep the wording factual, evidence-based, and easy to copy into a review form

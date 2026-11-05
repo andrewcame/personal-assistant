@@ -23,7 +23,7 @@ Turn role context and evidence into a small set of well-formed goals — either 
 - the challenges and improvements (`challenges/`, `improvements/`, open and closed) and `achievements/<year>.md`, which are the main raw material (see Workflow, step 2)
 - `context/my-role/job-specification.md` and `context/my-role/interview-task.md`
 - `context/my-role/horizons.md` — the live Now / Next / Later plan (30/60/90 files are archived; use only for original intent)
-- `context/role-pillars.md` and `context/objective-lenses.md`
+- `context/role-pillars.md` and `context/performance-process/objective-lenses.md`
 - `context/leadership-direction.md` — apply the Decision Lens defined there
 - recent `context/discovery-calls/` for evidence of what's already emerging
 - the existing `goals/2026.md` so new goals extend rather than duplicate it
@@ -51,7 +51,7 @@ Objectives entered in the People system are light, not essays. Detailed evidence
 
 - **Title:** one line, an action plus the area, with a period or date if relevant (e.g. "Accessibility testing on the Web Portal").
 - **Description:** one plain sentence of intent, then at most 2–4 short bullets of what this covers or what you will deliver. A bullet is a thing to do or produce, not a paragraph.
-- **SMART, lightly:** the specifics, the deliverable and the timeframe show up in the title and bullets (e.g. "Provide monthly reports", "by December"). Don't add measures, targets or percentages AC hasn't agreed; flag the gap instead.
+- **SMART, lightly:** the specifics, the deliverable and the timeframe show up in the title and bullets (e.g. "Provide monthly reports", "by December"). HR's test is Specific, Measurable (including degrees of success: what core looks like versus star) and Timebound/Deliverable; objectives are confirmed in February ([performance-cycle.md](../../context/performance-process/performance-cycle.md)). Don't add measures, targets or percentages AC hasn't agreed; flag the gap instead, including a missing core-versus-star distinction.
 - **Tone:** plain and direct, talking to the person ("so that you benefit from…"). No buzzwords, no bold lead-ins, no success-criteria sections.
 - Link to the related C&I in the repo (not in the objective text), and record the agreed text in the person's `## 2026 Objectives` table.
 

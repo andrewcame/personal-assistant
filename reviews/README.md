@@ -18,12 +18,12 @@ Use the [Review Writer agent](../.github/agents/review-writer.agent.md) to map e
 
 ## Team Reviews And Calibration
 
-For the QA team's end-of-year cycle (calibration session 2026-11-11; reviews completed by 31 December):
+For the QA team's end-of-year cycle (calibration session 2026-11-11; reviews completed by 15 January 2027):
 
 1. Through the year, add dated evidence to each person's **Year-End Evidence** section in `team/<alias>.md`.
 2. Before calibration, run the **calibration-prep** skill: it drafts each person's Top 3 WHAT, Top 3 HOW, development areas, and a suggested matrix position — **in chat only**.
 3. Type ratings, flight risk, succession, and PDP/PIP fields straight into the People team's template. They are never stored in this repo ([why](../team/README.md#writing-standard)).
 4. After calibration, use the Review Writer agent with the agreed outcome to draft each review conversation, spending as much time on development as on looking back.
 
-Process and matrix reference: [context/performance-calibration.md](../context/performance-calibration.md).
+Process and matrix reference: [context/performance-process/performance-calibration.md](../context/performance-process/performance-calibration.md); whole-cycle reference: [performance-cycle.md](../context/performance-process/performance-cycle.md).
 

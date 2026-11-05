@@ -17,7 +17,7 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 ## Context
 
-- Performance calibration session on 2026-11-11; end-of-year reviews completed by 31 December ([process reference](../context/performance-calibration.md)).
+- Performance calibration session on 2026-11-11; end-of-year reviews completed by 15 January 2027 ([process reference](../context/performance-process/performance-calibration.md)).
 - The WHAT rating is judged against agreed objectives, but no 2026 objectives are recorded for the team or for AC, and no Year-End Evidence has been logged in team profiles yet.
 - AC covers calibration for all six permanent QA staff (TMW, DA, MP, KB, JS, JFG).
 
@@ -25,7 +25,7 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 - Every permanent team member has their 2026 objectives recorded and dated WHAT and HOW evidence in their profile before calibration prep starts.
 - AC's own 2026 objectives agreed with GL and recorded in [goals/2026.md](../goals/2026.md) (expected to be microsite-focused).
-- Calibration template pre-populated before 11 November; reviews delivered by 31 December.
+- Calibration template pre-populated before 11 November; reviews delivered by 15 January 2027.
 
 ## Related
 
@@ -68,7 +68,7 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 | IMP-08.3 | Record objectives and evidence in team profiles             | AC    | IMP-08.2   | done   | —                                                        |
 | IMP-08.4 | Run calibration prep; fill People template (w/c 2026-11-02) | AC    | IMP-08.3   | later  | —                                                        |
 | IMP-08.5 | Attend calibration session (2026-11-11)                     | AC    | IMP-08.4   | later  | —                                                        |
-| IMP-08.6 | Deliver end-of-year reviews (by 2026-12-31)                 | AC    | IMP-08.5   | later  | —                                                        |
+| IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                 | AC    | IMP-08.5   | later  | —                                                        |
 | IMP-08.7 | Close open JFG calibration evidence questions               | AC    | —          | doing  | Close open JFG calibration evidence questions            |
 | IMP-08.8 | Monitor direct reports sending How/What/Learning data       | AC    | —          | doing  | Monitor direct reports sending me How/What/Learning data |
 

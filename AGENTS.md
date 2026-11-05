@@ -42,6 +42,7 @@ Open full source files only when these don't answer the question. Prefer folder 
 | `context/_taxonomy.md` | Every valid ID (JD-, P, M, lenses, values, goals, statuses) |
 | `context/people.md` | Alias → role lookup. No real names anywhere |
 | `context/discovery-calls/` | Interpreted call notes with front-matter |
+| `context/performance-process/` | HR's performance process (source decks plus summaries): cycle, objectives, matrix, calibration, objective lenses, review style examples. Start at its `README.md` |
 | `context/leadership-direction.md` | Director-level-and-above themes, newest first |
 | `context/archive/` | Quarterly roll-ups of long context files; don't load unless asked about history |
 | `team/` | Per-person development profiles under the writing standard; **Year-End Evidence** (WHAT/HOW) for team EOY and calibration |

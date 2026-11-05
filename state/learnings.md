@@ -43,6 +43,7 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-11-04 · all · Achievements (`achievements/`) are AC's own, for his EOY and goals; evidence (`team/<alias>.md` Year-End Evidence) is for the team's EOY and calibration. A closing challenge or improvement records which via `outcome:`. · AC's definition.
 - 2026-11-04 · planning · Plan items and job-spec gaps with no record are assumed required: open an improvement or challenge for each; AC closes any already done. Jira delivery is a `jira:` label, not a record. · AC's simplified flow.
 - 2026-11-04 · notion · Card writes (create, retag, column, rename) are applied and listed afterwards; deleting, archiving and moving to Done still need AC's OK. Commits still need AC's OK. · AC relaxed the show-before-write rule for cards.
+- 2026-11-05 · reviews · In calibration prep, date evidence by when the work happened, not when it was recorded, and when a previous manager has left, rely on self/other-reported evidence and note it once. · Evidence was collected in November but covers the full year; the previous manager is not available.
 
 ## Retired
 

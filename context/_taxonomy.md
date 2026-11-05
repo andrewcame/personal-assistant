@@ -81,7 +81,7 @@ Every row in the Now / Next / Later tables of [horizons.md](my-role/horizons.md)
 
 ## Objective Lenses
 
-Source: [objective-lenses.md](objective-lenses.md)
+Source: [objective-lenses.md](performance-process/objective-lenses.md)
 
 | ID | Lens               |
 |----|--------------------|
