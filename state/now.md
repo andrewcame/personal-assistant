@@ -2,7 +2,7 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it to one screen: only **Upcoming** and **Recent Decisions** live here. Everything else belongs on a record: progress in its log, tasks as Notion cards or roadmap steps, waiting-on as roadmap steps owned by the other person._
 
-**Updated:** 2026-11-04
+**Updated:** 2026-11-05
 
 _Format: the dashboard reads **Upcoming** only (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). Focus comes from Notion To Do cards._
 
@@ -12,6 +12,7 @@ _Format: the dashboard reads **Upcoming** only (one point per bullet, starting w
 - IMP-08 Objectives & reviews — GL objectives meeting booked (26 Oct); date to confirm.
 - IMP-08 Objectives & reviews — calibration session on 2026-11-11.
 - IMP-08 Objectives & reviews — EOY reviews due by 2027-01-15.
+- IMP-10 BrowserStack — renewal confirmed for 2026-11-22; agree the lower-cost plan before renewal.
 - General — Notion Done clear-out first due 2026-11-06 (last clear-out: none yet).
 - General — next weekly review on Friday 2026-11-06.
 
