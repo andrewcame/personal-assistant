@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-04
+updated: 2026-11-05
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -59,6 +59,12 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 - Notion card "Record objectives in team profiles" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-08.3 marked done. IMP-08.2 (objectives calls) and IMP-08.4 (calibration prep) remain open.
 
+### 2026-11-05
+
+- AC supplied the objective comments confirmed with DA: web rollout objective closed as met, AI work ongoing, and pico.frontend reliability improvements recorded in [DA's profile](../team/da.md). AC subsequently confirmed adding the dynamic Portal member creation objective to the performance system; the final wording is recorded in DA's profile.
+- Only KB's top 3 WHAT/HOW and improvement/development submission has been received so far. DA's, TMW's and MP's remain outstanding on the existing card "Monitor direct reports sending me How/What/Learning data" (roadmap IMP-08.8); objective comments are not a substitute for those submissions.
+- AC confirmed the remaining team submissions will feed the calibration-prep skill alongside objectives, comments and existing evidence, to generate the calibration report on Monday 2026-11-09 ahead of the 11 November session. Draft output stays in chat for transfer to the official People template; ratings and matrix positions are never saved in the repo.
+
 ## Roadmap
 
 | ID       | Step                                                        | Owner | Depends on | Status | Card                                                     |
@@ -76,7 +82,7 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 **Status:** In progress
 
-**Next action:** Hold the objectives call(s) and prepare the team's calibration stats (w/c 2026-11-02), recording the outcome in each person's profile under the [people-records standard](../team/README.md#writing-standard). Ratings and sensitive fields go straight into the People template, never here.
+**Next action:** Gather the remaining top 3 WHAT/HOW and improvement/development submissions, then run calibration-prep on 2026-11-09 using the objectives, comments and evidence in team profiles under the [people-records standard](../team/README.md#writing-standard). Flag any missing submissions rather than filling gaps by inference. Ratings and sensitive fields go straight into the People template, never here.
 
 ## Outcome
 

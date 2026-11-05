@@ -11,7 +11,7 @@ _Written to the [people-records standard](README.md#writing-standard): dated, ob
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-10-19                    |
+| Profile last reviewed  | 2026-11-05                    |
 
 ## Experience And Specialism
 
@@ -59,26 +59,32 @@ The Lead QA specification's flow-discipline clause ("stepping into whatever is n
 
 ## 2026 Objectives
 
-_As held in the performance system, recorded 2026-10-19. The WHAT rating is judged against these. Stable IDs: `DA-O<n>`._
+_As held in the performance system, recorded 2026-10-19; comments confirmed with DA and supplied by AC on 2026-11-05. Stable IDs: `DA-O<n>`: O2 is reliability and O3 is AI-generated automation, regardless of the order in the latest update. AC confirmed adding DA-O4 to the performance system on 2026-11-05; final wording below._
 
-| ID     | Objective                                                                           | Agreed                   | Status                          |
-|--------|-------------------------------------------------------------------------------------|--------------------------|---------------------------------|
-| DA-O1  | Drive high quality delivery of the web experience across key market rollouts        | 2026 (date not recorded) | Not assessed (no update logged) |
-| DA-O2  | Leverage automation to support early defect identification and incident prevention  | 2026 (date not recorded) | Not assessed (no update logged) |
-| DA-O3  | Adapt/extend ByteSmith so AI can start to generate automation tests                 | 2026 (date not recorded) | Not assessed (no update logged) |
+| ID      | Objective                                                                           | Agreed                    | Status                           |
+|---------|-------------------------------------------------------------------------------------|---------------------------|----------------------------------|
+| DA-O1   | Drive high quality delivery of the web experience across key market rollouts        | 2026 (date not recorded)  | Closed as met, 2026-11-05        |
+| DA-O2   | Leverage automation to support early defect identification and incident prevention  | 2026 (date not recorded)  | Comment added 2026-11-05         |
+| DA-O3   | Adapt/extend ByteSmith so AI can start to generate automation tests                 | 2026 (date not recorded)  | Ongoing; comment 2026-11-05      |
+| DA-O4   | Deliver dynamic member creation for reliable Portal automation                      | Added 2026-11-05          | Added; no comment yet            |
 
 ### DA-O1 — Web experience delivery across key market rollouts (Jan–Jun 2026)
 
 - Provide QA ownership of the web front-end member experience, including leading the DK/CH rollouts and overseeing UK CoP automation testing.
 - Ensure effective development, clear objectives and successful outcomes for the team.
-- Updates logged in the system: none.
+- Comment (confirmed with DA; supplied by AC, 2026-11-05): DA led the DK/CH QA activity, ensuring coverage in the front-end test repository and QA for the go-lives. DK was subsequently descoped as the business pivoted towards sunsetting the microsites. The team had clear objectives to track the work. Objective closed as met.
 
 ### DA-O2 — Automation for early defect identification and incident prevention (Mar–Jul 2026)
 
 - Using the AI / ByteSmith approach and next-generation automation techniques, take end-to-end ownership of testing to actively improve Pico system reliability.
 - Develop and implement a QA strategy to improve the current approach, for example increasing sharding to 100% for smoke tests in production deploy pipelines, including maturing features such as CoP/rejoiners, and ensuring the large daily automation pack reliably catches problems.
 - Communicate confidently and professionally with key cross-functional stakeholders to build trust that testing identifies issues early.
-- Updates logged in the system: none.
+- Comment (confirmed with DA; supplied by AC, 2026-11-05): the pico.frontend pack has:
+  - agentic AI skills and agent files to guide setup and standards
+  - an appropriate split of staging and production tests, scheduled as needed
+  - additional segmentation and pricing edge-case coverage in response to production issues
+  - Exerp checks as part of the Join flow
+- Evidence gap: these updates do not confirm the 100% smoke-test sharding target or quantify the daily pack's reliability.
 
 ### DA-O3 — ByteSmith AI-generated automation (Jan–Nov 2026)
 
@@ -87,7 +93,19 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Work with the AI Chapter (especially GH) to broaden Playwright coverage via the QA Chapter.
 - Coach, mentor and manage others in the QA team to succeed in this space.
 - Target: a minimum 10% increase in AI-generated Playwright coverage for the large pack and smoke test packs by Q4 2026.
-- Updates logged in the system: none.
+- Comment (confirmed with DA; supplied by AC, 2026-11-05): this remains ongoing as the AI landscape changes. Creating, adapting and updating skills and agent files addresses problems encountered; documenting new AI features supports team use and onboarding. DA also onboarded another team member to the pico.frontend pack, including its AI skills and conventions.
+- Evidence gap: the baseline and measured change against the 10% AI-generated coverage target have not been supplied.
+
+### DA-O4 — Deliver dynamic member creation for reliable Portal automation
+
+Lead the dynamic member creation initiative so Portal automation can run consistently and support the microsite sunset mission.
+
+- Deliver the agreed Portal member creation scope.
+- Enable reliable, consistent creation of Portal members, with clear error handling when member setup fails.
+- Document the approach in the repo with appropriate AI skills and agent updates.
+- Support the QA team in using it on new tests as required.
+- Context: AC confirmed adding this wording to the performance system on 2026-11-05. No timeframe or core-versus-stretch measures supplied. Related: [IMP-02 Member data — Dynamic Member Creation And Automated Test Data Architecture](../improvements/02-dynamic-member-creation-and-test-data.md), pillars P5 and P4. Objective lens: Value Creator / Business Operator.
+- Comment: none yet; delivery is still in progress.
 
 ## Observations
 
@@ -149,6 +167,7 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 
 _Operational actions live in Notion._
 
+- 2026-11-05: DA's top 3 WHAT, top 3 HOW tied to PG values, and improvement/development areas are still awaited. Track through the existing Notion card "Monitor direct reports sending me How/What/Learning data" ([IMP-08 Objectives & reviews](../improvements/08-2026-objectives-calibration-and-eoy-reviews.md), roadmap step IMP-08.8).
 - Agree the Staff QA Engineer evidence plan and review it through QA Lead Sync.
 - Review INI-01 progress and Web cover against the agreed expectations.
 - Align test-data strategy with the Principal Engineer.

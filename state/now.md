@@ -11,6 +11,7 @@ _Format: the dashboard reads **Upcoming** only (one point per bullet, starting w
 - IMP-08 Objectives & reviews — team objectives calls and calibration prep, w/c 2026-11-02.
 - IMP-08 Objectives & reviews — GL objectives meeting booked (26 Oct); date to confirm.
 - IMP-08 Objectives & reviews — calibration session on 2026-11-11.
+- IMP-08 Objectives & reviews — generate calibration prep in chat on 2026-11-09 using team submissions, objective comments and existing evidence.
 - IMP-08 Objectives & reviews — EOY reviews due by 2027-01-15.
 - IMP-10 BrowserStack — renewal confirmed for 2026-11-22; agree the lower-cost plan before renewal.
 - General — Notion Done clear-out first due 2026-11-06 (last clear-out: none yet).
