@@ -162,7 +162,7 @@ _From the Ideas triage on 2026-10-23 ([ideas log](../state/ideas-log.md))._
 
 ### 2026-11-04
 
-- Notion card "Set up Report Portal access with PDEX; compare with Claude reports" found Done in the 2026-11-04 sync (Flow 6). Roadmap IMP-04.8 marked done. The comparison outcome is not yet recorded here; AC to add it.
+- Notion card "Set up Report Portal access with PDEX; compare with Claude reports" found Done in the 2026-11-04 sync (Flow 6). The comparison has not happened, so IMP-04.8 stays open, tracked on the card "Learn how to setup Report Portal for automation metrics" (IMP-04, To Do).
 
 ## Roadmap
 
@@ -175,7 +175,7 @@ _From the Ideas triage on 2026-10-23 ([ideas log](../state/ideas-log.md))._
 | IMP-04.5  | Vibe-code Jira metric tool for gaps                                                             | AC    | IMP-04.3           | later  | Vibe-code metric tool using Jira API                                 |
 | IMP-04.6  | Produce one-team proof-of-concept baseline                                                      | AC    | IMP-04.3, IMP-04.4 | later  | —                                                                    |
 | IMP-04.7  | Agree metrics home alongside the Confluence tidy-up                                             | AC    | IMP-06.2           | later  | —                                                                    |
-| IMP-04.8  | Set up Report Portal access with PDEX; compare with Claude reports                              | AC    | —                  | done   | —                                                                    |
+| IMP-04.8  | Set up Report Portal access with PDEX; compare with Claude reports                              | AC    | —                  | doing  | —                                                                    |
 | IMP-04.9  | Build a separate Jira dashboard from the JQL queries                                            | AC    | IMP-04.3           | later  | —                                                                    |
 | IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people | AC    | IMP-04.3           | later  | —                                                                    |
 | IMP-04.11 | Learn how to set up Report Portal for automation metrics                                        | AC    | —                  | doing  | Learn how to setup Report Portal for automation metrics              |
