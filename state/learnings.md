@@ -45,6 +45,9 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 - 2026-11-04 · notion · Card writes (create, retag, column, rename) are applied and listed afterwards; deleting, archiving and moving to Done still need AC's OK. Commits still need AC's OK. · AC relaxed the show-before-write rule for cards.
 - 2026-11-05 · reviews · In calibration prep, date evidence by when the work happened, not when it was recorded, and when a previous manager has left, rely on self/other-reported evidence and note it once. · Evidence was collected in November but covers the full year; the previous manager is not available.
 
+- 2026-11-06 · notion · Long-open (14+ days) card tracking applies to To Do cards only; Backlog cards are never flagged as long-open. · AC correction in the Friday review.
+- 2026-11-06 · chat · When reporting to AC in chat, always give each IMP/CH record and each Notion card with its tag or name (e.g. IMP-08 Objectives & reviews), never a bare ID. · AC finds bare IDs hard to follow.
+
 ## Retired
 
 _Learnings consolidated into agent/skill files or superseded. Keep the line and say where it went._

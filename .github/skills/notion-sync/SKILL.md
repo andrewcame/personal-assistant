@@ -54,7 +54,7 @@ Read [`context/notion-boards.md`](../../../context/notion-boards.md) first. It l
 1. Query the To-Do data source for cards that are open (Backlog, To Do) or were completed in the last 7 days. For tracked cards (below), also fetch the card body — AC may keep detail there rather than in the title.
 2. Split them:
    - **Weekly churn:** untagged cards opened and closed within the week. Report a count and a one-line flavour only.
-   - **Tracked:** cards tagged with a record ID, or open for more than 14 days.
+   - **Tracked:** cards tagged with a record ID, or in To Do for more than 14 days (Backlog cards are never flagged as long-open).
 3. For tracked cards, propose: progress or blocker lines for the matching record; a possible achievement if a meaningful outcome completed (ask before logging); a nudge if a card has been open for a long time with no movement.
 4. Apply repo changes only after AC confirms; they follow the normal show-then-commit rule.
 

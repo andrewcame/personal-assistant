@@ -4,7 +4,7 @@ tag: QA in AI delivery
 type: challenge
 status: open
 horizon: later
-updated: 2026-11-02
+updated: 2026-11-06
 pillars: [P3, P6, P9]
 focus: [ownership]
 jd: [JD-07, JD-13]
@@ -153,19 +153,23 @@ _From two reads logged as [industry signals](../context/industry-signals.md): Na
 - **Mid-career risk:** one account says new starters and experts benefit from AI and the mid-career group is most exposed. Unsettled, and it cuts across the junior-pipeline worry in the team and capability questions above.
 - **Own load:** supervising several agents is reported as exhausting; keep an eye on team load as AI-assisted work scales.
 
+## 2026-11-06 Update — Discovery Card Closed
+
+- AC closed the Notion card "Read QA in AI-paired delivery research brief; plan discovery chats": this challenge sits in Later, and Later steps need no card. CH-11.7 set to later; a card is created when the challenge is promoted to Next or Now.
+
 ## Roadmap
 
-| ID      | Step                                                                                               | Owner | Depends on       | Status | Card                                                               |
-|---------|----------------------------------------------------------------------------------------------------|-------|------------------|--------|--------------------------------------------------------------------|
-| CH-11.1 | Raise QA engagement model at leadership call                                                       | AC    | —                | done   | —                                                                  |
-| CH-11.2 | Take three-touchpoint model to the QA lead sync                                                    | AC    | CH-11.7          | later  | —                                                                  |
-| CH-11.3 | Argue environments and test data as precondition with GL                                           | AC    | CH-11.7          | later  | —                                                                  |
-| CH-11.4 | Trial mutation testing on one core domain area                                                     | AC    | —                | later  | —                                                                  |
-| CH-11.5 | Test slice sizing on the first AI-paired initiative                                                | AC    | CH-11.2, CH-09.8 | later  | —                                                                  |
-| CH-11.6 | Agree QA engagement model for AI-paired delivery                                                   | AC    | CH-11.4, CH-11.5 | later  | —                                                                  |
-| CH-11.7 | Own discovery: read research brief, then talk to engineers and leads                               | AC    | —                | doing  | Read QA in AI-paired delivery research brief; plan discovery chats |
-| CH-11.8 | Agree interim model: QA does one e2e ticket once coding is done, with input throughout (tentative) | AC    | —                | done   | —                                                                  |
-| CH-11.9 | Automate the e2e ticket using dynamic Portal member creation                                       | AC    | CH-11.8          | later  | —                                                                  |
+| ID      | Step                                                                                               | Owner | Depends on       | Status | Card |
+|---------|----------------------------------------------------------------------------------------------------|-------|------------------|--------|------|
+| CH-11.1 | Raise QA engagement model at leadership call                                                       | AC    | —                | done   | —    |
+| CH-11.2 | Take three-touchpoint model to the QA lead sync                                                    | AC    | CH-11.7          | later  | —    |
+| CH-11.3 | Argue environments and test data as precondition with GL                                           | AC    | CH-11.7          | later  | —    |
+| CH-11.4 | Trial mutation testing on one core domain area                                                     | AC    | —                | later  | —    |
+| CH-11.5 | Test slice sizing on the first AI-paired initiative                                                | AC    | CH-11.2, CH-09.8 | later  | —    |
+| CH-11.6 | Agree QA engagement model for AI-paired delivery                                                   | AC    | CH-11.4, CH-11.5 | later  | —    |
+| CH-11.7 | Own discovery: read research brief, then talk to engineers and leads                               | AC    | —                | later  | —    |
+| CH-11.8 | Agree interim model: QA does one e2e ticket once coding is done, with input throughout (tentative) | AC    | —                | done   | —    |
+| CH-11.9 | Automate the e2e ticket using dynamic Portal member creation                                       | AC    | CH-11.8          | later  | —    |
 
 ## Status & Next Action
 

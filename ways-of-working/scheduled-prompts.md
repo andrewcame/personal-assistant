@@ -32,7 +32,7 @@ Common opening, used by all three:
 >    - **Suggested top 3** for the week, anchored on Now, each tied to a challenge or improvement ID and an open To Do card (name the card).
 >    - **Needs attention and Focus**, from `python scripts/report.py --week` (compact text; do not open the HTML or JSON): challenges/improvements with no to-do, and open to-dos by challenge/improvement. For steps owned by others and which tasks are not yet on Notion, use `python scripts/report.py --tasks`.
 >    - **Dated items this week** (the UPCOMING lines of the same output).
->    - Stale Now records; cards that look stuck (open more than 14 days).
+>    - Stale Now records; cards that look stuck (in To Do more than 14 days; Backlog cards are not counted).
 >    - Every ID, step or card you cite must come from a Notion card or a repo roadmap row. Name the source in brackets, e.g. `(card: "…")` or `(roadmap IMP-02.4, DA)`.
 >    - At most one question for AC.
 > 4. Apply Done-card changes via Flow 6 (AC's own Notion move is the approval). Propose any other `state/now.md` change (Upcoming, narrative focus) and do not write it until AC confirms. Do not commit.

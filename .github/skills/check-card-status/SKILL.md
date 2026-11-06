@@ -26,7 +26,7 @@ Rules that apply throughout: only the two boards in `context/notion-boards.md` (
    - **Wrong column** — a card for a Now record's step in `Backlog`, or for a Next or Later record's step in `To Do`. "To Do" means in progress.
    - **Wrong or stale tag** — tagged to a closed, dropped or retired (INI-) record, or a tag that doesn't match the step.
    - **Unmapped** — no `Record` value, or only `Admin`. Fine for BAU; ask whether any belongs to a record.
-   - **Stale** — open more than 14 days with no movement (use `created` from the snapshot).
+   - **Stale** — in To Do (not Backlog) more than 14 days with no movement (use `created` from the snapshot).
    - **Duplicate or drift** — two cards for the same step, or a title that no longer matches its step.
    - **Naming** — a card for someone else's step not titled "Monitor …", an internal step ID in a title, a `[CATEGORY]` prefix.
    - **Overloaded** — a record with many To Do cards. Not an error (AC adds cards as he thinks of them); just show the count.

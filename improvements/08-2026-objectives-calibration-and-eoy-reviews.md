@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-05
+updated: 2026-11-06
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -65,18 +65,23 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 - Only KB's top 3 WHAT/HOW and improvement/development submission has been received so far. DA's, TMW's and MP's remain outstanding on the existing card "Monitor direct reports sending me How/What/Learning data" (roadmap IMP-08.8); objective comments are not a substitute for those submissions.
 - AC confirmed the remaining team submissions will feed the calibration-prep skill alongside objectives, comments and existing evidence, to generate the calibration report on Monday 2026-11-09 ahead of the 11 November session. Draft output stays in chat for transfer to the official People template; ratings and matrix positions are never saved in the repo.
 
+### 2026-11-06
+
+- Notion card "Hold objectives alignment calls with the team" found Done (weekly review, Flow 6). IMP-08.2 marked done. IMP-08.4 (calibration prep) promoted to doing; card "Generate calibration prep in chat and fill the People template" created, due 2026-11-09.
+- Notion card "Close open JFG calibration evidence questions" found Done. IMP-08.7 marked done: the answers to the three calibration questions sharpen JFG's Year-End Evidence in [his profile](../team/jfg.md) (updated 2026-11-05); no separate achievement is logged.
+
 ## Roadmap
 
-| ID       | Step                                                        | Owner | Depends on | Status | Card                                                     |
-|----------|-------------------------------------------------------------|-------|------------|--------|----------------------------------------------------------|
-| IMP-08.1 | Book objectives meeting with GL                             | AC    | —          | done   | —                                                        |
-| IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02)        | AC    | —          | doing  | Hold objectives alignment calls with the team            |
-| IMP-08.3 | Record objectives and evidence in team profiles             | AC    | IMP-08.2   | done   | —                                                        |
-| IMP-08.4 | Run calibration prep; fill People template (w/c 2026-11-02) | AC    | IMP-08.3   | later  | —                                                        |
-| IMP-08.5 | Attend calibration session (2026-11-11)                     | AC    | IMP-08.4   | later  | —                                                        |
-| IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                 | AC    | IMP-08.5   | later  | —                                                        |
-| IMP-08.7 | Close open JFG calibration evidence questions               | AC    | —          | doing  | Close open JFG calibration evidence questions            |
-| IMP-08.8 | Monitor direct reports sending How/What/Learning data       | AC    | —          | doing  | Monitor direct reports sending me How/What/Learning data |
+| ID       | Step                                                               | Owner | Depends on | Status | Card                                                           |
+|----------|--------------------------------------------------------------------|-------|------------|--------|----------------------------------------------------------------|
+| IMP-08.1 | Book objectives meeting with GL                                    | AC    | —          | done   | —                                                              |
+| IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02)               | AC    | —          | done   | —                                                              |
+| IMP-08.3 | Record objectives and evidence in team profiles                    | AC    | IMP-08.2   | done   | —                                                              |
+| IMP-08.4 | Run calibration prep in chat; fill People template (by 2026-11-09) | AC    | IMP-08.3   | doing  | Generate calibration prep in chat and fill the People template |
+| IMP-08.5 | Attend calibration session (2026-11-11)                            | AC    | IMP-08.4   | later  | —                                                              |
+| IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                        | AC    | IMP-08.5   | later  | —                                                              |
+| IMP-08.7 | Close open JFG calibration evidence questions                      | AC    | —          | done   | —                                                              |
+| IMP-08.8 | Monitor direct reports sending How/What/Learning data              | AC    | —          | doing  | Monitor direct reports sending me How/What/Learning data       |
 
 ## Status & Next Action
 
