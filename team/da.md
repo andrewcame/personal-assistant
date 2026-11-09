@@ -158,16 +158,31 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 ### WHAT — impact against objectives
 
 - 2026-10-27 — DA-O1 — manager — Owns Web QA alongside TMW, broadly DA the front end and TMW the backend side. This resolved the Web QA capacity and accountability challenge (closed 2026-10-27) — [CH-04](../challenges/04-web-qa-capacity-and-accountability.md), [achievement](../achievements/2026.md)
+- 2026 (date not recorded) — DA-O2 — self — A new segment-pricing check found that production student join pages were showing staging prices, leaving customers stuck mid-join (WEB-805). DA reproduced it on production and traced it to a cache shared between production and staging; it was fixed the next day.
+- 2026 (from 2026-10-08) — DA-O4 — self — Leading Dynamic Member Creation (WEB-856). DA showed a fresh test member can be created through the APIs in about 10-15 seconds, against up to a minute through the UI, which allows Portal journeys such as cancellation to be automated without shared test accounts — [IMP-02](../improvements/02-dynamic-member-creation-and-test-data.md)
+- 2026 (date not recorded) — DA-O2 — self — Widened and stabilised the test suite: brought CH coverage in line with GB, added Exerp sale verification, added estate-wide price and joining-fee guards, replaced hard-coded gym data with backend lookups, added feature-file linting, fixed CI runner issues, and set up AI tooling for the team (also relevant to DA-O3).
 
 ### HOW — behaviours against the values
 
--
+- 2026 — V-DETAIL — self — Raises issues with clear evidence, the root cause and a suggested fix so they can be acted on quickly (WEB-805 above).
+- 2026 — V-SHOULDER — self — Takes review feedback on board and changes approach where it makes sense, for example adding duplicate-payment safeguards after a code review; pushes back with evidence where it does not.
+- 2026 — V-DIFF — self — Looks for gaps proactively (flaky test tracking, accessibility, visual regression) and adopts new tools early that help the team.
+
+### Improvement and development areas (from DA, 2026-11-09)
+
+- Follow through on tech debt: prioritise and deliver the most valuable items from the improvement backlog DA has raised.
+- Align earlier: agree the approach with the relevant teams before building, to reduce rework.
+- Work in smaller increments: story-sized PRs from the start so reviews are quicker and easier.
+
+### Manager's view of development areas
+
+- To be added by AC (card due 2026-11-10).
 
 ## Open Follow-Ups
 
 _Operational actions live in Notion._
 
-- 2026-11-05: DA's top 3 WHAT, top 3 HOW tied to PG values, and improvement/development areas are still awaited. Track through the existing Notion card "Monitor direct reports sending me How/What/Learning data" ([IMP-08 Objectives & reviews](../improvements/08-2026-objectives-calibration-and-eoy-reviews.md), roadmap step IMP-08.8).
+- 2026-11-09: DA's top 3 WHAT, top 3 HOW and improvement areas received and recorded above. Verify the WEB-805 and WEB-856 details (dates, timings) in Jira before they are used in calibration or the review.
 - Agree the Staff QA Engineer evidence plan and review it through QA Lead Sync.
 - Review INI-01 progress and Web cover against the agreed expectations.
 - Align test-data strategy with the Principal Engineer.

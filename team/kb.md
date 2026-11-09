@@ -162,6 +162,30 @@ _As held in the performance system, recorded 2026-10-19. The WHAT rating is judg
 - Gaps or areas needing more evidence:
 - Promotion discussion status: Not discussed
 
+## Year-End Evidence (2026)
+
+_Feeds calibration prep and the end-of-year review. Source: **self** (what they tell AC), **manager** (what AC saw) or **line-manager** (see team/README.md). Received from KB 2026-11-09 (earlier than the 2026-11-05 log note; first copy was not filed); dates not supplied and impact not yet quantified._
+
+### WHAT — impact against objectives
+
+- 2026 (date not recorded) — KB-O1 — self — Took over all testing for the CoP platform in the Comms team from a colleague. Investigated automation and produced a proposal. (The platform was later deprioritised in favour of segmented journeys; see KB-O1.)
+- 2026 (date not recorded) — (Web Team Two work; not covered by a 2026 objective) — self — Web Team Two segmented student journeys: added automation covering a high-risk area, including "unique" applications.
+- 2026 (date not recorded) — KB-O3 — self — AI enablement through local tooling adoption and AI-assisted test creation and code generation. Related evidence is under KB-O3 above (100% AI test case generation in the Comms team; AI skills in his personal tooling repo).
+
+### HOW — behaviours against the values
+
+- 2026 (date not recorded) — V-DETAIL — self — Found a major issue around dates in UAT for GCM, and more recently raised an issue in activity data work (KB's note: "SDET"; detail to confirm).
+- 2026 — V-SHOULDER — self — Moved between teams as needed (Integration, Comms, Web Team Two, then Mobile App on 2026-10-08) and added value in each.
+- 2026 — V-WIN — self — Willing to move between tech stacks and learn new ones.
+
+### Improvement and development areas (from KB, 2026-11-09)
+
+- AI tooling.
+
+### Manager's view of development areas
+
+- To be added by AC (card due 2026-11-10).
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Possible interest in a Lead specialist path; now moved to Mobile App as of 2026-10-08. In the 2026-09 conversation, Payments was not a preferred direction; confirm whether his preferences have changed.
@@ -175,3 +199,4 @@ _Keep operational actions in Notion; link or summarize only the context needed h
 - Confirm KB's current backend test contribution and the status of CEP/GCM 2 coverage.
 - Validate the development/staging ecosystem and preview-environment problem with engineering and other QA conversations.
 - Discuss the evidence and route for a Lead specialist progression path with DA and QA leadership.
+- Confirm dates and detail for KB's 2026 Year-End Evidence (GCM UAT date issue, activity data issue, CoP proposal).

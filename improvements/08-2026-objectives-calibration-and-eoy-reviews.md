@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-06
+updated: 2026-11-09
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -70,6 +70,11 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 - Notion card "Hold objectives alignment calls with the team" found Done (weekly review, Flow 6). IMP-08.2 marked done. IMP-08.4 (calibration prep) promoted to doing; card "Generate calibration prep in chat and fill the People template" created, due 2026-11-09.
 - Notion card "Close open JFG calibration evidence questions" found Done. IMP-08.7 marked done: the answers to the three calibration questions sharpen JFG's Year-End Evidence in [his profile](../team/jfg.md) (updated 2026-11-05); no separate achievement is logged.
 
+### 2026-11-09
+
+- MP's and DA's top 3 WHAT/HOW and improvement/development submissions received and recorded in [MP's](../team/mp.md) and [DA's](../team/da.md) profiles (figures and Jira details still to verify). Still waiting on JS and TMW; the IMP-08.8 card is renamed "Monitor JS and TMW sending me How/What/Learning data".
+- Development areas in the profiles are the team member's own wording. New step IMP-08.9 and card "Add my view of development areas to all six team profiles" (due 2026-11-10): AC adds his own interpretation under a "Manager's view of development areas" heading in each profile (placeholders added to all six), so it is in before the calibration prep runs.
+
 ## Roadmap
 
 | ID       | Step                                                               | Owner | Depends on | Status | Card                                                           |
@@ -81,7 +86,8 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 | IMP-08.5 | Attend calibration session (2026-11-11)                            | AC    | IMP-08.4   | later  | —                                                              |
 | IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                        | AC    | IMP-08.5   | later  | —                                                              |
 | IMP-08.7 | Close open JFG calibration evidence questions                      | AC    | —          | done   | —                                                              |
-| IMP-08.8 | Monitor direct reports sending How/What/Learning data              | AC    | —          | doing  | Monitor direct reports sending me How/What/Learning data       |
+| IMP-08.8 | Monitor JS and TMW sending How/What/Learning data                 | AC    | —          | doing  | Monitor JS and TMW sending me How/What/Learning data           |
+| IMP-08.9 | Add my view of development areas to team profiles (by 2026-11-10) | AC    | —          | doing  | Add my view of development areas to all six team profiles      |
 
 ## Status & Next Action
 

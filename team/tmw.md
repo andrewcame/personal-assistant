@@ -182,6 +182,10 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 
 -
 
+### Manager's view of development areas
+
+- To be added by AC (card due 2026-11-10).
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Has moved to Website (Web Team Two) and said she is positive about the change.

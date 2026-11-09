@@ -79,6 +79,12 @@ _Last discussed: 2026-09-14_
 - Gaps or areas needing more evidence:
 - Promotion discussion status: Not discussed
 
+## Year-End Evidence (2026)
+
+### Manager's view of development areas
+
+- To be added by AC (card due 2026-11-10).
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Wants to stay close to web and user experience; does not want the QA manager role. Interested in a supportive Lead QA Engineer path and potentially a leadership cohort.

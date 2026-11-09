@@ -96,6 +96,10 @@ _Feeds calibration prep. Source for this block: JFG's own notes and TMW's observ
 
 - No separate development input supplied for 2026. Use the areas already in this profile: communication and visibility, meeting attendance, and speaking up in calls; plus front-end and Portal confidence.
 
+### Manager's view of development areas
+
+- To be added by AC (card due 2026-11-10).
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Wants Senior QA Engineer progression. Prefers backend work but is willing to develop in web front end and Portal.

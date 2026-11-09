@@ -152,6 +152,31 @@ _As held in the performance system, recorded 2026-10-19; comments refreshed 2026
 - Gaps or areas needing more evidence:
 - Promotion discussion status: Not discussed
 
+## Year-End Evidence (2026)
+
+_Feeds calibration prep and the end-of-year review. Source: **self** (what they tell AC), **manager** (what AC saw) or **line-manager** (see team/README.md). Received from MP 2026-11-09; figures are MP's own and not yet verified against Jira._
+
+### WHAT — impact against objectives
+
+- 2026 (year to date) — self — QA'd over 110 tickets this year, around 40% of which were reopened, so a substantial number of defects were caught before production. Count to be verified in Jira.
+- 2026 (year to date) — self — Kept on top of the workload after the Payments QA team went from two QAs to one, with limited product team availability and input over the year.
+- 2026-08 — self — Peak workload while working alone on Payments QA, with higher developer throughput from AI use: five initiatives or urgent bug fixes at once (CH race condition, Apple MPAN, deduction day in Pico, co-branded cards, session state).
+- 2026 — MP-O4 — self — Regular use of AI in the QA phase to improve efficiency; examples are listed under MP-O4 above (Pico flow research, PAYTEAM-82 test migration, PAYTEAM-292 root cause, PR-to-test-gap skill). Further examples to follow from MP.
+
+### HOW — behaviours against the values
+
+- 2026 — V-DETAIL — self — Kept standards high under tight deadlines and reduced QA capacity, continuing to push back on poor quality.
+- 2026 — V-SHOULDER — self — Found a gap in team knowledge of how Pico handles the payment-attempted event (and so in test coverage). Investigated it, documented it in Miro (https://miro.com/app/board/uXjVH5QJF7I=/) and shared it with the QA and dev teams to spread knowledge and reduce regression risk. Relates to MP-O1.
+- 2026 — V-DETAIL — self — Investigates, challenges and improves existing test coverage rather than accepting it. Examples: PAYTEAM-51, 61, 195, 281, 282, 283, 284; PAY-3571, 3588, 3921.
+
+### Improvement and development areas
+
+- MP wants to use AI better in the QA phase to improve efficiency without introducing cognitive debt or unmaintainable solutions (matches MP's MP-O4 update 2).
+
+### Manager's view of development areas
+
+- To be added by AC (card due 2026-11-10).
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Prefers specialist contribution and currently does not want direct reports.
@@ -180,3 +205,4 @@ _Keep operational actions in Notion; link or summarize only the context needed h
 - Complete Payments domain review with MP.
 - Consider how another QA would be supported if Payments capacity changes.
 - Explore a suitable route for MP to build confidence in the newer Pico ecosystem.
+- Verify MP's 2026 ticket figures (110+ QA'd, ~40% reopened) in Jira; MP to add further AI examples.
