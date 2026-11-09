@@ -2,13 +2,13 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it to one screen: only **Upcoming** and **Recent Decisions** live here. Everything else belongs on a record: progress in its log, tasks as Notion cards or roadmap steps, waiting-on as roadmap steps owned by the other person._
 
-**Updated:** 2026-11-06
+**Updated:** 2026-11-09
 
 _Format: the dashboard reads **Upcoming** only (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). Focus comes from Notion To Do cards._
 
 ## Upcoming
 
-- IMP-08 Objectives & reviews — generate calibration prep in chat on 2026-11-09 using team submissions, objective comments and existing evidence.
+- IMP-08 Objectives & reviews — generate calibration prep in chat, run manually once all team data is in and no later than 2026-11-11 (HR form populated by end of 2026-11-11).
 - IMP-08 Objectives & reviews — calibration session on 2026-11-11.
 - IMP-08 Objectives & reviews — EOY reviews due by 2027-01-15.
 - IMP-10 BrowserStack — renewal confirmed for 2026-11-22; agree the lower-cost plan before renewal.
