@@ -175,7 +175,7 @@ Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-
 
 ### 2026-11-10 (2027 direction preview)
 
-- Triaged as **leave in a good place** ([CH-13](../challenges/13-2027-business-direction-transition.md)): record the QA flow baseline from the JQL queries and document it (IMP-04.13), and **don't wire up Report Portal**. IMP-04.8, IMP-04.11 and IMP-04.12 dropped; the card "Learn how to setup Report Portal for automation metrics" moved to Backlog for AC to archive.
+- Triaged as **leave in a good place** ([CH-13](../challenges/13-2027-business-direction-transition.md)): record the QA flow baseline from the JQL queries and document it (IMP-04.13), and **don't wire up Report Portal**. IMP-04.8, IMP-04.11 and IMP-04.12 dropped; the card "Learn how to setup Report Portal for automation metrics" moved to Backlog and kept (AC: it may be useful in the new set-up).
 
 ## Roadmap
 
@@ -191,7 +191,7 @@ Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-
 | IMP-04.8  | Set up Report Portal access with PDEX; compare with Claude reports                                   | AC    | —                  | dropped | —                                                                    |
 | IMP-04.9  | Build a separate Jira dashboard from the JQL queries                                                 | AC    | IMP-04.3           | later   | —                                                                    |
 | IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people      | AC    | IMP-04.3           | later   | —                                                                    |
-| IMP-04.11 | Learn how to set up Report Portal for automation metrics                                             | AC    | —                  | dropped | Learn how to setup Report Portal for automation metrics              |
+| IMP-04.11 | Learn how to set up Report Portal for automation metrics                                             | AC    | —                  | later   | Learn how to setup Report Portal for automation metrics              |
 | IMP-04.12 | Decide where to wire Report Portal first; populate it and build dashboards                           | AC    | IMP-04.11          | dropped | —                                                                    |
 | IMP-04.13 | Record the QA flow baseline from the JQL queries and document it in Confluence (handover checkpoint) | AC    | IMP-04.3           | next    | Build first JQL queries into Jira and document results in Confluence |
 

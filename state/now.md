@@ -12,7 +12,7 @@ _Format: the dashboard reads **Upcoming** only (one point per bullet, starting w
 - IMP-08 Objectives & reviews — calibration session on 2026-11-11.
 - IMP-08 Objectives & reviews — EOY reviews due by 2027-01-15.
 - IMP-10 BrowserStack — renewal on 2026-11-22; explore and agree a monthly rolling plan before then.
-- CH-13 2027 transition — find out what the third party takes on and what stays; 2027 direction expected to be confirmed around end of 2026.
+- CH-13 2027 transition — find out what of our ecosystem remains; 2027 direction expected to be confirmed around end of 2026.
 - General — Notion Done clear-out run 2026-11-06 (last clear-out: 2026-11-06); next due 2026-11-20.
 - General — next weekly review on Friday 2026-11-13.
 

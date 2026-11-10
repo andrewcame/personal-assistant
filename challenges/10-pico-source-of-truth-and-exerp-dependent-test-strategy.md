@@ -131,7 +131,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Status & Next Action
 
-_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms what of our ecosystem remains (the team will not manage any of the systems)._
 
 **Status:** Open — captured on 2026-09-25. Pico's original isolation philosophy remains valuable, but the implemented platform has real Exerp-dependent journeys without an agreed test-boundary policy or scalable multi-tenant environment direction.
 

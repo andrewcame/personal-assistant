@@ -94,7 +94,7 @@ Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); 
 
 **Status:** On hold — not started; moved to Later on 2026-11-10 because of the 2027 direction preview (CH-13). The coverage review has identified general gaps in Exerp Adapter and Basket tests.
 
-**Next action:** None until CH-13 shows whether backend testing stays with us; then restart or park.
+**Next action:** None. Close with `outcome: none` once CH-13 confirms what of our ecosystem remains (for example, whether the backend test pack is kept).
 
 ## Outcome
 

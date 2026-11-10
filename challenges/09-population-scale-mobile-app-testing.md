@@ -137,7 +137,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 **Status:** Open — captured on 2026-09-24; rescoped 2026-10-27 to cover reliable mobile coverage first (Phase 1, via the Jira epics) and population-scale testing second (Phase 2). Moved to Later on 2026-11-10 (not started; 2027 direction, CH-13).
 
-**Next action (Phase 1):** none until CH-13 shows whether mobile automation stays with us. When it restarts: start the first Jira epic, stabilising and baselining the existing Appium tests (CH-09.6, APP-352).
+**Next action (Phase 1):** none. The team will not manage the app in 2027; close with `outcome: none` once CH-13 confirms what of our ecosystem remains (for example, whether the existing Appium tests are kept).
 
 **Next action (Phase 2, later):**
 

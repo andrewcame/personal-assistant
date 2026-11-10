@@ -20,7 +20,7 @@ people: []
 ## Context
 
 - On 2026-11-10 AC saw a preview of the 2027 business direction ([Leadership Direction, 2026-11-10](../context/leadership-direction.md)): web and app technology moves to a third party; the QA team pivots to building agentic workflows for other areas of the business; for the rest of 2026 the aim is to "get done what we can" and leave things in a good place.
-- It is a preview, not an announcement. Which systems the third party takes on, and which stay with us, is not known; AC expects it to be confirmed around the end of 2026.
+- It is a preview, not an announcement. AC's understanding (2026-11-10) is that, whatever the outcome, the team will not manage any of the systems. The open question is therefore **what of our ecosystem remains**: which test packs, pipelines, environments, tools and documentation the third party keeps, and which are retired. AC expects it to be confirmed around the end of 2026.
 - It changes the driving theme ([horizons.md](../context/my-role/horizons.md)) and most of the improvement plan.
 
 ## The Challenge
@@ -29,7 +29,7 @@ people: []
 
 ## Questions To Explore
 
-- Which web and app systems, test packs, pipelines and tools move to the third party, and which stay with us?
+- What of our ecosystem remains: which test packs, pipelines, environments, tools (e.g. BrowserStack, Report Portal) and documentation the third party keeps, and which are retired?
 - When does the handover start, and who leads it on each side?
 - What is the QA team's remit in 2027, and what is AC's role?
 - What does "a good place" mean for each live record: finished, documented and handed over, or parked?
@@ -44,19 +44,19 @@ people: []
 
 ## Roadmap
 
-| ID      | Step                                                                                         | Owner | Depends on                | Status | Ticket | Card                                                        |
-|---------|----------------------------------------------------------------------------------------------|-------|---------------------------|--------|--------|-------------------------------------------------------------|
-| CH-13.1 | Triage live challenges and improvements: finish, leave in a good place, or park              | AC    | —                         | done   | —      | Triage challenges and improvements for the 2027 transition  |
-| CH-13.2 | Find out which web and app systems move to the third party and which stay with us            | AC    | —                         | next   | —      | Find out what the third party takes on and what stays       |
-| CH-13.3 | Confirm the handover timeline and who leads it on each side                                  | AC    | CH-13.2                   | later  | —      | —                                                           |
-| CH-13.4 | Confirm the QA team's 2027 remit and AC's role                                               | AC    | —                         | later  | —      | —                                                           |
-| CH-13.5 | Re-plan the horizons and driving theme for 2027 once the direction is confirmed              | AC    | CH-13.2, CH-13.3, CH-13.4 | later  | —      | —                                                           |
+| ID      | Step                                                                                      | Owner | Depends on                | Status | Ticket | Card                                                       |
+|---------|-------------------------------------------------------------------------------------------|-------|---------------------------|--------|--------|------------------------------------------------------------|
+| CH-13.1 | Triage live challenges and improvements: finish, leave in a good place, or park           | AC    | —                         | done   | —      | Triage challenges and improvements for the 2027 transition |
+| CH-13.2 | Find out what of our ecosystem remains (test packs, pipelines, environments, tools, docs) | AC    | —                         | next   | —      | Find out what of our ecosystem remains                     |
+| CH-13.3 | Confirm the handover timeline and who leads it on each side                               | AC    | CH-13.2                   | later  | —      | —                                                          |
+| CH-13.4 | Confirm the QA team's 2027 remit and AC's role                                            | AC    | —                         | later  | —      | —                                                          |
+| CH-13.5 | Re-plan the horizons and driving theme for 2027 once the direction is confirmed           | AC    | CH-13.2, CH-13.3, CH-13.4 | later  | —      | —                                                          |
 
 ## Status & Next Action
 
 **Status:** Open — direction previewed 2026-11-10 and live records triaged; not yet confirmed (expected around the end of 2026).
 
-**Next action:** Find out what the third party takes on and what stays with us (CH-13.2).
+**Next action:** Find out what of our ecosystem remains (CH-13.2).
 
 ## Outcome
 
@@ -73,7 +73,12 @@ AC approved the triage of the remaining records:
 | Park (Later)            | IMP-11 Backend tests; CH-09 Mobile coverage; IMP-12 Domain ownership; CH-10 Pico source of truth; CH-12 Exerp release risk; IMP-09 Exerp release process; IMP-07 Payments cover; IMP-03, IMP-13, IMP-14, IMP-15, IMP-17, IMP-18, CH-02, CH-05, CH-08, CH-11 |
 | Bring forward           | IMP-05 Assistant (Next); IMP-16 AI test boilerplate flagged as a 2027 pivot candidate                                                                                                                                                             |
 
-- Parked records close with `outcome: none` once CH-13.2 confirms the handover scope, or restart if the work stays with us. The Exerp items may stay with the business, so they are parked rather than closed.
+- Parked records close with `outcome: none` once CH-13.2 confirms what of our ecosystem remains.
+
+## 2026-11-10 Update — reframed
+
+- AC: whatever the direction, the team will not manage any of the systems, so the question is not "what do we look after" but "what of our ecosystem remains". CH-13.2 and the parked records reworded to match; nothing is expected to restart.
+- The Report Portal card stays in Backlog (not archived) in case it is useful in the new set-up. IMP-18 In-app Join test may no longer be relevant; it stays parked in Later.
 
 ## 2026-11-10 Update — opened
 

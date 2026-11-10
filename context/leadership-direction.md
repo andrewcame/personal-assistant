@@ -10,7 +10,7 @@ The idea-validator agent should load this file alongside the job spec and the [h
 
 Durable direction distilled from all entries, including [archived ones](archive/leadership-direction-2026-q3.md). Dates point to the source entries.
 
-- **2027 direction (preview, not confirmed)** — web and app technology moves to a third party; the team pivots to building agentic workflows for other areas of the business; for the rest of 2026, leave things in a good place. What the third party takes on is not yet known. (2026-11-10)
+- **2027 direction (preview, not confirmed)** — web and app technology moves to a third party; the team pivots to building agentic workflows for other areas of the business; for the rest of 2026, leave things in a good place. The team is not expected to manage any of the systems; the open question is what of our ecosystem remains. (2026-11-10)
 - **Business pillars: Grow, Simplify, Improve** — Grow means more gyms and members (US organic and franchise, Switzerland after the latest acquisition; smaller, varied formats; older franchise markets deprioritised). Simplify and Improve sit with the CTTO, who is AI-led and speed-focused; the COO wants lean cost and a strong growth story. Cross-department communication supports the "no product" decision. (2026-10-21)
 - **2027 direction (provisional; partly superseded 2026-11-10)** — finish the sunset tail (tech debt), roll out to other brands (assumed), grow organically mainly in the US, and use Microsoft Foundry for agentic workflows and automation across PureGym once capacity frees up. Mostly assumed, not announced. (2026-11-02)
 - **Microsite sunset is the gating priority** — the CTTO (recorded as CTO in earlier entries) expects account and bookings microsites to be gone by end of 2026 (team forecast: March 2027), and it is the standing answer to resourcing, promotion, and investment questions. (2026-09-11, 2026-09-30)
@@ -64,7 +64,7 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 - **Implication** — Driving Theme changed provisionally (AC agreed 2026-11-10) from "get off the microsites" to "leave it in a good place"; see [horizons.md](my-role/horizons.md). The open questions and the triage of live records are tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
 - **Implication** — Agentic-workflow capability (IMP-05 Assistant) moves to Next so it is ready for 2027.
 - **Supersedes:** 2026-11-02 items 1 and 4 in part (sunset tail and spare-capacity framing).
-- **My read** — Not recorded yet.
+- **My read** — Whatever the final direction, the team will not manage any of the systems. The decision is not "what do we look after" but "what of our ecosystem remains".
 
 ### 2026-11-02 — 2027 direction taking shape: sunset tail, other brands, US growth, Foundry-led agentic automation
 

@@ -49,7 +49,7 @@ The Head of Configuration is willing to provide earlier version visibility and c
 
 ## Status & Next Action
 
-_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms what of our ecosystem remains (the team will not manage any of the systems)._
 
 **Status:** Open — raised 2026-10-15 from the Notion to-do "discuss Exerp release testing with the leads".
 

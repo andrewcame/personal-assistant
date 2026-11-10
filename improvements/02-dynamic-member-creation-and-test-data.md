@@ -69,7 +69,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
 
-- The Portal member creation initiative is active, so AC will **see it out** (IMP-02.8). The wider test-data architecture steps (IMP-02.5 to IMP-02.7) stay in Later, parked until CH-13 shows what stays with us.
+- The Portal member creation initiative is active, so AC will **see it out** (IMP-02.8). The wider test-data architecture steps (IMP-02.5 to IMP-02.7) stay in Later, parked until CH-13 shows what of our ecosystem remains.
 
 ## Proposed Direction
 

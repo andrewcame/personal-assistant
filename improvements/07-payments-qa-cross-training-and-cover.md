@@ -52,7 +52,7 @@ people: [TMW, JFG]
 
 ## Status & Next Action
 
-_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](../challenges/13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](../challenges/13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms what of our ecosystem remains (the team will not manage any of the systems)._
 
 **Status:** Not started — Web responsibilities now settled; lower priority than microsite-sunset work.
 
