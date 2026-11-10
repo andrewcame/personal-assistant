@@ -3,13 +3,13 @@ id: IMP-07
 tag: Payments cover
 type: improvement
 status: not-started
-horizon: next
-updated: 2026-10-27
+horizon: later
+updated: 2026-11-10
 pillars: [P1, P6]
 focus: [people]
 jd: [JD-02]
 goals: []
-links: []
+links: [CH-13]
 people: [TMW, JFG]
 ---
 
@@ -51,6 +51,8 @@ people: [TMW, JFG]
 | IMP-07.5 | Follow up with TMW (line manager) and MP (Payments lead) on JFG's Payments KT plan — 2027 | AC    | IMP-07.1           | later  | Follow up with TMW and MP on JFG Payments knowledge-transfer plan (2027) |
 
 ## Status & Next Action
+
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](../challenges/13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
 
 **Status:** Not started — Web responsibilities now settled; lower priority than microsite-sunset work.
 

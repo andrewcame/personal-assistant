@@ -3,13 +3,13 @@ id: IMP-12
 tag: Domain ownership
 type: improvement
 status: not-started
-horizon: next
-updated: 2026-11-04
+horizon: later
+updated: 2026-11-10
 pillars: [P3, P4]
 focus: [ownership]
 jd: [JD-09]
 goals: []
-links: []
+links: [CH-13]
 people: [TMW, DA, MP, KB]
 ---
 
@@ -43,6 +43,8 @@ people: [TMW, DA, MP, KB]
 | IMP-12.1 | Scope the domain ownership model and flaky-pack response with the Lead QAs | AC    | —          | next   | Scope domain ownership and flaky-pack response with the Lead QAs |
 
 ## Status & Next Action
+
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](../challenges/13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
 
 **Status:** Not started.
 

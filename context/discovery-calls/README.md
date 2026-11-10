@@ -52,6 +52,7 @@ For QA lead and wider team health checks, use the [QA Health Summary](../qa-heal
 - **2026-10-21** — Annual conference team conversations — [2026-10-21-annual-conference-team-conversations.md](2026-10-21-annual-conference-team-conversations.md) — Speed vs quality and AI over-use as common themes; test-in-prod/SRE with mocking vs real Exerp integration debate.
 - **2026-10-13** — Environments discussion — [2026-10-13-environments-exerp-per-brand.md](2026-10-13-environments-exerp-per-brand.md) — One Exerp test environment per brand, Exerp event broadcaster, pico.deployment full-stack previews, Payments/Kafka blocker.
 - **2026-10-09** — Dootrix AI Harness (supplier knowledge sharing) — [2026-10-09-dootrix-ai-harness.md](2026-10-09-dootrix-ai-harness.md) — Harness structure, activity-based skills, scripts alongside skills, cross-model review, self-learning loop, QA architect role.
+- **2026-11-04** — Platform Technical Lead (AE) — [2026-11-04-platform-technical-lead-staging-reporting.md](2026-11-04-platform-technical-lead-staging-reporting.md) — Staging should carry more value (soak before prod), new empty Report Portal, backend test help, BrowserStack IP whitelisting, Cloudflare AI.
 
 ## How To Use These Notes
 

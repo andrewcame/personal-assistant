@@ -4,12 +4,12 @@ tag: Coverage baseline
 type: improvement
 status: in-progress
 horizon: later
-updated: 2026-11-06
+updated: 2026-11-10
 pillars: [P2]
 focus: [automation]
 jd: [JD-09]
 goals: []
-links: [CH-07, IMP-04]
+links: [CH-07, IMP-04, CH-13]
 people: []
 ---
 
@@ -70,6 +70,8 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | IMP-06.6 | Create Confluence pages for the manual and automation packs and their run status | AC    | IMP-06.2           | next   | Create Confluence pages for the manual and automation packs and run status           |
 
 ## Status & Next Action
+
+_2026-11-10: triaged as **leave in a good place** ([CH-13](../challenges/13-2027-business-direction-transition.md)). The coverage register doubles as a handover inventory of what we test and where; feeds CH-13.2. Stays in Later._
 
 **Status:** In progress
 

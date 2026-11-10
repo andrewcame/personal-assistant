@@ -2,15 +2,15 @@
 id: IMP-11
 tag: Backend tests
 type: improvement
-status: in-progress
-horizon: now
-updated: 2026-11-05
+status: on-hold
+horizon: later
+updated: 2026-11-10
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
 goals: []
-links: [IMP-06, CH-10]
-people: [TMW, JFG]
+links: [IMP-06, CH-10, IMP-14, CH-13]
+people: [TMW, JFG, AE]
 ---
 
 # Improvement 11 — Backend Test Pack Coverage
@@ -62,6 +62,22 @@ people: [TMW, JFG]
 - This work overlaps IMP-11.1, which maps missing coverage across Pico backend services, and CH-10, which determines the appropriate balance of Exerp-dependent and internal testing. IMP-11 tracks the coverage gaps; CH-10 defines the test strategy.
 - AC plans to set up the backend test coverage initiative and assign it to TMW and JFG so JFG can add the relevant ticket. IMP-11 remains in progress with TMW and JFG as the people involved.
 
+### 2026-11-04 (Platform Technical Lead discovery)
+
+Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-04-platform-technical-lead-staging-reporting.md).
+
+- **Why this is the priority:** AC told AE that decent backend test coverage is the first step, because it means more gets found in staging and staging becomes a more valuable proving ground; things should fail there rather than in prod. AE agreed staging should carry more value.
+- **Platform support:** AE will help from a technical point of view, and is open to talking if the backend tests hit a limitation in staging. Use this as the route for staging blockers on the initiative with TMW and JFG (IMP-11.6).
+- **Builds on:** layered testing (some checks in staging, some in prod, tagged on the tests) with overnight, always-on runs; see CH-10 Pico source of truth. A staging soak before prod depends on this coverage (IMP-14.2, CI/CD gate).
+
+### 2026-11-10 (2027 direction preview)
+
+Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
+
+- With web and app technology expected to move to a third party, AC decided **not to start** the backend coverage initiative. The gaps are known (IMP-11.1); creating the initiative now is unlikely to be worth it. Moved to Later and on hold; it may be parked (closed with `outcome: none`) once the handover scope is known.
+- IMP-11.6 and IMP-11.7 moved to later; their Notion cards moved to Backlog.
+- TMW's 2026 objective TMW-O6 (scope a Pico backend coverage initiative by end of December) depends on this work; AC to revisit it.
+
 ## Roadmap
 
 | ID       | Step                                                                                                                          | Owner | Depends on         | Status | Card                                                         |
@@ -71,14 +87,14 @@ people: [TMW, JFG]
 | IMP-11.3 | Fix Kafka Web Sender and decide whether to expand its use                                                                     | AC    | IMP-11.1           | later  | —                                                            |
 | IMP-11.4 | Agree priority gaps and owners; add the tests                                                                                 | AC    | IMP-11.1, IMP-11.2 | later  | —                                                            |
 | IMP-11.5 | Flesh out a flagged integration tier: select real-Exerp tests, flag them in the packs, decide blocking vs overnight-and-alert | AC    | CH-10.5            | later  | —                                                            |
-| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December)                     | AC    | —                  | next   | Set up the backend test coverage initiative with TMW and JFG |
-| IMP-11.7 | Investigate Exerp Assistant not showing all products                                                                          | AC    | —                  | doing  | Investigate Exerp Assistant not showing all products         |
+| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December)                     | AC    | —                  | later  | Set up the backend test coverage initiative with TMW and JFG |
+| IMP-11.7 | Investigate Exerp Assistant not showing all products                                                                          | AC    | —                  | later  | Investigate Exerp Assistant not showing all products         |
 
 ## Status & Next Action
 
-**Status:** In progress (the coverage review has identified general gaps in Exerp Adapter and Basket tests; the Basket pilot is ongoing, and AC plans to set up the initiative with TMW and JFG)
+**Status:** On hold — not started; moved to Later on 2026-11-10 because of the 2027 direction preview (CH-13). The coverage review has identified general gaps in Exerp Adapter and Basket tests.
 
-**Next action:** Set up the backend test coverage initiative and assign it to TMW and JFG so JFG can add the relevant ticket.
+**Next action:** None until CH-13 shows whether backend testing stays with us; then restart or park.
 
 ## Outcome
 

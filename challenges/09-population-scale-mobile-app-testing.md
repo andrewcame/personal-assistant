@@ -3,14 +3,14 @@ id: CH-09
 tag: Mobile coverage
 type: challenge
 status: open
-horizon: now
-updated: 2026-11-04
+horizon: later
+updated: 2026-11-10
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
 jira: [APP-352, APP-353]
 goals: []
-links: [CH-01]
+links: [CH-01, CH-13]
 people: []
 ---
 
@@ -102,6 +102,10 @@ The first step should not be to multiply the same tests unchanged. Repetition wi
 
 Production telemetry and escaped-defect evidence should guide scenario selection. The aim is not to reproduce the entire member base in test, but to identify representative cohorts and high-risk state combinations, then use repeated execution to make uncommon failures visible before release.
 
+## 2026-11-10 Update — 2027 direction preview
+
+- Web and app technology is expected to move to a third party in 2027 ([Leadership Direction, 2026-11-10](../context/leadership-direction.md); tracked in [CH-13](13-2027-business-direction-transition.md)). Phase 1 has not really started and is unlikely to, so this challenge moved to Later. CH-09.6 moved to later and its card moved to Backlog. Revisit or close once the handover scope is known.
+
 ## 2026-11-04 Update
 
 - The app simplification tickets have been received (CH-09.9 done). The next task is to kick off the first Jira epic — stabilise and baseline the existing Appium tests (CH-09.6, APP-352); its card is in To Do. The third epic (simpler tests for functionality not changing) can now be scoped.
@@ -122,7 +126,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-09.3  | Phase 2: Set execution count and frequency for target incidence                                                             | AC    | CH-09.2                   | later  | —       | —                                                                 |
 | CH-09.4  | Phase 2: Confirm per-run data generation and replay evidence                                                                | AC    | CH-09.2                   | later  | —       | —                                                                 |
 | CH-09.5  | Phase 2: Run PoC through the existing Appium pipeline                                                                       | AC    | CH-09.3, CH-09.4, CH-09.6 | later  | —       | —                                                                 |
-| CH-09.6  | Phase 1: Stabilise and baseline existing Appium tests (epic 1)                                                              | AC    | —                         | doing  | APP-352 | Start the first Appium initiative epic (stabilise existing tests) |
+| CH-09.6  | Phase 1: Stabilise and baseline existing Appium tests (epic 1)                                                              | AC    | —                         | later  | APP-352 | Start the first Appium initiative epic (stabilise existing tests) |
 | CH-09.7  | Phase 1: Optimise pipeline runs for maximum value and benefit (epic 2)                                                      | AC    | CH-09.6                   | later  | APP-353 | —                                                                 |
 | CH-09.8  | Phase 1: Write simpler Appium tests for functionality not changing in the app simplification work (epic 3, not yet written) | AC    | CH-09.6                   | later  | —       | —                                                                 |
 | CH-09.9  | Phase 1: Receive the app simplification tickets so the third epic can be scoped                                             | AC    | —                         | done   | —       | —                                                                 |
@@ -131,9 +135,9 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 ## Status & Next Action
 
-**Status:** Open — captured on 2026-09-24; rescoped 2026-10-27 to cover reliable mobile coverage first (Phase 1, via the Jira epics) and population-scale testing second (Phase 2).
+**Status:** Open — captured on 2026-09-24; rescoped 2026-10-27 to cover reliable mobile coverage first (Phase 1, via the Jira epics) and population-scale testing second (Phase 2). Moved to Later on 2026-11-10 (not started; 2027 direction, CH-13).
 
-**Next action (Phase 1):** start the first Jira epic — stabilise and baseline the existing Appium tests (CH-09.6, APP-352). The app simplification work is expected to bring its own Appium tests, so the third epic covers functionality that is not changing or moving.
+**Next action (Phase 1):** none until CH-13 shows whether mobile automation stays with us. When it restarts: start the first Jira epic, stabilising and baselining the existing Appium tests (CH-09.6, APP-352).
 
 **Next action (Phase 2, later):**
 

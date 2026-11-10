@@ -3,13 +3,13 @@ id: CH-12
 tag: Exerp release risk
 type: challenge
 status: open
-horizon: next
-updated: 2026-10-15
+horizon: later
+updated: 2026-11-10
 pillars: [P5, P8, P6]
 focus: [ownership, productivity]
 jd: [JD-12]
 goals: []
-links: [IMP-09, CH-08, CH-10]
+links: [IMP-09, CH-08, CH-10, CH-13]
 people: [MJ]
 ---
 
@@ -48,6 +48,8 @@ The Head of Configuration is willing to provide earlier version visibility and c
 | CH-12.3 | Confirm challenge resolved after pilot review      | AC    | CH-12.2    | later  | —                                                         |
 
 ## Status & Next Action
+
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
 
 **Status:** Open — raised 2026-10-15 from the Notion to-do "discuss Exerp release testing with the leads".
 

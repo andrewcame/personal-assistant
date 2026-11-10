@@ -4,12 +4,12 @@ tag: AI test boilerplate
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-11-04
+updated: 2026-11-10
 pillars: [P9]
 focus: [automation]
 jd: [JD-14]
 goals: []
-links: []
+links: [CH-13]
 people: []
 ---
 
@@ -41,6 +41,8 @@ people: []
 | IMP-16.1 | Scope how requirements-to-test boilerplate could work, starting from the Appium AI-led approach | AC | — | later | — |
 
 ## Status & Next Action
+
+_2026-11-10: stays in Later; flagged as a candidate for the 2027 pivot to agentic workflows ([CH-13](../challenges/13-2027-business-direction-transition.md), IMP-05)._
 
 **Status:** Not started — Later.
 

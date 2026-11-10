@@ -4,7 +4,7 @@ tag: Load testing
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-10-16
+updated: 2026-11-09
 pillars: [P7]
 focus: [automation]
 jd: [JD-11]
@@ -46,6 +46,12 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - **Always-on staging traffic:** run a low, steady volume of joiners through staging so it behaves more realistically and surfaces issues. Risk: Exerp test data will need purging, or compute will eventually run out.
 - **Measuring slowness:** how do we catch issues like "gym slowness" in QA, and measure page slowness smartly (load time and similar)?
 - **Get ahead of incidents:** performance testing is currently reactive. Check that prod alerting is in place.
+
+### 2026-11-04 (Platform Technical Lead discovery)
+
+Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-04-platform-technical-lead-staging-reporting.md).
+
+- AC and AE aligned on layers: prod testing and staging testing both matter, tests are tagged so some run in staging and some in prod, and the direction is to run tests all the time overnight, with load testing. This supports the nightly staging run in IMP-03.1, which needs staging to be valuable first (backend coverage, IMP-11 Backend tests).
 
 ## Roadmap
 

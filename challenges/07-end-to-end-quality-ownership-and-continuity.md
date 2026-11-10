@@ -3,12 +3,12 @@ id: CH-07
 tag: E2E continuity
 type: challenge
 status: open
-horizon: next
-updated: 2026-10-23
+horizon: now
+updated: 2026-11-10
 pillars: [P2, P3, P8]
 focus: [people]
 goals: []
-links: []
+links: [CH-13, IMP-06]
 people: [LM]
 ---
 
@@ -122,21 +122,30 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - CH-07.1 reframed by AC: AC maps the Portal part of the E2E domain review in Miro first, then explores using AI for the remaining domains (CH-07.2).
 - Question for CH-07.5: should the E2E pack be a separate repo running on a schedule, or built from the Playwright pack and flagged `e2e`?
 
+## 2026-11-10 Update — 2027 direction preview
+
+- With web and app technology expected to move to a third party ([CH-13](13-2027-business-direction-transition.md)), knowledge transfer becomes handover documentation, which is the most valuable thing this challenge can produce. Moved from Next to Now and marked **finish** in the CH-13 triage. New step CH-07.8; the resourcing and E2E-stage steps (CH-07.4, CH-07.5, CH-07.7) are parked until the handover scope is known.
+
 ## Roadmap
 
-| ID      | Step                                                     | Owner | Depends on       | Status | Card                                                                                  |
-|---------|----------------------------------------------------------|-------|------------------|--------|---------------------------------------------------------------------------------------|
-| CH-07.1 | Map the Portal part of the E2E domain review in Miro     | AC    | —                | next   | Map the Portal part of the E2E domain review in Miro                                  |
-| CH-07.2 | Catalogue priority journeys LM covers, AI-assisted       | AC    | CH-07.1          | later  | —                                                                                     |
-| CH-07.3 | Publish E2E results page in Confluence                   | AC    | IMP-06.2         | next   | Add a Confluence page for links to all E2E results, share with LM and let her update |
-| CH-07.4 | Pair delivery QAs into upcoming E2E work                 | AC    | CH-07.2          | later  | —                                                                                     |
-| CH-07.5 | Define criteria for a dedicated E2E stage                | AC    | CH-07.2          | later  | —                                                                                     |
-| CH-07.6 | Review sample of LM findings for escape causes           | AC    | —                | later  | —                                                                                     |
-| CH-07.7 | Recommend E2E resourcing and ownership model before 2027 | AC    | CH-07.4, CH-07.6 | later  | —                                                                                     |
+| ID      | Step                                                                  | Owner | Depends on       | Status | Card                                                                                 |
+|---------|-----------------------------------------------------------------------|-------|------------------|--------|--------------------------------------------------------------------------------------|
+| CH-07.1 | Map the Portal part of the E2E domain review in Miro                  | AC    | —                | next   | Map the Portal part of the E2E domain review in Miro                                 |
+| CH-07.2 | Catalogue priority journeys LM covers, AI-assisted                    | AC    | CH-07.1          | later  | —                                                                                    |
+| CH-07.3 | Publish E2E results page in Confluence                                | AC    | IMP-06.2         | next   | Add a Confluence page for links to all E2E results, share with LM and let her update |
+| CH-07.4 | Pair delivery QAs into upcoming E2E work                              | AC    | CH-07.2          | later  | —                                                                                    |
+| CH-07.5 | Define criteria for a dedicated E2E stage                             | AC    | CH-07.2          | later  | —                                                                                    |
+| CH-07.6 | Review sample of LM findings for escape causes                        | AC    | —                | later  | —                                                                                    |
+| CH-07.7 | Recommend E2E resourcing and ownership model before 2027              | AC    | CH-07.4, CH-07.6 | later  | —                                                                                    |
+| CH-07.8 | Capture E2E journey knowledge as handover documentation (AI-assisted) | AC    | —                | doing  | Capture E2E journey knowledge as handover documentation                              |
 
 ## Status & Next Action
 
-**Status:** Open — LM's contract has been extended into 2027 (confirmed 2026-10-15; end date to record), so the resourcing decision is no longer immediate. Knowledge transfer remains valid and should use AI to capture and structure journey knowledge.
+**Status:** Open — moved to Now on 2026-11-10 and refocused on handover documentation (2027 transition, CH-13).
+
+**Next action (2026-11-10):** capture E2E journey knowledge as handover documentation (CH-07.8), using the Portal map (CH-07.1) and the Confluence results page (CH-07.3) as the first outputs.
+
+_Superseded 2026-11-10:_ **Status:** Open — LM's contract has been extended into 2027 (confirmed 2026-10-15; end date to record), so the resourcing decision is no longer immediate. Knowledge transfer remains valid and should use AI to capture and structure journey knowledge.
 
 _2026-10-23:_ this is now a longer-term shift in how E2E is done, not just a replacement decision. It stays live until a sound data and environment strategy is agreed, since that enables earlier testing ([CH-10](10-pico-source-of-truth-and-exerp-dependent-test-strategy.md)).
 

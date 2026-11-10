@@ -14,7 +14,9 @@ The panel asked about: (1) re-energising the team, (2) ways of working, (3) valu
 
 ## Driving Theme
 
-**Get off the microsites.** Leadership treats microsite sunset as the precondition for most investment, progression, and growth work; QA's job is to make the Pico-fronted migration safe and fast while keeping people and capability work alive. Front-end-first test strategy is acceptable for this period. The plan itself (Now / Next / Later) is in [horizons.md](my-role/horizons.md); the direction is in [leadership-direction.md](leadership-direction.md). A change to the theme is updated here and in horizons.md together.
+**Leave it in a good place (provisional, from 2026-11-10).** The 2027 direction preview moves web and app technology to a third party and pivots the team to agentic workflows for other areas of the business ([leadership-direction.md](leadership-direction.md)). Until it is confirmed (expected around the end of 2026), finish what is worth finishing, leave the rest documented and ready to hand over, park the rest, and build agentic-workflow capability. Tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
+
+_Previous theme (2026-09-30 to 2026-11-10):_ **Get off the microsites.** Leadership treats microsite sunset as the precondition for most investment, progression, and growth work; QA's job is to make the Pico-fronted migration safe and fast while keeping people and capability work alive. Front-end-first test strategy is acceptable for this period. The plan itself (Now / Next / Later) is in [horizons.md](my-role/horizons.md); the direction is in [leadership-direction.md](leadership-direction.md). A change to the theme is updated here and in horizons.md together.
 
 ## Strategic Frame
 

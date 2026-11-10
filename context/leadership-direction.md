@@ -6,12 +6,13 @@ It is **not** a task list. Tasks live in Notion. This is for themes and signals 
 
 The idea-validator agent should load this file alongside the job spec and the [horizons plan](my-role/horizons.md) when sense-checking ideas.
 
-## Standing Themes (as at 2026-11-02)
+## Standing Themes (as at 2026-11-10)
 
 Durable direction distilled from all entries, including [archived ones](archive/leadership-direction-2026-q3.md). Dates point to the source entries.
 
+- **2027 direction (preview, not confirmed)** — web and app technology moves to a third party; the team pivots to building agentic workflows for other areas of the business; for the rest of 2026, leave things in a good place. What the third party takes on is not yet known. (2026-11-10)
 - **Business pillars: Grow, Simplify, Improve** — Grow means more gyms and members (US organic and franchise, Switzerland after the latest acquisition; smaller, varied formats; older franchise markets deprioritised). Simplify and Improve sit with the CTTO, who is AI-led and speed-focused; the COO wants lean cost and a strong growth story. Cross-department communication supports the "no product" decision. (2026-10-21)
-- **2027 direction (provisional)** — finish the sunset tail (tech debt), roll out to other brands (assumed), grow organically mainly in the US, and use Microsoft Foundry for agentic workflows and automation across PureGym once capacity frees up. Mostly assumed, not announced. (2026-11-02)
+- **2027 direction (provisional; partly superseded 2026-11-10)** — finish the sunset tail (tech debt), roll out to other brands (assumed), grow organically mainly in the US, and use Microsoft Foundry for agentic workflows and automation across PureGym once capacity frees up. Mostly assumed, not announced. (2026-11-02)
 - **Microsite sunset is the gating priority** — the CTTO (recorded as CTO in earlier entries) expects account and bookings microsites to be gone by end of 2026 (team forecast: March 2027), and it is the standing answer to resourcing, promotion, and investment questions. (2026-09-11, 2026-09-30)
 - **Morale and progression sit behind microsite sunset** — progression and investment are held until sunset, while low morale makes it harder; treat sunset as the unlock narrative and show visible progress against it. (2026-09-30)
 - **In-house technical ownership, closer to the business** — a more autonomous engineering function with direct stakeholder relationships, faster decisions, ownership pushed down, and the Tech Lead Chapter in place of the architecture council; QA takes custody of staging alerting. (2026-07-29, 2026-09-03, 2026-09-11)
@@ -53,6 +54,18 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 
 ## Entries
 
+### 2026-11-10 — 2027 direction preview: web and app tech to a third party; team pivots to agentic workflows
+
+- **Date** — 2026-11-10
+- **Source** — A preview of the 2027 business direction shared with AC. Not formally announced; expected to be confirmed around the end of 2026.
+- **Theme** — 1. **All web and app technology is to be managed by a third party.**
+- **Theme** — 2. **The team pivots to building agentic workflows for other areas of the business.** Consistent with the Foundry item in the 2026-11-02 entry, but the pivot is now for the team itself rather than spare capacity.
+- **Theme** — 3. **For the rest of 2026, "get done what we can"**: leave things in a good place. Which parts the third party will take on and maintain is not yet known.
+- **Implication** — Driving Theme changed provisionally (AC agreed 2026-11-10) from "get off the microsites" to "leave it in a good place"; see [horizons.md](my-role/horizons.md). The open questions and the triage of live records are tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
+- **Implication** — Agentic-workflow capability (IMP-05 Assistant) moves to Next so it is ready for 2027.
+- **Supersedes:** 2026-11-02 items 1 and 4 in part (sunset tail and spare-capacity framing).
+- **My read** — Not recorded yet.
+
 ### 2026-11-02 — 2027 direction taking shape: sunset tail, other brands, US growth, Foundry-led agentic automation
 
 - **Date** — 2026-11-02 (heard on or just before this date; the tech leadership workshop was "yesterday", i.e. about 2026-11-01)
@@ -65,6 +78,8 @@ The leadership signal behind these tests is that QA should help PureGym move qui
 - **Implication** — QA is likely to be asked how to test and release agents built for other departments, not only software built by Engineering. Background and a proposed approach are in [the research brief](research/2026-11-02-foundry-agentic-workflows-qa.md). Possible destination for any work: a new improvement, once AC decides it is worth doing (not created).
 - **Implication** — Brand rollout and US growth strengthen the repeatability lens (see CH-10 Pico source of truth and Exerp-dependent test strategy, and IMP-06 QA knowledge and coverage baseline) but need no new work until confirmed.
 - **My read** — Not recorded yet.
+
+_Partly superseded by 2026-11-10 (2027 direction preview)._
 
 ### 2026-10-21 — Annual conference and awards: business pillars from the CEO, COO and CTTO
 

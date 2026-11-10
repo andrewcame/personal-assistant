@@ -4,13 +4,13 @@ tag: QA metrics
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-04
+updated: 2026-11-10
 pillars: [P6]
 focus: [productivity]
 jd: [JD-09]
 goals: []
-links: [IMP-06]
-people: []
+links: [IMP-06, CH-13]
+people: [AE]
 ---
 
 # Improvement 04 — Jira QA Flow Metrics Baseline
@@ -164,27 +164,44 @@ _From the Ideas triage on 2026-10-23 ([ideas log](../state/ideas-log.md))._
 
 - Notion card "Set up Report Portal access with PDEX; compare with Claude reports" found Done in the 2026-11-04 sync (Flow 6). The comparison has not happened, so IMP-04.8 stays open, tracked on the card "Learn how to setup Report Portal for automation metrics" (IMP-04, To Do).
 
+### 2026-11-04 (Platform Technical Lead discovery)
+
+Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-04-platform-technical-lead-staging-reporting.md).
+
+- **Report Portal access granted:** PDEX gave AC a new portal instead of migrating the old one. AC is the only user so far and it holds no data, so it can be built up from scratch.
+- **To wire it up:** go to the chosen test codebase, install the plugin, add the credentials (API key and URL), then populate it, build the dashboards and the reports needed. The existing front-end test repo already has the integration, so it can be used as the example, or the integration can be added to Appium.
+- **Decision for AC:** update the existing front-end repo, or start fresh with Appium (or another repo nobody else touches, which is still useful and affects no one). Added IMP-04.12. This needs time; it sits on the card "Learn how to setup Report Portal for automation metrics".
+- **Cloudflare:** AE also gave AC access to Cloudflare's AI service, where applications can be built and shared. Possible option for the metrics home (IMP-04.7), alongside GL's use of Cloudflare Workers; not assessed yet.
+
+### 2026-11-10 (2027 direction preview)
+
+- Triaged as **leave in a good place** ([CH-13](../challenges/13-2027-business-direction-transition.md)): record the QA flow baseline from the JQL queries and document it (IMP-04.13), and **don't wire up Report Portal**. IMP-04.8, IMP-04.11 and IMP-04.12 dropped; the card "Learn how to setup Report Portal for automation metrics" moved to Backlog for AC to archive.
+
 ## Roadmap
 
-| ID        | Step                                                                                            | Owner | Depends on         | Status | Card                                                                 |
-|-----------|-------------------------------------------------------------------------------------------------|-------|--------------------|--------|----------------------------------------------------------------------|
-| IMP-04.1  | Agree five QA flow measures, Jira-first                                                         | AC    | —                  | done   | —                                                                    |
-| IMP-04.2  | Set up Jira placeholders for metrics and coverage                                               | AC    | IMP-04.1           | doing  | Build first JQL queries into Jira and document results in Confluence |
-| IMP-04.3  | Write first JQL queries                                                                         | AC    | IMP-04.2           | doing  | Build first JQL queries into Jira and document results in Confluence |
-| IMP-04.4  | Complete Jira discovery checklist with Delivery or Jira admin                                   | AC    | —                  | later  | —                                                                    |
-| IMP-04.5  | Vibe-code Jira metric tool for gaps                                                             | AC    | IMP-04.3           | later  | Vibe-code metric tool using Jira API                                 |
-| IMP-04.6  | Produce one-team proof-of-concept baseline                                                      | AC    | IMP-04.3, IMP-04.4 | later  | —                                                                    |
-| IMP-04.7  | Agree metrics home alongside the Confluence tidy-up                                             | AC    | IMP-06.2           | later  | —                                                                    |
-| IMP-04.8  | Set up Report Portal access with PDEX; compare with Claude reports                              | AC    | —                  | doing  | —                                                                    |
-| IMP-04.9  | Build a separate Jira dashboard from the JQL queries                                            | AC    | IMP-04.3           | later  | —                                                                    |
-| IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people | AC    | IMP-04.3           | later  | —                                                                    |
-| IMP-04.11 | Learn how to set up Report Portal for automation metrics                                        | AC    | —                  | doing  | Learn how to setup Report Portal for automation metrics              |
+| ID        | Step                                                                                                 | Owner | Depends on         | Status  | Card                                                                 |
+|-----------|------------------------------------------------------------------------------------------------------|-------|--------------------|---------|----------------------------------------------------------------------|
+| IMP-04.1  | Agree five QA flow measures, Jira-first                                                              | AC    | —                  | done    | —                                                                    |
+| IMP-04.2  | Set up Jira placeholders for metrics and coverage                                                    | AC    | IMP-04.1           | doing   | Build first JQL queries into Jira and document results in Confluence |
+| IMP-04.3  | Write first JQL queries                                                                              | AC    | IMP-04.2           | doing   | Build first JQL queries into Jira and document results in Confluence |
+| IMP-04.4  | Complete Jira discovery checklist with Delivery or Jira admin                                        | AC    | —                  | later   | —                                                                    |
+| IMP-04.5  | Vibe-code Jira metric tool for gaps                                                                  | AC    | IMP-04.3           | later   | Vibe-code metric tool using Jira API                                 |
+| IMP-04.6  | Produce one-team proof-of-concept baseline                                                           | AC    | IMP-04.3, IMP-04.4 | later   | —                                                                    |
+| IMP-04.7  | Agree metrics home alongside the Confluence tidy-up                                                  | AC    | IMP-06.2           | later   | —                                                                    |
+| IMP-04.8  | Set up Report Portal access with PDEX; compare with Claude reports                                   | AC    | —                  | dropped | —                                                                    |
+| IMP-04.9  | Build a separate Jira dashboard from the JQL queries                                                 | AC    | IMP-04.3           | later   | —                                                                    |
+| IMP-04.10 | Test an AI coverage check over Jira tickets and comments ("did we test x?"), filtered by people      | AC    | IMP-04.3           | later   | —                                                                    |
+| IMP-04.11 | Learn how to set up Report Portal for automation metrics                                             | AC    | —                  | dropped | Learn how to setup Report Portal for automation metrics              |
+| IMP-04.12 | Decide where to wire Report Portal first; populate it and build dashboards                           | AC    | IMP-04.11          | dropped | —                                                                    |
+| IMP-04.13 | Record the QA flow baseline from the JQL queries and document it in Confluence (handover checkpoint) | AC    | IMP-04.3           | next    | Build first JQL queries into Jira and document results in Confluence |
 
 ## Status & Next Action
 
-**Status:** In progress
+**Status:** In progress — marked **leave in a good place** in the 2027 transition triage (CH-13, 2026-11-10).
 
-**Next action:** Meet the relevant Delivery Manager or Jira administrator to complete the Jira discovery checklist, then produce a one-team proof of concept using native Jira reports first. Use a refreshable analysis workbook only for measures Jira cannot calculate accurately.
+**Next action:** Finish the first JQL queries and document the baseline in Confluence (IMP-04.3, IMP-04.13). Report Portal is not being wired up.
+
+_Superseded 2026-11-10:_ Meet the relevant Delivery Manager or Jira administrator to complete the Jira discovery checklist, then produce a one-team proof of concept using native Jira reports first. Use a refreshable analysis workbook only for measures Jira cannot calculate accurately.
 
 ## Outcome
 

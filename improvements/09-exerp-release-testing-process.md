@@ -3,13 +3,13 @@ id: IMP-09
 tag: Exerp release process
 type: improvement
 status: not-started
-horizon: next
-updated: 2026-10-16
+horizon: later
+updated: 2026-11-10
 pillars: [P5, P8, P6]
 focus: [ownership, productivity]
 jd: [JD-09]
 goals: []
-links: [CH-12]
+links: [CH-12, CH-13]
 people: [MJ]
 ---
 
@@ -51,6 +51,8 @@ people: [MJ]
 | IMP-09.4 | Document and agree the process with the Lead QAs       | AC    | IMP-09.3           | later  | —                                                         |
 
 ## Status & Next Action
+
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](../challenges/13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
 
 **Status:** Not started
 

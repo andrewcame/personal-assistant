@@ -4,12 +4,12 @@ tag: Member data
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-04
+updated: 2026-11-10
 pillars: [P5]
 focus: [automation]
 jd: [JD-06]
 goals: []
-links: [CH-10]
+links: [CH-10, CH-13]
 people: []
 ---
 
@@ -65,6 +65,12 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - **Exerp data refresh approach (for IMP-02.7):** seed data weekly, search for data at run time by criteria, or create data in each test run? Move away from hardcoded data.
 - **Test data generation:** this was done in CAPI before — can it run on a regular basis again?
 
+### 2026-11-10 (2027 direction preview)
+
+Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
+
+- The Portal member creation initiative is active, so AC will **see it out** (IMP-02.8). The wider test-data architecture steps (IMP-02.5 to IMP-02.7) stay in Later, parked until CH-13 shows what stays with us.
+
 ## Proposed Direction
 
 _Proposal for engineering discussion, not an architectural decision._
@@ -90,7 +96,7 @@ _Proposal for engineering discussion, not an architectural decision._
 
 **Status:** In progress — Portal member creation is delivered as a Jira initiative (brief: [Dynamic Member Creation & Lookup For Portal Automation](../context/jira-initiatives/01-portal-dynamic-member-creation.md); earlier ID INI-01). This record keeps the wider test-data architecture direction; the Jira initiative holds the scoped Web MVP.
 
-**Next action:** Monitor DA delivering Portal member creation (1 of 5 tickets done; Notion card "Monitor DA working on member creation initiative"). IMP-02.4 requirements gathering is done. When the Jira initiative completes it is done, but IMP-02 stays open for other member data improvements (to be confirmed), then shape requirements with the Backend Chapter (IMP-02.5).
+**Next action:** Monitor DA delivering Portal member creation (1 of 5 tickets done; Notion card "Monitor DA working on member creation initiative") and see it out. The wider steps (IMP-02.5 to IMP-02.7) are parked pending CH-13 (2027 transition); when the Jira initiative completes, decide with CH-13 whether IMP-02 closes.
 
 ## Outcome
 

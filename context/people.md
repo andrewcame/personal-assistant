@@ -59,7 +59,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 
 | Alias | Role                                  | Area                 | Status  | Notes                                       |
 |-------|---------------------------------------|----------------------|---------|---------------------------------------------|
-| AE    | Developer Experience team member      | PDEX                 | Current |                                             |
+| AE    | Platform Technical Lead               | PDEX                 | Current | Discovery call 2026-11-04; role per AC      |
 | DM    | Developer Experience team member      | PDEX                 | Current |                                             |
 
 ## Configuration

@@ -3,14 +3,14 @@ id: CH-10
 tag: Pico source of truth
 type: challenge
 status: open
-horizon: next
-updated: 2026-11-05
+horizon: later
+updated: 2026-11-10
 pillars: [P4, P5]
 focus: [automation]
 jd: [JD-06, JD-09]
 goals: []
-links: [CH-08, IMP-02, IMP-11]
-people: [LMo]
+links: [CH-08, IMP-02, IMP-11, IMP-14, CH-13]
+people: [LMo, AE]
 ---
 
 # Challenge 10 — Pico Source-Of-Truth And Exerp-Dependent Test Strategy
@@ -97,6 +97,14 @@ Source: [2026-10-21 annual conference team conversations](../context/discovery-c
 - **Agent-built simulators (2026-11-02):** a [2026 practitioner account](../context/industry-signals.md) describes StrongDM having coding agents generate simulations of Slack, Jira and Okta from public API docs and client libraries, so tests ran without rate limits at near-zero marginal cost. One company and secondhand, but it makes the mock tier cheap to build. The fidelity risk still applies: a simulator built from documentation can drift from the real service, which is what the real-Exerp tier and periodic contract checks are for. Unchecked: whether the Exerp documentation we hold is enough to generate one.
 - **AC's position: layers by environment and blocking power (2026-11-02, feeds CH-10.5):** the simulated-versus-real debate does not need a winner. Keep several layers, some real e2e, some mocked, some lower level, spread across environments and each gated by a different release-blocking capacity (what blocks a release, what runs overnight and alerts). Starting point to test: preview uses less Exerp integration (mostly mocked or simulated), while staging and prod use real Exerp. This extends the tiered model above and still needs the per-tier rules in CH-10.5.
 
+## 2026-11-04 Update — Platform Technical Lead
+
+Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-04-platform-technical-lead-staging-reporting.md).
+
+- **Second Platform voice on staging versus prod (feeds CH-10.5):** AC and AE agreed that staging should carry more value. Testing in prod and robust mechanisms are good, but the business does not want things going wrong in prod, so staging must catch them. Layers are the answer: tagged tests, some run in staging, some in prod, with overnight and always-on runs.
+- **Staging soak (idea from AE):** after merge, a change deploys to staging and is held for a set time (for example an hour) while tests run and monitoring watches, then promotes to prod. It has to be balanced against delivery speed. Tracked as IMP-14.2 under the CI/CD gate model, not here.
+- **Sequence:** backend coverage in staging first (IMP-11 Backend tests), so the staging tier has something to run. This supports the "layers by environment and blocking power" position above; it does not settle the tier rules.
+
 ## 2026-10-16 Update — Ideas Triage
 
 _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
@@ -122,6 +130,8 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-10.9 | Research industry practice: test in production/SRE vs mocking vs real integration for distributed systems | AC    | —          | done   | —                                                               |
 
 ## Status & Next Action
+
+_Parked 2026-11-10: moved from Next to Later in the 2027 transition triage ([CH-13](13-2027-business-direction-transition.md)); close with `outcome: none` once CH-13 confirms the handover scope, or restart if the work stays with us._
 
 **Status:** Open — captured on 2026-09-25. Pico's original isolation philosophy remains valuable, but the implemented platform has real Exerp-dependent journeys without an agreed test-boundary policy or scalable multi-tenant environment direction.
 
