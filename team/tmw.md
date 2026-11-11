@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-11-03                    |
+| Profile last reviewed  | 2026-11-11                    |
 
 ## Experience And Specialism
 
@@ -177,10 +177,22 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 ### WHAT — impact against objectives
 
 - 2026-10-08 — (no 2026 objective; change of team) — manager — Moved from Mobile App to Web (Web Team Two). With DA, owns Web QA: broadly TMW the backend side and DA the front end. This resolved the Web QA capacity and accountability challenge (closed 2026-10-27) — [CH-04](../challenges/04-web-qa-capacity-and-accountability.md), [achievement](../achievements/2026.md)
+- 2026 (date not recorded; the Exerp upgrade work followed from about September) — (not covered by a 2026 objective) — self — Improved the Exerp upgrade process: removed manual steps in the BGW/TestData reference updates, added detail to the instructions so less experienced people can pick the work up, and started adding AI skills for it. Removed repeated steps: the T4 template and generated files are now produced once for BGW and copied to the other projects, which TMW describes as the part of the flow most likely to go wrong and take extra time (the AI skills also struggle with it) — [IMP-09](../improvements/09-exerp-release-testing-process.md)
+- 2026 (date not recorded; Mobile App work, January to October) — (relates to TMW-O5 behaviours) — self — In refinement, asked developers targeted questions on App tickets (mainly tech debt) about how changes would affect testing, and put test aids in place earlier, for example simulating lost tokens through the Dev Menu where a shorter IDS timeout was not available. Aim: more developer testing before handover, so fewer tickets fail within minutes of reaching QA.
+- 2026 (date not recorded) — (Mobile App work) — self — Developers now have BrowserStack device access to test before handover; who arranged it is not recorded. Developers also asked TMW to test earlier on real devices rather than emulators, and TMW did.
+- 2026 (date not recorded) — (Mobile App work) — self — Started testing as soon as a ticket was ready for code review, to feed back before three developers spent review time on it. TMW's own view is that this saved little, because fixes still triggered re-reviews by all three.
 
 ### HOW — behaviours against the values
 
--
+- 2026 (from about September) — V-SHOULDER — self; manager (see [JFG](jfg.md) profile, 2026-09-14) — Took on Exerp upgrades to share the load, provide cover and find pain points in the flow as she went.
+- 2026 (date not recorded) — V-SHOULDER — self — Worked closely with developers to diagnose why issues were happening, sometimes working into the evening, and kept developers on track when issues had been assumed fixed.
+- 2026 (date not recorded) — V-DIFF — self — Consistently brought the team back to the customer's perspective rather than the technically interesting one, on the basis that a better technical solution that does not improve the member experience costs PureGym members, money and reputation.
+
+### Improvement and development areas (from TMW, 2026-11-11)
+
+- AI: using it more and wants to use it better; has bought her own training and has not yet found time to do it.
+- Learning the PureGym approach to front-end automation, especially as the team moves to AI-first; wants to learn it properly rather than only check that generated output looks right.
+- Line management: has led in roughly half her roles but has not line managed before, and wants to look into line-management training.
 
 ### Manager's view of development areas
 
@@ -196,4 +208,4 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 
 _Keep operational actions in Notion; link or summarize only the context needed here._
 
-- 2026-11-03: TMW asked to send (1) top 3 achievements with rough dates and impact, (2) top 3 behaviours tied to PG values, and (3) key improvements and development areas, to add to the objective comments ahead of the 2026-11-11 calibration session. Record the answers here when received.
+- 2026-11-11: TMW's top 3 WHAT, top 3 HOW and improvement areas received and recorded above. Dates and impact figures were not supplied; confirm them before the end-of-year review.

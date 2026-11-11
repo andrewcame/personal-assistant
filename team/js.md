@@ -9,7 +9,7 @@
 | Reports to             | DA                     |
 | Direct report to me    | No                     |
 | Last promoted          | Unknown                |
-| Profile last reviewed  | 2026-09-14             |
+| Profile last reviewed  | 2026-11-11             |
 
 ## Experience And Specialism
 
@@ -81,6 +81,25 @@ _Last discussed: 2026-09-14_
 
 ## Year-End Evidence (2026)
 
+_Feeds calibration prep and the end-of-year review. Received from JS 2026-11-11; dates and impact were not supplied. JS's 2026 objectives are not available to AC, so items are not tagged to an objective. Source: **self** (what they tell AC), **manager** (what AC saw) or **line-manager** (see team/README.md)._
+
+### WHAT — impact against objectives
+
+- 2026 (date not recorded) — (objectives not available) — self — Created an AI test agent to help generate and review Playwright automation tests.
+- 2026 (date not recorded) — (objectives not available) — self — Supported the launch of Pico to the CH market, including the login work.
+- 2026 (date not recorded) — (objectives not available) — self — Presented Pico features delivered (for example Payload) to stakeholders at London Head Office and on video calls.
+
+### HOW — behaviours against the values
+
+- 2026 (date not recorded) — V-DIFF — self — Raised concerns about QA processes with the team and leaders, including in retros and the leadership call, so the work backlog is managed and issues resolved.
+- 2026 (date not recorded) — V-SHOULDER — self — Managed her own team's work while helping other teams when resource was low or high-priority work had a deadline, for example the CH launch and CH login work alongside her team's 12-month commitment promotion work.
+- 2026 (date not recorded) — V-DETAIL — self — Went beyond the ticket and designs to check usability, functionality and edge cases, and questioned the reasoning behind design choices so they could be challenged and changed where the member experience would be better.
+
+### Improvement and development areas (from JS, 2026-11-11)
+
+- Leadership training, to resolve team and work issues at a higher level and to be more involved in improving standards over time (consistent with the leadership cohort interest in Direction And Sentiment).
+- Design an agentic workflow to review PRs; she does not currently use AI for PR review and expects it to speed reviews as PR volume grows.
+
 ### Manager's view of development areas
 
 - To be added by AC (card due 2026-11-10).
@@ -95,6 +114,7 @@ _Last discussed: 2026-09-14_
 
 _Keep operational actions in Notion; link or summarize only the context needed here._
 
+- 2026-11-11: JS's top achievements, top 3 HOW and improvement areas received and recorded above. Confirm dates and impact with JS and DA (line manager) before the end-of-year review.
 - Review QA PR/code-owner expectations with DA and KB.
 - Confirm JS's Growth Framework assessment and supportive Lead QA pathway with DA.
 - Check whether a leadership cohort is available and suitable.

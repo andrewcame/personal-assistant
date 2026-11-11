@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-09
+updated: 2026-11-11
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -75,6 +75,10 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 - MP's and DA's top 3 WHAT/HOW and improvement/development submissions received and recorded in [MP's](../team/mp.md) and [DA's](../team/da.md) profiles (figures and Jira details still to verify). Still waiting on JS and TMW; the IMP-08.8 card is renamed "Monitor JS and TMW sending me How/What/Learning data".
 - Development areas in the profiles are the team member's own wording. New step IMP-08.9 and card "Add my view of development areas to all six team profiles" (due 2026-11-10): AC adds his own interpretation under a "Manager's view of development areas" heading in each profile (placeholders added to all six), so it is in before the calibration prep runs.
 
+### 2026-11-11
+
+- TMW's and JS's top 3 WHAT/HOW and improvement/development submissions received and recorded in [TMW's](../team/tmw.md) and [JS's](../team/js.md) profiles. All six team profiles now hold submissions or evidence; dates and impact figures are still missing for most. The IMP-08.8 card was moved to Done; IMP-08.8 marked done.
+
 ## Roadmap
 
 | ID       | Step                                                               | Owner | Depends on | Status | Card                                                           |
@@ -86,7 +90,7 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 | IMP-08.5 | Attend calibration session (2026-11-11)                            | AC    | IMP-08.4   | later  | —                                                              |
 | IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                        | AC    | IMP-08.5   | later  | —                                                              |
 | IMP-08.7 | Close open JFG calibration evidence questions                      | AC    | —          | done   | —                                                              |
-| IMP-08.8 | Monitor JS and TMW sending How/What/Learning data                 | AC    | —          | doing  | Monitor JS and TMW sending me How/What/Learning data           |
+| IMP-08.8 | Monitor JS and TMW sending How/What/Learning data                 | AC    | —          | done   | Monitor JS and TMW sending me How/What/Learning data           |
 | IMP-08.9 | Add my view of development areas to team profiles (by 2026-11-10) | AC    | —          | doing  | Add my view of development areas to all six team profiles      |
 
 ## Status & Next Action
