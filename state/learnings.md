@@ -47,6 +47,7 @@ Scopes: `all` · `capture` · `people` · `reviews` · `planning` · `format` ·
 
 - 2026-11-06 · notion · Long-open (14+ days) card tracking applies to To Do cards only; Backlog cards are never flagged as long-open. · AC correction in the Friday review.
 - 2026-11-06 · chat · When reporting to AC in chat, always give each IMP/CH record and each Notion card with its tag or name (e.g. IMP-08 Objectives & reviews), never a bare ID. · AC finds bare IDs hard to follow.
+- 2026-11-11 · reviews · Write Top 3 WHAT/HOW and review entries warmer and less mechanical than the other-lead examples in `context/performance-process/review-examples/calibration-top3-examples.md`, keeping the ticket IDs and outcomes. · AC finds those examples quite factual and wants his own voice.
 
 ## Retired
 
