@@ -70,7 +70,7 @@ Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-
 
 Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); tracked in [CH-13](../challenges/13-2027-business-direction-transition.md).
 
-- Web and app technology is expected to move to a third party in 2027, so a long commitment is hard to justify. AC is exploring whether BrowserStack can move to a **monthly rolling plan** until the direction is confirmed. IMP-10.2 updated; its card was renamed to match.
+- Web and app technology is expected to move to a third party in 2027, so a long commitment is hard to justify. BrowserStack only sells yearly plans, so the monthly rolling option is off the table. If Web and App go to white label, automation has no product to test and BrowserStack isn't needed; the call is yearly or nothing, made after the director's white-label scope (Thu 12 Nov) and the Friday catch-up (13 Nov). IMP-10.2 updated; its card was renamed to match.
 - The longer-term device strategy steps (IMP-10.3 to IMP-10.6) stay in Later, parked until CH-13 shows who owns mobile automation in 2027.
 
 ## Roadmap
@@ -78,7 +78,7 @@ Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); 
 | ID       | Step                                                                                                                                    | Owner | Depends on         | Status | Card                                                   |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------|
 | IMP-10.1 | Hold renewal call with the BrowserStack account manager                                                                                 | AC    | —                  | done   | —                                                      |
-| IMP-10.2 | Receive plan list and agree a plan before renewal on 22 November 2026 (monthly rolling preferred until the 2027 direction is confirmed) | AC    | IMP-10.1           | doing  | Agree monthly rolling BrowserStack plan before renewal |
+| IMP-10.2 | Decide yearly BrowserStack or nothing, after the director's white-label scope (Thu 12 Nov) and the Friday catch-up; BrowserStack sells yearly only | AC    | IMP-10.1           | doing  | Decide yearly BrowserStack or nothing, after the director meeting |
 | IMP-10.3 | Baseline device-related failures in mobile automation                                                                                   | AC    | —                  | later  | —                                                      |
 | IMP-10.4 | Review alternatives: other device clouds and a local device estate                                                                      | AC    | IMP-10.2, IMP-10.3 | later  | —                                                      |
 | IMP-10.5 | Choose the platform that best unlocks mobile automation                                                                                 | AC    | IMP-10.4, CH-09.9  | later  | —                                                      |
