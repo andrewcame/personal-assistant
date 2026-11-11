@@ -78,7 +78,7 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 ### 2026-11-11
 
 - TMW's and JS's top 3 WHAT/HOW and improvement/development submissions received and recorded in [TMW's](../team/tmw.md) and [JS's](../team/js.md) profiles. All six team profiles now hold submissions or evidence; dates and impact figures are still missing for most. The IMP-08.8 card was moved to Done; IMP-08.8 marked done.
-
+- AC's view is now in the "Manager's view of development areas" section of all six profiles: agreement with each self-assessment, strengths observed and development areas, plus a few `manager` WHAT/HOW lines. Ratings and speculation were not recorded. The calibration-prep skill now reads this section. Card "Add my view of development areas to all six team profiles" moved to Done with AC's OK; IMP-08.9 marked done.
 ## Roadmap
 
 | ID       | Step                                                               | Owner | Depends on | Status | Card                                                           |
@@ -91,13 +91,13 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 | IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                        | AC    | IMP-08.5   | later  | —                                                              |
 | IMP-08.7 | Close open JFG calibration evidence questions                      | AC    | —          | done   | —                                                              |
 | IMP-08.8 | Monitor JS and TMW sending How/What/Learning data                 | AC    | —          | done   | Monitor JS and TMW sending me How/What/Learning data           |
-| IMP-08.9 | Add my view of development areas to team profiles (by 2026-11-10) | AC    | —          | doing  | Add my view of development areas to all six team profiles      |
+| IMP-08.9 | Add my view of development areas to team profiles (by 2026-11-10) | AC    | —          | done   | Add my view of development areas to all six team profiles      |
 
 ## Status & Next Action
 
 **Status:** In progress
 
-**Next action:** Gather the remaining top 3 WHAT/HOW and improvement/development submissions, then run calibration-prep on 2026-11-09 using the objectives, comments and evidence in team profiles under the [people-records standard](../team/README.md#writing-standard). Flag any missing submissions rather than filling gaps by inference. Ratings and sensitive fields go straight into the People template, never here.
+**Next action:** All submissions and AC's manager view are in; run calibration-prep using the objectives, comments and evidence in team profiles under the [people-records standard](../team/README.md#writing-standard). Flag any missing submissions rather than filling gaps by inference. Ratings and sensitive fields go straight into the People template, never here.
 
 ## Outcome
 

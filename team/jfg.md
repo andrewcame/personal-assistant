@@ -9,7 +9,7 @@
 | Reports to             | TMW                    |
 | Direct report to me    | No                     |
 | Last promoted          | Unknown                |
-| Profile last reviewed  | 2026-11-03             |
+| Profile last reviewed  | 2026-11-11             |
 
 ## Experience And Specialism
 
@@ -85,6 +85,7 @@ _Feeds calibration prep. Source for this block: JFG's own notes and TMW's observ
 - 2026 (exact date not recorded; work reported in the last three months) - Regression speed and reliability - self/TMW; AC direct on flakiness and test data - Made optimisations to keep tests running quickly and efficiently; before-and-after run times are not known. Added validation checkpoints during test data creation so system state is correct before assertions, health checks and notifications to reduce flakiness, and diagnostics that separate environment/data issues from genuine failures and surface deployment and database issues earlier.
 - 2026 (exact date not recorded; work reported in the last three months) - Mentoring and knowledge sharing - self/TMW; AC direct - Guided LM through end-to-end testing in Pico and cross-system data flows involving Braze and BGW, including an issue that looked correct at system level but had hidden downstream failures, and the operational risks of BGW retirement. Walked IY (a QA returning to do web work) through the Exerp, Backend and Frontend architecture and showed several ways to create test data.
 - 2026 (exact date not recorded; work reported in the last three months) - AI-assisted QA workflow (early stage) - self/TMW - Used GitHub Copilot to review regression tests as part of the Basket pilot, which remains in progress.
+- 2026 (date not recorded) - Backend test pack - manager (AC direct, from working in Web 3) - Built the backend test repo and has kept it up to date as its main contributor, acting on feedback to improve it. It is the base for [IMP-11 Backend tests — Backend Test Pack Coverage](../improvements/11-backend-test-pack-coverage.md).
 
 ### HOW - behaviours against the values
 
@@ -98,7 +99,12 @@ _Feeds calibration prep. Source for this block: JFG's own notes and TMW's observ
 
 ### Manager's view of development areas
 
-- To be added by AC (card due 2026-11-10).
+_AC, 2026-11-11, from working directly with JFG in Web 3. AC covers JFG's calibration; TMW (line manager) leads his EOY review. Read alongside the evidence above._
+
+- **Strengths observed:** goes into great detail on a problem; knows the Pico ecosystem well, especially the backend; built and maintains the backend test repo and acts on feedback (see WHAT above).
+- **Development areas (as could be said to JFG):**
+  - Get the small things right so your visibility matches your technical work: arrive at meetings on time, attend them, and respond when you're asked something in a call. Same as the expectation agreed on 2026-09-14.
+  - Make your work visible to the wider team (updates, demos, speaking up in calls), so others see the backend and test-data work you do. This is the main gap in the Senior QA Engineer case.
 
 ## Team Movement Considerations
 

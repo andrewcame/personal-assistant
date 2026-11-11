@@ -9,7 +9,7 @@
 | Reports to             | DA                                |
 | Direct report to me    | No                                |
 | Last promoted          | Unknown                           |
-| Profile last reviewed  | 2026-10-19                        |
+| Profile last reviewed  | 2026-11-11                        |
 
 ## Experience And Specialism
 
@@ -177,6 +177,7 @@ _Feeds calibration prep and the end-of-year review. Source: **self** (what they 
 - 2026 (date not recorded) — V-DETAIL — self — Found a major issue around dates in UAT for GCM, and more recently raised an issue in activity data work (KB's note: "SDET"; detail to confirm).
 - 2026 — V-SHOULDER — self — Moved between teams as needed (Integration, Comms, Web Team Two, then Mobile App on 2026-10-08) and added value in each.
 - 2026 — V-WIN — self — Willing to move between tech stacks and learn new ones.
+- 2026 (Integration, Comms, Web Team Two, Mobile App from 2026-10-08) — V-WIN — manager — Each time he moved team, he got on with what that team needed at the time, raised the relevant quality points and kept to the team's mission without being pulled off course.
 
 ### Improvement and development areas (from KB, 2026-11-09)
 
@@ -184,7 +185,13 @@ _Feeds calibration prep and the end-of-year review. Source: **self** (what they 
 
 ### Manager's view of development areas
 
-- To be added by AC (card due 2026-11-10).
+_AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, read alongside the evidence above._
+
+- **Agreement with KB's self-assessment:** agrees with KB's WHAT, HOW and development area. AC has seen the moves between teams, the readiness to learn new stacks, and the focus on what the business needs at the time throughout the year.
+- **Strengths observed:** flexible about where he works; detail-oriented, technical tester who gets into the detail of a problem; consistent with the cross-stack strengths recorded above (GraphQL, Kafka, Exerp Adapter, AI-assisted tooling).
+- **Development areas (as could be said to KB):**
+  - Build on your AI tooling interest and make it count for the app team: Appium skills, local debugging, and reusable tools others can use (KB-O3, KB-O4).
+  - Use the Mobile App move to build visible domain ownership, so your knowledge of the app shows in risks flagged and gaps closed by the end of December (KB-O4).
 
 ## Team Movement Considerations
 

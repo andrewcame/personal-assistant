@@ -9,7 +9,7 @@
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-11-03                    |
+| Profile last reviewed  | 2026-11-11                    |
 
 ## Experience And Specialism
 
@@ -168,6 +168,8 @@ _Feeds calibration prep and the end-of-year review. Source: **self** (what they 
 - 2026 — V-DETAIL — self — Kept standards high under tight deadlines and reduced QA capacity, continuing to push back on poor quality.
 - 2026 — V-SHOULDER — self — Found a gap in team knowledge of how Pico handles the payment-attempted event (and so in test coverage). Investigated it, documented it in Miro (https://miro.com/app/board/uXjVH5QJF7I=/) and shared it with the QA and dev teams to spread knowledge and reduce regression risk. Relates to MP-O1.
 - 2026 — V-DETAIL — self — Investigates, challenges and improves existing test coverage rather than accepting it. Examples: PAYTEAM-51, 61, 195, 281, 282, 283, 284; PAY-3571, 3588, 3921.
+- 2026 — V-DETAIL — manager — Has been the Payments QA all year and its main quality gatekeeper. After the team went from two QAs to one, he kept to the agreed standards when work was under pressure.
+- 2026 (recent; date not recorded) — V-SHOULDER — manager — Started spreading Payments knowledge across the QA team, which helped shape AC's plan for a second person to support Payments — [IMP-07 Payments cover — Payments QA Cross-Training And Cover](../improvements/07-payments-qa-cross-training-and-cover.md)
 
 ### Improvement and development areas
 
@@ -175,7 +177,13 @@ _Feeds calibration prep and the end-of-year review. Source: **self** (what they 
 
 ### Manager's view of development areas
 
-- To be added by AC (card due 2026-11-10).
+_AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, read alongside the evidence above._
+
+- **Agreement with MP's self-assessment:** agrees with MP's WHAT, HOW and development area. MP is the quality champion in the Payments team and challenges standards, as his HOW entries describe.
+- **Strengths observed:** depth of Payments knowledge; holds the line on quality when delivery pressure goes the other way (consistent with the Payments Technical Lead's feedback, 2026-09-11).
+- **Development areas (as could be said to MP):**
+  - Keep using AI to manage the single-QA workload, with the cognitive-debt check you already apply, and share what works with the other leads (MP-O4).
+  - Turn the Payments knowledge-sharing you have started into a structured plan for a second person, with TMW, under [IMP-07 Payments cover](../improvements/07-payments-qa-cross-training-and-cover.md).
 
 ## Team Movement Considerations
 

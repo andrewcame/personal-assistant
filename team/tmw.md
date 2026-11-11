@@ -187,16 +187,25 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 - 2026 (from about September) — V-SHOULDER — self; manager (see [JFG](jfg.md) profile, 2026-09-14) — Took on Exerp upgrades to share the load, provide cover and find pain points in the flow as she went.
 - 2026 (date not recorded) — V-SHOULDER — self — Worked closely with developers to diagnose why issues were happening, sometimes working into the evening, and kept developers on track when issues had been assumed fixed.
 - 2026 (date not recorded) — V-DIFF — self — Consistently brought the team back to the customer's perspective rather than the technically interesting one, on the basis that a better technical solution that does not improve the member experience costs PureGym members, money and reputation.
+- 2026 — V-SHOULDER — manager — Takes on work to help others. When AC was her direct report she regularly offered help, and as JFG's line manager she makes sure his objectives are in place and kept up to date.
+- 2026 (from about September) — V-SHOULDER — manager — Took on the Exerp upgrade work JFG had been doing, which spread the knowledge and fed improvements into [IMP-09 Exerp release — Exerp Release Testing Process](../improvements/09-exerp-release-testing-process.md).
 
 ### Improvement and development areas (from TMW, 2026-11-11)
 
 - AI: using it more and wants to use it better; has bought her own training and has not yet found time to do it.
 - Learning the PureGym approach to front-end automation, especially as the team moves to AI-first; wants to learn it properly rather than only check that generated output looks right.
-- Line management: has led in roughly half her roles but has not line managed before, and wants to look into line-management training.
+- Line management: has led in roughly half her roles but had not line managed before this role (she now line manages JFG), and wants to look into line-management training.
 
 ### Manager's view of development areas
 
-- To be added by AC (card due 2026-11-10).
+_AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, read alongside the evidence above._
+
+- **Agreement with TMW's self-assessment:** agrees with her WHAT, HOW and development areas (AI, PureGym's front-end automation approach, line-management training).
+- **Strengths observed:** strong people leadership and support for colleagues; diligent line manager; consistently argues from the member's perspective.
+- **Context:** in Mobile App she inherited the Appium test pack, and local development setup issues slowed her down. Since moving to Web Team Two (2026-10-08) she has been on a more stable platform and contributing well.
+- **Development areas (as could be said to TMW):**
+  - Build the technical depth expected of a Lead QA, especially with solutions and test packs you didn't build yourself. You do your best work when you can build your own tooling and test pack, so practise getting productive in inherited ones (TMW-O6, [IMP-11 Backend tests](../improvements/11-backend-test-pack-coverage.md)).
+  - On AI: training helps, but learn mainly by doing it on live work, such as the Exerp upgrade AI skills and backend test skills.
 
 ## Team Movement Considerations
 

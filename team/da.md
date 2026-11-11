@@ -11,7 +11,7 @@ _Written to the [people-records standard](README.md#writing-standard): dated, ob
 | Reports to             | QA & Test Engineering Manager |
 | Direct report to me    | Yes                           |
 | Last promoted          | Unknown                       |
-| Profile last reviewed  | 2026-11-05                    |
+| Profile last reviewed  | 2026-11-11                    |
 
 ## Experience And Specialism
 
@@ -176,7 +176,15 @@ _Feeds calibration prep and the end-of-year review. Add dated, linked evidence t
 
 ### Manager's view of development areas
 
-- To be added by AC (card due 2026-11-10).
+_AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, read alongside the evidence and the Observations above._
+
+- **Strengths observed:** a very capable, detail-oriented engineer with strong technical understanding. Makes good progress when scope and direction are clear (consistent with the move to initiative-shaped work agreed 2026-09-22 and with INI-01).
+- **Line management:** new to line management, with one report (JS). His approach is light-touch so far. AC has little direct view of it yet; this is an area to develop.
+- **Development areas (as could be said to DA):**
+  - Look beyond test execution to the bigger picture: how the work, and the way you communicate about it, lands with the teams and stakeholders around you. This builds on the communication expectation agreed on 2026-10-08.
+  - Be present and contribute on calls, including stand-ups during cover, as agreed on 2026-09-22.
+  - Develop your line-management practice with JS: regular, structured support for her progression case.
+  - Where scope is not set for you, propose it yourself so the direction is clear. This is part of the evidence needed for Staff.
 
 ## Open Follow-Ups
 

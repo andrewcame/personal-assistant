@@ -88,6 +88,7 @@ _Feeds calibration prep and the end-of-year review. Received from JS 2026-11-11;
 - 2026 (date not recorded) — (objectives not available) — self — Created an AI test agent to help generate and review Playwright automation tests.
 - 2026 (date not recorded) — (objectives not available) — self — Supported the launch of Pico to the CH market, including the login work.
 - 2026 (date not recorded) — (objectives not available) — self — Presented Pico features delivered (for example Payload) to stakeholders at London Head Office and on video calls.
+- 2026 (date not recorded) — (objectives not available) — manager — Heavily involved in QA for the Pico market launches, including CH. Built the proof of concept that became the basis of the pico.frontend automation pack, which she then co-authored with DA (DA later took it on as Lead QA).
 
 ### HOW — behaviours against the values
 
@@ -102,7 +103,13 @@ _Feeds calibration prep and the end-of-year review. Received from JS 2026-11-11;
 
 ### Manager's view of development areas
 
-- To be added by AC (card due 2026-11-10).
+_AC, 2026-11-11. AC does not line manage JS (DA does) and has a similar view to the evidence above. Read alongside it._
+
+- **Agreement with JS's self-assessment:** agrees with her WHAT, HOW and development areas.
+- **Strengths observed:** hard-working; on Pico from the start, so has deep context on it; asks good questions; manages her own work; makes strong use of AI agents in her testing.
+- **Development areas (as could be said to JS):**
+  - Broaden beyond the Join journey. Your experience is mostly Join on the web, so exposure to the member experience and the mobile app would strengthen a Senior, and later Lead, case.
+  - Build the evidence for your next step (Senior, then a supportive Lead role without line management) with DA, using the Growth Framework.
 
 ## Team Movement Considerations
 
