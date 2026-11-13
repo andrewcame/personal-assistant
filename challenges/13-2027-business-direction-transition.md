@@ -4,7 +4,7 @@ tag: 2027 transition
 type: challenge
 status: open
 horizon: now
-updated: 2026-11-10
+updated: 2026-11-13
 pillars: [P1, P6]
 focus: [people, ownership]
 jd: []
@@ -54,13 +54,20 @@ people: []
 
 ## Status & Next Action
 
-**Status:** Open — direction previewed 2026-11-10 and live records triaged; not yet confirmed (expected around the end of 2026).
+**Status:** Open — plan confirmed at the Friday catch-up on 2026-11-13 (web, app and join to white label); handover timeline and what of our ecosystem remains still to confirm.
 
 **Next action:** Find out what of our ecosystem remains (CH-13.2).
 
 ## Outcome
 
 _Fill when resolved or closed: where the result landed (achievement or team evidence) and set `outcome:` above (achievement | evidence | both | none)._
+
+## 2026-11-13 Update — plan confirmed at the Friday catch-up
+
+- AC: the plan is that everything moves to white label except the PureGym website landing page and content. The member portal, app and join all move to the Exerp white label.
+- The rest of 2026 is finishing in-progress work. Pico may need to be resurrected if the business ever reverses the decision; not expected.
+- Partly answers CH-13.2: the landing page and content stay with PureGym. The rest of the ecosystem is still to confirm.
+- IMP-10 BrowserStack: cancellation requested (no product left to test); see [IMP-10](../improvements/10-browserstack-renewal-and-device-strategy.md).
 
 ## 2026-11-10 Update — triage agreed
 

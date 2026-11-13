@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-11
+updated: 2026-11-13
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -79,6 +79,11 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 
 - TMW's and JS's top 3 WHAT/HOW and improvement/development submissions received and recorded in [TMW's](../team/tmw.md) and [JS's](../team/js.md) profiles. All six team profiles now hold submissions or evidence; dates and impact figures are still missing for most. The IMP-08.8 card was moved to Done; IMP-08.8 marked done.
 - AC's view is now in the "Manager's view of development areas" section of all six profiles: agreement with each self-assessment, strengths observed and development areas, plus a few `manager` WHAT/HOW lines. Ratings and speculation were not recorded. The calibration-prep skill now reads this section. Card "Add my view of development areas to all six team profiles" moved to Done with AC's OK; IMP-08.9 marked done.
+### 2026-11-13
+
+- AC confirmed the calibration prep deadline (11 Nov) was met; card "Generate calibration prep in chat and fill the People template" moved to Done. IMP-08.4 marked done.
+- The calibration session itself is next week (date to confirm), not 11 Nov as previously recorded. IMP-08.5 promoted to doing and card "Attend the calibration session" created. No achievement logged for the profile and submission work; it is progress on this record, not an outcome.
+
 ## Roadmap
 
 | ID       | Step                                                               | Owner | Depends on | Status | Card                                                           |
@@ -86,8 +91,8 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 | IMP-08.1 | Book objectives meeting with GL                                    | AC    | —          | done   | —                                                              |
 | IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02)               | AC    | —          | done   | —                                                              |
 | IMP-08.3 | Record objectives and evidence in team profiles                    | AC    | IMP-08.2   | done   | —                                                              |
-| IMP-08.4 | Run calibration prep in chat; fill People template (by 2026-11-09) | AC    | IMP-08.3   | doing  | Generate calibration prep in chat and fill the People template |
-| IMP-08.5 | Attend calibration session (2026-11-11)                            | AC    | IMP-08.4   | later  | —                                                              |
+| IMP-08.4 | Run calibration prep in chat; fill People template (by 2026-11-09) | AC    | IMP-08.3   | done   | Generate calibration prep in chat and fill the People template |
+| IMP-08.5 | Attend the calibration session (next week; date to confirm)        | AC    | IMP-08.4   | doing  | Attend the calibration session                                 |
 | IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                        | AC    | IMP-08.5   | later  | —                                                              |
 | IMP-08.7 | Close open JFG calibration evidence questions                      | AC    | —          | done   | —                                                              |
 | IMP-08.8 | Monitor JS and TMW sending How/What/Learning data                 | AC    | —          | done   | Monitor JS and TMW sending me How/What/Learning data           |

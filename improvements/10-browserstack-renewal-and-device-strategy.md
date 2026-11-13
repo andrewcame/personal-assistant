@@ -4,7 +4,7 @@ tag: BrowserStack
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-10
+updated: 2026-11-13
 pillars: [P4, P9]
 focus: [automation, productivity]
 jd: [JD-05]
@@ -73,24 +73,31 @@ Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); 
 - Web and app technology is expected to move to a third party in 2027, so a long commitment is hard to justify. BrowserStack only sells yearly plans, so the monthly rolling option is off the table. If Web and App go to white label, automation has no product to test and BrowserStack isn't needed; the call is yearly or nothing, made after the director's white-label scope (Thu 12 Nov) and the Friday catch-up (13 Nov). IMP-10.2 updated; its card was renamed to match.
 - The longer-term device strategy steps (IMP-10.3 to IMP-10.6) stay in Later, parked until CH-13 shows who owns mobile automation in 2027.
 
+### 2026-11-13 (Friday catch-up; found Done in the weekly review, Flow 6)
+
+- AC asked BrowserStack to cancel the subscription because it is no longer used, following the 13 Nov catch-up: web, app and join move to white label ([CH-13](../challenges/13-2027-business-direction-transition.md)), so there is no product left for the device cloud to test. This replaces the monthly rolling plan idea.
+- Cards "Decide yearly BrowserStack or nothing, after the director meeting", "Review my BrowserStack access post “approval”" and "Ask platform to whitelist BrowserStack IPs" are Done. IMP-10.2, IMP-10.7 and IMP-10.8 marked done. New step IMP-10.9 (confirm the cancellation lands before 22 Nov) and card added.
+- IMP-10.3 to IMP-10.6 are no longer needed; to be closed with the record once the cancellation is confirmed (outcome to be asked then).
+
 ## Roadmap
 
 | ID       | Step                                                                                                                                    | Owner | Depends on         | Status | Card                                                   |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------|
 | IMP-10.1 | Hold renewal call with the BrowserStack account manager                                                                                 | AC    | —                  | done   | —                                                      |
-| IMP-10.2 | Decide yearly BrowserStack or nothing, after the director's white-label scope (Thu 12 Nov) and the Friday catch-up; BrowserStack sells yearly only | AC    | IMP-10.1           | doing  | Decide yearly BrowserStack or nothing, after the director meeting |
+| IMP-10.2 | Decide yearly BrowserStack or nothing, after the director's white-label scope (Thu 12 Nov) and the Friday catch-up; BrowserStack sells yearly only | AC    | IMP-10.1           | done   | Decide yearly BrowserStack or nothing, after the director meeting |
 | IMP-10.3 | Baseline device-related failures in mobile automation                                                                                   | AC    | —                  | later  | —                                                      |
 | IMP-10.4 | Review alternatives: other device clouds and a local device estate                                                                      | AC    | IMP-10.2, IMP-10.3 | later  | —                                                      |
 | IMP-10.5 | Choose the platform that best unlocks mobile automation                                                                                 | AC    | IMP-10.4, CH-09.9  | later  | —                                                      |
 | IMP-10.6 | Re-request the SDK documentation; assess it as an Appium test improvement (with camera image injection)                                 | AC    | IMP-10.1           | later  | —                                                      |
-| IMP-10.7 | Review my BrowserStack access after approval                                                                                            | AC    | —                  | doing  | Review my BrowserStack access post “approval”          |
-| IMP-10.8 | Get the BrowserStack IP addresses and ask AE to whitelist them so external web views load on devices                                    | AC    | —                  | next   | Ask platform to whitelist BrowserStack IPs             |
+| IMP-10.7 | Review my BrowserStack access after approval                                                                                            | AC    | —                  | done   | Review my BrowserStack access post “approval”          |
+| IMP-10.8 | Get the BrowserStack IP addresses and ask AE to whitelist them so external web views load on devices                                    | AC    | —                  | done   | Ask platform to whitelist BrowserStack IPs             |
+| IMP-10.9 | Confirm the BrowserStack cancellation is processed before the 22 Nov renewal                                                            | AC    | IMP-10.2           | doing  | Confirm BrowserStack cancellation before the 22 Nov renewal |
 
 ## Status & Next Action
 
 **Status:** In progress
 
-**Next action:** Explore a monthly rolling plan with BrowserStack and agree it before renewal on **22 November 2026**.
+**Next action:** Confirm the cancellation request is processed before renewal on **22 November 2026**, then close the record.
 
 ## Outcome
 
