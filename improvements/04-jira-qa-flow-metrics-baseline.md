@@ -3,8 +3,8 @@ id: IMP-04
 tag: QA metrics
 type: improvement
 status: in-progress
-horizon: now
-updated: 2026-11-10
+horizon: later
+updated: 2026-11-16
 pillars: [P6]
 focus: [productivity]
 jd: [JD-09]
@@ -131,6 +131,10 @@ These measures can be referenced as context during an investigation, but should 
 - Later QA quality signals may include escaped defects, critical-journey coverage, automation reliability, environment health, and release outcomes. They should be added from their authoritative systems rather than forced into Jira.
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- AC marked this a carry-forward candidate for the new role (bigger test improvements). Horizon Later; no cards until the new remit is known.
 
 ### 2026-09-24
 

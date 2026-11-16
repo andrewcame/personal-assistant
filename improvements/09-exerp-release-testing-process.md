@@ -2,9 +2,9 @@
 id: IMP-09
 tag: Exerp release process
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P5, P8, P6]
 focus: [ownership, productivity]
 jd: [JD-09]
@@ -33,6 +33,10 @@ people: [MJ]
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-10-15
 
 - Opened. First step: discussion with the Lead QAs (Notion to-do).
@@ -41,12 +45,18 @@ people: [MJ]
 
 - IMP-09.2 reframed by AC: get access to the Exerp release calendar in Confluence, so upcoming Exerp releases can be shown in the weekly report.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Defined, risk-based process for Exerp release and upgrade testing
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
 ## Roadmap
 
 | ID       | Step                                                   | Owner | Depends on         | Status | Card                                                      |
 |----------|--------------------------------------------------------|-------|--------------------|--------|-----------------------------------------------------------|
-| IMP-09.1 | Agree process outline and owner with the Lead QAs      | AC    | CH-12.1            | next   | Book time to discuss Exerp release testing with the leads |
-| IMP-09.2 | Get access to the Exerp release calendar in Confluence | AC    | —                  | next   | Get access to the Exerp release calendar in Confluence    |
+| IMP-09.1 | Agree process outline and owner with the Lead QAs      | AC    | CH-12.1            | later  | —                                                         |
+| IMP-09.2 | Get access to the Exerp release calendar in Confluence | AC    | —                  | later  | —                                                         |
 | IMP-09.3 | Draft risk-based scope, ticket ownership and sign-off  | AC    | IMP-09.1, IMP-09.2 | later  | —                                                         |
 | IMP-09.4 | Document and agree the process with the Lead QAs       | AC    | IMP-09.3           | later  | —                                                         |
 

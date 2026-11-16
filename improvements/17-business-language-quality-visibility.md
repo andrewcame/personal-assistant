@@ -4,7 +4,7 @@ tag: Business visibility
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-11-04
+updated: 2026-11-16
 pillars: [P8, P10]
 focus: [ownership]
 jd: [JD-16]
@@ -30,6 +30,10 @@ people: []
 - Originating challenge(s): CH-02
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- AC marked this a carry-forward candidate for the new role (bigger test improvements). Horizon Later; no cards until the new remit is known.
 
 ### 2026-11-04
 

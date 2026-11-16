@@ -4,12 +4,12 @@ tag: Assistant
 type: improvement
 status: in-progress
 horizon: next
-updated: 2026-11-10
+updated: 2026-11-16
 pillars: [P9]
 focus: [productivity]
 jd: [JD-07]
 goals: []
-links: [CH-13, IMP-16]
+links: [CH-13, IMP-16, IMP-19]
 people: []
 ---
 
@@ -30,6 +30,10 @@ Identify and add only the skills that remove repeated procedural guidance withou
 - Originating recommendation: self
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Scope widened (AC): this is now about improving AC's own agentic flow (this repo, the harness, the assistant), not only the skill backlog. How QA works with agentic business workflows built in Foundry or similar is a separate improvement: [IMP-19](19-qa-in-agentic-business-workflows.md).
 
 ### 2026-09-30
 

@@ -2,12 +2,13 @@
 id: IMP-10
 tag: BrowserStack
 type: improvement
-status: in-progress
-horizon: now
-updated: 2026-11-13
+status: done
+horizon: none
+updated: 2026-11-16
 pillars: [P4, P9]
 focus: [automation, productivity]
 jd: [JD-05]
+outcome: achievement
 goals: []
 links: [CH-09, CH-13]
 people: [AE]
@@ -79,27 +80,32 @@ Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); 
 - Cards "Decide yearly BrowserStack or nothing, after the director meeting", "Review my BrowserStack access post “approval”" and "Ask platform to whitelist BrowserStack IPs" are Done. IMP-10.2, IMP-10.7 and IMP-10.8 marked done. New step IMP-10.9 (confirm the cancellation lands before 22 Nov) and card added.
 - IMP-10.3 to IMP-10.6 are no longer needed; to be closed with the record once the cancellation is confirmed (outcome to be asked then).
 
+### 2026-11-16 (Monday brief; found Done, Flow 6; closed)
+
+- Card "Confirm BrowserStack cancellation before the 22 Nov renewal" is Done; IMP-10.9 marked done.
+- **Correction (AC, 2026-11-16):** the renewal could not be cancelled after all. AC negotiated a saving of about $3k, the licence runs one more year, and it will not be renewed next year. No further action, so the record is closed with outcome `achievement`. IMP-10.3 to IMP-10.6 dropped (no longer needed).
+
 ## Roadmap
 
 | ID       | Step                                                                                                                                    | Owner | Depends on         | Status | Card                                                   |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------|
 | IMP-10.1 | Hold renewal call with the BrowserStack account manager                                                                                 | AC    | —                  | done   | —                                                      |
 | IMP-10.2 | Decide yearly BrowserStack or nothing, after the director's white-label scope (Thu 12 Nov) and the Friday catch-up; BrowserStack sells yearly only | AC    | IMP-10.1           | done   | Decide yearly BrowserStack or nothing, after the director meeting |
-| IMP-10.3 | Baseline device-related failures in mobile automation                                                                                   | AC    | —                  | later  | —                                                      |
-| IMP-10.4 | Review alternatives: other device clouds and a local device estate                                                                      | AC    | IMP-10.2, IMP-10.3 | later  | —                                                      |
-| IMP-10.5 | Choose the platform that best unlocks mobile automation                                                                                 | AC    | IMP-10.4, CH-09.9  | later  | —                                                      |
-| IMP-10.6 | Re-request the SDK documentation; assess it as an Appium test improvement (with camera image injection)                                 | AC    | IMP-10.1           | later  | —                                                      |
+| IMP-10.3 | Baseline device-related failures in mobile automation                                                                                   | AC    | —                  | dropped| —                                                      |
+| IMP-10.4 | Review alternatives: other device clouds and a local device estate                                                                      | AC    | IMP-10.2, IMP-10.3 | dropped| —                                                      |
+| IMP-10.5 | Choose the platform that best unlocks mobile automation                                                                                 | AC    | IMP-10.4, CH-09.9  | dropped| —                                                      |
+| IMP-10.6 | Re-request the SDK documentation; assess it as an Appium test improvement (with camera image injection)                                 | AC    | IMP-10.1           | dropped| —                                                      |
 | IMP-10.7 | Review my BrowserStack access after approval                                                                                            | AC    | —                  | done   | Review my BrowserStack access post “approval”          |
 | IMP-10.8 | Get the BrowserStack IP addresses and ask AE to whitelist them so external web views load on devices                                    | AC    | —                  | done   | Ask platform to whitelist BrowserStack IPs             |
-| IMP-10.9 | Confirm the BrowserStack cancellation is processed before the 22 Nov renewal                                                            | AC    | IMP-10.2           | doing  | Confirm BrowserStack cancellation before the 22 Nov renewal |
+| IMP-10.9 | Confirm the BrowserStack cancellation is processed before the 22 Nov renewal                                                            | AC    | IMP-10.2           | done   | Confirm BrowserStack cancellation before the 22 Nov renewal |
 
 ## Status & Next Action
 
-**Status:** In progress
+**Status:** Done (2026-11-16)
 
-**Next action:** Confirm the cancellation request is processed before renewal on **22 November 2026**, then close the record.
+**Next action:** None. Do not renew at the next renewal (around 22 November 2027).
 
 ## Outcome
 
-- Completed:
-- Logged achievement:
+- Completed: 2026-11-16
+- Logged achievement: [2026-11-16 - BrowserStack saving negotiated](../achievements/2026.md)

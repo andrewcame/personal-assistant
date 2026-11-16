@@ -4,7 +4,7 @@ tag: AI test boilerplate
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-11-10
+updated: 2026-11-16
 pillars: [P9]
 focus: [automation]
 jd: [JD-14]
@@ -29,6 +29,10 @@ people: []
 - Role pillar(s): [P9 AI-Enabled Testing](../context/role-pillars.md)
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- AC marked this a carry-forward candidate for the new role (bigger test improvements). Horizon Later; no cards until the new remit is known.
 
 ### 2026-11-04
 

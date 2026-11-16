@@ -2,9 +2,9 @@
 id: IMP-01
 tag: Staging SRE
 type: improvement
-status: in-progress
-horizon: now
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P5]
 focus: [productivity]
 jd: [JD-06]
@@ -34,6 +34,10 @@ people: [JT]
 - Originating recommendation: Self / Leadership in-office discussion
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
 
 ### 2026-09-11
 
@@ -87,6 +91,15 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 3. Record findings in the agreed local log, including the environment, time, observed signal, error evidence, impact, and escalation/outcome.
 4. Escalate actionable findings to the appropriate SME. If DLQ recovery is agreed, recreate the Kafka DLQ topic and then restart the affected consumer pod; verify that the consumer recreates its subscription.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Staging monitoring and alerting has a clear owner and daily routine
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+- **Notion card detail captured 2026-11-16 (cards archived 2026-11-16):**
+  - Card "Look into staging DLQ issues": account.basket.dlq.raw, account.membership.dlq.raw and account.payment.dlq.raw see some "production"-tagged messages (use AI to work out why); brazeadapter.account.dlq.raw has many errors from missing Braze config (identify and get fixed); exerpadapter.extracts.internal.dlq.raw (check why and when it runs, what it does, whether it can be disabled in staging, compare to prod); exerpadapter.product.dlq.raw (ask JT to show how to clear and re-run it).
+  - Card "Write up the staging routine and alert runbook for handover": document the daily staging checks, dashboards, DLQ handling and escalation so it can be handed over. Card "Scope Claude running the morning staging checks": no detail beyond the title.
+
 ## Roadmap
 
 | ID       | Step                                                                              | Owner | Depends on | Status  | Card                                                        |
@@ -95,11 +108,11 @@ _Proposal based on the 2026-09-14 discovery guidance; validate ownership, escala
 | IMP-01.2 | Complete DevEx/Platform monitoring walkthrough                                    | AC    | —          | done    | —                                                           |
 | IMP-01.3 | Run staging first-response checks manually                                        | AC    | IMP-01.2   | done    | —                                                           |
 | IMP-01.4 | Confirm daily first-response routine with DevEx/Platform                          | AC    | IMP-01.2   | dropped | —                                                           |
-| IMP-01.5 | Look into staging DLQ issues                                                      | AC    | —          | next    | Look into staging DLQ issues                                |
-| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC    | IMP-01.3   | next    | Scope Claude running the morning staging checks             |
+| IMP-01.5 | Look into staging DLQ issues                                                      | AC    | —          | later   | —                                                           |
+| IMP-01.6 | Scope Claude running the morning staging checks (what it reads, what stays human) | AC    | IMP-01.3   | later   | —                                                           |
 | IMP-01.7 | Pilot Claude-run morning checks; AC triages and fixes findings                    | AC    | IMP-01.6   | later   | —                                                           |
 | IMP-01.8 | Speak to PDEX about the staging environment to get control of it                  | AC    | —          | done    | Speak to PDEX about the staging environment                 |
-| IMP-01.9 | Write up the daily staging routine and alert runbook so it can be handed over     | AC    | —          | next    | Write up the staging routine and alert runbook for handover |
+| IMP-01.9 | Write up the daily staging routine and alert runbook so it can be handed over     | AC    | —          | later   | —                                                           |
 
 ## Status & Next Action
 

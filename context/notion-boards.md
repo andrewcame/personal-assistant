@@ -14,7 +14,7 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 ## Rules
 
 1. **Fetch these boards by link or ID only.** Never use Notion search, never list or browse other pages, never follow links from a card to other pages. A card's own body and comments may be read when tidying or tracking it.
-2. **Card writes are applied directly and listed to AC afterwards.** Creating cards, setting `Record` or `To-Do Completion`, fixing the column and renaming need no pre-approval. Deleting, archiving and moving a card to Done still need AC's OK (a card AC moves to Done himself is applied to the repo by notion-sync Flow 6).
+2. **Card writes are applied directly and listed to AC afterwards.** Creating cards, setting `Record` or `To-Do Completion`, fixing the column and renaming need no pre-approval (in scheduled runs AC's approval is standing; a refused write is queued for AC's reply, never worked around). Deleting, archiving and moving a card to Done still need AC's OK (a card AC moves to Done himself is applied to the repo by notion-sync Flow 6).
 3. **Tag with record IDs.** A card created from the repo carries its record ID (see Conventions below). An idea promoted to a record gets the new ID written back next to it.
 4. **Nothing sensitive goes to Notion** — the people-records standard applies to card text too.
 5. **Tasks are tracked in Notion, not in the repo.** The repo records outcomes and progress against records, and each roadmap step names its card in the `Card` column (exact title) so the dashboard can show what is on Notion.
@@ -27,6 +27,7 @@ Both sit under AC's **Work** page in Notion. The "To-Do Completion" database on 
 - **Done clear-out:** every fortnight, Done cards not edited for 14+ days are proposed for archiving (Trash, restorable) once their outcome is in the repo. AC approves each batch.
 - **Titles:** short and plain, no `[CATEGORY]` prefix (retired 2026-10-15). Detail can go in the card body — agents read the body of tracked cards.
 - **Record values:** go in the `Record` property as `<ID> <tag>`. The ID at the start is what agents and the dashboard match on, so never drop it. Add a new option when a new record is created; untagged cards are fine for quick tasks.
+- **Legacy records have no cards** (from 2026-11-16). Their Backlog cards are archived, with AC's OK, once the detail is in the record.
 - **Column rule:** "To Do" means in progress. A card for a **Now** step sits in `To Do`; a card for a **Next** or **Later** step sits in `Backlog`. Only Now work goes in To Do.
 - **No initiative cards:** cards are created for improvements (`IMP-`) and challenges (`CH-`) only. Jira delivery is tracked in Jira; its tasks go against the parent record. Cards still tagged `INI-01` or `INI-02` count towards IMP-02 and CH-09 respectively and should be retagged.
 - **Admin-only mapping:** `Admin` (BAU) is the only category value. A card with no `Record` value, or only `Admin`, is unmapped and ties to no challenge or improvement. Only a CH-/IMP- ID in `Record` links a card to a record.

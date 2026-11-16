@@ -2,9 +2,9 @@
 id: IMP-11
 tag: Backend tests
 type: improvement
-status: on-hold
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
@@ -34,6 +34,10 @@ people: [TMW, JFG, AE]
 - Related: [CH-10 — Pico Source-Of-Truth And Exerp-Dependent Test Strategy](../challenges/10-pico-source-of-truth-and-exerp-dependent-test-strategy.md) (test-tier rules for Exerp-dependent tests)
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
 
 ### 2026-11-03
 
@@ -78,6 +82,14 @@ Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); 
 - IMP-11.6 and IMP-11.7 moved to later; their Notion cards moved to Backlog.
 - TMW's 2026 objective TMW-O6 (scope a Pico backend coverage initiative by end of December) depends on this work; AC to revisit it.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Backend test pack covers priority services
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+- **Notion card detail captured 2026-11-16 (cards archived 2026-11-16):**
+  - Card "Set up the backend test coverage initiative with TMW and JFG" (High, due 2026-11-13): create the Jira initiative for backend test coverage (parent IMP-11); agree with TMW that her scoped proposal (TMW-O6, due end of December) is the first deliverable, with JFG's coverage work as input; have a pointer ready for calibration. Card "Investigate Exerp Assistant not showing all products": no detail beyond the title.
+
 ## Roadmap
 
 | ID       | Step                                                                                                                          | Owner | Depends on         | Status | Card                                                         |
@@ -87,8 +99,8 @@ Source: [Leadership Direction, 2026-11-10](../context/leadership-direction.md); 
 | IMP-11.3 | Fix Kafka Web Sender and decide whether to expand its use                                                                     | AC    | IMP-11.1           | later  | —                                                            |
 | IMP-11.4 | Agree priority gaps and owners; add the tests                                                                                 | AC    | IMP-11.1, IMP-11.2 | later  | —                                                            |
 | IMP-11.5 | Flesh out a flagged integration tier: select real-Exerp tests, flag them in the packs, decide blocking vs overnight-and-alert | AC    | CH-10.5            | later  | —                                                            |
-| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December)                     | AC    | —                  | later  | Set up the backend test coverage initiative with TMW and JFG |
-| IMP-11.7 | Investigate Exerp Assistant not showing all products                                                                          | AC    | —                  | later  | Investigate Exerp Assistant not showing all products         |
+| IMP-11.6 | Set up the backend test coverage initiative with TMW and JFG (TMW-O6 scoped proposal due end of December)                     | AC    | —                  | later  | —                                                            |
+| IMP-11.7 | Investigate Exerp Assistant not showing all products                                                                          | AC    | —                  | later  | —                                                            |
 
 ## Status & Next Action
 

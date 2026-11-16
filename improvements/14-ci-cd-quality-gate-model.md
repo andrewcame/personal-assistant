@@ -4,7 +4,7 @@ tag: CI/CD gate
 type: improvement
 status: not-started
 horizon: later
-updated: 2026-11-09
+updated: 2026-11-16
 pillars: [P4, P6]
 focus: [automation]
 jd: [JD-08]
@@ -30,6 +30,10 @@ people: [AE]
 - Originating recommendation: 60-day plan
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- AC marked this a carry-forward candidate for the new role (bigger test improvements). Horizon Later; no cards until the new remit is known.
 
 ### 2026-11-04
 

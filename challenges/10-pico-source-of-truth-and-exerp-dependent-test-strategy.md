@@ -2,9 +2,9 @@
 id: CH-10
 tag: Pico source of truth
 type: challenge
-status: open
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P4, P5]
 focus: [automation]
 jd: [JD-06, JD-09]
@@ -115,6 +115,19 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - **Cross-brand edge cases and copy-back:** e.g. logging into Ireland as a UK member on the same Exerp; Exerp copy-back protections.
 - **Parked:** Pico backend deploys everything at once, first to staging (needing a coordinator to check all parts deployed) then prod (race conditions as parts deploy in different orders). Not a QA item and aspirational for now; raise later if it becomes relevant.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Test data strategy agreed across teams (beyond the Portal MVP)
+- **Revive if:** the business reverses the white-label decision (Pico may need resurrecting), or the 2026 work carries into early February 2027.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ## Roadmap
 
 | ID      | Step                                                                                                      | Owner | Depends on | Status | Card                                                            |
@@ -126,7 +139,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-10.5 | Agree test-tier rules and Pico assertion boundary                                                         | AC    | CH-10.4    | later  | —                                                               |
 | CH-10.6 | Run one real-Exerp PoC journey with dynamic data                                                          | AC    | CH-10.5    | later  | —                                                               |
 | CH-10.7 | Record multi-tenant Exerp environment architecture decision                                               | AC    | CH-10.6    | later  | —                                                               |
-| CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem                | AC    | CH-10.1    | next   | Pull environment metrics showing why environments are a problem |
+| CH-10.8 | Pull environment metrics (via Claude, separate from Jira team metrics) showing the problem                | AC    | CH-10.1    | later  | —                                                               |
 | CH-10.9 | Research industry practice: test in production/SRE vs mocking vs real integration for distributed systems | AC    | —          | done   | —                                                               |
 
 ## Status & Next Action

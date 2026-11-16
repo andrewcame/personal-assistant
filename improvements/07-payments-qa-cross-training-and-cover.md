@@ -2,9 +2,9 @@
 id: IMP-07
 tag: Payments cover
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P1, P6]
 focus: [people]
 jd: [JD-02]
@@ -32,6 +32,10 @@ people: [TMW, JFG]
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-10-08
 
 - Identified a possible TMW-to-Payments support path with JFG, to begin only after the Web Team Two move has settled.
@@ -40,15 +44,21 @@ people: [TMW, JFG]
 
 - Web responsibilities are settled enough (see CH-04). The plan is that JFG backfills Payments; the knowledge-transfer plan sits with TMW (his line manager) and MP (Payments lead), with AC following up. Treated as 2027 work; horizon Later.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Payments QA cross-training and cover
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
 ## Roadmap
 
 | ID       | Step                                                                                      | Owner | Depends on         | Status | Card                                                                     |
 |----------|-------------------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------------------------|
 | IMP-07.1 | Confirm Web responsibilities stable after TMW's move                                      | AC    | CH-04.4            | done   | —                                                                        |
-| IMP-07.2 | Agree shadowing or paired-testing scope with TMW and JFG                                  | AC    | IMP-07.1           | next   | Agree Payments shadowing scope with TMW and JFG                          |
+| IMP-07.2 | Agree shadowing or paired-testing scope with TMW and JFG                                  | AC    | IMP-07.1           | later  | —                                                                        |
 | IMP-07.3 | Agree how Payments requests support without a bottleneck                                  | AC    | IMP-07.2           | later  | —                                                                        |
 | IMP-07.4 | Start bounded Payments shadowing with JFG                                                 | TMW   | IMP-07.2, IMP-07.3 | later  | —                                                                        |
-| IMP-07.5 | Follow up with TMW (line manager) and MP (Payments lead) on JFG's Payments KT plan — 2027 | AC    | IMP-07.1           | later  | Follow up with TMW and MP on JFG Payments knowledge-transfer plan (2027) |
+| IMP-07.5 | Follow up with TMW (line manager) and MP (Payments lead) on JFG's Payments KT plan — 2027 | AC    | IMP-07.1           | later  | —                                                                        |
 
 ## Status & Next Action
 

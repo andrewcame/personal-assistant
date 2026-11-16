@@ -2,9 +2,9 @@
 id: IMP-06
 tag: Coverage baseline
 type: improvement
-status: in-progress
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P2]
 focus: [automation]
 jd: [JD-09]
@@ -36,6 +36,10 @@ people: []
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-10-08
 
 - Functional deep-dive work is underway in Miro.
@@ -58,16 +62,26 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 - AC moved this improvement from Now to Later: in progress, but less urgent than the other Now work. Its Notion cards (Update Miro functional QA board; Tidy up QA Confluence; Add a Confluence page for links to all E2E results; Create Confluence pages for the manual and automation packs) moved from To Do to Backlog. Steps IMP-06.1 to IMP-06.3 set to next.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** First-pass coverage register (journey, market, repo, owner, cadence, gap)
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+- **Notion card detail captured 2026-11-16 (cards archived 2026-11-16):**
+  - Card "Create Confluence pages for the manual and automation packs and run status": include when they run, AI-generated coverage, gaps to be confirmed.
+  - Card "Update Miro functional QA board": document out the microsite portal; add in all automation repos where coverage exists.
+  - Card "Tidy up QA Confluence": explore what Confluence documentation can do and what AI it offers; whether how-to guides should live there. Confluence (QA space) is the home for future docs for now; other options can be investigated later.
+
 ## Roadmap
 
 | ID       | Step                                                                             | Owner | Depends on         | Status | Card                                                                                 |
 |----------|----------------------------------------------------------------------------------|-------|--------------------|--------|--------------------------------------------------------------------------------------|
-| IMP-06.1 | Build Miro functional QA board (first functional map)                            | AC    | —                  | next   | Update Miro functional QA board                                                      |
-| IMP-06.2 | Decide home of QA docs and Confluence structure                                  | AC    | —                  | next   | Tidy up QA Confluence                                                                |
-| IMP-06.3 | Create Confluence automation links page                                          | AC    | IMP-06.2           | next   | Add a Confluence page for links to all E2E results, share with LM and let her update |
+| IMP-06.1 | Build Miro functional QA board (first functional map)                            | AC    | —                  | later  | —                                                                                    |
+| IMP-06.2 | Decide home of QA docs and Confluence structure                                  | AC    | —                  | later  | —                                                                                    |
+| IMP-06.3 | Create Confluence automation links page                                          | AC    | IMP-06.2           | later  | —                                                                                    |
 | IMP-06.4 | Link references to Jira metrics and coverage items                               | AC    | IMP-06.3, IMP-04.2 | later  | —                                                                                    |
 | IMP-06.5 | Draft first-pass coverage register                                               | AC    | IMP-06.1, CH-07.2  | later  | —                                                                                    |
-| IMP-06.6 | Create Confluence pages for the manual and automation packs and their run status | AC    | IMP-06.2           | next   | Create Confluence pages for the manual and automation packs and run status           |
+| IMP-06.6 | Create Confluence pages for the manual and automation packs and their run status | AC    | IMP-06.2           | later  | —                                                                                    |
 
 ## Status & Next Action
 

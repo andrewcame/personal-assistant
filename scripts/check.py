@@ -27,11 +27,11 @@ RECORD_DIRS = {
     "improvement": ("improvements", "IMP"),
 }
 STATUSES = {
-    "challenge": ["open", "active-monitoring", "resolved", "closed"],
-    "improvement": ["not-started", "in-progress", "on-hold", "blocked", "done"],
+    "challenge": ["open", "active-monitoring", "resolved", "closed", "legacy"],
+    "improvement": ["not-started", "in-progress", "on-hold", "blocked", "done", "legacy"],
 }
 CLOSED = {"resolved", "closed", "done"}
-HORIZONS = ["now", "next", "later", "none"]
+HORIZONS = ["now", "next", "later", "legacy", "none"]
 NOW_LIMIT = 8
 OUTCOMES = ["achievement", "evidence", "both", "none"]
 FOCUS = ["people", "ownership", "automation", "productivity"]
@@ -158,7 +158,7 @@ def plan_rows() -> list[dict]:
     """Rows of the Now / Next / Later tables in horizons.md (Outcome | Focus | Carried by | Status)."""
     text = read(ROOT / "context" / "my-role" / "horizons.md")
     rows = []
-    for hz in ("Now", "Next", "Later"):
+    for hz in ("Now", "Next", "Later", "Legacy"):
         m = re.search(rf"^## {hz}[^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
         for line in (m.group(1) if m else "").splitlines():
             cells = [c.strip() for c in line.strip().strip("|").split("|")]
@@ -398,7 +398,7 @@ def stale(days: int = 21) -> int:
         if r["kind"] not in RECORD_DIRS:
             continue
         fm = r["fm"]
-        if fm.get("status") in CLOSED:
+        if fm.get("status") in CLOSED or fm.get("status") == "legacy":
             continue
         try:
             upd = dt.date.fromisoformat(fm.get("updated", ""))

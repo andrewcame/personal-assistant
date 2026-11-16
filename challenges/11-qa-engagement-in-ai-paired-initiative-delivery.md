@@ -4,7 +4,7 @@ tag: QA in AI delivery
 type: challenge
 status: open
 horizon: later
-updated: 2026-11-06
+updated: 2026-11-16
 pillars: [P3, P6, P9]
 focus: [ownership]
 jd: [JD-07, JD-13]
@@ -156,6 +156,13 @@ _From two reads logged as [industry signals](../context/industry-signals.md): Na
 ## 2026-11-06 Update — Discovery Card Closed
 
 - AC closed the Notion card "Read QA in AI-paired delivery research brief; plan discovery chats": this challenge sits in Later, and Later steps need no card. CH-11.7 set to later; a card is created when the challenge is promoted to Next or Now.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- AC marked this a carry-forward candidate for the new role (bigger test improvements). Horizon Later; no cards until the new remit is known.
 
 ## Roadmap
 

@@ -4,7 +4,7 @@ tag: Objectives & reviews
 type: improvement
 status: in-progress
 horizon: now
-updated: 2026-11-13
+updated: 2026-11-16
 pillars: [P1]
 focus: [people]
 jd: [JD-01, JD-03]
@@ -34,6 +34,10 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 - Originating recommendation: self (gap analysis 2026-10-14)
 
 ## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- AC: update my own objectives ahead of my EOY (new step IMP-08.10, card created). The calibration session is on Wednesday 2026-11-18.
 
 ### 2026-10-15
 
@@ -92,11 +96,12 @@ people: [TMW, DA, MP, KB, JS, JFG, GL]
 | IMP-08.2 | Hold objectives calls with the team (w/c 2026-11-02)               | AC    | —          | done   | —                                                              |
 | IMP-08.3 | Record objectives and evidence in team profiles                    | AC    | IMP-08.2   | done   | —                                                              |
 | IMP-08.4 | Run calibration prep in chat; fill People template (by 2026-11-09) | AC    | IMP-08.3   | done   | Generate calibration prep in chat and fill the People template |
-| IMP-08.5 | Attend the calibration session (next week; date to confirm)        | AC    | IMP-08.4   | doing  | Attend the calibration session                                 |
+| IMP-08.5 | Attend the calibration session (Wed 2026-11-18)                    | AC    | IMP-08.4   | doing  | Attend the calibration session                                 |
 | IMP-08.6 | Deliver end-of-year reviews (by 2027-01-15)                        | AC    | IMP-08.5   | later  | —                                                              |
 | IMP-08.7 | Close open JFG calibration evidence questions                      | AC    | —          | done   | —                                                              |
 | IMP-08.8 | Monitor JS and TMW sending How/What/Learning data                 | AC    | —          | done   | Monitor JS and TMW sending me How/What/Learning data           |
 | IMP-08.9 | Add my view of development areas to team profiles (by 2026-11-10) | AC    | —          | done   | Add my view of development areas to all six team profiles      |
+| IMP-08.10 | Update my own objectives ahead of my EOY                          | AC    | —          | doing  | Update my own objectives ahead of my EOY                       |
 
 ## Status & Next Action
 

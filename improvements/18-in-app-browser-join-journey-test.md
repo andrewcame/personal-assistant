@@ -2,9 +2,9 @@
 id: IMP-18
 tag: In-app Join test
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
@@ -34,6 +34,10 @@ people: []
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-11-10
 
 - Opened from AC's idea. Decision: new improvement, Later (Now is near its limit and delivery will need a Jira initiative).
@@ -41,6 +45,12 @@ people: []
 - Test from the final landing URL with campaign parameters, not the ad click (Facebook's link redirect is out of scope). Run on staging only, because Join creates real member sessions.
 - Capture current user-agent strings from real devices before writing the tests; version numbers change.
 - AC set the first steps: scope the initiative, and source repeatable test data in staging. Roadmap reordered (IMP-18.1 scope and raise in Jira; IMP-18.2 repeatable staging data); user-agent capture and the test build follow. Still Later, so no Notion cards until promoted to Next.
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Join journey tested as simulated Facebook and Instagram in-app browser traffic
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
 
 ## Roadmap
 

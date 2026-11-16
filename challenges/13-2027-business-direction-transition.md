@@ -4,14 +4,14 @@ tag: 2027 transition
 type: challenge
 status: open
 horizon: now
-updated: 2026-11-13
+updated: 2026-11-16
 pillars: [P1, P6]
 focus: [people, ownership]
 jd: []
 jira: []
 outcome:
 goals: []
-links: [IMP-02, IMP-05, IMP-10, IMP-11, CH-09]
+links: [IMP-02, IMP-05, IMP-10, IMP-11, IMP-19, CH-09]
 people: []
 ---
 
@@ -47,8 +47,8 @@ people: []
 | ID      | Step                                                                                      | Owner | Depends on                | Status | Ticket | Card                                                       |
 |---------|-------------------------------------------------------------------------------------------|-------|---------------------------|--------|--------|------------------------------------------------------------|
 | CH-13.1 | Triage live challenges and improvements: finish, leave in a good place, or park           | AC    | —                         | done   | —      | Triage challenges and improvements for the 2027 transition |
-| CH-13.2 | Find out what of our ecosystem remains (test packs, pipelines, environments, tools, docs) | AC    | —                         | next   | —      | Find out what of our ecosystem remains                     |
-| CH-13.3 | Confirm the handover timeline and who leads it on each side                               | AC    | CH-13.2                   | later  | —      | —                                                          |
+| CH-13.2 | Find out what of our ecosystem remains (test packs, pipelines, environments, tools, docs) | AC    | —                         | done   | —      | Find out what of our ecosystem remains                     |
+| CH-13.3 | Confirm the handover timeline and who leads it on each side                               | AC    | CH-13.2                   | doing  | —      | Confirm the handover timeline and who leads it on each side |
 | CH-13.4 | Confirm the QA team's 2027 remit and AC's role                                            | AC    | —                         | later  | —      | —                                                          |
 | CH-13.5 | Re-plan the horizons and driving theme for 2027 once the direction is confirmed           | AC    | CH-13.2, CH-13.3, CH-13.4 | later  | —      | —                                                          |
 
@@ -56,11 +56,16 @@ people: []
 
 **Status:** Open — plan confirmed at the Friday catch-up on 2026-11-13 (web, app and join to white label); handover timeline and what of our ecosystem remains still to confirm.
 
-**Next action:** Find out what of our ecosystem remains (CH-13.2).
+**Next action:** Confirm the handover timeline and who leads it on each side (CH-13.3).
 
 ## Outcome
 
 _Fill when resolved or closed: where the result landed (achievement or team evidence) and set `outcome:` above (achievement | evidence | both | none)._
+
+## 2026-11-16 Update — ecosystem card Done
+
+- Legacy review (AC, 2026-11-16): every record was reviewed against the new direction. Live: this record, IMP-08, IMP-02 (tracking), IMP-05 and new IMP-19 (Agentic QA); IMP-10 closed; IMP-04, CH-11, IMP-14, IMP-16 and IMP-17 stay in Later as carry-forward candidates; the rest are `legacy`. This supersedes the 2026-11-10 finish / leave-in-a-good-place triage. IMP-10 correction: the renewal could not be cancelled (about $3k saving negotiated; one more year, not renewed after).
+- Card "Find out what of our ecosystem remains" moved to Done in Notion; CH-13.2 marked done (Flow 6, Monday brief). CH-13.3 (handover timeline and who leads it) is now the next step; its To Do card was created on 2026-11-16 once AC confirmed.
 
 ## 2026-11-13 Update — plan confirmed at the Friday catch-up
 

@@ -2,9 +2,9 @@
 id: CH-12
 tag: Exerp release risk
 type: challenge
-status: open
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P5, P8, P6]
 focus: [ownership, productivity]
 jd: [JD-12]
@@ -39,11 +39,24 @@ How do we move Exerp release testing from a reactive activity to a predictable, 
 
 The Head of Configuration is willing to provide earlier version visibility and change notes. A simple flow — version notice → change-note review → agreed risk-based scope → correctly assigned tickets → sign-off — is the likely shape, worked out with the Lead QAs rather than imposed. The process itself is tracked as [IMP-09](../improvements/09-exerp-release-testing-process.md).
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Defined, risk-based process for Exerp release and upgrade testing
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ## Roadmap
 
 | ID      | Step                                               | Owner | Depends on | Status | Card                                                      |
 |---------|----------------------------------------------------|-------|------------|--------|-----------------------------------------------------------|
-| CH-12.1 | Discuss Exerp release testing with the Lead QAs    | AC    | —          | next   | Book time to discuss Exerp release testing with the leads |
+| CH-12.1 | Discuss Exerp release testing with the Lead QAs    | AC    | —          | later  | —                                                         |
 | CH-12.2 | Pilot the agreed process on the next Exerp release | AC    | IMP-09.4   | later  | —                                                         |
 | CH-12.3 | Confirm challenge resolved after pilot review      | AC    | CH-12.2    | later  | —                                                         |
 

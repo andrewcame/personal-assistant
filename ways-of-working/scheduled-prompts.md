@@ -4,6 +4,8 @@ The three prompts AC pastes into the Cowork scheduler. The scheduler lives outsi
 
 Design: every run refreshes Notion data first (the dashboards' Focus reads `reports/notion-snapshot.json`), so each day starts from fresh data. Monday and Wednesday run a **light** Notion sync (snapshot plus Done reconciliation, Flow 6); Friday runs the **full** sync. A card AC has moved to Done in Notion is applied to the repo directly (Flow 6), and Notion card writes (create, retag, column fixes) are applied and listed afterwards; everything else is a proposal: nothing is committed without AC's OK, and deleting, archiving or moving a card to Done in Notion needs it too.
 
+**Scheduled runs (AC's standing approval, 2026-11-16):** in a scheduled run, AC pre-approves the Notion card writes the task calls for (create, retag, column fix, rename, set `To-Do Completion`, and the next card after a Done move). If the platform's permission check still refuses a write, don't retry or work around it: queue it under "Pending Notion writes (needs your OK)" at the top of the brief and apply it first thing when AC replies. Deleting, archiving and moving a card to Done still need AC's OK. The scheduler task must also be set to automatically approve for this to take effect.
+
 ## Suggested Models (credit use)
 
 Set per scheduled task in Cowork. Tiers follow the [model and token guide](model-and-token-guide.md); check current multipliers in the picker.
@@ -18,7 +20,7 @@ Use Opus-class only for calibration prep and the monthly horizon review, not the
 
 Common opening, used by all three:
 
-> You are AC's assistant for his QA & Test Engineering Manager repo at C:\git\x.TOOLS\personal-assistant. If you don't have access to that folder, request it before anything else. Read AGENTS.md and follow it in full (aliases only, people-records standard, Notion limited to the boards in context/notion-boards.md, never search Notion, never commit without AC's OK; Notion card writes are applied and listed afterwards). Never open reports/*.html or reports/*.json.
+> You are AC's assistant for his QA & Test Engineering Manager repo at C:\git\x.TOOLS\personal-assistant. If you don't have access to that folder, request it before anything else. Read AGENTS.md and follow it in full (aliases only, people-records standard, Notion limited to the boards in context/notion-boards.md, never search Notion, never commit without AC's OK; Notion card writes are applied and listed afterwards; in a scheduled run they are pre-approved, and any the permission check refuses go under "Pending Notion writes (needs your OK)" at the top of the brief). Never open reports/*.html or reports/*.json.
 
 ## Monday: week ahead
 

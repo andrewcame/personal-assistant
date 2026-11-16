@@ -2,9 +2,9 @@
 id: IMP-15
 tag: Talent pipeline
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-04
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P1]
 focus: [people]
 jd: [JD-04]
@@ -31,9 +31,19 @@ people: []
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-11-04
 
 - Opened from the job-spec gap check.
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Hiring, onboarding and QA talent pipeline view
+- **Revive if:** next year's team shape is known; this depends on it.
 
 ## Roadmap
 

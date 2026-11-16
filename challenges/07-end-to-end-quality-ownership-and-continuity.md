@@ -2,9 +2,9 @@
 id: CH-07
 tag: E2E continuity
 type: challenge
-status: open
-horizon: now
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P2, P3, P8]
 focus: [people]
 goals: []
@@ -126,18 +126,33 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 - With web and app technology expected to move to a third party ([CH-13](13-2027-business-direction-transition.md)), knowledge transfer becomes handover documentation, which is the most valuable thing this challenge can produce. Moved from Next to Now and marked **finish** in the CH-13 triage. New step CH-07.8; the resourcing and E2E-stage steps (CH-07.4, CH-07.5, CH-07.7) are parked until the handover scope is known.
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** E2E knowledge captured as handover documentation (AI-assisted)
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+- **Notion card detail captured 2026-11-16 (cards archived 2026-11-16):**
+  - Card "Capture E2E journey knowledge as handover documentation": AI-assisted capture of E2E journey knowledge; first outputs were to be the Portal map in Miro and the Confluence E2E results page. Cards "Map the Portal part of the E2E domain review in Miro" and "Add a Confluence page for links to all E2E results, share with LM and let her update": no detail beyond the title.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ## Roadmap
 
 | ID      | Step                                                                  | Owner | Depends on       | Status | Card                                                                                 |
 |---------|-----------------------------------------------------------------------|-------|------------------|--------|--------------------------------------------------------------------------------------|
-| CH-07.1 | Map the Portal part of the E2E domain review in Miro                  | AC    | —                | next   | Map the Portal part of the E2E domain review in Miro                                 |
+| CH-07.1 | Map the Portal part of the E2E domain review in Miro                  | AC    | —                | later  | —                                                                                    |
 | CH-07.2 | Catalogue priority journeys LM covers, AI-assisted                    | AC    | CH-07.1          | later  | —                                                                                    |
-| CH-07.3 | Publish E2E results page in Confluence                                | AC    | IMP-06.2         | next   | Add a Confluence page for links to all E2E results, share with LM and let her update |
+| CH-07.3 | Publish E2E results page in Confluence                                | AC    | IMP-06.2         | later  | —                                                                                    |
 | CH-07.4 | Pair delivery QAs into upcoming E2E work                              | AC    | CH-07.2          | later  | —                                                                                    |
 | CH-07.5 | Define criteria for a dedicated E2E stage                             | AC    | CH-07.2          | later  | —                                                                                    |
 | CH-07.6 | Review sample of LM findings for escape causes                        | AC    | —                | later  | —                                                                                    |
 | CH-07.7 | Recommend E2E resourcing and ownership model before 2027              | AC    | CH-07.4, CH-07.6 | later  | —                                                                                    |
-| CH-07.8 | Capture E2E journey knowledge as handover documentation (AI-assisted) | AC    | —                | doing  | Capture E2E journey knowledge as handover documentation                              |
+| CH-07.8 | Capture E2E journey knowledge as handover documentation (AI-assisted) | AC    | —                | later  | —                                                                                    |
 
 ## Status & Next Action
 

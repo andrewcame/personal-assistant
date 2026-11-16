@@ -2,9 +2,9 @@
 id: IMP-03
 tag: Load testing
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-09
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P7]
 focus: [automation]
 jd: [JD-11]
@@ -35,6 +35,10 @@ people: [GL, GH, DJ]
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-09-15
 
 - Raised in Senior Leadership Meeting as a new gap distinct from backend load testing; agreed as a candidate improvement to action.
@@ -52,6 +56,12 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 Source: [2026-11-04 Platform Technical Lead](../context/discovery-calls/2026-11-04-platform-technical-lead-staging-reporting.md).
 
 - AC and AE aligned on layers: prod testing and staging testing both matter, tests are tagged so some run in staging and some in prod, and the direction is to run tests all the time overnight, with load testing. This supports the nightly staging run in IMP-03.1, which needs staging to be valuable first (backend coverage, IMP-11 Backend tests).
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** NFR partnership with Head of SE and Principal SE; NFR coverage visible
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
 
 ## Roadmap
 

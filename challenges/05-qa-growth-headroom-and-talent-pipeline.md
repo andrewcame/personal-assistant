@@ -2,9 +2,9 @@
 id: CH-05
 tag: Growth headroom
 type: challenge
-status: open
-horizon: later
-updated: 2026-11-04
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P1]
 focus: [people]
 jd: [JD-03, JD-04]
@@ -114,6 +114,19 @@ We must address both ends of the pyramid:
 ## 2026-11-04 Reopened — Later
 
 - Still open, but not active: KB's move to App lead unlocked his growth, but other bottlenecks remain (the Staff QA route for the two Website Lead QAs, and the wider talent pipeline). Parked in Later for 2027 planning; see also [IMP-15 Talent pipeline](../improvements/15-hiring-onboarding-and-qa-talent-pipeline.md).
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Growth headroom and talent pipeline (Staff QA route for the Web leads, wider pipeline)
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
 
 ## Roadmap
 

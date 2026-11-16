@@ -2,9 +2,9 @@
 id: CH-02
 tag: Business stakeholders
 type: challenge
-status: open
-horizon: later
-updated: 2026-10-15
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P8, P10]
 focus: [ownership]
 jd: [JD-15, JD-17]
@@ -64,6 +64,19 @@ The new structure should be treated as an opportunity to get closer to the busin
 QA can help expose ambiguity, map user journeys, and translate quality risk into business language, but it should not quietly become the replacement Product function. Engineering, QA, delivery, and stakeholders need an explicit working agreement about who brings context, who makes decisions, and how disagreements are resolved.
 
 Start with the highest-value domains, use real journeys rather than abstract requirements, and keep the feedback loop lightweight enough that it supports pace.
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Stakeholder coverage cadence with Finance and commercial teams
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
 
 ## Roadmap
 

@@ -2,9 +2,9 @@
 id: CH-09
 tag: Mobile coverage
 type: challenge
-status: open
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P4, P8]
 focus: [automation]
 jd: [JD-05]
@@ -117,6 +117,19 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 - Current app issues keep unearthing defects that have always been there; each fix reveals another. They are hard to find in QA because testing is functional rather than like the app is used.
 - Question: how can we test on prod, alpha and beta builds?
 
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Mobile App has appropriate, reliable test coverage (Phase 1: stabilise existing tests; Phase 2: population-scale testing)
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ## Roadmap
 
 | ID       | Step                                                                                                                        | Owner | Depends on                | Status | Ticket  | Card                                                              |
@@ -126,7 +139,7 @@ _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 | CH-09.3  | Phase 2: Set execution count and frequency for target incidence                                                             | AC    | CH-09.2                   | later  | —       | —                                                                 |
 | CH-09.4  | Phase 2: Confirm per-run data generation and replay evidence                                                                | AC    | CH-09.2                   | later  | —       | —                                                                 |
 | CH-09.5  | Phase 2: Run PoC through the existing Appium pipeline                                                                       | AC    | CH-09.3, CH-09.4, CH-09.6 | later  | —       | —                                                                 |
-| CH-09.6  | Phase 1: Stabilise and baseline existing Appium tests (epic 1)                                                              | AC    | —                         | later  | APP-352 | Start the first Appium initiative epic (stabilise existing tests) |
+| CH-09.6  | Phase 1: Stabilise and baseline existing Appium tests (epic 1)                                                              | AC    | —                         | later  | APP-352 | —                                                                 |
 | CH-09.7  | Phase 1: Optimise pipeline runs for maximum value and benefit (epic 2)                                                      | AC    | CH-09.6                   | later  | APP-353 | —                                                                 |
 | CH-09.8  | Phase 1: Write simpler Appium tests for functionality not changing in the app simplification work (epic 3, not yet written) | AC    | CH-09.6                   | later  | —       | —                                                                 |
 | CH-09.9  | Phase 1: Receive the app simplification tickets so the third epic can be scoped                                             | AC    | —                         | done   | —       | —                                                                 |

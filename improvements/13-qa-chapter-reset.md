@@ -2,9 +2,9 @@
 id: IMP-13
 tag: QA Chapter
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-04
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P2]
 focus: [people]
 jd: [JD-10]
@@ -31,9 +31,19 @@ people: []
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-11-04
 
 - Opened from the plan-only row in horizons.md.
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** QA Chapter reset as an open Testing Chapter with a purpose in the Pico model and a champion
+- **Revive if:** next year's team shape is known; this depends on it.
 
 ## Roadmap
 

@@ -141,5 +141,7 @@ Every challenge and improvement (a **CII**) carries a `## Roadmap` table: the or
 
 | Record      | Allowed status                                              |
 |-------------|-------------------------------------------------------------|
-| Challenge   | `open`, `active-monitoring`, `resolved`, `closed`           |
-| Improvement | `not-started`, `in-progress`, `on-hold`, `blocked`, `done`  |
+| Challenge   | `open`, `active-monitoring`, `resolved`, `closed`, `legacy` |
+| Improvement | `not-started`, `in-progress`, `on-hold`, `blocked`, `done`, `legacy` |
+
+**Legacy** (status and horizon, from 2026-11-16): a record that is kept but not planned, because the 2027 direction overtook it. It needs no tasks, cards or roadmap step, is left out of the dashboards' Now/Next/Later and the stale report, and carries a `## Legacy Value` note (what is worth keeping, and a "Revive if" line). Reviving it means setting a real status and horizon again and opening a card.

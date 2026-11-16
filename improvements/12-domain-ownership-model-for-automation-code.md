@@ -2,9 +2,9 @@
 id: IMP-12
 tag: Domain ownership
 type: improvement
-status: not-started
-horizon: later
-updated: 2026-11-10
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P3, P4]
 focus: [ownership]
 jd: [JD-09]
@@ -32,15 +32,25 @@ people: [TMW, DA, MP, KB]
 
 ## Actions & Progress
 
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
+
 ### 2026-11-04
 
 - Opened from the plan-only row in horizons.md.
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Domain ownership model for automation code; flaky-pack response agreed
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
 
 ## Roadmap
 
 | ID       | Step                                                                       | Owner | Depends on | Status | Card                                                             |
 |----------|----------------------------------------------------------------------------|-------|------------|--------|------------------------------------------------------------------|
-| IMP-12.1 | Scope the domain ownership model and flaky-pack response with the Lead QAs | AC    | —          | next   | Scope domain ownership and flaky-pack response with the Lead QAs |
+| IMP-12.1 | Scope the domain ownership model and flaky-pack response with the Lead QAs | AC    | —          | later  | —                                                                |
 
 ## Status & Next Action
 

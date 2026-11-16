@@ -2,9 +2,9 @@
 id: CH-08
 tag: Exerp reconciliation
 type: challenge
-status: open
-horizon: later
-updated: 2026-10-16
+status: legacy
+horizon: legacy
+updated: 2026-11-16
 pillars: [P5, P8]
 focus: [automation]
 jd: [JD-06]
@@ -85,6 +85,19 @@ The full-dataset extraction and 90-minute propagation time may limit fast feedba
 _From the Ideas triage on 2026-10-16 ([ideas log](../state/ideas-log.md))._
 
 - Pricing and discounts add complication: campaigns need to exist in staging to reflect prod, and must be reseeded after each Exerp copy-back.
+
+## Legacy Value
+
+- **Legacy from 2026-11-16** (2027 transition, [CH-13](../challenges/13-2027-business-direction-transition.md)): kept, not planned. No To Do cards and no roadmap duty; its Notion Backlog cards are closed once their detail is captured here.
+- **Worth keeping:** Challenge 08 — Exerp Extractor Reconciliation And Data Integrity
+- **Revive if:** the 2026 work carries into early February 2027, or the 2027 remit makes this relevant again.
+
+
+## Actions & Progress
+
+### 2026-11-16 (legacy review)
+
+- Moved to legacy at AC's review of every record under the 2027 transition: the new business direction overtakes it. Kept for reference; see Legacy Value below.
 
 ## Roadmap
 

@@ -2,20 +2,23 @@
 
 _Working memory. Every agent reads this first; Capture and the weekly review update it. Keep it to one screen: only **Upcoming** and **Recent Decisions** live here. Everything else belongs on a record: progress in its log, tasks as Notion cards or roadmap steps, waiting-on as roadmap steps owned by the other person._
 
-**Updated:** 2026-11-13
+**Updated:** 2026-11-16
 
 _Format: the dashboard reads **Upcoming** only (one point per bullet, starting with the record, e.g. `IMP-08 Short label — the point`, or `General — …`). Focus comes from Notion To Do cards._
 
 ## Upcoming
 
-- IMP-08 Objectives & reviews — calibration prep done (2026-11-13); calibration session next week (date to confirm).
+- IMP-08 Objectives & reviews — calibration prep done (2026-11-13); calibration session Wednesday 2026-11-18.
 - IMP-08 Objectives & reviews — EOY reviews due by 2027-01-15.
-- IMP-10 BrowserStack — cancellation requested 2026-11-13; renewal date is 2026-11-22; confirm the cancellation is processed.
-- CH-13 2027 transition — plan confirmed 2026-11-13: web, app and join go to white label; the PureGym website landing page and content stay; find out what else of our ecosystem remains.
-- General — Notion Done clear-out next due 2026-11-20 (last clear-out: 2026-11-06).
+- IMP-10 BrowserStack — closed 2026-11-16: renewal could not be cancelled; about $3k saving negotiated; one more year, not renewed after (around 2027-11-22).
+- CH-13 2027 transition — plan confirmed 2026-11-13: web, app and join go to white label; the PureGym website landing page and content stay; the ecosystem card is Done (2026-11-16); handover timeline next.
+- IMP-19 Agentic QA — AC upskilling on Foundry (first task); QA approach for agentic business workflows follows.
+- General — Notion Done clear-out next due 2026-11-20 (last clear-out: 2026-11-06; legacy card archive 2026-11-16).
 - General — next weekly review on Friday 2026-11-20.
 
 ## Recent Decisions
+
+- 2026-11-16 — AC reviewed every record against the 2027 direction: new status `legacy` (kept, not planned; no cards). Live: CH-13 2027 transition, IMP-08 Objectives & reviews, IMP-02 Member data (tracking only), IMP-05 Assistant (widened to AC's own agentic flow), new IMP-19 Agentic QA. IMP-10 BrowserStack closed (achievement: about $3k saving; renewal could not be cancelled, runs one more year, not renewed after). IMP-04, CH-11, IMP-14, IMP-16, IMP-17 stay in Later as carry-forward candidates; 17 other records moved to legacy. The work may carry into early February 2027. The 18 Backlog cards of legacy records were archived to Trash (restorable) the same day; their tasks stay as roadmap steps in the records (now `later`, no card). In scheduled runs AC pre-approves Notion card writes.
 
 - 2026-11-13 — Friday catch-up confirmed the plan: everything moves to white label except the PureGym website landing page and content (member portal, app and join all go to the Exerp white label); the rest of 2026 is finishing in-progress work, and Pico may need resurrecting if it is ever reversed. BrowserStack cancellation requested (IMP-10). Calibration prep done; the calibration session is next week. Weekly review: Flow 6 applied for three BrowserStack cards; IMP-10.9 and IMP-08.5 promoted with cards.
 
