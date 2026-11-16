@@ -193,6 +193,27 @@ _AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, 
   - Build on your AI tooling interest and make it count for the app team: Appium skills, local debugging, and reusable tools others can use (KB-O3, KB-O4).
   - Use the Mobile App move to build visible domain ownership, so your knowledge of the app shows in risks flagged and gaps closed by the end of December (KB-O4).
 
+### Calibration notes (AC, 2026-11-16)
+
+_AC's calibration notes for the WHAT, HOW and development areas, read alongside the evidence above. Dates were not recorded; ratings and matrix positions are not held here._
+
+**WHAT**
+
+- 2026 — KB-O1 — manager — Took over CoP testing and defined an automation approach: moved to the Comms team, picked up all the testing in that area, investigated automation and produced a proposal.
+- 2026 — (Web Team Two work; not covered by a 2026 objective) — manager — Protected a high-risk join journey with new automation for segmented student journeys, an area where products had previously gone missing from the front end. It does not cover duplicates, which were fixed following an improvement after a P1, but it gives good coverage for the new segmented approach in the pack.
+- 2026 — KB-O3 — manager — Made AI enablement a key part of his role: all test cases in his area are AI generated, he added skills and guidance for better use of AI, and he used AI to build his own tools for faster, more efficient manual testing.
+
+**HOW**
+
+- 2026 — V-DETAIL — manager — Finds hard-to-find issues: a major date issue in GCM UAT and, more recently, an issue in the activity-data work. He works with developers to produce meaningful data that helps them replicate and fix issues, shortening the defect-to-fix loop.
+- 2026 — V-SHOULDER — manager — Flexible in supporting the team where needed: Integration, then Comms, then Web Team 2 and now Apps, orienting quickly in each team and delivering.
+- 2026 — V-WIN — manager — Sound technical understanding across the front end, backend, CEP, CoP and GCM. He picks up technical areas quickly and contributes to improving and growing automation in them.
+
+**Development areas**
+
+1. Share what he builds: let other teams and engineering benefit from his tooling and insight, and contribute to platform initiatives.
+2. Understanding the business outcomes: tailor the level of testing to them, weigh it against delivery, and understand the bigger picture.
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Possible interest in a Lead specialist path; now moved to Mobile App as of 2026-10-08. In the 2026-09 conversation, Payments was not a preferred direction; confirm whether his preferences have changed.

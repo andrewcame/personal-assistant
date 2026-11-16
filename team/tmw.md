@@ -207,6 +207,26 @@ _AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, 
   - Build the technical depth expected of a Lead QA, especially with solutions and test packs you didn't build yourself. You do your best work when you can build your own tooling and test pack, so practise getting productive in inherited ones (TMW-O6, [IMP-11 Backend tests](../improvements/11-backend-test-pack-coverage.md)).
   - On AI: training helps, but learn mainly by doing it on live work, such as the Exerp upgrade AI skills and backend test skills.
 
+### Calibration notes (AC, 2026-11-16)
+
+_AC's calibration notes for the WHAT, HOW and development areas, read alongside the evidence above. Dates were not recorded; ratings and matrix positions are not held here._
+
+**WHAT**
+
+- 2026 (from about September) — (not covered by a 2026 objective) — manager — Industrialised the Exerp release process: removed some manual steps, added more detailed instructions and AI skills to speed it up, and made sure one person was not managing it alone and creating a delivery bottleneck — [IMP-09](../improvements/09-exerp-release-testing-process.md)
+- 2026 — (not covered by a 2026 objective) — manager — Was the app team's only QA through a major release, the move to .NET 10 and one of the biggest breaking-change releases of the year. She managed the defect and resolution process with product and stakeholders, and argued for the member perspective to get resolutions and keep quality up.
+- 2026 — TMW-O2 — manager — Delivered core Appium improvements and journeys, although it was never her full focus and technical challenges slowed her. She created a plan to tackle Appium and implemented key improvements: BrowserStack reporting, class bookings and dashboard checks.
+
+**HOW**
+
+- 2026 (from September) — V-SHOULDER — manager — Supported her team members and worked across teams in Web 3, particularly during the Exerp upgrade process. She looked for ways to support JFG while he was carrying the Exerp release work and, from September, supported him on it, managing the last release entirely so he could focus on Web 3.
+- 2026 — V-DIFF — manager — Advocated for the member throughout testing and held every issue found to that level of scrutiny. She spoke up in refinement and shifted issues and member-experience gaps left.
+- 2026 — V-DETAIL — manager — Showed determination to debug and find the root cause of issues in the app. She partnered with developers to push for dev pages and WireMock solutions so edge-case problems can be found and resolved in QA rather than by live members.
+
+**Development areas**
+
+See "Improvement and development areas" and "Manager's view of development areas" above; no separate items were added in AC's calibration notes.
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Has moved to Website (Web Team Two) and said she is positive about the change.

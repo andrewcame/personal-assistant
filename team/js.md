@@ -111,6 +111,27 @@ _AC, 2026-11-11. AC does not line manage JS (DA does) and has a similar view to 
   - Broaden beyond the Join journey. Your experience is mostly Join on the web, so exposure to the member experience and the mobile app would strengthen a Senior, and later Lead, case.
   - Build the evidence for your next step (Senior, then a supportive Lead role without line management) with DA, using the Growth Framework.
 
+### Calibration notes (AC, 2026-11-16)
+
+_AC's calibration notes for the WHAT, HOW and development areas, read alongside the evidence above. Dates were not recorded; ratings and matrix positions are not held here. JS is line managed by DA._
+
+**WHAT**
+
+- 2026 — manager — Supported the Pico launch in Switzerland, with a heavy QA focus on the Pico market launches, including CH and the linked login work.
+- 2026 — manager — Presented Pico features and functionality delivered (for example Payload) to key business stakeholders at London Head Office and on video calls, championing the solution and representing engineering.
+- 2026 — manager — Became a subject matter expert and AI enabler on the front-end tests: created an automation AI test agent to help generate and review Playwright tests, picks up PRs and raises appropriate tech enhancement tickets.
+
+**HOW**
+
+- 2026 — V-DIFF — manager — Identifies risk and quality concerns early. She raises problems with QA processes with the team and senior leaders, including in retros, and makes sure the work backlog is managed efficiently.
+- 2026 — V-SHOULDER — manager — Supports other teams and workstreams rather than working in a silo: acts as a subject matter expert and onboarded KB and TMW onto Web 2.
+- 2026 — V-DETAIL — manager — Puts the member experience first: goes beyond the ticket and designs into usability and edge cases, and questions the reasoning behind design choices so they can be challenged.
+
+**Development areas**
+
+1. Leadership training and awareness: she wants to develop her mentoring and leadership skills and be more impactful.
+2. More agentic AI usage and understanding: she wants to build more AI skills and find ways they can help other teams, for example an agentic workflow to review PRs.
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Wants to stay close to web and user experience; does not want the QA manager role. Interested in a supportive Lead QA Engineer path and potentially a leadership cohort.

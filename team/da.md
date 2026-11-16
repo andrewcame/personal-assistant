@@ -186,6 +186,27 @@ _AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, 
   - Develop your line-management practice with JS: regular, structured support for her progression case.
   - Where scope is not set for you, propose it yourself so the direction is clear. This is part of the evidence needed for Staff.
 
+### Calibration notes (AC, 2026-11-16)
+
+_AC's calibration notes for the WHAT, HOW and development areas, read alongside the evidence above. Dates were not recorded; ratings and matrix positions are not held here._
+
+**WHAT**
+
+- 2026 (Jan–Jun) — DA-O1 — manager — Led front-end QA for the DK and CH rollouts: made sure the front-end test repo covered the new markets and managed the day-to-day QA for the go-lives. DK was later descoped as the business moved towards sunsetting the microsites.
+- 2026 — DA-O2, DA-O3 — manager — Owned the front-end test repo scope: expanded coverage, added enhancements, standardised the repo across markets and made sure appropriate AI workflows and skills were included.
+- 2026 (from 2026-10-08) — DA-O4 — manager — Made Portal automation possible by leading the member creation initiative. He worked with the other QA leads and the test manager to gather requirements, scoped how it could be achieved and created the trail of work to deliver it — [IMP-02](../improvements/02-dynamic-member-creation-and-test-data.md)
+
+**HOW**
+
+- 2026 — V-DETAIL — manager — Raises issues with the detail and clarity that lets team members and developers understand the root cause and fix it.
+- 2026 — V-DIFF — manager — Looks for ways to expand test coverage from the latest technology trends, best practice and gaps seen on the web pages, for example accessibility.
+- 2026 — V-WIN — manager — Takes on technical challenges, is open to new technical approaches and improvements, and supports others in taking the same approach.
+
+**Development areas**
+
+1. Engagement, communication style and adaptability. Messages have at times been very direct, and DA has pushed back when asked to move onto new or business-critical work (see the 2026-09-22 and 2026-10-08 observations). He has not always been present in updates and calls, which AC has raised directly.
+2. Management. Set aside regular time for the development of his direct report: progression plans, objectives and similar.
+
 ## Open Follow-Ups
 
 _Operational actions live in Notion._

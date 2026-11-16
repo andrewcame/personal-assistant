@@ -185,6 +185,27 @@ _AC, 2026-11-11. Manager's perspective for calibration prep and the EOY review, 
   - Keep using AI to manage the single-QA workload, with the cognitive-debt check you already apply, and share what works with the other leads (MP-O4).
   - Turn the Payments knowledge-sharing you have started into a structured plan for a second person, with TMW, under [IMP-07 Payments cover](../improvements/07-payments-qa-cross-training-and-cover.md).
 
+### Calibration notes (AC, 2026-11-16)
+
+_AC's calibration notes for the WHAT, HOW and development areas, read alongside the evidence above. Figures are MP's own and not yet verified in Jira; ratings and matrix positions are not held here._
+
+**WHAT**
+
+- 2026 (year to date) — manager — Kept QA standards up when the team went from two QAs to one. Tested 110+ tickets this year, about 40% of which were reopened. In August he covered five streams at once: the CH race condition, Apple MPAN, deduction day in Pico, co-branded cards and session state.
+- 2026 (Jan–Jun) — MP-O1, MP-O3 — manager — Got CH payments live and protected coverage as payment services moved into Pico. CH is live with good coverage. When some payment services moved into the Pico repo he added tests confirming payment agreements and subscriptions are created after a join, and raised tickets for the remaining gaps (PAYTEAM-282, 283, 284). Coverage reached 80% before microsite-sunset work took priority.
+- 2026 — MP-O4 — manager — Used AI to support the single-QA model: mapped test migration across pipelines, brands and shards (PAYTEAM-82), work that would have taken hours manually; found the root cause of PAYTEAM-292; and created a skill that suggests tests from a PR and checks them against his test plan.
+
+**HOW**
+
+- 2026 — V-DETAIL — manager — Kept to the agreed standards through tight deadlines and reduced capacity, and pushed back where appropriate.
+- 2026 — V-SHOULDER — manager — Values knowledge sharing. He is closing gaps in documentation and in how specific payments things work (for example how certain Kafka messages behave), and creates epics and stories to record gaps and remind him to return and update them.
+- 2026 — V-DIFF — manager — Keeps looking to increase test coverage in his area by investigating, challenging and improving it, for example PAYTEAM-51, 61, 281, 282, 283, 284, 195 and PAY-3588, 3571, 3921.
+
+**Development areas**
+
+1. Understanding the business outcomes: tailor the level of testing to them, weigh "must fix now" against "revisit later", and work with delivery to see the bigger picture.
+2. He has been in one team for a long time. The documentation steps he has taken are good; turning them into a structured handover or cover plan would help ([IMP-07 Payments cover](../improvements/07-payments-qa-cross-training-and-cover.md)). Openness to work in other areas would also give him a wider perspective.
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Prefers specialist contribution and currently does not want direct reports.

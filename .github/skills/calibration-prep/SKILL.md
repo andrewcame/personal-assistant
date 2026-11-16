@@ -36,6 +36,6 @@ After all individuals, give a one-screen summary:
 
 ## Rules For The Conversation
 
-- Before drafting any Top 3 entries, read [calibration-top3-examples.md](../../../context/performance-process/review-examples/calibration-top3-examples.md) and write in that shape, but in a warmer, less mechanical voice than the examples.
+- Before drafting any Top 3 entries, read [ac-calibration-notes-2026.md](../../../context/performance-process/review-examples/ac-calibration-notes-2026.md) (AC's own wording; copy its voice) and [calibration-top3-examples.md](../../../context/performance-process/review-examples/calibration-top3-examples.md) (shape only), and write in AC's voice.
 - If the user mentions flight risk, pay, health, or a formal process, help them think it through in chat, then remind them it goes in the official template only.
 - If evidence is weak, say so; don't fill the gap with interpretation.

@@ -106,6 +106,27 @@ _AC, 2026-11-11, from working directly with JFG in Web 3. AC covers JFG's calibr
   - Get the small things right so your visibility matches your technical work: arrive at meetings on time, attend them, and respond when you're asked something in a call. Same as the expectation agreed on 2026-09-14.
   - Make your work visible to the wider team (updates, demos, speaking up in calls), so others see the backend and test-data work you do. This is the main gap in the Senior QA Engineer case.
 
+### Calibration notes (AC, 2026-11-16)
+
+_AC's calibration notes for the WHAT, HOW and development areas, read alongside the evidence above. Dates were not recorded; ratings and matrix positions are not held here. AC covers JFG's calibration; TMW (line manager) leads his EOY review._
+
+**WHAT**
+
+- 2026 — manager — Owner and architect of the Pico backend test repo, which he mostly maintains. He keeps it up to date and has changed it in response to feedback. The tests run against deployed preview environments, not only locally, so they catch problems that only appear once services talk to each other for real — [IMP-11 Backend tests](../improvements/11-backend-test-pack-coverage.md)
+- 2026 — manager — Subject matter expert for Pico backend and Portal end-to-end flows, and the main contact in the QA team for the account backend Pico services. He mentored three QAs (IY, TMW and LM) on Braze, BGW, test data creation and account Portal testing.
+- 2026 — manager — Led the Exerp upgrades in the legacy backend repos (BGW and TestData), including the BGW updates needed before microsite testing could start. TMW has since taken over owning this, but his initial documentation and process got it started.
+
+**HOW**
+
+- 2026 — V-SHOULDER — manager — Shared what he knows so others can test Pico end to end: runs demos, workshops and sessions to upskill others, and steps in on end-to-end testing to help deliver the microsite sunset.
+- 2026 — V-DETAIL — manager — Very diligent when testing tickets: follows the data through the journey, particularly in the backend, and proves the database seeding is as expected. He asks the right questions to understand the remit of a ticket so it is tested thoroughly.
+- 2026 — V-DIFF — manager — Took responsibility beyond his own tickets. Pico is an integrated ecosystem, and integration coverage in the account service is complete but not in others such as basket. He created WEB-924 to identify the gaps and discussed the scope with the team.
+
+**Development areas**
+
+1. Awareness: attend stand-ups on time and be present and responsive in all calls. He mostly does this but it lapses from time to time (same expectation as agreed on 2026-09-14).
+2. Visibility: make the case for his improvements to a wider audience, advocate for his approach and speak up on the change he wants.
+
 ## Team Movement Considerations
 
 - Relevant interests or constraints: Wants Senior QA Engineer progression. Prefers backend work but is willing to develop in web front end and Portal.
