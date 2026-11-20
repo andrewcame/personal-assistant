@@ -153,9 +153,10 @@ Build credibility and trust with the business stakeholders that QA's work suppor
 
 **Linked achievements (proposed; AC to confirm):**
 
-- Completed initial QA team listening and reset (2026-09-30), [achievements/2026.md](../achievements/2026.md) (also linked to Objective 1; its wording names the early working relationships with Configuration). No other achievements logged yet for the business stakeholder work.
+- Completed initial QA team listening and reset (2026-09-30), [achievements/2026.md](../achievements/2026.md) (also linked to Objective 1; its wording names the early working relationships with Configuration).
+- Worked with business stakeholders on a join flow issue and its resolution (2026-11-20), [achievements/2026.md](../achievements/2026.md). No other achievements logged yet for the business stakeholder work.
 
-**Stakeholders covered so far (AC, 2026-11-20):** CR (IT Pricing Manager, Configuration) and LK (Finance Manager). CG (Business Development Coordinator) to be added with achievements later. More to come.
+**Stakeholders covered so far (AC, 2026-11-20):** CR (IT Pricing Manager, Configuration) and LK (Finance Manager). CG (Business Development Coordinator) and KF (Head of Corporate Partnerships) added from the join flow issue (2026-11-20). More to come.
 
 **Other evidence links (proposed):** [discovery call with CR, 2026-09-16](../context/discovery-calls/2026-09-16-it-pricing-manager-cr.md) (member-centred pricing and configuration testing, Extractor reliability, communicating changes that need Configuration support, promotions and campaigns walkthrough); [CH-02 Business stakeholders](../challenges/02-direct-business-stakeholder-connection.md) (legacy; mapping stakeholders and decision owners); [CH-08 Exerp Extractor](../challenges/08-exerp-extractor-reconciliation-and-data-integrity.md) (legacy; the reconciliation problem CR raised); [IMP-17 Business visibility](../improvements/17-business-language-quality-visibility.md) (later; quality in business language). Job spec: Business Stakeholder Engagement ([JD-15, JD-17](../context/_taxonomy.md)).
 

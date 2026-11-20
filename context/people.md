@@ -25,6 +25,7 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | JW    | Head of Product                       | Product     | Left    | Product function left 2026-09             |
 | LK    | Finance Manager                       | Finance     | Current | Placeholder alias (surname not recorded); named by AC 2026-11-20 |
 | CG    | Business Development Coordinator      | Business Development | Current | Alias per AC, 2026-11-20 |
+| KF    | Head of Corporate Partnerships        | Corporate Partnerships | Current | Alias per AC, 2026-11-20 |
 
 ## QA & Test Engineering
 
