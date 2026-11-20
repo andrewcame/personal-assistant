@@ -10,6 +10,7 @@ _Format: the dashboard reads **Upcoming** only (one point per bullet, starting w
 
 - IMP-08 Objectives & reviews — calibration prep done (2026-11-13); calibration session Wednesday 2026-11-18.
 - IMP-08 Objectives & reviews — EOY reviews due by 2027-01-15.
+- IMP-08 Objectives & reviews — all three Manager objectives are in [goals/2026-objectives.md](../goals/2026-objectives.md); next is AC's comments on each (objective 3 stakeholders so far: CR and LK).
 - IMP-10 BrowserStack — closed 2026-11-16: renewal could not be cancelled; about $3k saving negotiated; one more year, not renewed after (around 2027-11-22).
 - CH-13 2027 transition — plan confirmed 2026-11-13: web, app and join go to white label; the PureGym website landing page and content stay; the ecosystem card is Done (2026-11-16); handover timeline next.
 - IMP-19 Agentic QA — AC upskilling on Foundry (first task); QA approach for agentic business workflows follows.
@@ -17,6 +18,10 @@ _Format: the dashboard reads **Upcoming** only (one point per bullet, starting w
 - General — next weekly review on Friday 2026-11-20.
 
 ## Recent Decisions
+
+- 2026-11-20 — IMP-08 Objectives & reviews: Manager objective 3 set as "Build credibility and trust with key business stakeholders" (business stakeholders only; the team side is covered by objective 1). Business Operator lens. GL had suggested Vivamo; AC has had little contact with those stakeholders, so it is general. New alias LK (Finance Manager) added to people.md.
+
+- 2026-11-17 — IMP-08 Objectives & reviews: the three closed Senior QA Engineer objectives and Manager objectives 1 and 2 (establish and transition into the role; sunset microsites by year end) are filed in [goals/2026-objectives.md](../goals/2026-objectives.md), with achievements linked provisionally to be reviewed at EOY prep. Old objectives carry no lens; new ones do.
 
 - 2026-11-16 — AC reviewed every record against the 2027 direction: new status `legacy` (kept, not planned; no cards). Live: CH-13 2027 transition, IMP-08 Objectives & reviews, IMP-02 Member data (tracking only), IMP-05 Assistant (widened to AC's own agentic flow), new IMP-19 Agentic QA. IMP-10 BrowserStack closed (achievement: about $3k saving; renewal could not be cancelled, runs one more year, not renewed after). IMP-04, CH-11, IMP-14, IMP-16, IMP-17 stay in Later as carry-forward candidates; 17 other records moved to legacy. The work may carry into early February 2027. The 18 Backlog cards of legacy records were archived to Trash (restorable) the same day; their tasks stay as roadmap steps in the records (now `later`, no card). In scheduled runs AC pre-approves Notion card writes.
 

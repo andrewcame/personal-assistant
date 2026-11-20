@@ -23,6 +23,8 @@ Everyone in this repo is referred to by **alias (initials)** only. This table ma
 | GH    | Head of Software Engineering          | Engineering | Current |                                           |
 | DJ    | Head of Delivery                      | Delivery    | Current |                                           |
 | JW    | Head of Product                       | Product     | Left    | Product function left 2026-09             |
+| LK    | Finance Manager                       | Finance     | Current | Placeholder alias (surname not recorded); named by AC 2026-11-20 |
+| CG    | Business Development Coordinator      | Business Development | Current | Alias per AC, 2026-11-20 |
 
 ## QA & Test Engineering
 
